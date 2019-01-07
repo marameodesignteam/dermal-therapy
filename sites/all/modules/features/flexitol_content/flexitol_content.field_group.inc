@@ -1,0 +1,522 @@
+<?php
+/**
+ * @file
+ * flexitol_content.field_group.inc
+ */
+
+/**
+ * Implements hook_field_group_info().
+ */
+function flexitol_content_field_group_info() {
+  $field_groups = array();
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_accordion1|node|webform|teaser';
+  $field_group->group_name = 'group_accordion1';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'webform';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = 'group_accordion';
+  $field_group->data = array(
+    'label' => 'Leave a Testimonial',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_webform_body',
+      1 => 'webform',
+      2 => 'group_accordion',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
+    'format_settings' => array(
+      'label' => 'Leave a Testimonial',
+      'instance_settings' => array(
+        'classes' => 'group-accordion1 field-group-bootstrap_fieldgroup_accordion_item',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_accordion1|node|webform|widget';
+  $field_group->group_name = 'group_accordion1';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'webform';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = 'group_accordion';
+  $field_group->data = array(
+    'label' => 'Leave a testimonial',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_webform_body',
+      1 => 'webform',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
+    'format_settings' => array(
+      'label' => 'Leave a testimonial',
+      'instance_settings' => array(
+        'classes' => 'group-accordion1 field-group-bootstrap_fieldgroup_accordion_item',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_accordion|node|webform|teaser';
+  $field_group->group_name = 'group_accordion';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'webform';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = 'group_accordion1';
+  $field_group->data = array(
+    'label' => 'Group',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_accordion1',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_accordion',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-accordion field-group-bootstrap_fieldgroup_accordion',
+        'id' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_accordion|node|webform|widget';
+  $field_group->group_name = 'group_accordion';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'webform';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Group',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_accordion1',
+      1 => 'group_closed',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_accordion',
+    'format_settings' => array(
+      'label' => 'Group',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-accordion field-group-bootstrap_fieldgroup_accordion',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_closed|node|webform|widget';
+  $field_group->group_name = 'group_closed';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'webform';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = 'group_accordion';
+  $field_group->data = array(
+    'label' => 'Closed',
+    'weight' => '5',
+    'children' => array(
+      0 => 'title',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-closed field-group-bootstrap_fieldgroup_accordion_item',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_default|node|review|widget';
+  $field_group->group_name = 'group_default';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'review';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = 'group_transform_container';
+  $field_group->data = array(
+    'label' => 'Dafault',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_review_city',
+      1 => 'field_review_country',
+      2 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Dafault',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-default field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_directions|node|product|full';
+  $field_group->group_name = 'group_directions';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_info';
+  $field_group->data = array(
+    'label' => 'Directions',
+    'weight' => '17',
+    'children' => array(
+      0 => 'field_product_directions',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-directions field-group-bootstrap_fieldgroup_nav_item',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_healthcare_graph_1|node|health_professionals_product|form';
+  $field_group->group_name = 'group_healthcare_graph_1';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'health_professionals_product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_healthcare_graphs';
+  $field_group->data = array(
+    'label' => 'Graph 1',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_healthcare_graph_1',
+      1 => 'field_healthcare_graph_1_notes',
+      2 => 'field_healthcare_graph_1_text',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_healthcare_graph_2|node|health_professionals_product|form';
+  $field_group->group_name = 'group_healthcare_graph_2';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'health_professionals_product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_healthcare_graphs';
+  $field_group->data = array(
+    'label' => 'Graph 2',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_graph_2_notes',
+      1 => 'field_healthcare_graph_2',
+      2 => 'field_healthcare_graph_2_text',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_healthcare_graphs|node|health_professionals_product|form';
+  $field_group->group_name = 'group_healthcare_graphs';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'health_professionals_product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Graphs',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_health_graph_image_single',
+      1 => 'field_healthcare_wysiwyg_editor',
+      2 => 'group_healthcare_graph_1',
+      3 => 'group_healthcare_graph_2',
+    ),
+    'format_type' => 'htabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_hover|node|homepage_featured_content|widget';
+  $field_group->group_name = 'group_hover';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'homepage_featured_content';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Hover Block',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_hfc_hover_text',
+      1 => 'field_hfc_hover_title',
+      2 => 'field_hfc_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Hover Block',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-hover field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_hover|node|review|widget';
+  $field_group->group_name = 'group_hover';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'review';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = 'group_transform_container';
+  $field_group->data = array(
+    'label' => 'Hover Block',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_review_body',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Hover Block',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-hover field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_information|node|product|full';
+  $field_group->group_name = 'group_information';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_info';
+  $field_group->data = array(
+    'label' => 'Information',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_product_information',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_settings' => array(
+      'label' => 'Information',
+      'instance_settings' => array(
+        'classes' => 'group-information field-group-bootstrap_fieldgroup_nav_item ',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_info|node|product|full';
+  $field_group->group_name = 'group_info';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Information',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_directions',
+      1 => 'group_information',
+      2 => 'group_ingredients',
+      3 => 'group_research',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_nav',
+    'format_settings' => array(
+      'label' => 'Information',
+      'instance_settings' => array(
+        'bootstrap_nav_type' => 'pills',
+        'bootstrap_stacked' => '0',
+        'bootstrap_orientation' => '0',
+        'classes' => 'group-info field-group-bootstrap_fieldgroup_nav',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_ingredients|node|product|full';
+  $field_group->group_name = 'group_ingredients';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_info';
+  $field_group->data = array(
+    'label' => 'Ingredients',
+    'weight' => '18',
+    'children' => array(
+      0 => 'field_product_ingredients',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-ingredients field-group-bootstrap_fieldgroup_nav_item',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_research|node|product|full';
+  $field_group->group_name = 'group_research';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_info';
+  $field_group->data = array(
+    'label' => 'Research',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_product_research',
+      1 => 'field_clinical_study',
+    ),
+    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-research field-group-bootstrap_fieldgroup_nav_item',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_transform_container|node|review|widget';
+  $field_group->group_name = 'group_transform_container';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'review';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Transform Container',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_default',
+      1 => 'group_hover',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Transform Container',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-transform-container field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Closed');
+  t('Dafault');
+  t('Directions');
+  t('Graph 1');
+  t('Graph 2');
+  t('Graphs');
+  t('Group');
+  t('Hover Block');
+  t('Information');
+  t('Ingredients');
+  t('Leave a Testimonial');
+  t('Leave a testimonial');
+  t('Research');
+  t('Transform Container');
+
+  return $field_groups;
+}

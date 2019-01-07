@@ -1,0 +1,99 @@
+<?php
+define("PROJECT_NAME", "Flexitol");
+
+/**
+ * Implements hook_block_info.
+ */
+function conf_block_block_info() {
+  $blocks = array();
+
+  $blocks['welcome_block'] = array(
+    'info' => t('Welcome block'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function conf_block_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+
+    case 'welcome_block':
+      $content = _conf_block_welcome_block_view();
+      $block['content'] = $content;
+      $block['subject'] = '';
+      break;
+  }
+
+  return $block;
+}
+
+function _conf_block_welcome_block_view() {
+  $block_data = variable_get('conf_block_welcome_block_data', array());
+  $markup = "";
+  $markup .= "<div>" . $block_data['body'] . "</div>";
+  $markup .= "<a class='btn btn-default' href=\"". $block_data['link'] . "\">Read more</a>";
+
+  // Block output in HTML with div wrapper
+  $block = array(
+    'message' => array(
+      '#type' => 'markup',
+      '#markup' => $markup,
+      '#suffix' => '',
+    ),
+  );
+
+  return $block;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function conf_block_block_configure($delta = '') {
+  $form = array();
+
+  switch ($delta) {
+    case 'welcome_block' :
+      $block_data = variable_get('conf_block_welcome_block_data', array());
+
+      $form['conf_block_welcome_block_body'] = array(
+        '#type' => 'textarea',
+        '#title' => 'Block Body',
+        '#default_value' => isset($block_data['body']) ? $block_data['body'] : '',
+      );
+
+      $form['conf_block_welcome_block_link'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Read More Link Url',
+        '#default_value' => isset($block_data['link']) ? $block_data['link'] : '',
+      );
+
+      break;
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function conf_block_block_save($delta = '', $edit = array()) {
+
+  switch ($delta) {
+    case 'welcome_block' :
+      $block_data =  array();
+
+      if (isset($edit['conf_block_welcome_block_body'])) {
+        $block_data['body'] = $edit['conf_block_welcome_block_body'];
+      }
+      if (isset($edit['conf_block_welcome_block_link'])) {
+        $block_data['link'] = $edit['conf_block_welcome_block_link'];
+      }
+      variable_set('conf_block_welcome_block_data', $block_data);
+      break;
+  }
+}

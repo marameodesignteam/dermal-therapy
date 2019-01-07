@@ -1,0 +1,17 @@
+// prefix declarations
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@mixin prefixed($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin opacity($value) {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
+  filter: alpha(opacity=#{$value});
+  opacity: #{$value};
+}
+

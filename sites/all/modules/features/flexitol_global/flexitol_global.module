@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Flexitol global feature.
+ */
+
+include_once 'flexitol_global.features.inc';

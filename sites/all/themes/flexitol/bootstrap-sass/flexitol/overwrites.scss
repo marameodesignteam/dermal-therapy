@@ -1,0 +1,49 @@
+.nav-pills {
+  > li {
+    border: 1px solid;
+
+    // Links rendered as pills
+    > a {
+      text-transform: uppercase;
+      font-size: 0.9em;
+      color: $navy-dark;
+      padding: 9px 20px;
+      @media (max-width: $screen-sm-max) {
+        font-size: 0.8em;
+        padding: 5px 10px;
+      }
+    }
+    + li {
+      margin-left: 15px;
+      @media (min-width: $screen-lg-min) {
+        margin-left: 50px;
+      }
+      @media (max-width: $screen-sm-max) {
+        margin-left: 7px;
+      }
+    }
+    // Active state
+    &.active {
+      border-color: $brand-primary;
+      > a {
+        outline: none;
+      }
+    }
+  }
+
+}
+
+.form-control {
+  color: #5d5d5d;
+}
+
+// Admin Module Fixes
+
+div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin-toolbar div.admin-tab a, div#admin-toolbar a {
+  box-sizing: content-box !important;
+}
+
+.waves-input-wrapper {
+  z-index: 99 !important;
+}
+

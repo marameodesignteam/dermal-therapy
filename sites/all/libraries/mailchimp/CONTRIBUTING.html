@@ -1,0 +1,81 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>CONTRIBUTING.md</title>
+      </head>
+      <body>
+        <h1 id="contributing">Contributing</h1>
+<p>Thank you for taking the time to help us develop the MailChimp library!</p>
+<p>We do all our work on GitHub. If you&#39;d like to help, you can create a
+<a href="https://github.com/join">free GitHub account here</a>.</p>
+<h2 id="reporting-an-issue">Reporting an issue</h2>
+<p>For bug reports or feature requests, please <a href="https://github.com/thinkshout/mailchimp-api-php/issues">create a new issue</a>.</p>
+<p>If reporting a bug, please:</p>
+<ul>
+<li>Let us know what steps we can take to reproduce the bug</li>
+<li>Include any error messages you received</li>
+</ul>
+<h2 id="submitting-changes">Submitting changes</h2>
+<p>The best way to submit a bug fix or improvement is through a <a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/">pull request</a>.</p>
+<ul>
+<li><a href="https://guides.github.com/activities/forking/">Fork</a>, then clone the repository:</li>
+</ul>
+<p><code>git clone git@github.com:YOUR-GITHUB-USERNAME/mailchimp-api-php.git</code></p>
+<ul>
+<li>Install the library&#39;s dependencies using <a href="https://getcomposer.org/">Composer</a>:</li>
+</ul>
+<pre><code class="lang-shell">cd mailchimp-api-php
+composer install
+</code></pre>
+<ul>
+<li><p>If you are adding new functionality, please add a corresponding test.
+See <a href="#testing">Testing</a> for more information.</p>
+</li>
+<li><p>After making your changes, ensure all tests pass.</p>
+</li>
+<li><p>Commit and push your changes to your fork of the repository.</p>
+</li>
+<li><p><a href="https://github.com/thinkshout/mailchimp-api-php/pulls">Submit a pull request</a>.</p>
+</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>This library includes a <a href="https://phpunit.de/">PHPUnit</a> test suite. Keeping these
+tests up to date helps us ensure the library is reliable.</p>
+<h3 id="running-phpunit-tests">Running PHPUnit tests</h3>
+<p>Add Composer&#39;s vendor directory to your PATH by adding the following line to
+your profile. This is dependent on your system, but on a Linux or Mac OSX system
+using Bash, you&#39;ll typically find the file at <em>~/.bash_profile</em>.</p>
+<p><code>export PATH=&quot;./vendor/bin:$PATH&quot;</code></p>
+<p>Bash example:</p>
+<pre><code class="lang-shell">echo &#39;export PATH=&quot;./vendor/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
+source ~/.bash_profile
+</code></pre>
+<p>Then run PHPUnit:</p>
+<p><code>phpunit</code></p>
+<h3 id="creating-new-tests">Creating new tests</h3>
+<p>Tests are located in the <em>tests</em> directory and are grouped into PHP files named
+after the library component they are testing. For example,
+<em>MailchimpCampaignsTest.php</em> contains tests for MailChimp Campaigns.</p>
+<p>New tests should contain at least the functionality in this simple test:</p>
+<pre><code class="lang-php">public function testGetCampaigns() {
+  $mc = new MailchimpCampaigns();
+  $mc-&gt;getCampaigns();
+
+  $this-&gt;assertEquals(&#39;GET&#39;, $mc-&gt;getClient()-&gt;method);
+  $this-&gt;assertEquals($mc-&gt;getEndpoint() . &#39;/campaigns&#39;, $mc-&gt;getClient()-&gt;uri);
+}
+</code></pre>
+<p>This test checks the request type and request URI are both correct.</p>
+<p>More advanced examples can be found in the <em>tests</em> directory.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="http://developer.mailchimp.com/documentation/mailchimp/">MailChimp API documentation</a></li>
+<li><a href="https://www.drupal.org/project/mailchimp">MailChimp Drupal module</a>, MailChimp integration for Drupal using this library.</li>
+<li><a href="https://www.drupal.org/project/mailchimp_ecommerce">MailChimp E-Commerce Drupal module</a>, MailChimp integration for Drupal Commerce using this library.</li>
+<li><a href="https://thinkshout.com">ThinkShout</a>, the library maintainer.</li>
+</ul>
+<h2 id="want-to-help-build-this-and-other-open-source-projects-">Want to help build this and other open source projects?</h2>
+<p>We&#39;re hiring software engineers! Check out our <a href="https://thinkshout.com/careers/">careers page</a>.</p>
+
+      </body>
+    </html>

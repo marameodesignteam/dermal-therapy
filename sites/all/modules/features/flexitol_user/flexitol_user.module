@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Flexitol user feature.
+ */
+
+include_once 'flexitol_user.features.inc';

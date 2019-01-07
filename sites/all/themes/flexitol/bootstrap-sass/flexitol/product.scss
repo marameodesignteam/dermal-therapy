@@ -1,0 +1,849 @@
+.page-node.node-type-product {
+
+  .region-content-bottom {
+    padding-top: 15px;
+    border-top: none;
+    margin-top: 60px;
+  }
+
+  .field-name-field-clinical-study-images .field-item {
+    width: 41%;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+
+  section#block-views-11d287f0dab888795c67e49bfb01f5ba {
+    width: 60%;
+    float: left;
+  }
+
+  section#block-views-beauty-review-button-block, section#block-views-leave-a-testimonial-block {
+    width: 40%;
+    margin: auto;
+    float: left;
+  }
+  @media (max-width: $screen-sm) {
+    section#block-views-beauty-review-button-block, section#block-views-leave-a-testimonial-block {
+      width: 100%;
+    }
+
+    section#block-views-11d287f0dab888795c67e49bfb01f5ba {
+      width: 100%;
+    }
+  }
+
+  .view-empty {
+    padding: 90px 70px;
+  }
+
+  .flexslider.optionset-dermal-therapy-testinomials {
+    li {
+      padding: 50px;
+      text-align: center;
+      .views-field-field-review-city {
+        float: left;
+      }
+      .views-field-field-review-country {
+        float: left;
+      }
+      .views-field-title-1 {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .flex-direction-nav a {
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .flexslider .flex-direction-nav a,
+  .flexslider .flex-direction-nav a {
+    display: block; /* I added this line */
+  }
+
+  .flex-direction-nav .flex-next {
+    right: 0 !important;
+    margin-right: -30px;
+    opacity: 1 !important;
+  }
+  .flex-direction-nav .flex-prev {
+    left: 0 !important;
+    opacity: 1 !important;
+    margin-left: -40px;
+  }
+
+  .flexslider {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .flex-direction-nav a:before {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .flexslider {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    ul {
+      overflow: hidden;
+    }
+  }
+
+  .bhrating {
+    text-align: center;
+
+    .left {
+      width: 55%;
+      float: left;
+      margin: 30px 0;
+
+      img {
+        width: 74%;
+      }
+    }
+    .right {
+      width: 45%;
+      float: right;
+      margin: 30px 0;
+
+      .product-average-rating {
+        width: 80%;
+        font-size: 12px;
+      }
+    }
+    @media (max-width: $screen-md) {
+      .left {
+        width: 100%;
+        margin-bottom: 0;
+
+        img {
+          width: 82%;
+        }
+      }
+      .right {
+        width: 100%;
+        float: left;
+        margin-bottom: 60px;
+      }
+      .product-average-rating {
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: $screen-sm) {
+      .left img {
+        width: 82%;
+      }
+    }
+
+    .fivestar-widget-static {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .fivestar-bh .fivestar-widget-static .star {
+      span.on {
+        background: url(/sites/all/themes/flexitol/images/star-small.png) no-repeat 0 -40px;
+      }
+      span.off {
+        background: url(/sites/all/themes/flexitol/images/star-small.png) no-repeat 0 0px;
+      }
+      span {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin-right: 3px;
+        text-indent: -9999999px;
+      }
+    }
+    .review-info {
+      padding-top: 10px;
+    }
+    .node-average-rating {
+      margin-top: 10px;
+    }
+    a {
+      color: #103355;
+    }
+  }
+
+  .view-leave-a-testimonial {
+    .panel-heading {
+      width: 82%;
+      text-align: center;
+      border-radius: 0;
+      margin: auto;
+      border-bottom: 0px;
+      background-color: transparent;
+      color: #7a99ac;
+      text-transform: uppercase;
+      font-size: 11px !important;
+      border: 1px solid #7a99ac;
+      &:hover {
+        background-color: #7a99ac;
+        color: white;
+      }
+      a:hover, a.active, a:focus {
+        text-decoration: none;
+      }
+    }
+    .panel-group {
+      margin-bottom: 30px;
+    }
+
+    .panel-default {
+      border-color: none;
+    }
+
+    .panel {
+      margin-bottom: 20px;
+      background-color: transparent;
+      border: none;
+      border-radius: 0px;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      box-shadow: none;
+    }
+
+    .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 14px;
+      color: inherit;
+    }
+
+    .panel-default > .panel-heading + .panel-collapse > .panel-body {
+      border-top-color: transparent;
+      background: white;
+      padding: 20px;
+      margin: 20px;
+    }
+
+  }
+
+  #webform-ajax-wrapper-113 {
+    .links {
+      display: none;
+    }
+  }
+  .panel.panel-default.required-fields.group-closed.field-group-bootstrap_fieldgroup_accordion_item {
+    display: none;
+  }
+
+  .mobile-only-buttons {
+    display: none;
+  }
+  section#block-views-product-testimonials-block {
+    display: block;
+    background-color: black;
+    & .flexslider {
+      background: transparent;
+      border: 0px;
+      position: relative;
+      width: 70%;
+      zoom: 1;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .views-field-field-review-body .field-content {
+      font-size: 1.3em;
+    }
+  }
+  .content-tertiary-fluid {
+    background-color: #e0e0e0;
+    padding: 20px 0;
+    margin-top: -40px;
+  }
+  .view-product-testimonials {
+    & .views-field.views-field-view-node {
+      margin-top: 35px;
+    }
+    & span a {
+      text-transform: uppercase;
+      border: 1px solid;
+      color: $brand-primary;
+      padding: 5px 10px;
+      &:hover {
+        text-decoration: none;
+        background-color: #7a99ac;
+        color: #fffff;
+        border-color: #ffffff;
+      }
+    }
+  }
+  .view-products-related-conditions {
+    & .field-content .title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5em;
+    }
+    & a {
+      text-transform: uppercase;
+      border: 1px solid;
+      color: #fff;
+      padding: 5px 10px;
+      &:hover {
+        text-decoration: none;
+        background-color: #7a99ac;
+        color: #fffff;
+        border-color: #ffffff;
+      }
+    }
+    .cond-body.col-sm-7 {
+      background-color: #00a9e0;
+      color: #fff;
+      text-align: center;
+      padding-bottom: 55px;
+    }
+  }
+  .view-related-products {
+    & .field-content .title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5em;
+    }
+    & .image img {
+      height: auto;
+      -moz-user-select: none;
+      margin-left: 50%;
+    }
+    & .prod-title {
+      text-transform: uppercase;
+      font-size: 3em;
+      margin-left: 50px;
+      margin-top: 50px;
+      display: block;
+    }
+    & .more a {
+      text-transform: uppercase;
+      border: 1px solid;
+      color: $brand-primary;
+      padding: 5px 10px;
+      display: -webkit-inline-box;
+      margin-left: 55px;
+      border-color: $brand-primary;
+      font-size: 0.9em;
+      &:hover {
+        text-decoration: none;
+        background-color: #7a99ac;
+        color: #ffffff;
+        border-color: #ffffff;
+      }
+    }
+  }
+
+  @media (max-width: $grid-float-breakpoint) {
+    #page-header {
+      background-color: transparent;
+    }
+
+  }
+  #content-wrapper {
+    background-color: rgba(255, 255, 255, 0.90);
+    .container {
+      padding-bottom: 30px;
+    }
+  }
+  .field-name-title {
+    flex: 100%;
+    -webkit-flex: 100%;
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0px;
+      &:after {
+        position: absolute;
+        top: 275px;
+        left: 50%;
+        content: "";
+        border-top: 1px solid #FFFFFF;
+        width: 120px;
+        margin-left: -60px;
+      }
+    }
+  }
+  .field-name-field-product-image {
+    float: left;
+    width: 25%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .field-name-field-product-subtitle {
+    float: right;
+    width: 75%;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-left: 30px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    @media (max-width: $screen-desktop) {
+      font-size: 18px;
+    }
+    @media (max-width: $screen-phone) {
+      font-size: 13px;
+    }
+  }
+  .field-name-field-product-info-image {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    clear: both;
+    margin-top: 70px;
+  }
+
+  .field-name-field-product-buy-link, .field-name-where-to-buy-button {
+    float: left;
+    a {
+      text-transform: uppercase;
+      font-size: 0.9em;
+      padding: 9px 20px;
+      @media (max-width: $screen-sm-max) {
+        font-size: 0.8em;
+        padding: 5px 10px;
+      }
+    }
+  }
+  .field-name-where-to-buy-button {
+    margin-left: 50px;
+    @media (max-width: $screen-sm-max) {
+      margin-left: 20px;
+    }
+  }
+
+  .region-content {
+    .col-sm-8 {
+      width: 62%;
+      padding-top: 30px;
+      float: left;
+    }
+    .col-sm-4 {
+      width: 38%;
+      padding-top: 30px;
+      float: left;
+    }
+    @media (max-width: $screen-tablet) {
+      .col-sm-8 {
+        width: 100%;
+      }
+      .col-sm-4 {
+        width: 100%;
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 30px;
+    border-right: 1px solid;
+    padding-right: 20px;
+    margin-bottom: 40px;
+    @media (max-width: $screen-phone) {
+      border: none;
+      margin-top: 10px;
+    }
+  }
+  .region-content-secondary {
+    text-align: center;
+    .block {
+      margin-bottom: 40px;
+    }
+    .block-title {
+      color: $brand-primary;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.1em;
+      position: relative;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      &:after {
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        content: "";
+        border-top: 1px solid #FFFFFF;
+        width: 120px;
+        margin-left: -60px;
+      }
+    }
+    .field-name-field-review-body {
+      max-width: 80%;
+      margin: 0 auto 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .field-name-node-link {
+      padding: 10px;
+      a {
+        text-transform: uppercase;
+        border: 1px solid;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .region-content-tertiary {
+    .block-views {
+      float: left;
+    }
+    #block-views-conditions-block {
+      width: 55%;
+      @media (max-width: $screen-phone) {
+        width: 100%;
+      }
+      .taxonomy-term.vocabulary-conditions.view-mode-widget {
+        background-color: $brand-primary;
+        color: #FFFFFF;
+        font-size: 0.9em;
+        .group-right {
+          text-align: center;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: "";
+            height: 0;
+            width: 0;
+            top: 110px;
+            left: -15px;
+            border-top: 15px inset rgba(255, 255, 255, 0);
+            border-bottom: 15px inset rgba(255, 255, 255, 0);
+            border-right: 15px solid $brand-primary;
+          }
+        }
+        .condition-fixed-title {
+          font-size: 1.8em;
+          position: relative;
+          margin: 10px 0 20px;
+          &:after {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            content: "";
+            border-top: 1px solid #FFFFFF;
+            width: 100px;
+            margin-left: -50px;
+          }
+        }
+        .taxonomy-term-description {
+          margin: 0 15px;
+        }
+        .field-name-more-link {
+          padding: 20px;
+          a {
+            text-transform: uppercase;
+            border: 1px solid;
+            color: #FFFFFF;
+            padding: 5px 10px;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    #block-views-related-products-block {
+
+      @media (max-width: $screen-phone) {
+        width: 100%;
+      }
+      .block-title {
+        background-color: #FFFFFF;
+        margin: 0 0 0 20px;
+        padding-top: 10px;
+        font-size: 1.4em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .view-related-products {
+        margin-left: 20px;
+        background-color: #FFFFFF;
+        .field-name-field-product-image {
+          width: 100%;
+          img {
+            width: auto;
+            max-height: 200px;
+          }
+        }
+        .field-name-node-link {
+          padding: 20px;
+          a {
+            text-transform: uppercase;
+            border: 1px solid;
+            padding: 5px 10px;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .jcarousel-skin-default {
+        .jcarousel-container-horizontal {
+          width: 400px;
+          height: auto;
+          padding: 12px 20px 0;
+        }
+        .jcarousel-clip-horizontal {
+          width: 360px;
+        }
+        .jcarousel-item {
+          height: 217px;
+          border: none;
+        }
+        .jcarousel-prev-horizontal {
+          left: 0;
+          top: 90px;
+          &:hover,
+          &:active {
+            background-position: 0 0;
+          }
+        }
+        .jcarousel-next-horizontal {
+          right: 0;
+          top: 90px;
+          &:hover,
+          &:active {
+            background-position: 0 -32px;
+          }
+        }
+        .jcarousel-next, .jcarousel-prev {
+          background-image: url(../images/arrows.png);
+        }
+      }
+    }
+  }
+  .field-group-bootstrap_fieldgroup_nav {
+    margin-bottom: 10px;
+  }
+  @media (max-width: $screen-tablet) {
+    .mobile-only-buttons {
+      display: block;
+    }
+    .col-sm-4 {
+      text-align: center;
+      .field-name-field-product-buy-link,
+      .field-name-where-to-buy-button {
+        display: none;
+      }
+    }
+    .field-name-field-product-info-image {
+      margin-top: 0;
+    }
+    #clinical-studies-button li {
+      float: none;
+      margin: 0 auto 20px;
+      width: 200px;
+    }
+  }
+
+  @media (min-width: top-ba) {
+
+    #info-image {
+      display: block !important;
+    }
+    #clinical-studies-button {
+      display: none;
+    }
+  }
+
+}
+
+#block-ds-extras-banner {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  display: -webkit-flex;
+  padding-bottom: 30px;
+}
+
+/* ACCORDION RE-STYLE */
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br, .ui-corner-left, .ui-corner-top {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #e6e6e6;
+  border: none;
+  color: inherit;
+}
+
+.ui-widget {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #7a99ac;
+}
+
+.ui-widget-content {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #7a99ac
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 1.2em 1.2em;
+  border-top: 0;
+  overflow: auto;
+  background: #e6e6e6;
+  border: none;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+  color: #00a9e0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* MOBILE BUTTONS */
+
+@media (max-width: $screen-tablet) {
+
+  .field-group-bootstrap_fieldgroup_nav li {
+    width: 40%;
+    padding: 0px;
+    margin: 15px;
+  }
+
+  .nav-pills > li > a {
+    outline: none;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-pills > li + li {
+    margin: 15px;
+  }
+
+  .mobile-only-buttons .field-name-field-product-buy-link {
+    width: 40%;
+    margin: 5px 12px 15px 15px;;
+
+  }
+
+  .mobile-only-buttons .field-name-where-to-buy-button {
+    width: 40%;
+    margin: 5px 15px 15px 15px;
+  }
+
+  .field.field-name-field-product-information {
+    clear: both;
+    padding-top: 20px;
+  }
+
+  .field-name-field-product-buy-link a, .field-name-where-to-buy-button a {
+    padding: 10px !important;
+    width: 100%;
+  }
+
+  .page-node.node-type-product .tab-content {
+    border-right: none;
+  }
+
+  .page-node.node-type-product .field-name-field-product-info-image img {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: $screen-phone) {
+  .page-node.node-type-product {
+    .field-name-title {
+
+      h1 {
+
+        &:after {
+          display: none !important;
+        }
+      }
+    }
+
+    .view-leave-a-testimonial {
+      .panel-heading {
+        width: 100% !important;
+      }
+      .panel {
+        margin-top: 20px;
+      }
+    }
+    .flexslider.optionset-dermal-therapy-testinomials {
+
+      li {
+
+        padding: 30px 10px;
+        text-align: center;
+      }
+    }
+    section#block-views-11d287f0dab888795c67e49bfb01f5ba {
+      width: 100%;
+      float: left;
+
+      margin-bottom: 25px;
+    }
+    section#block-views-beauty-review-button-block, section#block-views-leave-a-testimonial-block {
+      margin-left: 3%;
+    }
+  }
+
+}
+
+.click-and-collect {
+  float: left;
+  padding: 10px 0;
+  margin: 20px auto;
+
+  img {
+    max-width: 89%;
+  }
+
+  @media (max-width: $screen-md) {
+    img {
+      max-width: 83%;
+    }
+  }
+
+  @media (max-width: $screen-phone) {
+    text-align: center;
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.mobile-centered {
+  @media (max-width: $screen-phone) {
+    float: none;
+  }
+}
+
+.w2b-click-collect {
+  margin: 30px 0;
+  img {
+    float: right;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin: 0;
+    img {
+      float: none;
+    }
+  }
+}

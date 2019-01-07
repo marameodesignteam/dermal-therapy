@@ -1,0 +1,283 @@
+.page-homepage {
+  .content-secondary-fluid {
+    background-color: #d9f2fa;
+    color: $navy-dark;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .footer-fluid {
+    background-color: #ffffff;
+  }
+  #block-conf-block-welcome-block {
+    width: 85%;
+    margin: 0 auto;
+    .block-title {
+      font-size: 38px;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:after {
+        content: "";
+        width: 150px;
+        height: 2px;
+        border-bottom: 2px solid $navy-dark;
+        margin: 15px auto 20px;
+        display: block;
+      }
+    }
+    a.btn {
+      margin-top: 20px;
+    }
+  }
+
+  .btn-default {
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid;
+    color: #7a99ac;
+    padding: 5px 10px;
+    &:hover {
+      text-decoration: none;
+      background-color: #7a99ac;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+  }
+  #block-menu-menu-footer-menu {
+    float: right;
+    .nav > li {
+      display: inline-block;
+      a {
+        color: $navy-dark;
+        text-transform: uppercase;
+        padding: 0px 10px;
+        border-right: 1px solid;
+        font-size: 0.9em;
+      }
+      &:last-child {
+        a {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.node-homepage-featured-content {
+  position: relative;
+  overflow: hidden;
+  @media (max-width: $screen-tablet) {
+    height: 260px;
+    margin-top: 10px;
+    .field-name-title {
+      margin-top: 15% !important;
+    }
+  }
+  @media (max-width: $screen-phone) {
+    height: 230px;
+    margin-top: 5px;
+    .field-name-title {
+      margin-top: 12% !important;
+    }
+  }
+  .field-name-title, .group-hover {
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+  }
+  .field-name-title {
+    z-index: 1;
+    margin-top: 35%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    h2 {
+      font-size: 24px;
+    }
+  }
+  .field-name-field-hfc-image {
+    .field-items {
+      overflow: hidden;
+    }
+    img {
+      @include prefixed("transform", "scaleY(1)");
+      @include prefixed("transition", "all 0.7s ease-in-out");
+      width: 100%;
+      height: auto;
+    }
+  }
+  .group-hover {
+    background-color: $brand-primary;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+    @include prefixed("transition", "all 0.5s linear");
+    @include opacity(0);
+    .field {
+      margin: 10px 20px;
+      color: #ffffff;
+
+    }
+    .field-item {
+      @include opacity(0);
+      @include prefixed("transform", "scale(0)");
+      @include prefixed("transition", "all 0.5s linear");
+    }
+    .field-name-field-hfc-hover-title {
+      font-size: 30px;
+      line-height: 30px;
+      margin-top: 20px;
+    }
+    .field-name-field-hfc-hover-text {
+      color: #ffffff;
+      span {
+        display: block;
+      }
+    }
+    .field-name-field-hfc-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  &:hover {
+    .field-name-field-hfc-image img, .field-name-title {
+      @include prefixed("transform", "scale(10)");
+      @include opacity(0);
+    }
+    .group-hover {
+      @include opacity(1);
+      .field-item {
+        @include opacity(1);
+        @include prefixed("transform", "scale(1)");
+      }
+    }
+  }
+}
+
+// Tablet fixes
+@media (min-width: $screen-tablet) and (max-width: $screen-desktop) {
+  .node-homepage-featured-content {
+    .field-name-title {
+      margin-top: 30%;
+      h2 {
+        font-size: 20px;
+      }
+    }
+    .group-hover {
+      .field {
+        margin: 10px;
+      }
+      .field-name-field-hfc-hover-text {
+        font-size: 12px;
+        line-height: 13px;
+      }
+      .field-name-field-hfc-hover-title {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+  .view-nodequeue-2 {
+    .node-review.view-mode-widget {
+      .field-name-title {
+        h2 {
+          margin-top: 30px;
+          font-size: 20px;
+          &:after {
+            width: 80px;
+          }
+        }
+      }
+      .field-name-field-review-country, .field-name-field-review-city {
+        font-size: 1em;
+      }
+      .field-name-field-review-body {
+        margin: 20px 15px;
+        font-size: 11px;
+        line-height: 11px;
+      }
+    }
+  }
+}
+
+//view-nodequeue-2 .node-review.view-mode-widget .group-transform-container
+
+//Mobile Testimonial
+@media (max-width: 768px) {
+  .view-nodequeue-2 {
+    .row {
+      .col.col-sm-3:first-child {
+        .node-review.view-mode-widget .group-transform-container {
+          width: 230px;
+          height: 230px;
+          margin-left: auto;
+          margin-right: auto;
+          transition: all 0.4s ease-in-out;
+          transform-style: preserve-3d;
+        }
+      }
+    }
+  }
+}
+
+//Mobile Sub Menu Block
+@media (min-width: $screen-tablet) {
+  .navbar.mobilefront {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar.mobilefront {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -25px;
+    li.leaf {
+
+      a {
+        color: #ffffff;
+        background-color: #00a9e0;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 700;
+
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+    li.leaf.first {
+
+      padding-right: 8px;
+    }
+    li.leaf.last {
+      padding-left: 8px;
+    }
+
+  }
+}
+
+@media (max-width: $screen-phone) {
+  .navbar.mobilefront {
+    margin-top: 10px !important;
+    margin-bottom: -25px !important;
+    li.leaf {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar.mobilefront {
+    li.leaf {
+      a {
+        font-size: 14px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+}

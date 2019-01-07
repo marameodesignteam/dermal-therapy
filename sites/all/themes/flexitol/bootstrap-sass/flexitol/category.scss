@@ -1,0 +1,211 @@
+.page-taxonomy.page-taxonomy-term {
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    width: 10%;
+    border-top: 2px solid #7a99ac;
+  }
+  #block-views-category-block {
+    display: none;
+    margin: 20px 20%;
+  }
+  .field-content p {
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    word-spacing: 0.3em;
+  }
+  .field.field-name-field-product-image.field-type-image.field-label-hidden {
+    text-align: -webkit-center;
+    padding-bottom: 4%;
+    min-height: 320px;
+  }
+  img {
+    margin: auto;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    #block-views-category-block-1 {
+      display: none;
+    }
+    #block-views-category-block {
+      display: block;
+    }
+  }
+  .view-category {
+    color: #FFFFFF;
+    .views-field-name {
+      position: relative;
+      h1 {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 50px;
+        &:after {
+          position: absolute;
+          bottom: -25px;
+          left: 50%;
+          content: "";
+          border-top: 1px solid #FFFFFF;
+          width: 120px;
+          margin-left: -60px;
+        }
+      }
+    }
+    .views-field-description {
+      text-align: center;
+      margin: 0 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .view-products {
+    .views-row {
+      margin-bottom: 5px;
+    }
+  }
+  #block-views-products-block {
+    padding: 0 0px 0px 0px;
+  }
+  .view-id-category.view-display-id-block_1 {
+    background-image: linear-gradient(0deg, #797979, #636363);
+    padding-top: 10px;
+  }
+  .well {
+    background: transparent;
+    border: none;
+    padding: 0;
+    a {
+      color: #FFFFFF;
+    }
+  }
+  .region-sidebar-first {
+    @media (max-width: $grid-float-breakpoint) {
+      text-align: center;
+      padding-top: 0;
+    }
+    background-color: $brand-primary;
+    margin-bottom: 0;
+    padding-top: 5px;
+    h3 {
+      text-transform: uppercase;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-left: 10px;
+      &.active {
+        color: $brand-primary !important;
+        background-color: #f5f5f5;
+        display: block;
+        width: 100%;
+      }
+    }
+    #block-views-conditions-menu-block {
+      padding-left: 0px;
+      padding-top: 10px;
+    }
+    @media (min-width: $screen-sm) {
+      #block-views-conditions-menu-block {
+        padding-left: 0px;
+        .view.view-conditions-menu {
+          h3 {
+            a {
+              color: #ffffff;
+
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: $screen-md) {
+      #block-views-conditions-menu-block {
+        padding-left: 0px;
+        .view.view-conditions-menu {
+          h3 {
+            a {
+              color: #ffffff;
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .region-content {
+    padding-bottom: 40px;
+    .field-name-field-conditions-main-blurb {
+      padding-left: 5%;
+      padding-right: 5%;
+
+      p {
+        text-align: left;
+        font-size: 1.15em;
+        padding-bottom: 20px;
+        padding-top: 10px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 15px;
+      min-height: 75px;
+
+    }
+    @media (min-width: $screen-md) {
+      h2 {
+        font-size: 26px;
+      }
+    }
+
+    .field-item.even[property="dc:title"] {
+      margin-bottom: 30px;
+    }
+    .views-row {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+    .field-name-node-link {
+      padding: 10px;
+      a {
+        text-transform: uppercase;
+        border: 1px solid;
+        color: $navy-dark;
+        padding: 5px 10px;
+        &:hover {
+          text-decoration: none;
+          background-color: $navy-dark;
+          color: #ffffff;
+          border-color: #ffffff;
+        }
+      }
+    }
+  }
+  #content-wrapper {
+    > .container {
+      > .row {
+        > .col-sm-3, > .col-sm-4 {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        > .content-column {
+          background-color: rgba(255, 255, 255, 0.90);
+        }
+      }
+    }
+  }
+}
+
+.product-category-container {
+  width: 100%;
+  margin: auto;
+}
+
+/* ????????????????
+.page-taxonomy-term-10 .product-category-container {
+  width: 700px;
+}*/

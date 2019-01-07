@@ -1,0 +1,367 @@
+diff --git a/taxonomy_menu.admin.inc b/taxonomy_menu.admin.inc
+index 804d582..cb49e0e 100644
+--- a/taxonomy_menu.admin.inc
++++ b/taxonomy_menu.admin.inc
+@@ -153,9 +153,20 @@ function taxonomy_menu_form_taxonomy_form_vocabulary(&$form, &$form_state) {
+   $form['taxonomy_menu']['options_markup']['display_num'] = array(
+     '#type' => 'checkbox',
+     '#title' => t('Display the count of nodes referencing a term in the menu link title.'),
+-    '#description' => t('Number of nodes is calculated the Drupal Core way. This is not recursive by default.'),
++    '#description' => t('Number of nodes is calculated the Drupal Core way.'),
+     '#default_value' => taxonomy_menu_variable_get('display_num', $vid, $defaults['display_num']),
+   );
++  $form['taxonomy_menu']['options_markup']['include_children'] = array(
++    '#type' => 'checkbox',
++    '#title' => t('Count children'),
++    '#description' => t('Include nodes attached to child terms in count.'),
++    '#default_value' => taxonomy_menu_variable_get('include_children', $vid, $defaults['include_children']),
++    '#states' => array(
++      'visible' => array(
++        ':input[name="taxonomy_menu[options_markup][display_num]"]' => array('checked' => TRUE),
++      ),
++    ),
++  );
+   /*$form['taxonomy_menu']['options_markup']['voc_item_description'] = array(
+     '#type' => 'checkbox',
+     '#title' => t('Add description for vocabulary'),
+@@ -317,6 +328,7 @@ function taxonomy_menu_taxonomy_menu_vocabulary_settings() {
+     'expanded' => TRUE,
+     'term_item_description' => FALSE,
+     'display_num' => FALSE,
++    'include_children' => FALSE,
+     'hide_empty_terms' => FALSE,
+     'flat' => FALSE,
+     'voc_item_description' => FALSE,
+diff --git a/taxonomy_menu.module b/taxonomy_menu.module
+index 876032a..7ca50f9 100644
+--- a/taxonomy_menu.module
++++ b/taxonomy_menu.module
+@@ -144,16 +144,6 @@ function taxonomy_menu_menu_links_delete($vid) {
+ function taxonomy_menu_menu_link_prepare($term, $menu_name) {
+   static $weight = 0;
+   $langcode = isset($term->language) ? $term->language : LANGUAGE_NONE;
+-  $recursive_count = FALSE;
+-
+-  // Count nodes attached to a taxonomy term if the settings require it.
+-  // TODO Make the recursivity of node count optional.
+-  $display_count = taxonomy_menu_variable_get('display_num', $term->vid, FALSE);
+-  $hide_term = taxonomy_menu_variable_get('hide_empty_terms', $term->vid, FALSE);
+-  if ($hide_term || $display_count) {
+-    $nodes_count = taxonomy_menu_term_count_nodes($term->tid, $recursive_count);
+-    $is_hidden = ($hide_term && (!$nodes_count || $nodes_count == 0)) ? 1 : 0;
+-  }
+ 
+   // Load or create a menu link corresponding the taxonomy term being processed.
+   $menu_link = taxonomy_menu_menu_link_load($term, $langcode);
+@@ -177,23 +167,30 @@ function taxonomy_menu_menu_link_prepare($term, $menu_name) {
+     $menu_link['weight'] = $term->weight;
+     $menu_link['plid'] = taxonomy_menu_term_get_plid($term, $langcode);
+   }
+-  // Empty terms.
+-  $menu_link['hidden'] = isset($is_hidden) ? $is_hidden :  $menu_link['hidden'];
+ 
+   // Menu link title.
+   $menu_link['link_title'] = $term->name;
+-  if ($display_count && $nodes_count > 0) {
+-    $menu_link['link_title'] .= " (" . $nodes_count . ")";
+-  }
++
+   // HTML title attribute.
+   if (taxonomy_menu_variable_get('display_title_attr', $term->vid, TRUE)) {
+     $term_description = taxonomy_menu_variable_get('term_item_description', $term->vid, 0);
+   }
+   $menu_link['options']['attributes']['title'] = (isset($term_description) && $term_description == 1) ? trim($term->description) : '';
++
+   // Path.
+   $link_path = taxonomy_menu_path_get($term);
+   $menu_link['link_path'] = drupal_get_normal_path($link_path, $langcode);
+ 
++  // If node count or hide empty is enabled, alter needs to be set to TRUE
++  // for hook_translated_menu_link_alter to be invoked when loading the menu item.
++  $alter = taxonomy_menu_variable_get('display_num', $term->vid, FALSE)
++    || taxonomy_menu_variable_get('hide_empty_terms', $term->vid, FALSE);
++
++  if ($alter) {
++    // TODO Hide empty terms here instead of altering the items each request.
++    $menu_link['options']['alter'] = TRUE;
++  }
++
+   return $menu_link;
+ }
+ 
+@@ -231,7 +228,6 @@ function taxonomy_menu_menu_link_load($term, $langcode){
+     $menu_link['language'] = $langcode;
+     $menu_link['taxonomy_menu']['update'] = FALSE;
+   }
+-
+   return $menu_link;
+ }
+ 
+@@ -353,38 +349,6 @@ function taxonomy_menu_taxonomy_term_delete($term) {
+ }
+ 
+ /**
+- * Implements hook_node_insert().
+- *
+- * @TODO Update the menu items count, empty terms.
+- */
+-function taxonomy_menu_node_insert($node) {
+-}
+-
+-/**
+- * Implements hook_node_update().
+- *
+- * @TODO Update the menu items count, empty terms.
+- */
+-function taxonomy_menu_node_update($node) {
+-}
+-
+-/**
+- * Implements hook_node_presave().
+- *
+- * @TODO Update the menu items count, empty terms.
+- */
+-function taxonomy_menu_node_presave($node) {
+-}
+-
+-/**
+- * Implements hook_node_delete().
+- *
+- * @TODO Update the menu items count, empty terms.
+- */
+-function taxonomy_menu_node_delete($node) {
+-}
+-
+-/**
+  * Abstraction of hook_node_<op>().
+  *
+  * @param $node
+@@ -522,24 +486,42 @@ function _taxonomy_menu_children_has_nodes($tid, $vid, $return = FALSE) {
+  * @return int
+  *   The number of nodes attached to a term and optionally its children.
+  *
+- * @TODO Make function recursive.
+  */
+ function taxonomy_menu_term_count_nodes($tid, $recursive = FALSE) {
+   if ($tid == 0 || !variable_get('taxonomy_maintain_index_table', TRUE)) {
+-    return FALSE;
++    return 0;
+   }
+-  if ($recursive) {
+-    //@TODO Make it recursive.
++  // Cache node counts to prevent redundant db calls when recursion is set or
++  // menu appears more than once.
++  $node_counts = &drupal_static(__FUNCTION__);
++  if (!isset($node_counts)) {
++    $node_counts = array();
+   }
+-  else {
++  // Not cached, count.
++  if (!isset($node_counts[$tid])) {
+     $query = db_select('taxonomy_index', 't');
+     $query->condition('tid', $tid);
+     $query->addField('t', 'nid');
+     $query->addField('t', 'tid');
++    // Check node access.
++    $query->addTag('node_access');
+     $count = $query->countQuery()->execute()->fetchField();
+-  }
+ 
+-  return $count;
++    if ($recursive) {
++      // Load all child terms for term.
++      // @see taxonomy_get_children()
++      $query = db_select('taxonomy_term_data', 't');
++      $query->join('taxonomy_term_hierarchy', 'h', 'h.tid = t.tid');
++      $query->addField('t', 'tid');
++      $query->condition('h.parent', $tid);
++      $tids = $query->execute()->fetchCol();
++      foreach ($tids as $child_tid) {
++        $count += taxonomy_menu_term_count_nodes($child_tid, $recursive);
++      }
++    }
++    $node_counts[$tid] = $count;
++  }
++  return $node_counts[$tid];
+ }
+ 
+ /**
+@@ -631,58 +613,35 @@ function taxonomy_menu_get_paths() {
+ /**
+  * Implements hook_translated_menu_link_alter().
+  *
+- * Translate menu links on the fly by using term translations.
++ * Hide empty menu items and add node counts.
+  */
+ function taxonomy_menu_translated_menu_link_alter(&$item, $map) {
+-  if (module_exists('i18n_taxonomy')) {
+-    // In case of localized terms, use term translation for menu title.
+-    if ($item['module'] == 'taxonomy_menu') {
+-      $t = _taxonomy_menu_get_item($item['mlid']);
+-      // Only translate when term exist (may per example occur with stray menu item)
+-      if ($t) {
+-        // Only translate when translation mode is set to localize
+-        if (i18n_taxonomy_vocabulary_mode($t->vid, I18N_MODE_LOCALIZE)) {
+-          // this is a term
+-          if ($t->tid > 0) {
+-            $term = taxonomy_term_load($t->tid);
+-            $display_num = '';
+-            $num = _taxonomy_menu_term_count($t->tid);
+-
+-            // If hide menu is selected and the term count is 0 and the term has no children then do not create the menu item
+-            if ($num == 0 && taxonomy_menu_variable_get('hide_empty_terms', $t->vid, FALSE) && !_taxonomy_menu_children_has_nodes($t->tid, $t->vid)) {
+-              $display_num = '';
+-            }
+-            // if display number is selected and $num > 0 then change the title
+-            elseif (taxonomy_menu_variable_get('display_num', $t->vid, FALSE)) {
+-              // if number > 0 and display decendants, then count all of the children
+-              if (taxonomy_menu_variable_get('display_descendants', $t->vid, FALSE)) {
+-                $num = taxonomy_menu_term_count_nodes($t->tid);
+-              }
+-              $display_num = " ($num)";
+-            }
+-
+-            if ($item['title'] != ($term->name . $display_num)) {
+-              // Should not happen
+-              watchdog('error', 'Menu and taxonomy name mismatch: @title != @name', array('@title' => $item['title'], '@name' => $term->name . $display_num));
+-            }
+-
+-            $term = i18n_taxonomy_localize_terms($term);
+-            $item['title'] = $item['link_title'] = $term->name . $display_num;
+-            if ($term->description) {
+-              $item['options']['attributes']['title'] = $term->description;
+-            }
+-          }
+-          // is a vocabulary
+-          else {
+-            $vocab = taxonomy_vocabulary_load($t->vid);
+-            $item['title'] = i18n_string('taxonomy:vocabulary:' . $vocab->vid . ':name', $vocab->name);
+-          }
+-        }
+-      }
+-      // no term, add a watchdog entry to help
+-      else {
+-        watchdog('taxonomy_menu', 'Error with menu entry "%me" in menu "%mt"', array('%me' => $item['title'], '%mt' => $item['menu_name']));
+-      }
++  if ($item['module'] != 'taxonomy_menu') {
++    return;
++  }
++
++  // Load menu item term info.
++  $term_info = _taxonomy_menu_get_item($item['mlid']);
++  if(!$term_info) {
++    // No term found, add a watchdog entry to help.
++    // TODO When can this happen?
++    watchdog('taxonomy_menu', 'Error with menu entry "%me" in menu "%mt"', array('%me' => $item['title'], '%mt' => $item['menu_name']));
++    return;
++  }
++
++  // Hide empty terms
++  $display_num = taxonomy_menu_variable_get('display_num', $term_info->vid, FALSE);
++  $hide_empty_terms = taxonomy_menu_variable_get('hide_empty_terms', $term_info->vid, FALSE);
++
++  if ($display_num || $hide_empty_terms) {
++    $recursive = taxonomy_menu_variable_get('include_children', $term_info->vid, FALSE);;
++    $node_count = taxonomy_menu_term_count_nodes($term_info->tid, $recursive);
++    if ($hide_empty_terms && !$node_count) {
++      // Hide term.
++      $item['hidden'] = 1;
++    }
++    elseif ($display_num) {
++      $item['title'] .= ' (' . $node_count . ')';
+     }
+   }
+ }
+diff --git a/tests/taxonomy_menu.test b/tests/taxonomy_menu.test
+index a9b98e7..4c411d5 100644
+--- a/tests/taxonomy_menu.test
++++ b/tests/taxonomy_menu.test
+@@ -92,15 +92,9 @@ abstract class TaxonomyMenuWebTestCase extends TaxonomyWebTestCase {
+    *   An array containing properties to verify.
+    */
+   public function assertMenuLink($mlid, array $expected_item) {
+-    // Retrieve menu link.
+-    $item = db_query('SELECT * FROM {menu_links} WHERE mlid = :mlid', array(':mlid' => $mlid))->fetchAssoc();
+-    $options = unserialize($item['options']);
+-    if (!empty($options['query'])) {
+-      $item['link_path'] .= '?' . drupal_http_build_query($options['query']);
+-    }
+-    if (!empty($options['fragment'])) {
+-      $item['link_path'] .= '#' . $options['fragment'];
+-    }
++    // Retrieve menu link. Menu link needs to be loaded in order
++    // to invoke taxonomy_menu_translated_menu_link_alter().
++    $item = menu_link_load($mlid);
+     foreach ($expected_item as $key => $value) {
+       $this->assertEqual($item[$key], $value, t('Parameter %key had expected value.', array('%key' => $key)));
+     }
+@@ -710,9 +704,7 @@ class TaxonomyMenuConfigurationTest extends TaxonomyMenuWebTestCase {
+   }
+ 
+   /**
+-   * Tests Taxonommy Menu "Node count" option.
+-   *
+-   * @TODO Add a test for recursive count.
++   * Tests Taxonomy Menu "Node count" option.
+    */
+   public function testTaxonomyMenuCountNodes() {
+     $voc_machine_name = $this->vocabulary->machine_name;
+@@ -771,11 +763,55 @@ class TaxonomyMenuConfigurationTest extends TaxonomyMenuWebTestCase {
+             break;
+         }
+         if (in_array($index, $positive_count_terms_index)) {
+-          $this->assertMenuLink($mlid, array('link_title' => $term->name . ' (' . $count . ')'));
++          $this->assertMenuLink($mlid, array('title' => $term->name . ' (' . $count . ')'));
+         }
+-        else {
+-          $this->assertMenuLink($mlid, array('link_title' => $term->name));
++        $this->assertMenuLink($mlid, array('link_title' => $term->name));
++      }
++      else {
++        $this->fail('No mlid could be found for the term ' . $term->tid);
++      }
++      $index++;
++    }
++
++    /*
++      Enable recursive counting.
++
++      We expect the following result for number of items:
++      - terms[1]: count is 4
++      - terms[3]: count is 4
++      - terms[4]: count is 2
++      - terms[5]: count is 1
++      - terms[6]: count is 1
++      - Others  : count is 0
++    */
++    $edit = array(
++      'taxonomy_menu[options_markup][include_children]' => TRUE,
++    );
++    $this->drupalPost('admin/structure/taxonomy/' . $voc_machine_name . '/edit', $edit, t('Save'));
++    foreach ($this->terms_hierarchy as $term) {
++      $mlid = _taxonomy_menu_get_mlid($term->tid, $this->vocabulary->vid);
++      $menu_link = menu_link_load($mlid);
++      if ($mlid) {
++        switch ($index) {
++          case '1':
++          case '3':
++            $count = 4;
++            break;
++          case '4':
++            $count = 2;
++            break;
++          case '5':
++          case '6':
++            $count = 1;
++            break;
++          default:
++            $count = 0;
++            break;
++        }
++        if (in_array($index, $positive_count_terms_index)) {
++          $this->assertMenuLink($mlid, array('title' => $term->name . ' (' . $count . ')'));
+         }
++        $this->assertMenuLink($mlid, array('link_title' => $term->name));
+       }
+       else {
+         $this->fail('No mlid could be found for the term ' . $term->tid);

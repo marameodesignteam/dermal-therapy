@@ -1,0 +1,27 @@
+/* where to buy page */
+.page-node.page-node-.page-node-30.node-type-page {
+  .field-name-body {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5% 9.5%;
+    font-weight: 400;
+    text-align: justify;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  p.highlight {
+    color: $brand-primary;
+    font-weight: 600;
+  }
+  section#block-block-1, section#block-block-10 {
+    padding-top: 2%;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+  }
+
+  #block-block-1 .row {
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

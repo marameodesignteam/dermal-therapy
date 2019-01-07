@@ -1,0 +1,107 @@
+body.node-type-conditions {
+
+  section#block-ds-extras-banner-conditions {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 1.4em;
+    hr {
+      width: 10%;
+      border-top: 2px solid #eeeeee;
+    }
+  }
+
+  aside.col-sm-3 {
+    padding-right: 0;
+    padding-left: 0;
+
+    .region-sidebar-first {
+
+      @media (max-width: $grid-float-breakpoint) {
+        text-align: center;
+        padding-top: 0;
+      }
+      background-color: #ffffff;
+      margin-bottom: 0;
+      padding-top: 0;
+      h3 {
+        text-transform: uppercase;
+      }
+      a {
+        color: #ffffff;
+      }
+      #block-views-conditions-menu-block {
+        background-color: $brand-primary;
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
+      @media (min-width: $screen-sm) {
+        #block-views-conditions-menu-block {
+          padding-left: 15px;
+          .view.view-conditions-menu {
+            h3 {
+              a {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: $screen-md) {
+        #block-views-conditions-menu-block {
+          padding-left: 35px;
+          .view.view-conditions-menu {
+            h3 {
+              a {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: $screen-lg) {
+        section#block-views-8a88aca1c0589e095165a67e4cdec26f img {
+          margin: 0 auto;
+
+        }
+      }
+      @media (min-width: $screen-lg) {
+        section#block-views-8a88aca1c0589e095165a67e4cdec26f {
+          margin-left: 17px;
+        }
+      }
+    }
+
+  }
+
+  section.content-column.col-sm-9 {
+    background-color: rgba(255, 255, 255, 0.9);
+    section#block-system-main {
+      padding-left: 35px;
+      padding-right: 35px;
+      hr {
+        width: 10%;
+        border-top: 2px solid #7a99ac;
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+
+  }
+
+}
+
+/*
+section#block-views-8a88aca1c0589e095165a67e4cdec26f{
+  position: fixed;  bottom: 10px; 
+}*/
+/*
+.block.block-views.contextual-links-region.clearfix.affix{
+      position:fixed;
+    top:0px;
+    background:#f09;
+    color:#fff;
+    padding:10px;
+}
+*/

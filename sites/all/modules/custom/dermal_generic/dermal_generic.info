@@ -1,0 +1,4 @@
+name = Dermal Generic
+description = Generic module for Dermal
+package = MarameoDesign
+core = 7.x

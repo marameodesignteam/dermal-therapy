@@ -1,0 +1,15 @@
+name = res_fav_feature
+description = feature to save responsive favicon configuration
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = responsive_favicons
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[user_permission][] = administer responsive favicons
+features[variable][] = responsive_favicons_path
+features[variable][] = responsive_favicons_remove_default
+features[variable][] = responsive_favicons_tags
+features[variable][] = responsive_favicons_upload

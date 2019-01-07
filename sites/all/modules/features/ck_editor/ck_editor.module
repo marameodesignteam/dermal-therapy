@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ck editor feature.
+ */
+
+include_once 'ck_editor.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the res_fav_feature feature.
+ */
+
+include_once 'res_fav_feature.features.inc';
