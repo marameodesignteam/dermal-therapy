@@ -57,21 +57,9 @@ DirectoryIndex index.php index.html index.htm
   </FilesMatch>
 </IfModule>
 
-<IfModule mod_rewrite.c>
-
-  RewriteEngine On 
-
-  RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
-  RewriteCond %{HTTP:X-Forwarded-Proto} =""
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-</IfModule>
-
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
-
-  RewriteEngine On 
+  RewriteEngine on
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
@@ -113,8 +101,8 @@ DirectoryIndex index.php index.html index.htm
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
   # uncomment the following:
-   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-   RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
@@ -164,5 +152,3 @@ DirectoryIndex index.php index.html index.htm
   # Disable content sniffing, since it's an attack vector.
   Header always set X-Content-Type-Options nosniff
 </IfModule>
-
-AddHandler application/x-httpd-php56 .php .php5 .php4 .php3
