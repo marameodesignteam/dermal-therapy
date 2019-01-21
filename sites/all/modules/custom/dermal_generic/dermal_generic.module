@@ -94,3 +94,15 @@ function dermal_generic_cron() {
 
   watchdog(WATCHDOG_ALERT, "Added/updated {$count} reviews");
 }
+
+/**
+ * Implements hook_node_presave().
+ *
+ * @param $node
+ */
+function dermal_generic_node_presave($node) {
+    global $user;
+    if ($node->type == 'product' && isset($node->nid) && isset($user->uid)) {
+        $node->field_beauty_review_data = $node->original->field_beauty_review_data;
+    }
+}
