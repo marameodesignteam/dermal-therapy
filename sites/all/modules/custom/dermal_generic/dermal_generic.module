@@ -122,22 +122,22 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
       $description = strip_tags($context['entity']->field_product_information['und'][0]['value']);
       $data = array(
         '#type' => 'markup',
-        '#markup' => "<script type='application/ld+json'>
+        '#markup' => '<script type="application/ld+json">
 {
-  '@context': 'https://schema.org/',
-  '@type': 'Product',
-  'name': '{$context['entity']->title}',
-  'image': [
-    '{$image}',
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "' . $context["entity"]->title . '",
+  "image": [
+    "' . $image . '",
    ],
-  'description': '{$description}',
-  'mpn': '925872',
-  'brand': {
-    '@type': 'Thing',
-    'name': 'Dermal Therapy'
+  "description": "' . $description . '",
+  "mpn": "925872",
+  "brand": {
+    "@type": "Thing",
+    "name": "Dermal Therapy"
   }
 }
-</script>");
+</script>');
 
       $layout_render_array['left'][] = $data;
     }
