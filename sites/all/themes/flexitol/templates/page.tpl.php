@@ -88,7 +88,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
             	echo "AUS";
             } elseif ($_domain['domain_id'] == 2){
             	echo "SG";
-            } elseif($_domain['domain_id'] == 3){ 
+            } elseif($_domain['domain_id'] == 3){
             	echo "NZ";
             } else {
             	echo "AUS";
@@ -140,7 +140,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 				<?php global $base_url; ?>
 				<input type="checkbox" id="op"></input>
 
-				 
+
 
 					<div id="countryselecdt-dsktop" class="countryselecdt lower">
 						<label for="op">
@@ -160,6 +160,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 					</div>
 					<?php if ($_domain['domain_id'] == 2) {
 						echo '<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>';
+						echo '<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>';
 					} elseif ($_domain['domain_id'] == 1) {
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>';
@@ -167,12 +168,12 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>';
 					}
-					
+
 					?>
 			<!--  <a href="#"><span class="header-icon header-icon-world"></span></a> -->
 			  <a class="searchicon" href="#"><i class="fa fa-search"></i></a>
 			  <div class="sblock"><?php $search_form = drupal_get_form('search_block_form'); print render($search_form);?>
-			  	
+
 			  </div>
 				<?php include 'overlay.tpl.php'; ?>
 			  <!-- <div id="countryselecdt-dsktop"class="countryselecdt"> -->
@@ -294,8 +295,9 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 
 
       <?php elseif ($_domain['domain_id'] == 2):  ?>
-
+			<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>
       	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>
+
 
       <?php else:  ?>
 
