@@ -107,46 +107,39 @@ function dermal_generic_node_presave($node) {
     }
 }
 
+/**
+ * Implements hook_ds_pre_render_alter()
+ *
+ * @param $layout_render_array
+ * @param $context
+ * @param $vars
+ */
 function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$vars) {
   if ($context['entity_type'] == 'node' && $context['entity']->type == 'product') {
-    $data = array(
-      '#type' => 'markup',
-      '#markup' => '<script type="application/ld+json">
+    $current = domain_get_domain();
+    if ($current['machine_name'] == 'australia_dt') {
+      $image = image_style_url('width_250', $context['entity']->field_product_image['und'][0]['uri']);
+      $data = array(
+        '#type' => 'markup',
+        '#markup' => "<script type='application/ld+json'>
 {
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Executive Anvil",
-  "image": [
-    "https://example.com/photos/1x1/photo.jpg",
-    "https://example.com/photos/4x3/photo.jpg",
-    "https://example.com/photos/16x9/photo.jpg"
+  '@context': 'https://schema.org/',
+  '@type': 'Product',
+  'name': '{$context['entity']->title}',
+  'image': [
+    '{$image}',
    ],
-  "description": "Sleeker than ACME\'s Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
-  "mpn": "925872",
-  "brand": {
-    "@type": "Thing",
-    "name": "ACME"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "reviewCount": "89"
-  },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "USD",
-    "price": "119.99",
-    "priceValidUntil": "2020-11-05",
-    "itemCondition": "https://schema.org/UsedCondition",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Executive Objects"
-    }
+  'description': '{$context['entity']->field_product_information['und'][0]['value']}',
+  'mpn': '925872',
+  'brand': {
+    '@type': 'Thing',
+    'name': 'Dermal Therapy'
+  }
   }
 }
-</script>');
+</script>");
 
-    $layout_render_array['left'][] = $data;
+      $layout_render_array['left'][] = $data;
+    }
   }
 }
