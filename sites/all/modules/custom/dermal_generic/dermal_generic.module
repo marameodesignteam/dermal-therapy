@@ -119,6 +119,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
     $current = domain_get_domain();
     if ($current['machine_name'] == 'australia_dt') {
       $image = image_style_url('width_250', $context['entity']->field_product_image['und'][0]['uri']);
+      $description = strip_tags($context['entity']->field_product_information['und'][0]['value']);
       $data = array(
         '#type' => 'markup',
         '#markup' => "<script type='application/ld+json'>
@@ -129,7 +130,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
   'image': [
     '{$image}',
    ],
-  'description': '{$context['entity']->field_product_information['und'][0]['value']}',
+  'description': '{$description}',
   'mpn': '925872',
   'brand': {
     '@type': 'Thing',
