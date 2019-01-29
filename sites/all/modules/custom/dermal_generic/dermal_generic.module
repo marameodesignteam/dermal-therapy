@@ -135,7 +135,6 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
     '@type': 'Thing',
     'name': 'Dermal Therapy'
   }
-  }
 }
 </script>");
 
