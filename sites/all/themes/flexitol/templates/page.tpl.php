@@ -158,6 +158,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 		            		</div>
 					    </label>
 					</div>
+					<a href="https://www.youtube.com/channel/UCu72syrSnOcHoEifAZWR-kA/videos" target="_blank"><i class="fa fa-youtube"></i></a>
 					<?php if ($_domain['domain_id'] == 2) {
 						echo '<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>';
@@ -287,6 +288,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
   <footer class="footer container no-padding">
     <?php print render($page['footer']); ?>
     <div class="col-xs-12 col-sm-3 no-padding-left">
+			<a href="https://www.youtube.com/channel/UCu72syrSnOcHoEifAZWR-kA/videos" target="_blank"><i class="fa fa-youtube"></i></a>
 
       <?php if ($_domain['domain_id'] == 1):  ?>
         <!-- <div class="social twitter"><a href="https://www.twitter.com/FlexitolCanada/" target="_blank"><i class="fa fa-twitter"></i></a></div>-->
