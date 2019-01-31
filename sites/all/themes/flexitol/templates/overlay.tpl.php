@@ -274,7 +274,7 @@
                     <div class="flag">
                         <a href="https://flexitol.com/us" target="_blank"><img src="<?php echo $path_to_theme; ?>/images/flags-png/United-States.png" alt="United States Flag"></a>
                     </div>
-                    <a href="http://flexitol.com/us"><div class="flag-label">United States</div></a>
+                    <a href="https://flexitol.com/us"><div class="flag-label">United States</div></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4 flag-cols">
                     <div class="flag">
@@ -302,9 +302,9 @@
                 <div class="col-lg-2 col-md-4 col-sm-4 flag-cols">
                     <div class="flag">
                         <!-- link to replace href="http://flexitol.ir" -->
-                        <a href="" data-toggle="modal" data-target="#FexiIran"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Iran.png" alt="Iran Flag"></a>
+                        <a href="https://flexitol.com.sa" data-toggle="modal" data-target="#FexiIran"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Iran.png" alt="Iran Flag"></a>
                     </div>
-                    <a href="" data-toggle="modal" data-target="#FexiIran"><div class="flag-label">Iran</div></a>
+                    <a href="https://flexitol.com.sa" data-toggle="modal" data-target="#FexiIran"><div class="flag-label">Iran</div></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4 flag-cols">
                     <div class="flag">
