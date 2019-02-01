@@ -55,6 +55,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_beautyheaven_review';
+  $strongarm->value = 0;
+  $export['comment_anonymous_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_conditions';
   $strongarm->value = 0;
   $export['comment_anonymous_conditions'] = $strongarm;
@@ -118,6 +125,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_beautyheaven_review';
+  $strongarm->value = '2';
+  $export['comment_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_conditions';
   $strongarm->value = '2';
   $export['comment_conditions'] = $strongarm;
@@ -128,6 +142,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_default_mode_article';
   $strongarm->value = 1;
   $export['comment_default_mode_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_beautyheaven_review';
+  $strongarm->value = 1;
+  $export['comment_default_mode_beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -195,6 +216,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_beautyheaven_review';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_conditions';
   $strongarm->value = '50';
   $export['comment_default_per_page_conditions'] = $strongarm;
@@ -254,6 +282,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_form_location_article';
   $strongarm->value = 1;
   $export['comment_form_location_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_beautyheaven_review';
+  $strongarm->value = 1;
+  $export['comment_form_location_beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -349,6 +384,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_beautyheaven_review';
+  $strongarm->value = '1';
+  $export['comment_preview_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_conditions';
   $strongarm->value = '1';
   $export['comment_preview_conditions'] = $strongarm;
@@ -426,6 +468,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_beautyheaven_review';
+  $strongarm->value = 1;
+  $export['comment_subject_field_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_conditions';
   $strongarm->value = 1;
   $export['comment_subject_field_conditions'] = $strongarm;
@@ -496,6 +545,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_beautyheaven_review';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_enable_revisions_page_node_conditions';
   $strongarm->value = 1;
   $export['diff_enable_revisions_page_node_conditions'] = $strongarm;
@@ -552,6 +608,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_beautyheaven_review';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_show_preview_changes_node_conditions';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_conditions'] = $strongarm;
@@ -604,6 +667,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'diff_show_preview_changes_node_webform';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_beautyheaven_review';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -789,6 +859,35 @@ function flexitol_content_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__beautyheaven_review';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'domain' => array(
+          'weight' => '6',
+        ),
+        'metatags' => array(
+          'weight' => '9',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '7',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '8',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1335,6 +1434,15 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_beautyheaven_review';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_conditions';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -1412,6 +1520,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_beautyheaven_review';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_conditions';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_conditions'] = $strongarm;
@@ -1474,6 +1589,16 @@ function flexitol_content_strongarm() {
     1 => 'promote',
   );
   $export['node_options_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_beautyheaven_review';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1560,6 +1685,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_beautyheaven_review';
+  $strongarm->value = '1';
+  $export['node_preview_beautyheaven_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_conditions';
   $strongarm->value = '1';
   $export['node_preview_conditions'] = $strongarm;
@@ -1619,6 +1751,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'node_submitted_article';
   $strongarm->value = 0;
   $export['node_submitted_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_beautyheaven_review';
+  $strongarm->value = 1;
+  $export['node_submitted_beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1769,6 +1908,16 @@ function flexitol_content_strongarm() {
     'priority' => '0.7',
   );
   $export['xmlsitemap_settings_menu_link_main-menu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_beautyheaven_review';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_beautyheaven_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
