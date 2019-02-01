@@ -81,20 +81,20 @@ function drush_dermal_generic_bhrating_reviews() {
     $xpath = new DOMXPath($dom);
     $reviews = $xpath->query( "//div[contains(@class,'view-product-reviews')]/div[contains(@class,'view-content')]/div[contains(@class,'views-row')]" );
 
-    foreach ($reviews as $node) {
-      $authorElement = $xpath->query(".//h4[contains(@class,'author')]/span", $node)->item(0);
+    foreach ($reviews as $review) {
+      $authorElement = $xpath->query(".//h4[contains(@class,'author')]/span", $review)->item(0);
       $author = strip_tags($dom->saveHTML($authorElement));
 
-      $dateElement = $xpath->query(".//div[contains(@class,'date')]", $node)->item(0);
+      $dateElement = $xpath->query(".//div[contains(@class,'date')]", $review)->item(0);
       $date = strip_tags($dom->saveHTML($dateElement));
 
-      $titleElement = $xpath->query(".//div[contains(@class,'review-info')]/h4", $node)->item(0);
+      $titleElement = $xpath->query(".//div[contains(@class,'review-info')]/h4", $review)->item(0);
       $title = strip_tags($dom->saveHTML($titleElement));
 
-      $bodyElement = $xpath->query(".//div[contains(@class,'field-name-body')]", $node)->item(0);
+      $bodyElement = $xpath->query(".//div[contains(@class,'field-name-body')]", $review)->item(0);
       $body = strip_tags($dom->saveHTML($bodyElement));
 
-      $ratingElement = $xpath->query(".//div[contains(@class,'star')]/span[contains(@class,'on')]", $node);
+      $ratingElement = $xpath->query(".//div[contains(@class,'star')]/span[contains(@class,'on')]", $review);
       $rating = $ratingElement->length;
 
       // Create node
@@ -112,6 +112,7 @@ function drush_dermal_generic_bhrating_reviews() {
       $ewrapper->field_author->set($author);
       $ewrapper->field_review_date->set($date);
       $ewrapper->field_rate->set($rating);
+      $ewrapper->field_product->set($node->nid);
       $ewrapper->save();
     }
   }
