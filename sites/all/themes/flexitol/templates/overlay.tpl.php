@@ -60,7 +60,7 @@
                     </li>
                     <li>
                         <!-- http://flexitol.ca  target="_blank" -->
-                        <a href="" data-toggle="modal" data-target="#canadaFrench">
+                        <a href="https://flexitol.ca/fr" target="_blank">
                             <span class="flag-icon flag-icon-ca"></span>Canada (Francais)
                         </a>
                     </li>
@@ -285,10 +285,10 @@
                 <div class="col-lg-2 col-md-4 col-sm-4 flag-cols ">
                     <div class="flag">
                         <!-- http://flexitol.ca -->
-                        <a href="" data-toggle="modal" data-target="#canadaFrench"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Canada.png" alt="Canada Flag (Francais)"></a>
+                        <a href="https://flexitol.ca/fr" target="_blank"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Canada.png" alt="Canada Flag (Francais)"></a>
                     </div>
                     <!-- http://flexitol.ca -->
-                    <a href="" data-toggle="modal" data-target="#canadaFrench"><div class="flag-label">Canada (Francais)</div></a>
+                    <a href="https://flexitol.ca/fr" target="_blank"><div class="flag-label">Canada (Francais)</div></a>
                 </div>
                 <div class="col-sm-12 region-title">
                     MIDDLE EAST
@@ -513,7 +513,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="canadaFrench" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--div class="modal fade" id="canadaFrench" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content text-center">
             <div class="modal-body">
@@ -524,4 +524,4 @@
             </div>
         </div>
     </div>
-</div>
+</div-->
