@@ -57,6 +57,17 @@ DirectoryIndex index.php index.html index.htm
   </FilesMatch>
 </IfModule>
 
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On 
+
+  RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+  RewriteCond %{HTTP:X-Forwarded-Proto} =""
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+</IfModule>
+
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
