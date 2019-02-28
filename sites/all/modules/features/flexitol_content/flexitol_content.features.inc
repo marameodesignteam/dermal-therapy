@@ -48,6 +48,14 @@ function flexitol_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'beautyheaven_review' => array(
+      'name' => t('Beauty Heaven Review'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'conditions' => array(
       'name' => t('Conditions'),
       'base' => 'node_content',

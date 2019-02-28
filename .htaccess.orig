@@ -163,3 +163,5 @@ DirectoryIndex index.php index.html index.htm
   # Disable content sniffing, since it's an attack vector.
   Header always set X-Content-Type-Options nosniff
 </IfModule>
+
+AddHandler application/x-httpd-php56 .php .php5 .php4 .php3
