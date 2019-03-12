@@ -155,6 +155,13 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
 
       $image = image_style_url('width_250', $context['entity']->field_product_image['und'][0]['uri']);
       $description = strip_tags($context['entity']->field_product_information['und'][0]['value']);
+      $aggregate_rating = empty($rate_count) ? '' : '
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "' . number_format($rate_total/$rate_count, 1) . '",
+          "bestRating": "' . $rate_best . '",
+          "ratingCount": "' . $rate_count . '"
+        },';
       $data = [
         '#type' => 'markup',
         '#markup' => '<script type="application/ld+json">
@@ -171,14 +178,8 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
     "@type": "Thing",
     "name": "Dermal Therapy"
   },
-  "review": ' . json_encode($reviews) . ',
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "' . number_format($rate_total/$rate_count, 1) . '",
-    "bestRating": "' . $rate_best . '",
-    "ratingCount": "' . $rate_count . '"
-  },
-  "url": "' . url("/node/{$context["entity"]->nid}") . '"
+  "review": ' . json_encode($reviews) . ',' . $aggregate_rating .
+  '"url": "' . url("/node/{$context["entity"]->nid}") . '"
 }
 </script>',
       ];
