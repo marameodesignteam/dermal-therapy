@@ -184,7 +184,25 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
 </script>',
       ];
 
-      $layout_render_array['left'][] = $data;
+//      $layout_render_array['left'][] = $data;
+
+      if (!empty($rate_count)) {
+        $rating = empty($rate_count) ? '' : '
+          <span itemprop="ratingValue">' . number_format($rate_total/$rate_count, 1) . '</span> out of
+          <span itemprop="bestRating">' . $rate_best . '</span> by
+          <span itemprop="reviewCount">' . $rate_count . '</span> customers.';
+          $snippet =  [
+            '#type' => 'markup',
+            '#markup' =>'<span style="display: none" itemscope itemtype="http://schema.org/Product">
+            <span itemprop="name">' . $context['entity']->title . '</span> is
+            <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+              <a href="' . $node->field_beauty_review_link[LANGUAGE_NONE][0]['value'] . '" target="_blank">rated</a>' .
+              $rating .
+            '</span>
+          </span>'];
+
+        $layout_render_array['left'][] = $snippet;
+      }
     }
   }
 }
