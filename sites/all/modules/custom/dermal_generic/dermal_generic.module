@@ -188,9 +188,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
 
       if (!empty($rate_count)) {
         $rating = empty($rate_count) ? '' : '
-          <span itemprop="ratingValue">' . number_format($rate_total/$rate_count, 1) . '</span> out of
-          <span itemprop="bestRating">' . $rate_best . '</span> by
-          <span itemprop="reviewCount">' . $rate_count . '</span> customers.';
+          <span itemprop="ratingValue">' . number_format($rate_total/$rate_count, 1) . '</span> out of <span itemprop="bestRating">' . $rate_best . '</span> by <span itemprop="reviewCount">' . $rate_count . '</span> customers.';
           $snippet =  [
             '#type' => 'markup',
             '#markup' =>'<span style="display: none" itemscope itemtype="http://schema.org/Product">
