@@ -195,7 +195,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
             '#type' => 'markup',
             '#markup' =>'<span style="display: none" itemscope itemtype="http://schema.org/Product">
             <span itemprop="name">' . $context['entity']->title . '</span> is <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-              <a href="' . $node->field_beauty_review_link[LANGUAGE_NONE][0]['url'] . '" target="_blank">rated</a>' .
+              <a href="' . $context['entity']->field_beauty_review_link[LANGUAGE_NONE][0]['url'] . '" target="_blank">rated</a>' .
               $rating .
             '</span>
           </span>'];
