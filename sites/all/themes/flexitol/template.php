@@ -154,6 +154,61 @@ function flexitol_preprocess_page(&$vars) {
     }
   }
 
+  if (arg(0) == 'node' && arg(1) && is_numeric(arg(1)) && !arg(2)) {
+    $node = node_load(arg(1));
+    if ($node->type == 'product') {
+      $current = domain_get_domain();
+      if ($current['machine_name'] == 'australia_dt') {
+        $query = new EntityFieldQuery();
+        $query->entityCondition('entity_type', 'node')
+          ->entityCondition('bundle', 'beautyheaven_review')
+          ->fieldCondition('field_product', 'value', arg(1))
+          ->addMetaData('account', user_load(1));
+        $result = $query->execute();
+
+        $rate_total = 0;
+        $rate_count = 0;
+        if (isset($result['node'])) {
+          $nids = array_keys($result['node']);
+          $review_nodes = entity_load('node', $nids);
+          foreach ($review_nodes as $review_node) {
+            $rate = $review_node->field_rate[LANGUAGE_NONE][0]['value'];
+            $rate_total += $rate;
+            $rate_count++;
+          }
+        }
+
+        $aggregate_rating = empty($rate_count) ? '' : '
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "' . number_format($rate_total / $rate_count, 1) . '",
+                "ratingCount": "' . $rate_count . '"
+              },';
+
+        $google_product = '
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "mainEntityOfPage": "' . url("node/{$node->nid}", array('absolute' => TRUE)) . '",
+              "@type": "Product",
+              "name": "' . $node->title . '",
+              "description": "' . trim(preg_replace('/\s+/', ' ', strip_tags($node->field_product_information['und'][0]['value']))) . '",
+              "image": "' . image_style_url('width_250', $node->field_product_image['und'][0]['uri']) . '",
+              "brand": {
+                "@type": "Thing",
+                "name": "Dermal Therapy"
+              },' . $aggregate_rating . '
+            }
+          </script>';
+        $element = [
+          '#type' => 'markup',
+          '#markup' => $google_product,
+        ];
+
+        drupal_add_html_head($element, 'jquery-tmpl');
+      }
+    }
+  }
 }
 
 /**

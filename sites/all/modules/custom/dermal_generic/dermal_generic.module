@@ -198,7 +198,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
             '</span>
           </span>'];
 
-        $layout_render_array['left'][] = $snippet;
+//        $layout_render_array['left'][] = $snippet;
       }
     }
   }
