@@ -181,7 +181,7 @@ function flexitol_preprocess_page(&$vars) {
         $aggregate_rating = empty($rate_count) ? '' : '
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "' . number_format($rate_total / $rate_count, 1) . '",
+                "ratingValue": "' . round($rate_total / $rate_count) . '",
                 "ratingCount": "' . $rate_count . '"
               },';
 
