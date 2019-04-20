@@ -178,12 +178,12 @@ function flexitol_preprocess_page(&$vars) {
           }
         }
 
-        $aggregate_rating = empty($rate_count) ? '' : '
+        $aggregate_rating = empty($rate_count) ? '' : ',
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "' . round($rate_total / $rate_count) . '",
                 "ratingCount": "' . $rate_count . '"
-              },';
+              }';
 
         $google_product = '
           <script type="application/ld+json">
@@ -197,7 +197,7 @@ function flexitol_preprocess_page(&$vars) {
               "brand": {
                 "@type": "Thing",
                 "name": "Dermal Therapy"
-              },' . $aggregate_rating . '
+              }' . $aggregate_rating . '
             }
           </script>';
         $element = [
