@@ -103,7 +103,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 <div class="container-fluid top-banner-container">
     <div class="container">
         <div class="row top-banner">
-            <a href="https://lacorium-competitions.com/trip-to-paris" target="_blank">
+            <a href="https://offers.dermaltherapy.com.au/" target="_blank">
                 <img src="<?php print $path_to_theme; ?>/images/top-banner--desktop.jpg" class="big-banner">
                 <img src="<?php print $path_to_theme; ?>/images/top-banner--mobile.jpg" class="small-banner">
             </a>
