@@ -107,7 +107,7 @@ function dermal_generic_cron() {
  */
 function dermal_generic_node_presave($node) {
   global $user;
-  if ($node->type == 'product' && isset($node->nid) && isset($user->uid)) {
+  if ($node->type == 'product' && !empty($node->nid) && !empty($user->uid)) {
     $node->field_beauty_review_data = $node->original->field_beauty_review_data;
   }
 }
