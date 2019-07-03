@@ -44,9 +44,13 @@ function drush_dermal_generic_bhrating_sync() {
     $rating = $xpath->query( "//div[contains(@class,'product-average-rating')]" );
     if ($rating->length === 1) {
       $rating_block = $dom->saveHTML($rating->item(0));
-      $node->field_beauty_review_data[LANGUAGE_NONE][0]['value'] = $rating_block;
-      $node->field_beauty_review_data[LANGUAGE_NONE][0]['#format'] = 'php_code';
-      node_save($node);
+//      $node->field_beauty_review_data[LANGUAGE_NONE][0]['value'] = $rating_block;
+//      $node->field_beauty_review_data[LANGUAGE_NONE][0]['#format'] = 'php_code';
+//      node_save($node);
+
+      $node_wrapper = entity_metadata_wrapper('node', $node);
+      $node_wrapper->field_beauty_review_data->value = $rating_block;
+      $node_wrapper->field_beauty_review_data->format = 'filtered_html';
     }
   }
 }
