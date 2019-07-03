@@ -51,6 +51,7 @@ function drush_dermal_generic_bhrating_sync() {
       $node_wrapper = entity_metadata_wrapper('node', $node);
       $node_wrapper->field_beauty_review_data->value = $rating_block;
       $node_wrapper->field_beauty_review_data->format = 'filtered_html';
+      $node_wrapper->save();
     }
   }
 }
