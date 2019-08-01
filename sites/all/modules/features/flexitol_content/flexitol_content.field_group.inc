@@ -122,6 +122,62 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_clinical_studies_accordion|field_collection_item|field_clinical_study|default';
+  $field_group->group_name = 'group_clinical_studies_accordion';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_clinical_study';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Clinical Studies',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_clinical_studies_item',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'label' => 'Clinical Studies',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-clinical-studies-accordion field-group-bootstrap_fieldgroup_accordion',
+        'description' => '',
+        'effect' => 'none',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_clinical_studies_item|field_collection_item|field_clinical_study|default';
+  $field_group->group_name = 'group_clinical_studies_item';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_clinical_study';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_clinical_studies_accordion';
+  $field_group->data = array(
+    'label' => 'Clinical Studies',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_clinical_study_description',
+      1 => 'field_clinical_study_images',
+      2 => 'field_clinical_study_title',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-clinical-studies-item field-group-bootstrap_fieldgroup_accordion_item',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_closed|node|webform|widget';
   $field_group->group_name = 'group_closed';
   $field_group->entity_type = 'node';
@@ -503,6 +559,7 @@ function flexitol_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Clinical Studies');
   t('Closed');
   t('Dafault');
   t('Directions');

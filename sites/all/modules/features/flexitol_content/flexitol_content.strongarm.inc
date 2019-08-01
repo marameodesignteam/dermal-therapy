@@ -1163,6 +1163,9 @@ function flexitol_content_strongarm() {
         'xmlsitemap' => array(
           'weight' => '19',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'domain' => array(
