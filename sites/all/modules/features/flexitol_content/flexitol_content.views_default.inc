@@ -32,13 +32,17 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Beauty Review data */
-  $handler->display->display_options['fields']['field_beauty_review_data']['id'] = 'field_beauty_review_data';
-  $handler->display->display_options['fields']['field_beauty_review_data']['table'] = 'field_data_field_beauty_review_data';
-  $handler->display->display_options['fields']['field_beauty_review_data']['field'] = 'field_beauty_review_data';
-  $handler->display->display_options['fields']['field_beauty_review_data']['label'] = '';
-  $handler->display->display_options['fields']['field_beauty_review_data']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_beauty_review_data']['type'] = 'bhfivestar';
+  /* Field: Content: BH rate */
+  $handler->display->display_options['fields']['field_bh_rate']['id'] = 'field_bh_rate';
+  $handler->display->display_options['fields']['field_bh_rate']['table'] = 'field_data_field_bh_rate';
+  $handler->display->display_options['fields']['field_bh_rate']['field'] = 'field_bh_rate';
+  $handler->display->display_options['fields']['field_bh_rate']['label'] = '';
+  $handler->display->display_options['fields']['field_bh_rate']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_bh_rate']['type'] = 'bhrate_to_fivestar';
+  $handler->display->display_options['fields']['field_bh_rate']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

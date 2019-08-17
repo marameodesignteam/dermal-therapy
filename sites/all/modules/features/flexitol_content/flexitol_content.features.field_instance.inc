@@ -2136,6 +2136,69 @@ function flexitol_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-product-field_bh_rate'.
+  $field_instances['node-product-field_bh_rate'] = array(
+    'bundle' => 'product',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 18,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'nodeorder' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_bh_rate',
+    'label' => 'BH rate',
+    'required' => FALSE,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-product-field_clinical_study'.
   $field_instances['node-product-field_clinical_study'] = array(
     'bundle' => 'product',
@@ -3483,6 +3546,7 @@ function flexitol_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Author');
+  t('BH rate');
   t('Beauty Review Link');
   t('Beauty Review data');
   t('Body');

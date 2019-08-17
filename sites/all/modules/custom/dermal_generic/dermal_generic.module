@@ -10,6 +10,11 @@ function dermal_generic_field_formatter_info() {
       'field types' => ['text_long'],
       'description' => t('Show as the BH Review block'),
     ],
+    'bhrate_to_fivestar' => [
+      'label' => t('BH Fivestar from rate'),
+      'field types' => ['number_integer'],
+      'description' => t('Custom BH Review block'),
+    ],
   ];
 
   return $info;
@@ -45,6 +50,28 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
         }
         $element[0] = [
           '#markup' => $markup,
+        ];
+      }
+      break;
+
+    case 'bhrate_to_fivestar':
+      $rate = reset($items);
+      if (!empty($rate['value'])) {
+        $element[0] = [
+          '#markup' => "
+<div class='product-average-rating'>
+  <div class='review-result'>Rated {$rate['value']}/5 stars</div>
+  <div class='fivestar-bh stars large'>
+    <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clearfix'>
+      <div class='star star-1 star-odd star-first'><span class='on'>{$rate['value']}</span></div>
+      <div class='star star-2 star-even'><span class='on'></span></div>
+      <div class='star star-3 star-odd'><span class='on'></span></div>
+      <div class='star star-4 star-even'><span class='on'></span></div>
+      <div class='star star-5 star-odd star-last'><span class='on'></span></div>
+    </div>
+  </div>
+  <div class='review-info'>by beauty heaven members</div>
+</div>",
         ];
       }
       break;
