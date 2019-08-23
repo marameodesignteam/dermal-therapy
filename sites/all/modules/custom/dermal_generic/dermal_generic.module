@@ -57,17 +57,30 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
     case 'bhrate_to_fivestar':
       $rate = reset($items);
       if (!empty($rate['value'])) {
+
+        //$rate['value'] = 3;
+
+        $begin_markup = $end_markup = $final_markup = "";
+
+        $begin_markup = "<div class='star star-";
+
+        $end_markup = "'></div>";
+
+        for ($i = 1; $i <= 5; $i++ ) {
+
+          $fill = ($rate['value'] >= $i) ? " filled" : "";
+
+          $final_markup .= $begin_markup.$i.$fill.$end_markup;
+
+        }
+
         $element[0] = [
           '#markup' => "
 <div class='product-average-rating'>
   <div class='review-result'>Rated {$rate['value']}/5 stars</div>
   <div class='fivestar-bh stars large'>
     <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clearfix'>
-      <div class='star star-1 star-odd star-first'><span class='on'>{$rate['value']}</span></div>
-      <div class='star star-2 star-even'><span class='on'></span></div>
-      <div class='star star-3 star-odd'><span class='on'></span></div>
-      <div class='star star-4 star-even'><span class='on'></span></div>
-      <div class='star star-5 star-odd star-last'><span class='on'></span></div>
+    ".$final_markup."
     </div>
   </div>
   <div class='review-info'>by beauty heaven members</div>
