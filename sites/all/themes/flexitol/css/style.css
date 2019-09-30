@@ -7931,13 +7931,15 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   width: 60%;
   float: left;
 }
-.page-node.node-type-product section#block-views-beauty-review-button-block, .page-node.node-type-product section#block-views-leave-a-testimonial-block {
+.page-node.node-type-product section#block-views-beauty-review-button-block,
+.page-node.node-type-product section#block-views-leave-a-testimonial-block {
   width: 40%;
   margin: auto;
   float: left;
 }
 @media (max-width: 768px) {
-  .page-node.node-type-product section#block-views-beauty-review-button-block, .page-node.node-type-product section#block-views-leave-a-testimonial-block {
+  .page-node.node-type-product section#block-views-beauty-review-button-block,
+.page-node.node-type-product section#block-views-leave-a-testimonial-block {
     width: 100%;
   }
   .page-node.node-type-product section#block-views-11d287f0dab888795c67e49bfb01f5ba {
@@ -7990,8 +7992,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 .page-node.node-type-product .flexslider {
   width: 90%;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
 }
 .page-node.node-type-product .flexslider ul {
   overflow: hidden;
@@ -8044,10 +8045,10 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   justify-content: center;
 }
 .page-node.node-type-product .bhrating .fivestar-bh .fivestar-widget-static .star span.on {
-  background: url(/sites/all/themes/flexitol/images/star-small.png) no-repeat 0 -40px;
+  background: url("/sites/all/themes/flexitol/images/star-small.png") no-repeat 0 -40px;
 }
 .page-node.node-type-product .bhrating .fivestar-bh .fivestar-widget-static .star span.off {
-  background: url(/sites/all/themes/flexitol/images/star-small.png) no-repeat 0 0px;
+  background: url("/sites/all/themes/flexitol/images/star-small.png") no-repeat 0 0;
 }
 .page-node.node-type-product .bhrating .fivestar-bh .fivestar-widget-static .star span {
   float: left;
@@ -8070,7 +8071,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   text-align: center;
   border-radius: 0;
   margin: auto;
-  border-bottom: 0px;
+  border-bottom: 0;
   background-color: transparent;
   color: #7a99ac;
   text-transform: uppercase;
@@ -8081,7 +8082,9 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   background-color: #7a99ac;
   color: white;
 }
-.page-node.node-type-product .view-leave-a-testimonial .panel-heading a:hover, .page-node.node-type-product .view-leave-a-testimonial .panel-heading a.active, .page-node.node-type-product .view-leave-a-testimonial .panel-heading a:focus {
+.page-node.node-type-product .view-leave-a-testimonial .panel-heading a.active,
+.page-node.node-type-product .view-leave-a-testimonial .panel-heading a:focus,
+.page-node.node-type-product .view-leave-a-testimonial .panel-heading a:hover {
   text-decoration: none;
 }
 .page-node.node-type-product .view-leave-a-testimonial .panel-group {
@@ -8094,7 +8097,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   margin-bottom: 20px;
   background-color: transparent;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: none;
 }
@@ -8125,7 +8128,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 .page-node.node-type-product section#block-views-product-testimonials-block .flexslider {
   background: transparent;
-  border: 0px;
+  border: 0;
   position: relative;
   width: 70%;
   zoom: 1;
@@ -8232,7 +8235,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .page-node.node-type-product .field-name-title h1:after {
   position: absolute;
@@ -8283,16 +8286,19 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   max-width: 100%;
   height: auto;
 }
-.page-node.node-type-product .field-name-field-product-buy-link, .page-node.node-type-product .field-name-where-to-buy-button {
+.page-node.node-type-product .field-name-field-product-buy-link,
+.page-node.node-type-product .field-name-where-to-buy-button {
   float: left;
 }
-.page-node.node-type-product .field-name-field-product-buy-link a, .page-node.node-type-product .field-name-where-to-buy-button a {
+.page-node.node-type-product .field-name-field-product-buy-link a,
+.page-node.node-type-product .field-name-where-to-buy-button a {
   text-transform: uppercase;
   font-size: 0.9em;
   padding: 9px 20px;
 }
 @media (max-width: 991px) {
-  .page-node.node-type-product .field-name-field-product-buy-link a, .page-node.node-type-product .field-name-where-to-buy-button a {
+  .page-node.node-type-product .field-name-field-product-buy-link a,
+.page-node.node-type-product .field-name-where-to-buy-button a {
     font-size: 0.8em;
     padding: 5px 10px;
   }
@@ -8488,18 +8494,19 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   left: 0;
   top: 90px;
 }
-.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-prev-horizontal:hover, .page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-prev-horizontal:active {
+.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-prev-horizontal:active, .page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-prev-horizontal:hover {
   background-position: 0 0;
 }
 .page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next-horizontal {
   right: 0;
   top: 90px;
 }
-.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next-horizontal:hover, .page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next-horizontal:active {
+.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next-horizontal:active, .page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next-horizontal:hover {
   background-position: 0 -32px;
 }
-.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next, .page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-prev {
-  background-image: url(../images/arrows.png);
+.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-next,
+.page-node.node-type-product .region-content-tertiary #block-views-related-products-block .jcarousel-skin-default .jcarousel-prev {
+  background-image: url("../images/arrows.png");
 }
 .page-node.node-type-product .field-group-bootstrap_fieldgroup_nav {
   margin-bottom: 10px;
@@ -8542,14 +8549,21 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 
 /* ACCORDION RE-STYLE */
-.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br, .ui-corner-left, .ui-corner-top {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-br,
+.ui-corner-left,
+.ui-corner-right,
+.ui-corner-top {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
   background: #e6e6e6;
   border: none;
   color: inherit;
@@ -8568,14 +8582,16 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 
 .ui-accordion .ui-accordion-content {
-  padding: 1.2em 1.2em;
+  padding: 1.2em;
   border-top: 0;
   overflow: auto;
   background: #e6e6e6;
   border: none;
 }
 
-.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
   color: #00a9e0;
   text-decoration: none;
   text-transform: uppercase;
@@ -8585,7 +8601,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 @media (max-width: 768px) {
   .field-group-bootstrap_fieldgroup_nav li {
     width: 40%;
-    padding: 0px;
+    padding: 0;
     margin: 15px;
   }
 
@@ -8606,7 +8622,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 
   .mobile-only-buttons .field-name-where-to-buy-button {
     width: 40%;
-    margin: 5px 15px 15px 15px;
+    margin: 5px 15px 15px;
   }
 
   .field.field-name-field-product-information {
@@ -8614,7 +8630,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     padding-top: 20px;
   }
 
-  .field-name-field-product-buy-link a, .field-name-where-to-buy-button a {
+  .field-name-field-product-buy-link a,
+.field-name-where-to-buy-button a {
     padding: 10px !important;
     width: 100%;
   }
@@ -8624,8 +8641,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   }
 
   .page-node.node-type-product .field-name-field-product-info-image img {
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
   }
 }
 @media (max-width: 480px) {
@@ -8647,7 +8663,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     float: left;
     margin-bottom: 25px;
   }
-  .page-node.node-type-product section#block-views-beauty-review-button-block, .page-node.node-type-product section#block-views-leave-a-testimonial-block {
+  .page-node.node-type-product section#block-views-beauty-review-button-block,
+.page-node.node-type-product section#block-views-leave-a-testimonial-block {
     margin-left: 3%;
   }
 }
@@ -8693,6 +8710,28 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   .w2b-click-collect img {
     float: none;
   }
+}
+
+.product-average-rating {
+  color: #596d9c;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto 40px;
+}
+.product-average-rating .review-result {
+  margin-bottom: 10px;
+}
+
+.star {
+  background: url("../images/starsprite.png") 0px -49px no-repeat;
+  width: 50px;
+  height: 49px;
+  display: inline-block;
+}
+
+.star.filled {
+  background-position: 0 0;
 }
 
 .page-taxonomy.page-taxonomy-term hr {

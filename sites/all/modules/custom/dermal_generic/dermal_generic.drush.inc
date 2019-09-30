@@ -10,7 +10,7 @@ function dermal_generic_drush_command() {
   );
 
   $items['bhrating-reviews'] = array(
-    'description' => 'Crawl all ratings from Beauty Heaven.',
+    'description' => 'Crawl all rating items from Beauty Heaven for SEO purpose (no need anymore)',
   );
 
   return $items;
@@ -41,16 +41,11 @@ function drush_dermal_generic_bhrating_sync() {
     $dom = new DOMDocument();
     @$dom->loadHTML($html);
     $xpath = new DOMXPath($dom);
-    $rating = $xpath->query( "//div[contains(@class,'product-average-rating')]" );
+    $rating = $xpath->query( "//div[contains(@class,'product-average-rating')]//div[contains(@class,'fivestar-widget-static-5')]" );
     if ($rating->length === 1) {
       $rating_block = $dom->saveHTML($rating->item(0));
-//      $node->field_beauty_review_data[LANGUAGE_NONE][0]['value'] = $rating_block;
-//      $node->field_beauty_review_data[LANGUAGE_NONE][0]['#format'] = 'php_code';
-//      node_save($node);
-
       $node_wrapper = entity_metadata_wrapper('node', $node);
-      $node_wrapper->field_beauty_review_data->value = $rating_block;
-      $node_wrapper->field_beauty_review_data->format = 'filtered_html';
+      $node_wrapper->field_bh_rate->set(trim(strip_tags($rating_block)));
       $node_wrapper->save();
     }
   }
