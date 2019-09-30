@@ -108,7 +108,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
     <div class="container">
         <div class="row top-banner">
             <a href="https://offers.dermaltherapy.com.au/australia/" target="_blank">
-                <img src="<?php print $path_to_theme; ?>/images/top-banner--desktop.jpg" class="big-banner">
+                <img src="<?php print $path_to_theme; ?>/images/top-banner--desktop-ok.jpg" class="big-banner">
                 <img src="<?php print $path_to_theme; ?>/images/top-banner--mobile.jpg" class="small-banner">
             </a>
         </div>
