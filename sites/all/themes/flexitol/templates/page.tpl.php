@@ -102,7 +102,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
       </div>
     </div>
 </div>
-<?php if ($_domain['domain_id'] == 1) ?>
+<?php if ($_domain['domain_id'] == 1): ?>
 
 <div class="container-fluid top-banner-container">
     <div class="container">
@@ -114,7 +114,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
         </div>
     </div>
 </div>
-
+<?php endif; ?>
 
 <div class="container-fluid header-fluid">
 	<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
