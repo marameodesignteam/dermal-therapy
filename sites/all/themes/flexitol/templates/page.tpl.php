@@ -102,7 +102,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
       </div>
     </div>
 </div>
-<?php if ($_domain['domain_id'] == 1) ?>
+<?php if ($_domain['domain_id'] == 1): ?>
 
 <div class="container-fluid top-banner-container">
     <div class="container">
