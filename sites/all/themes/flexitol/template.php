@@ -234,7 +234,6 @@ function flexitol_preprocess_field(&$vars) {
   }
 }
 
-
 /**
  * Implements template_preprocess_HOOK().
  */
