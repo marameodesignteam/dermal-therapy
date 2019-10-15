@@ -236,9 +236,10 @@ function flexitol_preprocess_field(&$vars) {
 
 
 /**
- * Implements template_preprocess_bootstrap_tabs().
- * @param $variables
+ * Implements template_preprocess_HOOK().
  */
-function flexitol_preprocess_bootstrap_fieldgroup_nav(&$variables) {
-  // dprint_r($variables['items']['group_information']['field_product_information']['#object']);
+function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
+  if (current_path() == 'taxonomy/term/28') {
+    $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
+  }
 }
