@@ -60,5 +60,5 @@ $path_to_theme = $base_url . '/' . $theme_path;
         </div>
     </a>
 
-    <?php echo $element['#object']->field_product_category['und'][0]['target_id'] == 28 ? '<div><a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a>' : ''; ?>
+    <?php echo $element['#object']->field_product_category['und'][0]['target_id'] == 28 ? '<div><a target="_blank" href="https://littlebodies.com.au"><img src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a>' : ''; ?>
 <?php endif; ?>

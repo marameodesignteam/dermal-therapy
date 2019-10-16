@@ -239,6 +239,6 @@ function flexitol_preprocess_field(&$vars) {
  */
 function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
   if (current_path() == 'taxonomy/term/28') {
-    $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
+    $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
   }
 }
