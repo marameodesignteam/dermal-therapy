@@ -103,7 +103,6 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
     </div>
 </div>
 <?php if ($_domain['domain_id'] == 1): ?>
-
 <div class="container-fluid top-banner-container">
     <div class="container">
         <div class="row top-banner">
@@ -114,6 +113,17 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
         </div>
     </div>
 </div>
+<?php else: ?>
+    <div class="container-fluid top-banner-container">
+        <div class="container">
+            <div class="row top-banner">
+                <a href="https://offers.dermaltherapy.com.au/new-zeala" target="_blank">
+                    <img src="<?php print $path_to_theme; ?>/images/nz-top-banner--desktop-ok.jpg" class="big-banner">
+                    <img src="<?php print $path_to_theme; ?>/images/nz-top-banner--mobile.jpg" class="small-banner">
+                </a>
+            </div>
+        </div>
+    </div>
 <?php endif; ?>
 
 <div class="container-fluid header-fluid">
@@ -144,9 +154,6 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 			  	<?php print render($page['headerright']); ?>
 				<?php global $base_url; ?>
 				<input type="checkbox" id="op"></input>
-
-
-
 					<div id="countryselecdt-dsktop" class="countryselecdt lower">
 						<label for="op">
 							<i class="fa fa-globe"></i>
