@@ -55,27 +55,29 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
       break;
 
     case 'bhrate_to_fivestar':
-      $rate = reset($items);
-      if (!empty($rate['value'])) {
-
-        //$rate['value'] = 3;
-
-        $begin_markup = $end_markup = $final_markup = "";
-
-        $begin_markup = "<div class='star star-";
-
-        $end_markup = "'></div>";
-
-        for ($i = 1; $i <= 5; $i++ ) {
-
-          $fill = ($rate['value'] >= $i) ? " filled" : "";
-
-          $final_markup .= $begin_markup.$i.$fill.$end_markup;
-
-        }
-
+      if (!empty($entity->nid) && ($entity->nid == 83 || $entity->nid == 1331 || $entity->nid == 1332 || $entity->nid == 1333)) {
         $element[0] = [
-          '#markup' => "
+          '#markup' => '<a target="_blank" href="https://www.productreview.com.au/listings/little-bodies" rel="noopener">
+            <img
+            width="160"
+            src="https://api.productreview.com.au/api/services/rating-badge/v2/au/46923d38-dfcc-3924-b544-5ae6720bb473/from-internal-entry-id?resolution=hd&theme=light&width=160"
+            alt="Little Bodies"
+            >
+          </a>'];
+      }
+      else {
+        $rate = reset($items);
+        if (!empty($rate['value'])) {
+          $final_markup = "";
+          $begin_markup = "<div class='star star-";
+          $end_markup = "'></div>";
+          for ($i = 1; $i <= 5; $i++ ) {
+            $fill = ($rate['value'] >= $i) ? " filled" : "";
+            $final_markup .= $begin_markup.$i.$fill.$end_markup;
+          }
+
+          $element[0] = [
+            '#markup' => "
 <div class='product-average-rating'>
   <div class='review-result'>Rated {$rate['value']}/5 stars</div>
   <div class='fivestar-bh stars large'>
@@ -85,7 +87,8 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
   </div>
   <div class='review-info'>by beauty heaven members</div>
 </div>",
-        ];
+          ];
+        }
       }
       break;
   }
