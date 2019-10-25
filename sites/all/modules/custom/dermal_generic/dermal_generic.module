@@ -55,7 +55,7 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
       break;
 
     case 'bhrate_to_fivestar':
-      if (!empty($entity->nid) && ($entity->nid == 83 || $entity->nid == 1331 || $entity->nid == 1332 || $entity->nid == 1333)) {
+      if (!empty($entity->nid) && ($entity->nid == 1331 || $entity->nid == 1332 || $entity->nid == 1333)) {
         $element[0] = [
           '#markup' => '<a target="_blank" href="https://www.productreview.com.au/listings/little-bodies" rel="noopener">
             <img
