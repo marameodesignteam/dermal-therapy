@@ -113,7 +113,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
         </div>
     </div>
 </div>
-<?php else: ?>
+<?php else if ($_domain['domain_id'] == 3) : ?>
     <div class="container-fluid top-banner-container">
         <div class="container">
             <div class="row top-banner">
