@@ -46,8 +46,8 @@
         $node_obj =  $variables['items']['group_information']['field_product_information']['#object'];
         $buy_link_field = field_view_field('node', $node_obj, 'field_product_buy_link', 'full');
         print render($buy_link_field);
-//        $where = (($node_obj->nid == 1331 || $node_obj->nid == 1332 || $node_obj->nid == 1333)) ? 'https://littlebodies.com.au/' : '/where-buy';
-        $where = '/where-buy';
+        $where = (($node_obj->nid == 1331 || $node_obj->nid == 1332 || $node_obj->nid == 1333)) ? 'https://littlebodies.com.au/' : '/where-buy';
+//        $where = '/where-buy';
         ?>
         <div class="field field-name-where-to-buy-button field-type-ds field-label-hidden">
           <div class="field-items">
