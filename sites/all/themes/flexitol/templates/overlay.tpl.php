@@ -121,7 +121,7 @@
                     </li>
                     <li>
                         <!-- href="http://flexitol.il" -->
-                        <a href="" data-toggle="modal" data-target="#FexiIsrael">
+                        <a href="https://flexitol.il" target="_blank">
                             <span class="flag-icon flag-icon-il"></span>Isreal (English)
                         </a>
                     </li>
@@ -357,10 +357,10 @@
                 <div class="col-lg-2 col-md-4 col-sm-4 flag-cols">
                     <div class="flag">
                         <!-- http://flexitol.co.il -->
-                        <a href="" data-toggle="modal" data-target="#FexiIsrael"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Israel.png" alt="Israel Flag (English)"></a>
+                        <a href="https://flexitol.co.il" target="_blank"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Israel.png" alt="Israel Flag (English)"></a>
                     </div>
                     <!-- http://flexitol.co.il -->
-                    <a href="" data-toggle="modal" data-target="#FexiIsrael"><div class="flag-label">Israel (English)</div></a>
+                    <a href="https://flexitol.co.il" target="_blank"><div class="flag-label">Israel (English)</div></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4 flag-cols">
                     <div class="flag">
