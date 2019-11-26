@@ -668,7 +668,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="navbar mobilefront">
 <nav role="navigation">
 <ul class="menu nav navbar-nav">
-<li class="col-xs-6 leaf first"><a href="/products/body-care">Products</a></li>
+<li class="col-xs-6 leaf first"><a href="/products/foot-care">Products</a></li>
 <li class="col-xs-6 leaf last"><a href="/conditions/foot">Conditions</a></li>
 </ul>                      </nav>
 </div>';
