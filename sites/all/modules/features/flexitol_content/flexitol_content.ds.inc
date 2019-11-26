@@ -432,9 +432,12 @@ function flexitol_content_ds_custom_fields_info() {
   $ds_field->ui_limit = 'product|*';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<p><a class="btn btn-danger" href="/where-buy">Where to buy</a></p>
-',
-      'format' => 'full_html',
+      'value' => '<?php
+$crt_path = current_path();
+$path = ($crt_path == \'node/1331\' || $crt_path == \'node/1332\' || $crt_path == \'node/1333\') ? \'https://littlebodies.com.au/\' : \'/where-buy\';
+?>
+<p><a class="btn btn-danger" href="<?php echo $path; ?>">Where to buy</a></p>',
+      'format' => 'php_code',
     ),
     'use_token' => 0,
   );
