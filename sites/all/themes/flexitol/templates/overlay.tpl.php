@@ -121,7 +121,7 @@
                     </li>
                     <li>
                         <!-- href="http://flexitol.il" -->
-                        <a href="https://flexitol.il" target="_blank">
+                        <a href="https://flexitol.co.il" target="_blank">
                             <span class="flag-icon flag-icon-il"></span>Isreal (English)
                         </a>
                     </li>
