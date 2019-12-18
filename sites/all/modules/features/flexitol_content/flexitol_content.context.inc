@@ -333,12 +333,6 @@ function flexitol_content_context_default_contexts() {
           'region' => 'content_bottom',
           'weight' => '-35',
         ),
-        'views-beauty_review_button-block' => array(
-          'module' => 'views',
-          'delta' => 'beauty_review_button-block',
-          'region' => 'content_bottom',
-          'weight' => '-34',
-        ),
         'views-leave_a_testimonial-block' => array(
           'module' => 'views',
           'delta' => 'leave_a_testimonial-block',

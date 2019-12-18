@@ -456,7 +456,6 @@ features[variable][] = xmlsitemap_settings_node_page
 features[variable][] = xmlsitemap_settings_node_product
 features[variable][] = xmlsitemap_settings_node_review
 features[variable][] = xmlsitemap_settings_node_webform
-features[views_view][] = beauty_review_button
 features[views_view][] = category
 features[views_view][] = conditions
 features[views_view][] = conditions_menu
