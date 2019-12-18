@@ -3,22 +3,23 @@
 /**
  * @file
  * template.php
-
-function flexitol_preprocess_taxonomy_term(&$vars) {
-  if ($vars['vocabulary_machine_name'] == 'conditions') {
-    if ($vars['view_mode'] == 'widget') {
-     $vars['content']['description']['#prefix'] .= '<div class="condition-fixed-title">' . t("CONDITIONS") .'</div>';
-    }
-  }
-}
-
-/**
+ *
+ * function flexitol_preprocess_taxonomy_term(&$vars) {
+ * if ($vars['vocabulary_machine_name'] == 'conditions') {
+ * if ($vars['view_mode'] == 'widget') {
+ * $vars['content']['description']['#prefix'] .= '<div
+ *   class="condition-fixed-title">' . t("CONDITIONS") .'</div>';
+ * }
+ * }
+ * }
+ *
+ * /**
  * Override or insert variables into the html template.
  */
 
 
 function flexitol_preprocess_html(&$vars) {
-   $vars['background_image'] = base_path() . drupal_get_path('theme', 'flexitol') . "/images" . "/default_background.jpg";
+  $vars['background_image'] = base_path() . drupal_get_path('theme', 'flexitol') . "/images" . "/default_background.jpg";
 
   // Set background of product and other pages
   if (arg(0) == 'node' && is_numeric(arg(1))) {
@@ -47,6 +48,24 @@ function flexitol_preprocess_html(&$vars) {
 
       }
     }
+
+    // Add product review script
+    // Setup IE meta tag to force IE rendering mode
+    $product_review = [
+      '#type' => 'markup',
+      '#markup' => "
+<script>
+    window.__productReviewSettings = {
+        brandId: '3c70d8a7-f94e-4e4a-9789-fc10a3106cb8'
+    };
+</script>
+<script src=\"https://cdn.productreview.com.au/assets/widgets/loader.js\" async></script>
+",
+    ];
+
+    // Add header meta tag for IE to head
+    drupal_add_html_head($product_review, 'product_review');
+
   }
   // Set background of product category page
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
@@ -66,41 +85,151 @@ function flexitol_preprocess_html(&$vars) {
   }
 
   // custom background image for contact pages
-  else if ( in_array( $vars['classes_array'][6], array('page-node-221', 'page-node-185', 'page-node-36') ) ) {
+  else {
+    if (in_array($vars['classes_array'][6], [
+      'page-node-221',
+      'page-node-185',
+      'page-node-36',
+    ])) {
       // Place url of img inside quotes below
-    $vars['background_image'] = "/sites/all/themes/flexitol/images/dt-contact-us-background.jpeg";
+      $vars['background_image'] = "/sites/all/themes/flexitol/images/dt-contact-us-background.jpeg";
+    }
   }
 
-// Set background of view pages
-  if(function_exists('views_get_page_view') && views_get_page_view()){
-      $view = views_get_page_view();
-   
-      //Background for Healthcare Professionals
-      if (isset($view) && $view->name == 'healthcare_professional_page') {
-        // Place url of img inside quotes below
+  // Set background of view pages
+  if (function_exists('views_get_page_view') && views_get_page_view()) {
+    $view = views_get_page_view();
+
+    //Background for Healthcare Professionals
+    if (isset($view) && $view->name == 'healthcare_professional_page') {
+      // Place url of img inside quotes below
       $vars['background_image'] = "/sites/all/themes/flexitol/images/healthcare_bg.jpg";
 
+    }
+    //Background for 'Review' page
+    else {
+      if (isset($view) && $view->name == 'review') {
+        // Place url of img inside quotes below
+        $vars['background_image'] = "/sites/all/themes/flexitol/images/testimonials_bg.jpg";
+
       }
-  //Background for 'Review' page
-      else if(isset($view) && $view->name == 'review'){
-       // Place url of img inside quotes below
-      $vars['background_image'] = "/sites/all/themes/flexitol/images/testimonials_bg.jpg";
-
+      //Background for Special offers and events
+      else {
+        if (isset($view) && $view->name == 'special_offers') {
+          // Place url of img inside quotes below
+          $vars['background_image'] = "/sites/all/themes/flexitol/images/special_offer_bg.jpg";
+        }
+      }
     }
-  //Background for Special offers and events
-    else if(isset($view) && $view->name == 'special_offers'){
-       // Place url of img inside quotes below
-      $vars['background_image'] = "/sites/all/themes/flexitol/images/special_offer_bg.jpg";
-    }
-
   }
 
-
-
-     if (drupal_is_front_page()) {
+  if (drupal_is_front_page()) {
     $vars['background_image'] = NULL;
   }
+}
 
+/**
+ * Add product review
+ *
+ * @param $vars
+ */
+function flexitol_preprocess_views_view__leave_a_testimonial(&$vars) {
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    $categ = $node->field_product_category['und'][0]['target_id'];
+  }
+  $vars['prefix'] = _product_review($categ, 'product-review');
+}
+
+function _product_review($categ, $wrapper_class) {
+  $identifiers = [
+    9 => '90cc9147-c35a-4183-bf7a-2579c553c8b8', // FOOT CARE
+    14 => 'd08068ab-88f8-4124-ba4c-b198e23c7465', // LIP CARE
+    19 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // ECZEMA PRONE SKIN CARE
+    20 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // ITCHY SKIN CARE
+    21 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // VERY DRY SKIN CARE
+    22 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // SENSITIVE SKIN CARE
+    23 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // PERSONAL CARE
+    10 => 'b1a40f30-4372-4788-bc38-da37413ff560', // HAND CARE
+  ];
+  $markups = [
+    9 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-foot-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/90cc9147-c35a-4183-bf7a-2579c553c8b8/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Foot Care Range"
+>
+</a>', // FOOT CARE
+    14 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-lip-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/d08068ab-88f8-4124-ba4c-b198e23c7465/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Lip Care Range"
+>
+</a>', // LIP CARE
+    19 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-body-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/fe658376-e2db-4c78-bc04-f24d0fe7e44f/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Body Care Range"
+>
+</a>', // ECZEMA PRONE SKIN CARE
+    20 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-body-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/fe658376-e2db-4c78-bc04-f24d0fe7e44f/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Body Care Range"
+>
+</a>', // ITCHY SKIN CARE
+    21 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-body-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/fe658376-e2db-4c78-bc04-f24d0fe7e44f/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Body Care Range"
+>
+</a>', // VERY DRY SKIN CARE
+    22 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-body-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/fe658376-e2db-4c78-bc04-f24d0fe7e44f/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Body Care Range"
+>
+</a>', // SENSITIVE SKIN CARE
+    23 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-body-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/fe658376-e2db-4c78-bc04-f24d0fe7e44f/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Body Care Range"
+>
+</a>', // PERSONAL CARE
+    10 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-hand-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/b1a40f30-4372-4788-bc38-da37413ff560/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Hand Care Range"
+>
+</a>', // HAND CARE
+  ];
+  if (!empty($categ) && !empty($identifiers[$categ])) {
+    return "
+    <script>
+        window.__productReviewCallbackQueue = window.__productReviewCallbackQueue || [];
+        window.__productReviewCallbackQueue.push(function(ProductReview) {
+            ProductReview.use('seo-listing-aggregated-rating', {
+                'identificationDetails': {
+                  'type': 'single',
+                  'strategy': 'from-internal-entry-id',
+                  'identifier': '{$identifiers[$categ]}'
+                }
+            });
+        });
+    </script>
+    <div class='{$wrapper_class}' style='text-align: center; margin-bottom: 10px;'>
+      {$markups[$categ]}
+    </div>";
+  }
+
+  return '';
 }
 
 /**
@@ -122,17 +251,17 @@ function flexitol_preprocess_page(&$vars) {
   }
   $vars['sidebar_class'] = "col-sm-3";
 
-//set variables for specific nodes here:
+  //set variables for specific nodes here:
   if (arg(0) == 'node' && is_numeric(arg(1))) {
     $node = node_load(arg(1));
     //ie if($node ->type =='conditions'){}
     if ($node->type == 'conditions') {
-	  $vars['content_column_class'] = 'col-sm-9';
+      $vars['content_column_class'] = 'col-sm-9';
       $vars['sidebar_first_class'] = 'col-sm-3';
     }
-}
+  }
   // Old background function - references to background removed. 
-//set variables for specific taxonomy taxonomy terms
+  //set variables for specific taxonomy taxonomy terms
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $term = taxonomy_term_load(arg(2));
     // sets container classnames etc
@@ -141,8 +270,8 @@ function flexitol_preprocess_page(&$vars) {
       $vars['content_column_class'] = 'col-sm-9';
       $vars['sidebar_first_class'] = 'col-sm-3';
     }
-	
-	if ($term->vocabulary_machine_name == 'product_category' && $term->name == 'Hand care' ) {
+
+    if ($term->vocabulary_machine_name == 'product_category' && $term->name == 'Hand care') {
       $vars['content_column_class'] = 'col-sm-8';
       $vars['sidebar_first_class'] = 'col-sm-4';
     }
@@ -189,7 +318,7 @@ function flexitol_preprocess_page(&$vars) {
           <script type="application/ld+json">
             {
               "@context": "http://schema.org",
-              "mainEntityOfPage": "' . url("node/{$node->nid}", array('absolute' => TRUE)) . '",
+              "mainEntityOfPage": "' . url("node/{$node->nid}", ['absolute' => TRUE]) . '",
               "@type": "Product",
               "name": "' . $node->title . '",
               "description": "' . trim(preg_replace('/\s+/', ' ', strip_tags($node->field_product_information['und'][0]['value']))) . '",
@@ -213,8 +342,8 @@ function flexitol_preprocess_page(&$vars) {
 
 /**
  * Implements template_preprocess_block().
- 
-Adds col-sm-6 to products page condition blocks and related products blocks
+ *
+ * Adds col-sm-6 to products page condition blocks and related products blocks
  */
 function flexitol_preprocess_block(&$vars) {
   if ($vars['block']->module == 'views') {
@@ -240,5 +369,29 @@ function flexitol_preprocess_field(&$vars) {
 function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
   if (current_path() == 'taxonomy/term/28') {
     $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
+  }
+  elseif (current_path() == 'taxonomy/term/9') {
+    $variables['rows'] .= _product_review(9, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/10') {
+    $variables['rows'] .= _product_review(10, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/14') {
+    $variables['rows'] .= _product_review(14, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/19') {
+    $variables['rows'] .= _product_review(19, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/20') {
+    $variables['rows'] .= _product_review(20, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/21') {
+    $variables['rows'] .= _product_review(21, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/22') {
+    $variables['rows'] .= _product_review(22, 'views-row col-sm-12');;
+  }
+  elseif (current_path() == 'taxonomy/term/23') {
+    $variables['rows'] .= _product_review(23, 'views-row col-sm-12');;
   }
 }
