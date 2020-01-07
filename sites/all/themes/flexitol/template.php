@@ -288,31 +288,14 @@ function flexitol_preprocess_page(&$vars) {
     if ($node->type == 'product') {
       $current = domain_get_domain();
       if ($current['machine_name'] == 'australia_dt') {
-        $query = new EntityFieldQuery();
-        $query->entityCondition('entity_type', 'node')
-          ->entityCondition('bundle', 'beautyheaven_review')
-          ->fieldCondition('field_product', 'value', arg(1))
-          ->addMetaData('account', user_load(1));
-        $result = $query->execute();
-
-        $rate_total = 0;
-        $rate_count = 0;
-        if (isset($result['node'])) {
-          $nids = array_keys($result['node']);
-          $review_nodes = entity_load('node', $nids);
-          foreach ($review_nodes as $review_node) {
-            $rate = $review_node->field_rate[LANGUAGE_NONE][0]['value'];
-            $rate_total += $rate;
-            $rate_count++;
-          }
-        }
-
-        $aggregate_rating = empty($rate_count) ? '' : ',
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "' . round($rate_total / $rate_count) . '",
-                "ratingCount": "' . $rate_count . '"
-              }';
+        $rate_value = $node->field_rating_value['und'][0]['value'];
+        $rate_count = $node->field_rating_count['und'][0]['value'];
+        $aggregate_rating = empty($rate_count) ? '' : '
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "' . $rate_value . '",
+          "ratingCount": "' . $rate_count . '"
+        },';
 
         $google_product = '
           <script type="application/ld+json">
