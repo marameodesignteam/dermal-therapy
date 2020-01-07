@@ -7073,7 +7073,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   margin-bottom: 50px; }
   .page-products h1:after {
     position: absolute;
-    bottom: -25px;
+    top: 65px;
     left: 50%;
     content: "";
     border-top: 1px solid #FFFFFF;
