@@ -6,3 +6,9 @@ sites/*/files
 sites/*/private
 .idea
 .history
+
+sites/all/themes/flexitol/prepros-6.config
+/sites/all/themes/flexitol/prepros-6.config
+
+.DS_Store
+/*/.DS_Store

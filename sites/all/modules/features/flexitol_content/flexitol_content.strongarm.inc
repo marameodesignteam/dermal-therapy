@@ -1405,10 +1405,22 @@ function flexitol_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'name' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'description' => array(
-          'weight' => '0',
+          'weight' => '1',
+        ),
+        'metatags' => array(
+          'weight' => '7',
+        ),
+        'path' => array(
+          'weight' => '5',
+        ),
+        'redirect' => array(
+          'weight' => '6',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '4',
         ),
       ),
       'display' => array(
