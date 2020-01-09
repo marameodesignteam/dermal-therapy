@@ -52,14 +52,12 @@ function drush_dermal_generic_bhrating_sync() {
 }
 
 /**
- * Callback for the pub-config command
+ * Callback for the product-review-fetch command
  *
  * @param $token_url
  * @param $pub_url
  */
 function drush_dermal_generic_bhrating_reviews() {
-  _truncate_old_reviews();
-
   $nids = db_select('node', 'n')
     ->fields('n', array('nid'))
     ->fields('n', array('type'))
@@ -68,52 +66,27 @@ function drush_dermal_generic_bhrating_reviews() {
     ->fetchCol();
   $nodes = node_load_multiple($nids);
   foreach ($nodes as $node) {
-    $curl = curl_init($node->field_beauty_review_link[LANGUAGE_NONE][0]['url']);
+    if (!empty($node->field_product_review_link['und'][0]['value'])) {
+      $curl = curl_init($node->field_product_review_link['und'][0]['value']);
 
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
-    $html = curl_exec($curl);
-    curl_close($curl);
+      curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+      curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
+      $html = curl_exec($curl);
+      curl_close($curl);
 
-    $dom = new DOMDocument();
-    @$dom->loadHTML($html);
-    $xpath = new DOMXPath($dom);
-    $reviews = $xpath->query( "//div[contains(@class,'view-product-reviews')]/div[contains(@class,'view-content')]/div[contains(@class,'views-row')]" );
+      $dom = new DOMDocument();
+      @$dom->loadHTML($html);
+      $xpath = new DOMXPath($dom);
+      $value = $xpath->query( "//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[1]/span");
+      $value_block = $dom->saveHTML($value->item(0));
+      $count = $xpath->query( "//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[2]/span/span/span");
+      $count_block = $dom->saveHTML($count->item(0));
 
-    foreach ($reviews as $review) {
-      $authorElement = $xpath->query(".//h4[contains(@class,'author')]/span", $review)->item(0);
-      $author = strip_tags($dom->saveHTML($authorElement));
-
-      $dateElement = $xpath->query(".//div[contains(@class,'date')]", $review)->item(0);
-      $date = strip_tags($dom->saveHTML($dateElement));
-
-      $titleElement = $xpath->query(".//div[contains(@class,'review-info')]/h4", $review)->item(0);
-      $title = strip_tags($dom->saveHTML($titleElement));
-
-      $bodyElement = $xpath->query(".//div[contains(@class,'field-name-body')]", $review)->item(0);
-      $body = strip_tags($dom->saveHTML($bodyElement));
-
-      $ratingElement = $xpath->query(".//div[contains(@class,'star')]/span[contains(@class,'on')]", $review);
-      $rating = $ratingElement->length;
-
-      // Create node
-      $values = array(
-        'type' => 'beautyheaven_review',
-        'uid' => 1,
-        'status' => 1,
-        'comment' => 1,
-        'promote' => 0,
-      );
-      $entity = entity_create('node', $values);
-      $ewrapper = entity_metadata_wrapper('node', $entity);
-      $ewrapper->title->set($title);
-      $ewrapper->body->set(array('value' => $body));
-      $ewrapper->field_author->set($author);
-      $ewrapper->field_review_date->set($date);
-      $ewrapper->field_rate->set($rating);
-      $ewrapper->field_product->set($node->nid);
-      $ewrapper->save();
+      $node_wrapper = entity_metadata_wrapper('node', $node);
+      $node_wrapper->field_rating_value->set(trim(strip_tags($value_block)));
+      $node_wrapper->field_rating_count->set(trim(strip_tags($count_block)));
+      $node_wrapper->save();
     }
   }
 }

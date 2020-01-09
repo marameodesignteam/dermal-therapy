@@ -1155,16 +1155,16 @@ function flexitol_content_strongarm() {
           'weight' => '10',
         ),
         'metatags' => array(
-          'weight' => '15',
-        ),
-        'path' => array(
           'weight' => '14',
         ),
+        'path' => array(
+          'weight' => '13',
+        ),
         'xmlsitemap' => array(
-          'weight' => '19',
+          'weight' => '18',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '20',
         ),
       ),
       'display' => array(

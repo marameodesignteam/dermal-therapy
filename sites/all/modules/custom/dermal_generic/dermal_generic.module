@@ -102,21 +102,19 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
  * @throws \Exception
  */
 function dermal_generic_cron() {
-  watchdog(WATCHDOG_ALERT, 'SYNC Beatury Heaven Reviews');
-
   $nids = db_select('node', 'n')
-    ->fields('n', ['nid'])
-    ->fields('n', ['type'])
+    ->fields('n', array('nid'))
+    ->fields('n', array('type'))
     ->condition('n.type', 'product')
     ->execute()
     ->fetchCol();
   $nodes = node_load_multiple($nids);
-  $count = 0;
   foreach ($nodes as $node) {
-    if (isset($node->field_beauty_review_link[LANGUAGE_NONE])) {
-      $curl = curl_init($node->field_beauty_review_link[LANGUAGE_NONE][0]['url']);
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-      curl_setopt($curl, CURLOPT_FOLLOWLOCATION, TRUE);
+    if (!empty($node->field_product_review_link['und'][0]['value'])) {
+      $curl = curl_init($node->field_product_review_link['und'][0]['value']);
+
+      curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
       curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
       $html = curl_exec($curl);
       curl_close($curl);
@@ -124,23 +122,17 @@ function dermal_generic_cron() {
       $dom = new DOMDocument();
       @$dom->loadHTML($html);
       $xpath = new DOMXPath($dom);
-      $rating = $xpath->query("//div[contains(@class,'product-average-rating')]");
-      if ($rating->length === 1) {
-        $count++;
-        $rating_block = $dom->saveHTML($rating->item(0));
-//        $node->field_beauty_review_data[LANGUAGE_NONE][0]['value'] = $rating_block;
-//        $node->field_beauty_review_data[LANGUAGE_NONE][0]['#format'] = 'php_code';
-//        node_save($node);
+      $value = $xpath->query( "//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[1]/span");
+      $value_block = $dom->saveHTML($value->item(0));
+      $count = $xpath->query( "//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[2]/span/span/span");
+      $count_block = $dom->saveHTML($count->item(0));
 
-        $node_wrapper = entity_metadata_wrapper('node', $node);
-        $node_wrapper->field_beauty_review_data->value = $rating_block;
-        $node_wrapper->field_beauty_review_data->format = 'filtered_html';
-        $node_wrapper->save();
-      }
+      $node_wrapper = entity_metadata_wrapper('node', $node);
+      $node_wrapper->field_rating_value->set(trim(strip_tags($value_block)));
+      $node_wrapper->field_rating_count->set(trim(strip_tags($count_block)));
+      $node_wrapper->save();
     }
   }
-
-  watchdog(WATCHDOG_ALERT, "Added/updated {$count} reviews");
 }
 
 /**
@@ -149,10 +141,10 @@ function dermal_generic_cron() {
  * @param $node
  */
 function dermal_generic_node_presave($node) {
-  global $user;
-  if ($node->type == 'product' && !empty($node->nid) && !empty($user->uid)) {
-    $node->field_beauty_review_data = $node->original->field_beauty_review_data;
-  }
+//  global $user;
+//  if ($node->type == 'product' && !empty($node->nid) && !empty($user->uid)) {
+//    $node->field_beauty_review_data = $node->original->field_beauty_review_data;
+//  }
 }
 
 /**
@@ -166,47 +158,15 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
   if ($context['entity_type'] == 'node' && $context['entity']->type == 'product') {
     $current = domain_get_domain();
     if ($current['machine_name'] == 'australia_dt') {
-      $query = new EntityFieldQuery();
-      $query->entityCondition('entity_type', 'node')
-        ->entityCondition('bundle', 'beautyheaven_review')
-        ->fieldCondition('field_product', 'value', $context["entity"]->nid)
-        ->addMetaData('account', user_load(1));
-      $result = $query->execute();
-
-      $reviews = [];
-      $rate_total = 0;
-      $rate_count = 0;
-      $rate_best = 0;
-      if (isset($result['node'])) {
-        $nids = array_keys($result['node']);
-        $review_nodes = entity_load('node', $nids);
-        foreach ($review_nodes as $node) {
-          $rate = $node->field_rate[LANGUAGE_NONE][0]['value'];
-          $rate_total += $rate;
-          $rate_count++;
-          $rate_best = ($rate_best < $rate) ? $rate : $rate_best;
-          $reviews[] = [
-            '@type' => 'Review',
-            'author' => $node->field_author[LANGUAGE_NONE][0]['value'],
-            'datePublished' => $node->field_review_date[LANGUAGE_NONE][0]['value'],
-            'description' => $node->body[LANGUAGE_NONE][0]['value'],
-            'name' => $node->title,
-            'reviewRating' => [
-              '@type'=> 'Rating',
-              'bestRating'=> '5',
-              'ratingValue'=> $rate,
-              'worstRating'=> '1'
-            ]
-          ];
-        }
-      }
-
+      $rate_value = $context['entity']->field_rating_value['und'][0]['value'];
+      $rate_count = $context['entity']->field_rating_count['und'][0]['value'];
+      $rate_best = 5;
       $image = image_style_url('width_250', $context['entity']->field_product_image['und'][0]['uri']);
       $description = strip_tags($context['entity']->field_product_information['und'][0]['value']);
       $aggregate_rating = empty($rate_count) ? '' : '
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "' . number_format($rate_total/$rate_count, 1) . '",
+          "ratingValue": "' . $rate_value . '",
           "bestRating": "' . $rate_best . '",
           "ratingCount": "' . $rate_count . '"
         },';
@@ -236,17 +196,15 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
 
       if (!empty($rate_count)) {
         $rating = empty($rate_count) ? '' : '
-          <span itemprop="ratingValue">' . number_format($rate_total/$rate_count, 1) . '</span> out of <span itemprop="bestRating">' . $rate_best . '</span> by <span itemprop="reviewCount">' . $rate_count . '</span> customers.';
+          <span itemprop="ratingValue">' . $rate_value . '</span> out of <span itemprop="bestRating">' . $rate_best . '</span> by <span itemprop="reviewCount">' . $rate_count . '</span> customers.';
           $snippet =  [
             '#type' => 'markup',
             '#markup' =>'<span style="display: none" itemscope itemtype="http://schema.org/Product">
             <span itemprop="name">' . $context['entity']->title . '</span> is <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-              <a href="' . $context['entity']->field_beauty_review_link[LANGUAGE_NONE][0]['url'] . '" target="_blank">rated</a>' .
+              <a href="' . $context['entity']->field_product_review_link[LANGUAGE_NONE][0]['value'] . '" target="_blank">rated</a>' .
               $rating .
             '</span>
           </span>'];
-
-//        $layout_render_array['left'][] = $snippet;
       }
     }
   }
