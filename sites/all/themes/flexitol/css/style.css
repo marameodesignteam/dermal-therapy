@@ -7080,12 +7080,6 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     width: 120px;
     margin-left: -60px; }
 
-.page-products .domain-newzealand-dt .view-products-page .box-flex img,
-.page-products .domain-newzealand-dt .view-products-page .box-flex a.learn-more,
-.page-products .domain-singapore-dt .view-products-page .box-flex img,
-.page-products .domain-singapore-dt .view-products-page .box-flex a.learn-more {
-  display: none; }
-
 .page-products .view-products-page .view-content {
   width: 100%;
   margin: auto;
@@ -7136,6 +7130,12 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
       padding: 5px 10px;
       text-align: center;
       align-self: flex-end; }
+
+.domain-newzealand-dt .view-products-page .box-flex img,
+.domain-newzealand-dt .view-products-page .box-flex a.learn-more,
+.domain-singapore-dt .view-products-page .box-flex img,
+.domain-singapore-dt .view-products-page .box-flex a.learn-more {
+  display: none; }
 
 .page-taxonomy.page-taxonomy-term hr {
   margin-top: 20px;
