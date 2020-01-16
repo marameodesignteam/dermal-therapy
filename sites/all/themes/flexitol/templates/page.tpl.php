@@ -105,7 +105,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 <?php if ($_domain['domain_id'] == 1): ?>
 
 <?php elseif ($_domain['domain_id'] == 3) : ?>
-    <div class="container-fluid top-banner-container">
+    <!--div class="container-fluid top-banner-container">
         <div class="container">
             <div class="row top-banner">
                 <a href="https://offers.dermaltherapy.com.au/new-zeala" target="_blank">
@@ -114,7 +114,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
                 </a>
             </div>
         </div>
-    </div>
+    </div-->
 <?php endif; ?>
 
 <div class="container-fluid header-fluid">
