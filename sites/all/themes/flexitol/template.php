@@ -290,14 +290,8 @@ function flexitol_preprocess_page(&$vars) {
       if ($current['machine_name'] == 'australia_dt') {
         $rate_value = $node->field_rating_value['und'][0]['value'];
         $rate_count = $node->field_rating_count['und'][0]['value'];
-        $aggregate_rating = empty($rate_count) ? '' : ',
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "' . $rate_value . '",
-                "ratingCount": "' . $rate_count . '"
-              }';
-
-        $google_product = '
+        if (!empty($rate_count)) {
+          $google_product = '
           <script type="application/ld+json">
             {
               "@context": "http://schema.org",
@@ -309,15 +303,21 @@ function flexitol_preprocess_page(&$vars) {
               "brand": {
                 "@type": "Thing",
                 "name": "Dermal Therapy"
-              }' . $aggregate_rating . '
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "' . $rate_value . '",
+                "ratingCount": "' . $rate_count . '"
+              }
             }
           </script>';
-        $element = [
-          '#type' => 'markup',
-          '#markup' => $google_product,
-        ];
+          $element = [
+            '#type' => 'markup',
+            '#markup' => $google_product,
+          ];
 
-        drupal_add_html_head($element, 'jquery-tmpl');
+          drupal_add_html_head($element, 'jquery-tmpl');
+        }
       }
     }
   }
