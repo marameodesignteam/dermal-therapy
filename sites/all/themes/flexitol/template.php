@@ -291,11 +291,11 @@ function flexitol_preprocess_page(&$vars) {
         $rate_value = $node->field_rating_value['und'][0]['value'];
         $rate_count = $node->field_rating_count['und'][0]['value'];
         $aggregate_rating = empty($rate_count) ? '' : ',
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "' . $rate_value . '",
-          "ratingCount": "' . $rate_count . '"
-        },';
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "' . $rate_value . '",
+                "ratingCount": "' . $rate_count . '"
+              }';
 
         $google_product = '
           <script type="application/ld+json">
