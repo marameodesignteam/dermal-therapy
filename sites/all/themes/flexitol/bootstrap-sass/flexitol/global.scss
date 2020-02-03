@@ -1404,3 +1404,21 @@ i.fa.fa-search {
   float: none;
   margin: 0 auto;
 }
+
+.page-node-99 {
+  .field-name-title h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  .field-name-body {
+    background: rgba(255,255,255,0.9);
+    padding: 5% 13%;
+    font-weight: 400;
+    word-spacing: 0.1em;
+    text-align: justify;
+  }
+}
