@@ -283,43 +283,43 @@ function flexitol_preprocess_page(&$vars) {
     }
   }
 
-  if (arg(0) == 'node' && arg(1) && is_numeric(arg(1)) && !arg(2)) {
-    $node = node_load(arg(1));
-    if ($node->type == 'product') {
-      $current = domain_get_domain();
-      if ($current['machine_name'] == 'australia_dt') {
-        $rate_value = $node->field_rating_value['und'][0]['value'];
-        $rate_count = $node->field_rating_count['und'][0]['value'];
-        if (!empty($rate_count)) {
-          $google_product = '
-          <script type="application/ld+json">
-            {
-              "@context": "http://schema.org",
-              "mainEntityOfPage": "' . url("node/{$node->nid}", ['absolute' => TRUE]) . '",
-              "@type": "Product",
-              "name": "' . $node->title . '",
-              "image": "' . image_style_url('width_250', $node->field_product_image['und'][0]['uri']) . '",
-              "brand": {
-                "@type": "Thing",
-                "name": "Dermal Therapy"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "' . $rate_value . '",
-                "ratingCount": "' . $rate_count . '"
-              }
-            }
-          </script>';
-          $element = [
-            '#type' => 'markup',
-            '#markup' => $google_product,
-          ];
-
-          drupal_add_html_head($element, 'jquery-tmpl');
-        }
-      }
-    }
-  }
+//  if (arg(0) == 'node' && arg(1) && is_numeric(arg(1)) && !arg(2)) {
+//    $node = node_load(arg(1));
+//    if ($node->type == 'product') {
+//      $current = domain_get_domain();
+//      if ($current['machine_name'] == 'australia_dt') {
+//        $rate_value = $node->field_rating_value['und'][0]['value'];
+//        $rate_count = $node->field_rating_count['und'][0]['value'];
+//        if (!empty($rate_count)) {
+//          $google_product = '
+//          <script type="application/ld+json">
+//            {
+//              "@context": "http://schema.org",
+//              "mainEntityOfPage": "' . url("node/{$node->nid}", ['absolute' => TRUE]) . '",
+//              "@type": "Product",
+//              "name": "' . $node->title . '",
+//              "image": "' . image_style_url('width_250', $node->field_product_image['und'][0]['uri']) . '",
+//              "brand": {
+//                "@type": "Thing",
+//                "name": "Dermal Therapy"
+//              },
+//              "aggregateRating": {
+//                "@type": "AggregateRating",
+//                "ratingValue": "' . $rate_value . '",
+//                "ratingCount": "' . $rate_count . '"
+//              }
+//            }
+//          </script>';
+//          $element = [
+//            '#type' => 'markup',
+//            '#markup' => $google_product,
+//          ];
+//
+//          drupal_add_html_head($element, 'jquery-tmpl');
+//        }
+//      }
+//    }
+//  }
 }
 
 /**
