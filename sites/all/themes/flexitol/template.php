@@ -260,7 +260,7 @@ function flexitol_preprocess_page(&$vars) {
       $vars['sidebar_first_class'] = 'col-sm-3';
     }
   }
-  // Old background function - references to background removed. 
+  // Old background function - references to background removed.
   //set variables for specific taxonomy taxonomy terms
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $term = taxonomy_term_load(arg(2));
@@ -349,7 +349,7 @@ function flexitol_preprocess_field(&$vars) {
  * Implements template_preprocess_HOOK().
  */
 function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
-  if (current_path() == 'taxonomy/term/28') {
+  if (current_path() == 'taxonomy/term/28' || current_path() == 'taxonomy/term/34') {
     $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
   }
   elseif (current_path() == 'taxonomy/term/9') {
