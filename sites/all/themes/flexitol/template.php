@@ -349,8 +349,12 @@ function flexitol_preprocess_field(&$vars) {
  * Implements template_preprocess_HOOK().
  */
 function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
-  if (current_path() == 'taxonomy/term/28' || current_path() == 'taxonomy/term/34') {
+  if (current_path() == 'taxonomy/term/28') {
     $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
+  }
+
+  elseif (current_path() == 'taxonomy/term/34') {
+    $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
   }
   elseif (current_path() == 'taxonomy/term/9') {
     $variables['rows'] .= _product_review(9, 'views-row col-sm-12');;
