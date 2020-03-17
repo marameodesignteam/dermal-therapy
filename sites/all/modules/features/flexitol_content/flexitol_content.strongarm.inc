@@ -1155,16 +1155,16 @@ function flexitol_content_strongarm() {
           'weight' => '10',
         ),
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
         'xmlsitemap' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
         'redirect' => array(
-          'weight' => '20',
+          'weight' => '30',
         ),
       ),
       'display' => array(
@@ -1405,22 +1405,10 @@ function flexitol_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'name' => array(
-          'weight' => '0',
+          'weight' => '-5',
         ),
         'description' => array(
-          'weight' => '1',
-        ),
-        'metatags' => array(
-          'weight' => '7',
-        ),
-        'path' => array(
-          'weight' => '5',
-        ),
-        'redirect' => array(
-          'weight' => '6',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '4',
+          'weight' => '0',
         ),
       ),
       'display' => array(
@@ -1949,7 +1937,7 @@ function flexitol_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_health_professionals_product';
   $strongarm->value = array(
-    'status' => '1',
+    'status' => '0',
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_health_professionals_product'] = $strongarm;
@@ -1999,7 +1987,7 @@ function flexitol_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_review';
   $strongarm->value = array(
-    'status' => '1',
+    'status' => '0',
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_review'] = $strongarm;

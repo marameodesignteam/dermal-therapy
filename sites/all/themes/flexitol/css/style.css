@@ -7091,7 +7091,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   padding: 10px 0;
   margin: 20px auto; }
   .click-and-collect img {
-    max-width: 89%; }
+    max-width: 89%;
+    height: 37px !important; }
   @media (max-width: 992px) {
     .click-and-collect img {
       max-width: 83%; } }
