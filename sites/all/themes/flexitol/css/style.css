@@ -7220,12 +7220,6 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
       -ms-flex-item-align: end;
       align-self: flex-end; }
 
-.domain-newzealand-dt .view-products-page .box-flex img,
-.domain-newzealand-dt .view-products-page .box-flex a.learn-more,
-.domain-singapore-dt .view-products-page .box-flex img,
-.domain-singapore-dt .view-products-page .box-flex a.learn-more {
-  display: none; }
-
 .page-taxonomy.page-taxonomy-term hr {
   margin-top: 20px;
   margin-bottom: 20px;
