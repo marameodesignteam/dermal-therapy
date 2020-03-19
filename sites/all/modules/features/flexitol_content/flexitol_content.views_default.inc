@@ -1254,7 +1254,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php']['php_output'] = '<?php
-global $domain;
+global $_domain;
 if ($_domain[\'domain_id\'] == 2){
   echo "SG";
 } elseif($_domain[\'domain_id\'] == 3){
