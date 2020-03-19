@@ -10905,3 +10905,7 @@ a.a2a_button_facebook {
 
 .fa-meetup:before {
   content: ""; }
+
+.domain-singapore-dt .view-products-page .box-flex img,
+.domain-singapore-dt .view-products-page .box-flex a.learn-more {
+  display: none; }
