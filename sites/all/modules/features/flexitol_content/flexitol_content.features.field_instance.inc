@@ -3729,7 +3729,7 @@ function flexitol_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -3760,7 +3760,7 @@ function flexitol_content_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_packshot_image',
-    'label' => 'Packshot Image',
+    'label' => 'Packshot Image AU',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -3782,6 +3782,106 @@ function flexitol_content_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-product_category-field_packshot_image_nz'.
+  $field_instances['taxonomy_term-product_category-field_packshot_image_nz'] = array(
+    'bundle' => 'product_category',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_packshot_image_nz',
+    'label' => 'Packshot Image NZ',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-product_category-field_packshot_image_sg'.
+  $field_instances['taxonomy_term-product_category-field_packshot_image_sg'] = array(
+    'bundle' => 'product_category',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_packshot_image_sg',
+    'label' => 'Packshot Image SG',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
     ),
   );
 
@@ -3820,7 +3920,9 @@ function flexitol_content_field_default_field_instances() {
   t('Link');
   t('Main body');
   t('Main paragraph');
-  t('Packshot Image');
+  t('Packshot Image AU');
+  t('Packshot Image NZ');
+  t('Packshot Image SG');
   t('Page Background Image');
   t('Product');
   t('Product Review Link');
