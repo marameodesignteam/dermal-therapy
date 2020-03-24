@@ -200,5 +200,14 @@ $(window).scroll(function(){
             $('section#block-flexitol-global-social-footer-links-block a:nth-child(1)').attr("href", "https://www.facebook.com/dermaltherapysg");
 
         }
+
+        $('.dropdown-toggle').click(function() {
+            if (jQuery('.hamburger-menu').height() < 10) {
+                var location = $(this).attr('href');
+                window.location.href = location;
+                return false;
+            }
+        });
     });
+
 })(jQuery);
