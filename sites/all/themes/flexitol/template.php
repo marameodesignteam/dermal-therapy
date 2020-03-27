@@ -224,7 +224,7 @@ alt="Dermal Therapy Australia Hand Care Range"
             });
         });
     </script>
-    <div class='{$wrapper_class}' style='text-align: center; margin-bottom: 10px;'>
+    <div class='{$wrapper_class}' style='text-align: center; margin-bottom: 10px; margin-top: 100px;'>
       {$markups[$categ]}
     </div>";
   }
