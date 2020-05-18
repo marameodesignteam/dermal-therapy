@@ -128,7 +128,7 @@
                     <li>
                         <!-- https://www.altman.co.il/products/skin-health/dry-skin/ -->
                         <a href="https://www.altman.co.il/products/skin-health/dry-skin/" target="_blank">
-                            <span class="flag-icon flag-icon-il"></span>Israel (תִיִרבע)
+                            <span class="flag-icon flag-icon-il"></span>Israel (עברית)
                         </a>
                     </li>
                     <li class="dropdown-header">EUROPE</li>
@@ -368,7 +368,7 @@
                         <a href="https://www.altman.co.il/products/skin-health/dry-skin/" target="_blank"><img src="<?php echo $path_to_theme; ?>/images/flags-png/Israel.png" alt="Israel Flag (xxx)"></a>
                     </div>
                     <!-- https://www.altman.co.il/products/skin-health/dry-skin/ -->
-                    <a href="https://www.altman.co.il/products/skin-health/dry-skin/" target="_blank"><div class="flag-label">Israel (תִיִרבע)</div></a>
+                    <a href="https://www.altman.co.il/products/skin-health/dry-skin/" target="_blank"><div class="flag-label">Israel (עברית)</div></a>
                 </div>
                 <div class="col-sm-12 region-title">
                     EUROPE
