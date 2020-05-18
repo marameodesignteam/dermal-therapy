@@ -151,6 +151,7 @@ function _product_review($categ, $wrapper_class) {
     22 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // SENSITIVE SKIN CARE
     23 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // PERSONAL CARE
     10 => 'b1a40f30-4372-4788-bc38-da37413ff560', // HAND CARE
+    28 => '28023c61-e180-43fc-8219-e6f318688388', // CHILDREN SKIN CARE
   ];
   $markups = [
     9 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-foot-care-range" rel="noopener">
