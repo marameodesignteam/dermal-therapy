@@ -209,6 +209,13 @@ src="https://api.productreview.com.au/api/services/rating-badge/v2/au/b1a40f30-4
 alt="Dermal Therapy Australia Hand Care Range"
 >
 </a>', // HAND CARE
+    28 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/28023c61-e180-43fc-8219-e6f318688388/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Children\'s Skin Care"
+>
+</a>', // CHILDREN SKIN CARE
   ];
   if (!empty($categ) && !empty($identifiers[$categ])) {
     return "
