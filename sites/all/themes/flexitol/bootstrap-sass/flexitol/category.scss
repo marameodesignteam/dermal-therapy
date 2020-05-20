@@ -88,6 +88,13 @@
     background-color: $brand-primary;
     margin-bottom: 0;
     padding-top: 5px;
+
+    #block-views-products-block {
+			@media (max-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+
     h3 {
       text-transform: uppercase;
     }

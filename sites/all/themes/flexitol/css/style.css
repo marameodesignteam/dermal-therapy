@@ -9020,6 +9020,11 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     padding-top: 0;
   }
 }
+@media (max-width: 768px) {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-products-block {
+    display: none;
+  }
+}
 .page-taxonomy.page-taxonomy-term .region-sidebar-first h3 {
   text-transform: uppercase;
 }
