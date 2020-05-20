@@ -222,62 +222,64 @@
 }
 
 //Mobile Sub Menu Block
-@media (min-width: $screen-tablet) {
+@media (min-width:$screen-tablet) {
   .navbar.mobilefront {
     display: none;
   }
 }
 
-@media (max-width: 767px) {
-  .navbar.mobilefront {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: -25px;
-    li.leaf {
-
-      a {
-        color: #ffffff;
-        background-color: #00a9e0;
-        text-transform: uppercase;
-        font-size: 28px;
-        font-weight: 700;
-
-        text-align: center;
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-    }
-    li.leaf.first {
-
-      padding-right: 8px;
-    }
-    li.leaf.last {
-      padding-left: 8px;
-    }
-
-  }
+.navbar.mobilefront {
+  display: none
 }
 
-@media (max-width: $screen-phone) {
-  .navbar.mobilefront {
-    margin-top: 10px !important;
-    margin-bottom: -25px !important;
-    li.leaf {
-      a {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
-@media (max-width: 360px) {
-  .navbar.mobilefront {
-    li.leaf {
-      a {
-        font-size: 14px;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-    }
-  }
-}
+// @media (max-width:767px) {
+//   .navbar.mobilefront {
+//     display: block;
+//     margin-top: 20px;
+//     margin-bottom: -25px;
+//
+//     li.leaf {
+//       a {
+//         color: #ffffff;
+//         background-color: #00a9e0;
+//         text-transform: uppercase;
+//         font-size: 28px;
+//         font-weight: 700;
+//         text-align: center;
+//         padding-top: 15px;
+//         padding-bottom: 15px;
+//       }
+//     }
+//
+//     li.leaf.first {
+//       padding-right: 8px;
+//     }
+//
+//     li.leaf.last {
+//       padding-left: 8px;
+//     }
+//   }
+// }
+// @media (max-width:$screen-phone) {
+//   .navbar.mobilefront {
+//     margin-top: 10px !important;
+//     margin-bottom: -25px!important;
+//
+//     li.leaf {
+//       a {
+//         font-size: 18px;
+//       }
+//     }
+//   }
+// }
+// @media (max-width:360px) {
+//   .navbar.mobilefront {
+//     li.leaf {
+//       a {
+//         font-size: 14px;
+//         padding-left: 5px;
+//         padding-right: 5px;
+//       }
+//     }
+//   }
+// }
