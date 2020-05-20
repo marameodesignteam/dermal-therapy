@@ -7727,6 +7727,12 @@ i.fa.fa-search {
   left: -6px;
 }
 
+@media (max-width: 767px) {
+  .navbar-nav .first .dropdown-menu {
+    display: none !important;
+  }
+}
+
 .nav-pills > li {
   border: 1px solid;
 }

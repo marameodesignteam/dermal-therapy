@@ -1,4 +1,13 @@
+(function ($) {
+  $(document).ready(function () {
+    $(".navbar-nav .first > *").on("click", function() {
 
+      if ($(window).width() < 769) {
+        window.location = "/products";
+      }
+    })
+  })
+})(jQuery);
 
 /*
 Wait until we can see the bottom - then set to fixed.
@@ -22,7 +31,7 @@ Then, if top = bottom of above - position absolute
         $(this).siblings('.sblock').toggleClass('visible-md');
         $(this).siblings('.sblock').toggleClass('visible-sm');
         $(this).siblings('.sblock').toggleClass('heightsb');
-        
+
          $('.header-fluid').toggleClass('heightheader');
          */
     });
@@ -43,11 +52,11 @@ if (jQuery(window).width() >= 768) {
 	//Function for bottom-fixed sidebar image
 function checkOffset() {
 var bottom = jQuery('#block-views-conditions-menu-block').offset().top + jQuery('#block-views-conditions-menu-block').outerHeight(true);
-    if($('#block-views-8a88aca1c0589e095165a67e4cdec26f').offset().top + $('#block-views-8a88aca1c0589e095165a67e4cdec26f').height() 
+    if($('#block-views-8a88aca1c0589e095165a67e4cdec26f').offset().top + $('#block-views-8a88aca1c0589e095165a67e4cdec26f').height()
                                            >= $('.container-fluid.footer-fluid').offset().top - 20)
         $('#block-views-8a88aca1c0589e095165a67e4cdec26f').css('position', 'absolute');
     if($(document).scrollTop() + window.innerHeight < $('.container-fluid.footer-fluid').offset().top)
-        $('#block-views-8a88aca1c0589e095165a67e4cdec26f').css('position', 'fixed'); 
+        $('#block-views-8a88aca1c0589e095165a67e4cdec26f').css('position', 'fixed');
     	$('#block-views-8a88aca1c0589e095165a67e4cdec26f').css('bottom', '0px');
 
     if($('#block-views-8a88aca1c0589e095165a67e4cdec26f').css('position') == 'absolute' ){
@@ -56,7 +65,7 @@ var bottom = jQuery('#block-views-conditions-menu-block').offset().top + jQuery(
     else if($('#block-views-8a88aca1c0589e095165a67e4cdec26f').offset().top <= bottom ) {
     	//$('#block-views-8a88aca1c0589e095165a67e4cdec26f').css('bottom', 'initial !important');
     	$('#block-views-8a88aca1c0589e095165a67e4cdec26f').attr('style','bottom:initial !important');
-    	
+
     }
 
 
@@ -65,7 +74,7 @@ var bottom = jQuery('#block-views-conditions-menu-block').offset().top + jQuery(
 }
 
 $(document).scroll(function() {
-	
+
     checkOffset();
 });
 })(jQuery);
@@ -78,7 +87,7 @@ jQuery(function () {
   	jQuery('#block-views-8a88aca1c0589e095165a67e4cdec26f').bind('inview', function (event, isInView, visiblePartX, visiblePartY) {
   if (isInView) {
     // element is now visible in the viewport
-   
+
     if (visiblePartY == 'both') {
       // top part of element is visible
        jQuery('#block-views-8a88aca1c0589e095165a67e4cdec26f').unbind('inview');
@@ -105,7 +114,7 @@ jQuery(function () {
 $(window).on('resize', function(){
 
 var new_width = $('.region.region-sidebar-first').width();
-$('#block-views-8a88aca1c0589e095165a67e4cdec26f img').css('max-width', new_width); 
+$('#block-views-8a88aca1c0589e095165a67e4cdec26f img').css('max-width', new_width);
 });
 })(jQuery);
 
@@ -128,7 +137,7 @@ $('#block-views-8a88aca1c0589e095165a67e4cdec26f img').css('max-width', new_widt
     function explodeWidth() {
 		var browserWidth = $(document).width();
 		var wrapWidth = $('.container').width();
-		
+
 		var margin = ( ( browserWidth - wrapWidth ) / 2 );
 		$('.fullwidth').css( 'margin-left', - margin ).css( 'margin-right', - margin );
 		$('.efficacy').css( 'margin-left', - margin ).css( 'margin-right', - margin );
@@ -150,15 +159,15 @@ $(window).scroll(function(){
 (function($){
   if ($(window).width() < 768) {
     $(window).load(function(){
-      for (i = 1; i < 4; i++) { 
+      for (i = 1; i < 4; i++) {
       //store current height of block
       var curheight = $("#views-bootstrap-grid-1 .row .col.col-sm-4:nth-child("+i+") .node-homepage-featured-content").height()
       //current height of hover copy
       var copyheight = $("#views-bootstrap-grid-1 .row .col.col-sm-4:nth-child("+i+") .node-homepage-featured-content .field-name-field-hfc-hover-text span").outerHeight(true)
       //set new block height to copy height + block height
       $("#views-bootstrap-grid-1 .row .col.col-sm-4:nth-child("+i+") .node-homepage-featured-content").height(curheight +copyheight);
-    }  
-  }); 
+    }
+  });
   }
 })(jQuery);
 

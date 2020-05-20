@@ -1464,3 +1464,11 @@ i.fa.fa-search {
   top: 11px;
   left: -6px;
 }
+
+
+//hide products dropdown
+.navbar-nav .first .dropdown-menu {
+  @media (max-width: 767px) {
+    display: none !important
+  }
+}
