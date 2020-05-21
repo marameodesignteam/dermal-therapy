@@ -358,7 +358,15 @@ function flexitol_preprocess_field(&$vars) {
  */
 function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
   if (current_path() == 'taxonomy/term/28') {
-    $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a></div>';
+    $variables['rows'] .= '
+    <div class="views-row col-sm-12">
+      <div class="product-review" style="text-align: center; margin-bottom: 10px; margin-top: 50px;">
+        <a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia" rel="noopener">
+          <img width="160" src="https://api.productreview.com.au/api/services/rating-badge/v2/au/28023c61-e180-43fc-8219-e6f318688388/from-internal-entry-id?resolution=hd&amp;theme=light&amp;width=160" alt="Dermal Therapy Australia Children\'s Skin Care">
+        </a>
+      </div>
+      <a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a>
+    </div>';
   }
 
   elseif (current_path() == 'taxonomy/term/34') {
