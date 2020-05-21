@@ -8044,9 +8044,9 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 .page-node.node-type-product section#block-views-beauty-review-button-block,
 .page-node.node-type-product section#block-views-leave-a-testimonial-block {
-  width: 40%;
+  width: 100%;
   margin: auto;
-  float: left;
+  float: none;
 }
 @media (max-width: 768px) {
   .page-node.node-type-product section#block-views-beauty-review-button-block,
@@ -8394,6 +8394,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   margin-top: 70px;
 }
 .page-node.node-type-product .field-name-field-product-info-image img {
+  margin: auto;
   max-width: 100%;
   height: auto;
 }
