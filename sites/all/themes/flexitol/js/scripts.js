@@ -1,3 +1,18 @@
+
+(function ($) {
+  $(document).ready(function () {
+    $(".node-homepage-featured-content .group-hover").on("click", function() {
+
+      if ($(window).width() < 992) {
+        var location = $(this).find(".btn").attr("href");
+
+        window.location = location;
+      }
+    })
+  })
+})(jQuery);
+
+
 (function ($) {
   $(document).ready(function () {
     $(".navbar-nav .first > *").on("click", function() {

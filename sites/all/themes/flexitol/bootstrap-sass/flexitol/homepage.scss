@@ -5,16 +5,20 @@
     text-align: center;
     padding: 30px 0;
   }
+
   .footer-fluid {
     background-color: #ffffff;
   }
+
   #block-conf-block-welcome-block {
     width: 85%;
     margin: 0 auto;
+
     .block-title {
       font-size: 38px;
       font-weight: bold;
       text-transform: uppercase;
+
       &:after {
         content: "";
         width: 150px;
@@ -24,6 +28,7 @@
         display: block;
       }
     }
+
     a.btn {
       margin-top: 20px;
     }
@@ -35,6 +40,7 @@
     border: 1px solid;
     color: #7a99ac;
     padding: 5px 10px;
+
     &:hover {
       text-decoration: none;
       background-color: #7a99ac;
@@ -42,17 +48,21 @@
       border-color: #ffffff;
     }
   }
+
   #block-menu-menu-footer-menu {
     float: right;
+
     .nav > li {
       display: inline-block;
+
       a {
         color: $navy-dark;
         text-transform: uppercase;
-        padding: 0px 10px;
+        padding: 0 10px;
         border-right: 1px solid;
         font-size: 0.9em;
       }
+
       &:last-child {
         a {
           border: none;
@@ -68,6 +78,7 @@
   @media (max-width: $screen-tablet) {
     height: 260px;
     margin-top: 10px;
+
     .field-name-title {
       margin-top: 15% !important;
     }
@@ -75,29 +86,36 @@
   @media (max-width: $screen-phone) {
     height: 230px;
     margin-top: 5px;
+
     .field-name-title {
       margin-top: 12% !important;
     }
   }
-  .field-name-title, .group-hover {
+
+  .field-name-title,
+  .group-hover {
     position: absolute;
     color: #ffffff;
     text-align: center;
   }
+
   .field-name-title {
     z-index: 1;
     margin-top: 35%;
     width: 100%;
     text-transform: uppercase;
     font-weight: bold;
+
     h2 {
       font-size: 24px;
     }
   }
+
   .field-name-field-hfc-image {
     .field-items {
       overflow: hidden;
     }
+
     img {
       @include prefixed("transform", "scaleY(1)");
       @include prefixed("transition", "all 0.7s ease-in-out");
@@ -105,6 +123,7 @@
       height: auto;
     }
   }
+
   .group-hover {
     background-color: $brand-primary;
     top: 0;
@@ -114,84 +133,102 @@
     z-index: 2;
     @include prefixed("transition", "all 0.5s linear");
     @include opacity(0);
+
     .field {
       margin: 10px 20px;
       color: #ffffff;
-
     }
+
     .field-item {
       @include opacity(0);
       @include prefixed("transform", "scale(0)");
       @include prefixed("transition", "all 0.5s linear");
     }
+
     .field-name-field-hfc-hover-title {
       font-size: 30px;
       line-height: 30px;
       margin-top: 20px;
     }
+
     .field-name-field-hfc-hover-text {
       color: #ffffff;
+
       span {
         display: block;
       }
     }
+
     .field-name-field-hfc-link {
       text-align: center;
       margin-top: 20px;
     }
   }
-  &:hover {
-    .field-name-field-hfc-image img, .field-name-title {
-      @include prefixed("transform", "scale(10)");
-      @include opacity(0);
-    }
-    .group-hover {
-      @include opacity(1);
-      .field-item {
+  @media (min-width: $screen-desktop) {
+    &:hover {
+      .field-name-field-hfc-image img,
+      .field-name-title {
+        @include prefixed("transform", "scale(10)");
+        @include opacity(0);
+      }
+
+      .group-hover {
         @include opacity(1);
-        @include prefixed("transform", "scale(1)");
+
+        .field-item {
+          @include opacity(1);
+          @include prefixed("transform", "scale(1)");
+        }
       }
     }
   }
 }
-
 // Tablet fixes
 @media (min-width: $screen-tablet) and (max-width: $screen-desktop) {
   .node-homepage-featured-content {
     .field-name-title {
       margin-top: 30%;
+
       h2 {
         font-size: 20px;
       }
     }
+
     .group-hover {
       .field {
         margin: 10px;
       }
+
       .field-name-field-hfc-hover-text {
         font-size: 12px;
         line-height: 13px;
       }
+
       .field-name-field-hfc-hover-title {
         font-size: 20px;
         line-height: 20px;
       }
     }
   }
+
   .view-nodequeue-2 {
     .node-review.view-mode-widget {
       .field-name-title {
         h2 {
           margin-top: 30px;
           font-size: 20px;
+
           &:after {
             width: 80px;
           }
         }
       }
-      .field-name-field-review-country, .field-name-field-review-city {
+
+      .field-name-field-review-city,
+      .field-name-field-review-country {
         font-size: 1em;
       }
+
       .field-name-field-review-body {
         margin: 20px 15px;
         font-size: 11px;
@@ -200,9 +237,7 @@
     }
   }
 }
-
 //view-nodequeue-2 .node-review.view-mode-widget .group-transform-container
-
 //Mobile Testimonial
 @media (max-width: 768px) {
   .view-nodequeue-2 {
@@ -220,7 +255,6 @@
     }
   }
 }
-
 //Mobile Sub Menu Block
 @media (min-width:$screen-tablet) {
   .navbar.mobilefront {
@@ -229,9 +263,8 @@
 }
 
 .navbar.mobilefront {
-  display: none
+  display: none;
 }
-
 // @media (max-width:767px) {
 //   .navbar.mobilefront {
 //     display: block;

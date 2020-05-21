@@ -7831,7 +7831,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-homepage #block-menu-menu-footer-menu .nav > li a {
   color: #7a99ac;
   text-transform: uppercase;
-  padding: 0px 10px;
+  padding: 0 10px;
   border-right: 1px solid;
   font-size: 0.9em;
 }
@@ -7861,7 +7861,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     margin-top: 12% !important;
   }
 }
-.node-homepage-featured-content .field-name-title, .node-homepage-featured-content .group-hover {
+.node-homepage-featured-content .field-name-title,
+.node-homepage-featured-content .group-hover {
   position: absolute;
   color: #ffffff;
   text-align: center;
@@ -7943,30 +7944,33 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   text-align: center;
   margin-top: 20px;
 }
-.node-homepage-featured-content:hover .field-name-field-hfc-image img, .node-homepage-featured-content:hover .field-name-title {
-  -webkit-transform: scale(10);
-  -moz-transform: scale(10);
-  -ms-transform: scale(10);
-  -o-transform: scale(10);
-  transform: scale(10);
-  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-}
-.node-homepage-featured-content:hover .group-hover {
-  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
-  filter: alpha(opacity=1);
-  opacity: 1;
-}
-.node-homepage-featured-content:hover .group-hover .field-item {
-  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
-  filter: alpha(opacity=1);
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+@media (min-width: 992px) {
+  .node-homepage-featured-content:hover .field-name-field-hfc-image img,
+.node-homepage-featured-content:hover .field-name-title {
+    -webkit-transform: scale(10);
+    -moz-transform: scale(10);
+    -ms-transform: scale(10);
+    -o-transform: scale(10);
+    transform: scale(10);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  .node-homepage-featured-content:hover .group-hover {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  .node-homepage-featured-content:hover .group-hover .field-item {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -7995,7 +7999,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   .view-nodequeue-2 .node-review.view-mode-widget .field-name-title h2:after {
     width: 80px;
   }
-  .view-nodequeue-2 .node-review.view-mode-widget .field-name-field-review-country, .view-nodequeue-2 .node-review.view-mode-widget .field-name-field-review-city {
+  .view-nodequeue-2 .node-review.view-mode-widget .field-name-field-review-city,
+.view-nodequeue-2 .node-review.view-mode-widget .field-name-field-review-country {
     font-size: 1em;
   }
   .view-nodequeue-2 .node-review.view-mode-widget .field-name-field-review-body {
