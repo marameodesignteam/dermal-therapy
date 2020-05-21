@@ -303,21 +303,12 @@ function flexitol_content_context_default_contexts() {
   $export['homepage_sg'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'product';
   $context->description = 'Product page';
   $context->tag = '';
-  $context->conditions = array(
-    'node' => array(
-      'values' => array(
-        'product' => 'product',
-      ),
-      'options' => array(
-        'node_form' => '0',
-      ),
-    ),
-  );
+  $context->conditions = array();
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
@@ -332,12 +323,6 @@ function flexitol_content_context_default_contexts() {
           'delta' => '11d287f0dab888795c67e49bfb01f5ba',
           'region' => 'content_bottom',
           'weight' => '-35',
-        ),
-        'views-beauty_review_button-block' => array(
-          'module' => 'views',
-          'delta' => 'beauty_review_button-block',
-          'region' => 'content_bottom',
-          'weight' => '-34',
         ),
         'views-leave_a_testimonial-block' => array(
           'module' => 'views',

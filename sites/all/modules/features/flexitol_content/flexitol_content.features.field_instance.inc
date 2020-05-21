@@ -2009,7 +2009,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 24,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2073,7 +2073,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 28,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2159,7 +2159,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 21,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2368,7 +2368,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 29,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2431,7 +2431,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 27,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2488,7 +2488,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 25,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2607,7 +2607,7 @@ function flexitol_content_field_default_field_instances() {
           'image_style' => 'width_250',
         ),
         'type' => 'image',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2875,7 +2875,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 26,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2990,7 +2990,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 20,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3048,7 +3048,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3111,7 +3111,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 19,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3174,7 +3174,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3237,7 +3237,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 22,
       ),
       'nodeorder' => array(
         'label' => 'above',

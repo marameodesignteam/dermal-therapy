@@ -1336,6 +1336,137 @@ if ($_domain[\'domain_id\'] == 2){
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['metatags'] = array(
+    'und' => array(
+      'title' => array(
+        'value' => 'Dermal Therapy Products | Effective Skincare Products Made in Australia',
+        'default' => '[view:title] | [current-page:pager][site:name]',
+      ),
+      'description' => array(
+        'value' => 'Dermal Therapy products Australia offer a range of effective and innovative foot and skincare products',
+        'default' => '[view:description]',
+      ),
+      'abstract' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'keywords' => array(
+        'value' => 'Dermal Therapy Products',
+        'default' => 'heel balm, foot care, dry hands, dry skin, cracked heels, blisters, stretch marks, scars, dry lips, skincare, psoriasis, eczema, dermatitis,cocoa butter, lanolin, shea butter, urea',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 'index',
+          'follow' => 'follow',
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+        'default' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rating' => array(
+        'value' => 'general',
+        'default' => 'general',
+      ),
+      'referrer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rights' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'image_src' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'canonical' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'shortlink' => array(
+        'value' => '[current-page:url:unaliased]',
+        'default' => '[current-page:url:unaliased]',
+      ),
+      'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'next' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'content-language' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.position' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+        'default' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['path'] = 'products';
   $export['products_page'] = $view;
 
@@ -2400,6 +2531,81 @@ if ($_domain[\'domain_id\'] == 2){
   $handler->display->display_options['filters']['current_all']['value'] = '1';
   $handler->display->display_options['filters']['current_all']['group'] = 1;
   $handler->display->display_options['block_description'] = 'Children Skin care';
+
+  /* Display: Scalp care */
+  $handler = $view->new_display('block', 'Scalp care', 'scalp_care');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['field_review_body']['id'] = 'field_review_body';
+  $handler->display->display_options['fields']['field_review_body']['table'] = 'field_data_field_review_body';
+  $handler->display->display_options['fields']['field_review_body']['field'] = 'field_review_body';
+  $handler->display->display_options['fields']['field_review_body']['label'] = '';
+  $handler->display->display_options['fields']['field_review_body']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<br/>
+[title],';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: City */
+  $handler->display->display_options['fields']['field_review_city']['id'] = 'field_review_city';
+  $handler->display->display_options['fields']['field_review_city']['table'] = 'field_data_field_review_city';
+  $handler->display->display_options['fields']['field_review_city']['field'] = 'field_review_city';
+  $handler->display->display_options['fields']['field_review_city']['label'] = '';
+  $handler->display->display_options['fields']['field_review_city']['element_label_colon'] = FALSE;
+  /* Field: Content: Country */
+  $handler->display->display_options['fields']['field_review_country']['id'] = 'field_review_country';
+  $handler->display->display_options['fields']['field_review_country']['table'] = 'field_data_field_review_country';
+  $handler->display->display_options['fields']['field_review_country']['field'] = 'field_review_country';
+  $handler->display->display_options['fields']['field_review_country']['label'] = '';
+  $handler->display->display_options['fields']['field_review_country']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'review' => 'review',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['relationship'] = 'field_review_product_target_id';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    35 => '35',
+  );
+  $handler->display->display_options['filters']['tid']['group'] = 1;
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'product_category';
+  /* Filter criterion: Domain Access: Available on current domain */
+  $handler->display->display_options['filters']['current_all']['id'] = 'current_all';
+  $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
+  $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
+  $handler->display->display_options['filters']['current_all']['relationship'] = 'field_review_product_target_id';
+  $handler->display->display_options['filters']['current_all']['value'] = '1';
+  $handler->display->display_options['filters']['current_all']['group'] = 1;
+  $handler->display->display_options['block_description'] = 'Personal care';
   $export['review'] = $view;
 
   $view = new view();
@@ -2609,6 +2815,11 @@ if ($_domain[\'domain_id\'] == 2){
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
+  /* Filter criterion: Content: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
