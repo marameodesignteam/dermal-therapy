@@ -199,7 +199,7 @@ class RulesPluginUI extends FacesExtender implements RulesPluginUIInterface {
    * Note: Make sure that you set RulesPluginUI::$basePath before using this
    * method, otherwise paths, links, redirects etc. won't be correct.
    */
-  public function form(&$form, &$form_state, $options = array()) {
+  public function form(&$form, &$form_state, $options = array(), $iterator = NULL) {
     self::formDefaults($form, $form_state);
     $form_state += array('rules_element' => $this->element);
 
@@ -890,7 +890,7 @@ class RulesAbstractPluginUI extends RulesPluginUI {
    * Overridden to invoke the abstract plugins form alter callback and to add
    * the negation checkbox for conditions.
    */
-  public function form(&$form, &$form_state, $options = array()) {
+  public function form(&$form, &$form_state, $options = array(), $iterator = NULL) {
     parent::form($form, $form_state, $options);
 
     if ($this->element instanceof RulesCondition) {
