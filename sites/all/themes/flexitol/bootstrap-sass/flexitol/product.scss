@@ -14,7 +14,6 @@
   section#block-views-11d287f0dab888795c67e49bfb01f5ba {
     width: 60%;
     float: left;
-    
   }
 
   section#block-views-beauty-review-button-block,
@@ -995,10 +994,9 @@
       flex: 0 0 30.3333%;
       margin: 10px;
       max-width: 30.333%;
-
       @media (max-width: $screen-tablet) {
-      flex: 0 0 45%;
-      max-width: 45%;
+        flex: 0 0 45%;
+        max-width: 45%;
       }
 
       > div {
@@ -1027,18 +1025,17 @@
         color: #7a99ac;
         margin: 0;
         color: gray;
-
         @media (max-width: $screen-md) {
-        font-size: 20px;
+          font-size: 20px;
         }
-
         @media (max-width: $screen-phone) {
-        font-size: 18px;
+          font-size: 18px;
         }
       }
 
       a {
         text-decoration: none;
+
         &:hover {
           text-decoration: none;
         }
@@ -1051,6 +1048,17 @@
         padding: 5px 10px;
         text-align: center;
         align-self: flex-end;
+      }
+    }
+  }
+}
+//override for scalp care nz product page
+.domain-newzealand-dt {
+  &.page-node-1402,
+  &.page-node-1403 {
+    .field-name-leave-a-testimonial {
+      @media (min-width: 769px) {
+        margin-top: 70px;
       }
     }
   }
