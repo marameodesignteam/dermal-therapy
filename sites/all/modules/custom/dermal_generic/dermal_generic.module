@@ -3,8 +3,9 @@
 /**
  * Implements hook_field_formatter_info().
  */
-function dermal_generic_field_formatter_info() {
-  $info = [
+function dermal_generic_field_formatter_info()
+{
+    $info = [
     'bhfivestar' => [
       'label' => t('BH Fivestar'),
       'field types' => ['text_long'],
@@ -15,85 +16,195 @@ function dermal_generic_field_formatter_info() {
       'field types' => ['number_integer'],
       'description' => t('Custom BH Review block'),
     ],
+
+    'online_reseller' => [
+      'label' => t('Online reseller link'),
+      'field types' => ['text'],
+      'description' => t('Custom online reseller link'),
+    ],
+
   ];
 
-  return $info;
+    return $info;
 }
 
 /**
  * Implements hook_field_formatter_view().
  */
-function dermal_generic_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
-  $element = [];
+function dermal_generic_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display)
+{
+    $element = [];
 
-  switch ($display['type']) {
-    case 'bhfivestar':
-      $text_long = reset($items);
-      if (!empty($text_long['value'])) {
-        $bh_logo = drupal_get_path('module', 'dermal_generic') . '/img/beauty_review_logo.png';
-        if (!empty($entity->field_beauty_review_link[LANGUAGE_NONE][0]['url'])) {
-          $url = $entity->field_beauty_review_link[LANGUAGE_NONE][0]['url'];
-          $markup = "
-            <div class='bhrating'>
-              <a href='{$url}' target='_blank'>
-                <div class='left'><img src='/{$bh_logo}'/></div>
-                <div class='right'>{$text_long['value']}</div>
-              </a>
-            </div>";
-        }
-        else {
-          $markup = "
-            <div class='bhrating'>
-              <div class='left'><img src='/{$bh_logo}'/></div>
-              <div class='right'>{$text_long['value']}</div>
-            </div>";
-        }
-        $element[0] = [
-          '#markup' => $markup,
-        ];
-      }
+    //   switch ($display['type']) {
+//     case 'bhfivestar':
+//       $text_long = reset($items);
+//       if (!empty($text_long['value'])) {
+//         $bh_logo = drupal_get_path('module', 'dermal_generic') . '/img/beauty_review_logo.png';
+//         if (!empty($entity->field_beauty_review_link[LANGUAGE_NONE][0]['url'])) {
+//           $url = $entity->field_beauty_review_link[LANGUAGE_NONE][0]['url'];
+//           $markup = "
+//             <div class='bhrating'>
+//               <a href='{$url}' target='_blank'>
+//                 <div class='left'><img src='/{$bh_logo}'/></div>
+//                 <div class='right'>{$text_long['value']}</div>
+//               </a>
+//             </div>";
+//         }
+//         else {
+//           $markup = "
+//             <div class='bhrating'>
+//               <div class='left'><img src='/{$bh_logo}'/></div>
+//               <div class='right'>{$text_long['value']}</div>
+//             </div>";
+//         }
+//         $element[0] = [
+//           '#markup' => $markup,
+//         ];
+//       }
+//       break;
+//
+//     case 'bhrate_to_fivestar':
+//       if (!empty($entity->nid) && ($entity->nid == 1331 || $entity->nid == 1332 || $entity->nid == 1333)) {
+//         $element[0] = [
+//           '#markup' => '<a target="_blank" href="https://www.productreview.com.au/listings/little-bodies" rel="noopener">
+//             <img
+//             width="160"
+//             src="https://api.productreview.com.au/api/services/rating-badge/v2/au/46923d38-dfcc-3924-b544-5ae6720bb473/from-internal-entry-id?resolution=hd&theme=light&width=160"
+//             alt="Little Bodies"
+//             >
+//           </a>'];
+//       }
+//       else {
+//         $rate = reset($items);
+//         if (!empty($rate['value'])) {
+//           $final_markup = "";
+//           $begin_markup = "<div class='star star-";
+//           $end_markup = "'></div>";
+//           for ($i = 1; $i <= 5; $i++ ) {
+//             $fill = ($rate['value'] >= $i) ? " filled" : "";
+//             $final_markup .= $begin_markup.$i.$fill.$end_markup;
+//           }
+//
+//           $element[0] = [
+//             '#markup' => "
+    // <div class='product-average-rating'>
+    //   <div class='review-result'>Rated {$rate['value']}/5 stars</div>
+    //   <div class='fivestar-bh stars large'>
+//     <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clearfix'>
+//     ".$final_markup."
+//     </div>
+    //   </div>
+    //   <div class='review-info'>by beauty heaven members</div>
+    // </div>",
+//           ];
+//         }
+//       }
+//       break;
+    //   }
+
+    switch ($display['type']) {
+
+      case 'online_reseller':
+
+      $label = $instance["label"];
+
+      $class = strtolower(str_replace( " ", "_", $label));
+
+      $value = reset($items);
+
+      $url = $value["value"];
+
+      if (!empty($url)) $element[0] = [
+
+        '#markup' => "<div class='".$class."'><a class='btn btn-blue' target='_blank' href='".$url."'>Buy now<span class='visually-hidden'> on the ".$label." website</span></a></div>"
+
+      ];
+
       break;
 
-    case 'bhrate_to_fivestar':
-      if (!empty($entity->nid) && ($entity->nid == 1331 || $entity->nid == 1332 || $entity->nid == 1333)) {
-        $element[0] = [
-          '#markup' => '<a target="_blank" href="https://www.productreview.com.au/listings/little-bodies" rel="noopener">
-            <img
-            width="160"
-            src="https://api.productreview.com.au/api/services/rating-badge/v2/au/46923d38-dfcc-3924-b544-5ae6720bb473/from-internal-entry-id?resolution=hd&theme=light&width=160"
-            alt="Little Bodies"
-            >
-          </a>'];
-      }
-      else {
-        $rate = reset($items);
-        if (!empty($rate['value'])) {
-          $final_markup = "";
-          $begin_markup = "<div class='star star-";
-          $end_markup = "'></div>";
-          for ($i = 1; $i <= 5; $i++ ) {
-            $fill = ($rate['value'] >= $i) ? " filled" : "";
-            $final_markup .= $begin_markup.$i.$fill.$end_markup;
-          }
+   case 'bhfivestar':
 
-          $element[0] = [
-            '#markup' => "
-<div class='product-average-rating'>
-  <div class='review-result'>Rated {$rate['value']}/5 stars</div>
-  <div class='fivestar-bh stars large'>
-    <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clearfix'>
-    ".$final_markup."
-    </div>
-  </div>
-  <div class='review-info'>by beauty heaven members</div>
-</div>",
-          ];
-        }
+  $rate = reset($items);
+
+  //echo "<pre>";var_dump($rate['value']);  echo "</pre>";
+
+  $rate_string = $rate['value'];
+
+  $rate_string = str_replace(array(" ", "</div>", "<div>", "<strong>", "</strong>"), "", $rate_string);
+
+  $filteredNumbers = array_filter(preg_split("/\D+/", $rate_string));
+
+  $rate_value = reset($filteredNumbers);
+
+
+  if (!empty($rate['value'])) {
+      $final_markup = "";
+      $begin_markup = "<div class='star star-";
+      $end_markup = "'></div>";
+      for ($i = 1; $i <= 5; $i++) {
+          $fill = ($rate_value >= $i) ? " filled" : "";
+          $final_markup .= $begin_markup.$i.$fill.$end_markup;
       }
-      break;
+
+      $element[0] = [
+      '#markup' => "
+          <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5' aria-hidden='true'>
+          ".$final_markup."
+          </div>
+          <div class='product-average-rating'>
+          <div class='review-result'>{$rate['value']}</div>
+          <div class='fivestar-bh stars large'>
+
+          </div>
+          <div class='review-info'>by beauty heaven members</div>
+          </div>",
+    ];
   }
 
-  return $element;
+  break;
+
+  case 'bhrate_to_fivestar':
+       if (!empty($entity->nid) && ($entity->nid == 1331 || $entity->nid == 1332 || $entity->nid == 1333)) {
+           $element[0] = [
+           '#markup' => '<a target="_blank" href="https://www.productreview.com.au/listings/little-bodies" rel="noopener">
+             <img
+             width="160"
+             src="https://api.productreview.com.au/api/services/rating-badge/v2/au/46923d38-dfcc-3924-b544-5ae6720bb473/from-internal-entry-id?resolution=hd&theme=light&width=160"
+             alt="Little Bodies"
+             >
+           </a>'];
+       } else {
+           $rate = reset($items);
+           if (!empty($rate['value'])) {
+               $final_markup = "";
+               $begin_markup = "<div class='star star-";
+               $end_markup = "'></div>";
+               for ($i = 1; $i <= 5; $i++) {
+                   $fill = ($rate['value'] >= $i) ? " filled" : "";
+                   $final_markup .= $begin_markup.$i.$fill.$end_markup;
+               }
+
+               $element[0] = [
+             '#markup' => "
+ <div class='product-average-rating'>
+   <div class='review-result'>Rated {$rate['value']}/5 stars</div>
+   <div class='fivestar-bh stars large'>
+     <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5 clearfix'>
+     ".$final_markup."
+     </div>
+   </div>
+   <div class='review-info'>by beauty heaven members</div>
+ </div>",
+           ];
+           }
+       }
+       break;
+
+
+
+}
+
+    return $element;
 }
 
 /**
@@ -101,38 +212,39 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
  *
  * @throws \Exception
  */
-function dermal_generic_cron() {
-  $nids = db_select('node', 'n')
+function dermal_generic_cron()
+{
+    $nids = db_select('node', 'n')
     ->fields('n', array('nid'))
     ->fields('n', array('type'))
     ->condition('n.type', 'product')
     ->execute()
     ->fetchCol();
-  $nodes = node_load_multiple($nids);
-  foreach ($nodes as $node) {
-    if (!empty($node->field_product_review_link['und'][0]['value'])) {
-      $curl = curl_init($node->field_product_review_link['und'][0]['value']);
+    $nodes = node_load_multiple($nids);
+    foreach ($nodes as $node) {
+        if (!empty($node->field_product_review_link['und'][0]['value'])) {
+            $curl = curl_init($node->field_product_review_link['und'][0]['value']);
 
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-      curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-      curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
-      $html = curl_exec($curl);
-      curl_close($curl);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
+            $html = curl_exec($curl);
+            curl_close($curl);
 
-      $dom = new DOMDocument();
-      @$dom->loadHTML($html);
-      $xpath = new DOMXPath($dom);
-      $value = $xpath->query( "//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[1]/span");
-      $value_block = $dom->saveHTML($value->item(0));
-      $count = $xpath->query( "//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[2]/span/span/span");
-      $count_block = $dom->saveHTML($count->item(0));
+            $dom = new DOMDocument();
+            @$dom->loadHTML($html);
+            $xpath = new DOMXPath($dom);
+            $value = $xpath->query("//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[1]/span");
+            $value_block = $dom->saveHTML($value->item(0));
+            $count = $xpath->query("//*[@id='content']/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]/span/span[2]/span/span/span");
+            $count_block = $dom->saveHTML($count->item(0));
 
-      $node_wrapper = entity_metadata_wrapper('node', $node);
-      $node_wrapper->field_rating_value->set(trim(strip_tags($value_block)));
-      $node_wrapper->field_rating_count->set(trim(strip_tags($count_block)));
-      $node_wrapper->save();
+            $node_wrapper = entity_metadata_wrapper('node', $node);
+            $node_wrapper->field_rating_value->set(trim(strip_tags($value_block)));
+            $node_wrapper->field_rating_count->set(trim(strip_tags($count_block)));
+            $node_wrapper->save();
+        }
     }
-  }
 }
 
 /**
@@ -140,8 +252,9 @@ function dermal_generic_cron() {
  *
  * @param $node
  */
-function dermal_generic_node_presave($node) {
-//  global $user;
+function dermal_generic_node_presave($node)
+{
+    //  global $user;
 //  if ($node->type == 'product' && !empty($node->nid) && !empty($user->uid)) {
 //    $node->field_beauty_review_data = $node->original->field_beauty_review_data;
 //  }
@@ -154,23 +267,24 @@ function dermal_generic_node_presave($node) {
  * @param $context
  * @param $vars
  */
-function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$vars) {
-  if ($context['entity_type'] == 'node' && $context['entity']->type == 'product') {
-    $current = domain_get_domain();
-    if ($current['machine_name'] == 'australia_dt') {
-      $rate_value = $context['entity']->field_rating_value['und'][0]['value'];
-      $rate_count = $context['entity']->field_rating_count['und'][0]['value'];
-      $rate_best = 5;
-      $image = image_style_url('width_250', $context['entity']->field_product_image['und'][0]['uri']);
-      $description = strip_tags($context['entity']->field_product_information['und'][0]['value']);
-      $aggregate_rating = empty($rate_count) ? '' : '
+function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$vars)
+{
+    if ($context['entity_type'] == 'node' && $context['entity']->type == 'product') {
+        $current = domain_get_domain();
+        if ($current['machine_name'] == 'australia_dt') {
+            $rate_value = $context['entity']->field_rating_value['und'][0]['value'];
+            $rate_count = $context['entity']->field_rating_count['und'][0]['value'];
+            $rate_best = 5;
+            $image = image_style_url('width_250', $context['entity']->field_product_image['und'][0]['uri']);
+            $description = strip_tags($context['entity']->field_product_information['und'][0]['value']);
+            $aggregate_rating = empty($rate_count) ? '' : '
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "' . $rate_value . '",
           "bestRating": "' . $rate_best . '",
           "ratingCount": "' . $rate_count . '"
         },';
-      $data = [
+            $data = [
         '#type' => 'markup',
         '#markup' => '<script type="application/ld+json">
 {
@@ -194,10 +308,10 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
 
 //      $layout_render_array['left'][] = $data;
 
-      if (!empty($rate_count)) {
-        $rating = empty($rate_count) ? '' : '
+            if (!empty($rate_count)) {
+                $rating = empty($rate_count) ? '' : '
           <span itemprop="ratingValue">' . $rate_value . '</span> out of <span itemprop="bestRating">' . $rate_best . '</span> by <span itemprop="reviewCount">' . $rate_count . '</span> customers.';
-          $snippet =  [
+                $snippet =  [
             '#type' => 'markup',
             '#markup' =>'<span style="display: none" itemscope itemtype="http://schema.org/Product">
             <span itemprop="name">' . $context['entity']->title . '</span> is <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -205,7 +319,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
               $rating .
             '</span>
           </span>'];
-      }
+            }
+        }
     }
-  }
 }
