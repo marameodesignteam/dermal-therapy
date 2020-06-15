@@ -8266,6 +8266,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   .page-node.node-type-product .group-buttons #online-resellers + .field-name-where-to-buy-button {
     width: auto;
     left: 8.75em;
+    margin-left: 20px;
   }
 }
 .page-node.node-type-product .group-buttons .btn-danger {

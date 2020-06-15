@@ -242,6 +242,7 @@ $text-color: #575757;
 
     .field-name-where-to-buy-button {
       width: calc(50% - 0.7142855em);
+
       @media (min-width:768px) {
         width: auto;
       }
@@ -254,6 +255,7 @@ $text-color: #575757;
       @media (min-width:768px) {
         width: auto;
         left: 8.75em;
+        margin-left: 20px;
       }
     }
 
