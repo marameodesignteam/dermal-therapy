@@ -156,7 +156,7 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
           <div class='fivestar-bh stars large'>
 
           </div>
-          <div class='review-info'>by beauty heaven members</div>
+          <div class='review-info'>by beautyheaven members</div>
           </div>",
     ];
   }
