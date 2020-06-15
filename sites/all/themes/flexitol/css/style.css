@@ -8393,6 +8393,11 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   flex-direction: column;
   border: 2px solid #D1D1D1;
 }
+.page-node.node-type-product .related-products .group-title a {
+  display: block;
+  color: #7A99AC;
+  padding: 1em 1em 0;
+}
 .page-node.node-type-product .related-products .group-title h3 {
   text-transform: uppercase;
   font-size: 1.42857em;
@@ -8401,11 +8406,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   font-weight: bold;
 }
 .page-node.node-type-product .related-products .group-title h3 a {
-  padding: 1em 0 1.25em;
-}
-.page-node.node-type-product .related-products .group-title a {
-  display: block;
-  color: #7A99AC;
+  padding: 1em 1em 1.25em;
 }
 .page-node.node-type-product .related-products .group-title img {
   width: 100%;

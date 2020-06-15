@@ -425,6 +425,12 @@ $text-color: #575757;
       flex-direction: column;
       border: 2px solid $slideshow-border;
 
+      a {
+        display: block;
+        color: #7A99AC;
+        padding: 1em 1em 0;
+      }
+
       h3 {
         text-transform: uppercase;
         font-size: 1.42857em;
@@ -433,14 +439,11 @@ $text-color: #575757;
         font-weight: bold;
 
         a {
-          padding: 1em 0 1.25em;
+          padding: 1em 1em 1.25em;
         }
       }
 
-      a {
-        display: block;
-        color: #7A99AC;
-      }
+
 
       img {
         width: 100%;
