@@ -308,7 +308,16 @@ function flexitol_content_context_default_contexts() {
   $context->name = 'product';
   $context->description = 'Product page';
   $context->tag = '';
-  $context->conditions = array();
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'product' => 'product',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
@@ -322,13 +331,13 @@ function flexitol_content_context_default_contexts() {
           'module' => 'views',
           'delta' => '11d287f0dab888795c67e49bfb01f5ba',
           'region' => 'content_bottom',
-          'weight' => '-35',
+          'weight' => '-9',
         ),
         'views-leave_a_testimonial-block' => array(
           'module' => 'views',
           'delta' => 'leave_a_testimonial-block',
           'region' => 'content_bottom',
-          'weight' => '-33',
+          'weight' => '-8',
         ),
       ),
     ),
