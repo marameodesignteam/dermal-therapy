@@ -388,6 +388,27 @@ function flexitol_content_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|product|related_product';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'product';
+  $ds_fieldsetting->view_mode = 'related_product';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '38',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|product|related_product'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|product|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'product';
@@ -602,6 +623,51 @@ function flexitol_content_ds_custom_fields_info() {
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
+  $ds_field->field = 'beauty_review_data_clone_';
+  $ds_field->label = 'Beauty Review data (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['beauty_review_data_clone_'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'click_and_collect';
+  $ds_field->label = 'Click and collect';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<p>Click and collect</p>
+',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['click_and_collect'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
   $ds_field->field = 'conditions_menu_block';
   $ds_field->label = 'Conditions Menu';
   $ds_field->field_type = 6;
@@ -614,6 +680,116 @@ function flexitol_content_ds_custom_fields_info() {
     'block_render' => '2',
   );
   $export['conditions_menu_block'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'leave_a_testimonial';
+  $ds_field->label = 'Leave a testimonial';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'views|leave_a_testimonial-block',
+    'block_render' => '1',
+    'block_visibility' => 0,
+  );
+  $export['leave_a_testimonial'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'product_slideshow';
+  $ds_field->label = 'Product slideshow';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'views|product_slideshow-block',
+    'block_render' => '3',
+    'block_visibility' => 0,
+  );
+  $export['product_slideshow'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'subtitle_clone_';
+  $ds_field->label = 'Subtitle (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['subtitle_clone_'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'subtitle_information_clone_';
+  $ds_field->label = 'Subtitle information (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['subtitle_information_clone_'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'title_clone_';
+  $ds_field->label = 'Title (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['title_clone_'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
@@ -636,6 +812,32 @@ $path = ($crt_path == \'node/1331\' || $crt_path == \'node/1332\' || $crt_path =
     'use_token' => 0,
   );
   $export['where_to_buy_button'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'write_a_review_url_clone_';
+  $ds_field->label = 'Write a review URL (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['write_a_review_url_clone_'] = $ds_field;
 
   return $export;
 }
@@ -1081,6 +1283,39 @@ function flexitol_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|product|related_product';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'product';
+  $ds_layout->view_mode = 'related_product';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_title',
+        1 => 'title',
+        2 => 'field_product_image',
+      ),
+    ),
+    'fields' => array(
+      'group_title' => 'ds_content',
+      'title' => 'ds_content',
+      'field_product_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|product|related_product'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|product|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'product';
@@ -1508,6 +1743,15 @@ function flexitol_content_ds_layout_settings_info() {
  */
 function flexitol_content_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'related_product';
+  $ds_view_mode->label = 'Related product';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['related_product'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
