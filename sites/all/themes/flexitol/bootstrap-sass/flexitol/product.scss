@@ -242,7 +242,6 @@ $text-color: #575757;
 
     .field-name-where-to-buy-button {
       width: calc(50% - 0.7142855em);
-
       @media (min-width:768px) {
         width: auto;
       }
@@ -316,6 +315,55 @@ $text-color: #575757;
 
       .panel-body {
         padding: 1em 0;
+      }
+    }
+  }
+
+  .group-clinical-studies-accordion {
+    .ui-widget {
+      color: inherit;
+    }
+
+    .ui-accordion-header-icon {
+      display: none
+    }
+
+    .ui-accordion-content,
+    h3 {
+      background: none;
+    }
+
+     .ui-accordion-content {
+       color: $text-color;
+       padding: 1em 0;
+     }
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 0;
+      background: none;
+
+      a {
+        display: block;
+        padding: 0.7em 0;
+        border-bottom: 1px solid $accordion-border;
+        display: flex;
+        justify-content: space-between;
+        color: $text-color;
+
+        &::after {
+          content: "-";
+          font-size: 1.42857em;
+          font-weight: 500;
+        }
+
+        &.collapsed {
+          &::after {
+            content: "+";
+          }
+        }
       }
     }
   }
@@ -444,8 +492,6 @@ $text-color: #575757;
           padding: 1em 1em 1.25em;
         }
       }
-
-
 
       img {
         width: 100%;
@@ -1344,7 +1390,6 @@ $text-color: #575757;
   }
 }
 // beauty heavern
-
 .view-beauty-review-button {
   text-align: center;
   padding-bottom: 10px;
@@ -1439,7 +1484,6 @@ $text-color: #575757;
   }
 }
 //override for scalp care nz product page
-
 .domain-newzealand-dt {
   &.page-node-1402,
   &.page-node-1403 {
