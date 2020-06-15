@@ -250,7 +250,7 @@ $text-color: #575757;
 
     #online-resellers + .field-name-where-to-buy-button {
       position: absolute;
-      left: calc(50% - 0.7142855em);
+      left: calc(50% + 0.7142855em);
       width: calc(50% - 0.7142855em);
       @media (min-width:768px) {
         width: auto;
