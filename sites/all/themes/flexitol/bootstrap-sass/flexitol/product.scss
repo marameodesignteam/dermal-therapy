@@ -4,8 +4,13 @@ $where-to-buy-bckgr: #F8FAFB;
 $subtitle-info-bckgr: #F2FBFD;
 $red-button: #C83617;
 $text-color: #575757;
+$retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 
 .page-node.node-type-product {
+  &.domain-newzealand-dt .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
+    background-image: url("#{$retailer_images}pharmacy-direct-nz.png");
+  }
+
   .hidden-md {
     @media (min-width: 768px) {
       display: none !important;
@@ -101,8 +106,8 @@ $text-color: #575757;
     }
 
     .review-result {
-      > div > strong,
-      > div > div > div > div {
+      > div > div > div > div,
+      > div > strong {
         display: none;
       }
     }
@@ -231,11 +236,47 @@ $text-color: #575757;
         }
 
         .field-name-field-amcal- {
-          background-image: url("/sites/default/files/amcal_0.png");
+          background-image: url("#{$retailer_images}amcal.png");
+        }
+
+        .field-name-field-priceline {
+          background-image: url("#{$retailer_images}priceline.png");
         }
 
         .field-name-field-chemist-warehouse {
-          background-image: url("/sites/default/files/chemist-wharehouse_logo.png");
+          background-image: url("#{$retailer_images}chemist.png");
+        }
+
+        .field-name-field-chempro {
+          background-image: url("#{$retailer_images}chempro.png");
+        }
+
+        .field-name-field-coles {
+          background-image: url("#{$retailer_images}coles.png");
+        }
+
+        .field-name-field-woolworths {
+          background-image: url("#{$retailer_images}wollies.png");
+        }
+
+        .field-name-field-bargain-chemist {
+          background-image: url("#{$retailer_images}bargain-chemist.png");
+        }
+
+        .field-name-field-pharmacy-direct {
+          background-image: url("#{$retailer_images}pharmacy-direct-au.png");
+        }
+
+        .field-name-field-lazada {
+          background-image: url("#{$retailer_images}lazada.png");
+        }
+
+        .field-name-field--shopee {
+          background-image: url("#{$retailer_images}shopee.png");
+        }
+
+        .field-name-field-watsons {
+          background-image: url("#{$retailer_images}watsons.png");
         }
       }
     }
@@ -325,7 +366,7 @@ $text-color: #575757;
     }
 
     .ui-accordion-header-icon {
-      display: none
+      display: none;
     }
 
     .ui-accordion-content,
@@ -333,10 +374,10 @@ $text-color: #575757;
       background: none;
     }
 
-     .ui-accordion-content {
-       color: $text-color;
-       padding: 1em 0;
-     }
+    .ui-accordion-content {
+      color: $text-color;
+      padding: 1em 0;
+    }
 
     h3 {
       text-transform: uppercase;
@@ -1390,6 +1431,7 @@ $text-color: #575757;
   }
 }
 // beauty heavern
+
 .view-beauty-review-button {
   text-align: center;
   padding-bottom: 10px;
@@ -1484,6 +1526,7 @@ $text-color: #575757;
   }
 }
 //override for scalp care nz product page
+
 .domain-newzealand-dt {
   &.page-node-1402,
   &.page-node-1403 {

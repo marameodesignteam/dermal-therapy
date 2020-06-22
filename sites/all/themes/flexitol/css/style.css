@@ -8042,6 +8042,9 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   display: none;
 }
 
+.page-node.node-type-product.domain-newzealand-dt .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-direct-nz.png");
+}
 @media (min-width: 768px) {
   .page-node.node-type-product .hidden-md {
     display: none !important;
@@ -8124,8 +8127,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-node.node-type-product .bh-rating .product-average-rating div {
   display: inline;
 }
-.page-node.node-type-product .bh-rating .review-result > div > strong,
-.page-node.node-type-product .bh-rating .review-result > div > div > div > div {
+.page-node.node-type-product .bh-rating .review-result > div > div > div > div,
+.page-node.node-type-product .bh-rating .review-result > div > strong {
   display: none;
 }
 .page-node.node-type-product .write-review a {
@@ -8244,10 +8247,37 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   border-color: #2695d7;
 }
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-amcal- {
-  background-image: url("/sites/default/files/amcal_0.png");
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/amcal.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-priceline {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/priceline.png");
 }
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chemist-warehouse {
-  background-image: url("/sites/default/files/chemist-wharehouse_logo.png");
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/chemist.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chempro {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/chempro.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-coles {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/coles.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-woolworths {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/wollies.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-bargain-chemist {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/bargain-chemist.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-direct-au.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-lazada {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/lazada.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field--shopee {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/shopee.png");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-watsons {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/watsons.png");
 }
 .page-node.node-type-product .group-buttons .field-name-where-to-buy-button {
   width: calc(50% - 0.7142855em);
