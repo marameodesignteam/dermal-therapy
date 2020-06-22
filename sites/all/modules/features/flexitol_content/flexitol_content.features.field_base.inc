@@ -31,6 +31,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'field__shopee'.
+  $field_bases['field__shopee'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field__shopee',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_amcal_'.
   $field_bases['field_amcal_'] = array(
     'active' => 1,
@@ -69,6 +90,27 @@ function flexitol_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_bargain_chemist'.
+  $field_bases['field_bargain_chemist'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_bargain_chemist',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_beauty_review_data'.
@@ -177,6 +219,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_chempro'.
+  $field_bases['field_chempro'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_chempro',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_clinical_study'.
   $field_bases['field_clinical_study'] = array(
     'active' => 1,
@@ -261,6 +324,27 @@ function flexitol_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'field_group_titles',
+  );
+
+  // Exported field_base: 'field_coles'.
+  $field_bases['field_coles'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_coles',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_condition_category'.
@@ -727,6 +811,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_lazada'.
+  $field_bases['field_lazada'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_lazada',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_packshot_image'.
   $field_bases['field_packshot_image'] = array(
     'active' => 1,
@@ -815,6 +920,48 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_pharmacy_direct'.
+  $field_bases['field_pharmacy_direct'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pharmacy_direct',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_priceline'.
+  $field_bases['field_priceline'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_priceline',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_product'.
   $field_bases['field_product'] = array(
     'active' => 1,
@@ -889,29 +1036,6 @@ function flexitol_content_field_default_field_bases() {
         ),
       ),
       'target_type' => 'taxonomy_term',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
-  // Exported field_base: 'field_product_condition'.
-  $field_bases['field_product_condition'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_product_condition',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(),
-      'target_type' => 'node',
     ),
     'translatable' => 0,
     'type' => 'entityreference',
@@ -1474,6 +1598,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'video_embed_field',
   );
 
+  // Exported field_base: 'field_watsons'.
+  $field_bases['field_watsons'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_watsons',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_webform_body'.
   $field_bases['field_webform_body'] = array(
     'active' => 1,
@@ -1506,6 +1651,27 @@ function flexitol_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_woolworths'.
+  $field_bases['field_woolworths'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_woolworths',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_write_a_review_url'.
