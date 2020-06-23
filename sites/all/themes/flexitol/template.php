@@ -245,7 +245,6 @@ alt="Dermal Therapy Australia Children\'s Skin Care"
  */
 
 function flexitol_preprocess_page(&$vars) {
-  $vars['page']['footer']['#suffix'] = 'test';
   $vars['background_image'] = base_path() . drupal_get_path('theme', 'flexitol') . "/images" . "/default_background.jpg";
   $vars['content_container_class'] = "";
   // Add information about the number of sidebars.
