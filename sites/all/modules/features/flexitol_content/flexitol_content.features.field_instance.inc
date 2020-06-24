@@ -3898,7 +3898,7 @@ function flexitol_content_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_product_video',
-    'label' => 'Product video',
+    'label' => 'Product videos',
     'required' => 0,
     'settings' => array(
       'allowed_providers' => array(
@@ -5085,7 +5085,7 @@ function flexitol_content_field_default_field_instances() {
   t('Priceline');
   t('Product');
   t('Product Review Link');
-  t('Product video');
+  t('Product videos');
   t('Rate');
   t('Rating Count');
   t('Rating Value');
