@@ -2200,7 +2200,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 41,
+      'weight' => 40,
     ),
   );
 
@@ -2271,7 +2271,7 @@ function flexitol_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 24,
     ),
   );
 
@@ -2427,7 +2427,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -2498,7 +2498,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 29,
+      'weight' => 30,
     ),
   );
 
@@ -2569,7 +2569,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 32,
+      'weight' => 33,
     ),
   );
 
@@ -2711,7 +2711,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 34,
+      'weight' => 35,
     ),
   );
 
@@ -2928,7 +2928,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 33,
+      'weight' => 34,
     ),
   );
 
@@ -2999,7 +2999,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 30,
+      'weight' => 32,
     ),
   );
 
@@ -3777,7 +3777,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 27,
+      'weight' => 28,
     ),
   );
 
@@ -3983,7 +3983,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -4052,7 +4052,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 26,
+      'weight' => 27,
     ),
   );
 
@@ -4263,7 +4263,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 23,
+      'weight' => 21,
     ),
   );
 
@@ -4334,7 +4334,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 35,
+      'weight' => 36,
     ),
   );
 

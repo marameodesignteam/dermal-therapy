@@ -1170,10 +1170,10 @@ function flexitol_content_strongarm() {
           'weight' => '17',
         ),
         'xmlsitemap' => array(
-          'weight' => '21',
+          'weight' => '20',
         ),
         'redirect' => array(
-          'weight' => '28',
+          'weight' => '22',
         ),
       ),
       'display' => array(
