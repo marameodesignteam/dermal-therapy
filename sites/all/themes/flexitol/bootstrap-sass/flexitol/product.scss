@@ -376,7 +376,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 
     .ui-accordion-content {
       color: $text-color;
-      padding: 1em 0;
+      padding: 1em 0 1em 1em;
     }
 
     h3 {
@@ -386,25 +386,32 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
       padding: 0;
       background: none;
 
-      a {
-        display: block;
-        padding: 0.7em 0;
-        border-bottom: 1px solid $accordion-border;
-        display: flex;
-        justify-content: space-between;
-        color: $text-color;
-
-        &::after {
-          content: "-";
-          font-size: 1.42857em;
-          font-weight: 500;
-        }
-
-        &.collapsed {
-          &::after {
+      &.ui-state-active  {
+        a {
+          &::before {
             content: "+";
           }
         }
+      }
+
+      a {
+        display: block;
+        padding: 0.5em 1em;
+        background: $subtitle-info-bckgr;
+        border-bottom: 1px solid $accordion-border;
+        display: flex;
+        color: $text-color;
+        font-weight: bold;
+        align-items: center;
+        align-content: center;
+
+        &::before {
+          content: "+";
+          font-size: 1.42857em;
+          font-weight: 500;
+          margin-right: 0.35em;
+        }
+
       }
     }
   }
