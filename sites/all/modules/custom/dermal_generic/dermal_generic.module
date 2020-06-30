@@ -108,17 +108,19 @@ function dermal_generic_field_formatter_view($entity_type, $entity, $field, $ins
 
       $label = $instance["label"];
 
-      $class = strtolower(str_replace( " ", "_", $label));
+      $class = strtolower(str_replace(" ", "_", $label));
 
       $value = reset($items);
 
       $url = $value["value"];
 
-      if (!empty($url)) $element[0] = [
+      if (!empty($url)) {
+          $element[0] = [
 
         '#markup' => "<div class='".$class."'><a class='btn btn-blue' target='_blank' href='".$url."'>Buy now<span class='visually-hidden'> on the ".$label." website</span></a></div>"
 
       ];
+      }
 
       break;
 
@@ -320,6 +322,24 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
             '</span>
           </span>'];
             }
+        }
+    }
+}
+
+function dermal_generic_form_node_form_alter(&$form, &$form_state, $form_id)
+{
+    $exclude_fields = array(
+      "field_beauty_review_link",
+      "field_beauty_review_data",
+      "field_bh_rate",
+      "field_rating_count",
+      "field_rating_value",
+      "field_product_review_link",
+    );
+
+    if ($form_id == 'product_node_form') {
+        foreach ($exclude_fields as $field) {
+            $form[$field]['#attributes']['class'][] = 'element-hidden';
         }
     }
 }
