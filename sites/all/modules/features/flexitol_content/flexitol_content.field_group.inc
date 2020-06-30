@@ -122,36 +122,6 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_beauty_review_tab|node|product|form';
-  $field_group->group_name = 'group_beauty_review_tab';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'product';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_vertical';
-  $field_group->data = array(
-    'label' => 'Beauty Review Data (do not change)',
-    'weight' => '46',
-    'children' => array(
-      0 => 'field_beauty_review_data',
-      1 => 'field_bh_rate',
-      2 => 'field_rating_count',
-      3 => 'field_rating_value',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-beauty-review-tab field-group-tab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_buttons|node|product|full';
   $field_group->group_name = 'group_buttons';
   $field_group->entity_type = 'node';
@@ -639,7 +609,7 @@ function flexitol_content_field_group_info() {
       'instance_settings' => array(
         'classes' => 'group-information field-group-bootstrap_fieldgroup_nav_item ',
       ),
-      'formatter' => 'open',
+      'formatter' => 'closed',
     ),
   );
   $field_groups[''] = $field_group;
@@ -722,33 +692,6 @@ function flexitol_content_field_group_info() {
         'classes' => 'group-onlineresellers field-group-bootstrap_fieldgroup_accordion ',
         'description' => '',
         'effect' => 'bounceslide',
-      ),
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_prod_review_link|node|product|form';
-  $field_group->group_name = 'group_prod_review_link';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'product';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_vertical';
-  $field_group->data = array(
-    'label' => 'Product Review Link',
-    'weight' => '45',
-    'children' => array(
-      0 => 'field_product_review_link',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-prod-review-link field-group-tab',
-        'required_fields' => 1,
       ),
     ),
   );
@@ -889,8 +832,6 @@ function flexitol_content_field_group_info() {
     'children' => array(
       0 => 'group_buylinks',
       1 => 'group_related',
-      2 => 'group_prod_review_link',
-      3 => 'group_beauty_review_tab',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -905,7 +846,6 @@ function flexitol_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Beauty Review Data (do not change)');
   t('Buy online');
   t('Buy online links');
   t('Clinical Studies');
@@ -922,7 +862,6 @@ function flexitol_content_field_group_info() {
   t('Leave a Testimonial');
   t('Leave a testimonial');
   t('Online resellers');
-  t('Product Review Link');
   t('Related products');
   t('Research');
   t('Transform Container');
