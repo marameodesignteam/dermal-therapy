@@ -404,6 +404,11 @@ function flexitol_content_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
+    'field_product_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|product|related_product'] = $ds_fieldsetting;
 
