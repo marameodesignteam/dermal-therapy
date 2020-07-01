@@ -8492,7 +8492,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 .page-node.node-type-product .related-products .group-title img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: 15.714285em;
 }
 .page-node.node-type-product .related-products .field-name-title {
   order: 1;

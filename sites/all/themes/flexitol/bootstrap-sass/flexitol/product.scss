@@ -560,7 +560,8 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 
       img {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        max-height: 15.714285em;
       }
     }
 
