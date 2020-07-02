@@ -1482,3 +1482,26 @@ i.fa.fa-search {
   white-space: nowrap;
   /* added line */
 }
+
+//hide money back guaranteed for nz and au, show only on contact and home
+
+.domain-australia-dt, .domain-newzealand-dt {
+  &:not(.node-type-webform):not(.page-homepage) {
+    #block-menu-menu-footer-menu {
+      .menu.nav {
+        > li {
+          &.last {
+            display: none;
+          }
+
+          &:nth-last-child(2) {
+            a {
+              border-right:0;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
