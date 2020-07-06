@@ -329,7 +329,7 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
 function dermal_generic_form_node_form_alter(&$form, &$form_state, $form_id)
 {
     $exclude_fields = array(
-      "field_beauty_review_link",
+      //"field_beauty_review_link",
       "field_beauty_review_data",
       "field_bh_rate",
       "field_rating_count",
