@@ -1170,7 +1170,7 @@ function flexitol_content_strongarm() {
           'weight' => '17',
         ),
         'xmlsitemap' => array(
-          'weight' => '20',
+          'weight' => '21',
         ),
         'redirect' => array(
           'weight' => '22',
@@ -1183,7 +1183,7 @@ function flexitol_content_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '40',
+            'weight' => '38',
             'visible' => FALSE,
           ),
           'teaser' => array(

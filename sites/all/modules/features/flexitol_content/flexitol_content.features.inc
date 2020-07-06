@@ -45,11 +45,12 @@ function flexitol_content_image_default_styles() {
   $styles['product_slideshow'] = array(
     'label' => 'Product slideshow',
     'effects' => array(
-      1 => array(
-        'name' => 'image_scale_and_crop',
+      14 => array(
+        'name' => 'image_scale',
         'data' => array(
           'width' => 460,
           'height' => 430,
+          'upscale' => 1,
         ),
         'weight' => 1,
       ),

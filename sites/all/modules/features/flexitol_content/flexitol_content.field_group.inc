@@ -122,6 +122,36 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_bt_link|node|product|full';
+  $field_group->group_name = 'group_bt_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_dt';
+  $field_group->data = array(
+    'label' => 'Beauty review link',
+    'weight' => '49',
+    'children' => array(
+      0 => 'field_beauty_review_data',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Beauty review link',
+      'instance_settings' => array(
+        'link_to' => 'field_beauty_review_link',
+        'custom_url' => '',
+        'custom_url_normalize' => 0,
+        'target' => 'default',
+        'classes' => 'group-bt-link field-group-link',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_buttons|node|product|full';
   $field_group->group_name = 'group_buttons';
   $field_group->entity_type = 'node';
@@ -130,7 +160,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '11',
+    'weight' => '9',
     'children' => array(
       0 => 'where_to_buy_button',
       1 => 'group_onlineresellers',
@@ -140,9 +170,9 @@ function flexitol_content_field_group_info() {
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-buttons field-group-div ',
+        'classes' => 'group-buttons field-group-div',
         'description' => '',
-        'show_label' => '0',
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
@@ -162,20 +192,20 @@ function flexitol_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_vertical';
   $field_group->data = array(
-    'label' => 'Buy online links',
-    'weight' => '43',
+    'label' => 'Buy Online Links',
+    'weight' => '44',
     'children' => array(
-      0 => 'field_chemist_warehouse',
-      1 => 'field_priceline',
-      2 => 'field_coles',
-      3 => 'field_woolworths',
-      4 => 'field_amcal_',
-      5 => 'field_pharmacy_direct',
+      0 => 'field_amcal_',
+      1 => 'field_chemist_warehouse',
+      2 => 'field__shopee',
+      3 => 'field_bargain_chemist',
+      4 => 'field_chempro',
+      5 => 'field_coles',
       6 => 'field_lazada',
-      7 => 'field__shopee',
-      8 => 'field_watsons',
-      9 => 'field_bargain_chemist',
-      10 => 'field_chempro',
+      7 => 'field_pharmacy_direct',
+      8 => 'field_priceline',
+      9 => 'field_watsons',
+      10 => 'field_woolworths',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -200,28 +230,26 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_onlineresellers';
   $field_group->data = array(
     'label' => 'Buy online',
-    'weight' => '8',
+    'weight' => '46',
     'children' => array(
-      0 => 'field_chemist_warehouse',
-      1 => 'field_priceline',
-      2 => 'field_coles',
-      3 => 'field_woolworths',
-      4 => 'field_amcal_',
-      5 => 'field_pharmacy_direct',
+      0 => 'field_amcal_',
+      1 => 'field_chemist_warehouse',
+      2 => 'field__shopee',
+      3 => 'field_bargain_chemist',
+      4 => 'field_chempro',
+      5 => 'field_coles',
       6 => 'field_lazada',
-      7 => 'field__shopee',
-      8 => 'field_watsons',
-      9 => 'field_bargain_chemist',
-      10 => 'field_chempro',
+      7 => 'field_pharmacy_direct',
+      8 => 'field_priceline',
+      9 => 'field_watsons',
+      10 => 'field_woolworths',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'label' => 'Buy online',
-      'instance_settings' => array(
-        'classes' => 'group-buyonline-group field-group-bootstrap_fieldgroup_nav_item',
-        'required_fields' => 1,
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-buyonline-group field-group-accordion-item',
+      ),
     ),
   );
   $field_groups[''] = $field_group;
@@ -379,17 +407,17 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
-      0 => 'beauty_review_data_clone_',
-      1 => 'write_a_review_url_clone_',
+      0 => 'write_a_review_url_clone_',
+      1 => 'group_bt_link_clone',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-dt-clone field-group-fieldset',
+        'classes' => 'group-dt-clone field-group-div',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -412,10 +440,10 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '9',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_beauty_review_data',
-      1 => 'field_write_a_review_url',
+      0 => 'field_write_a_review_url',
+      1 => 'group_bt_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -625,7 +653,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Information',
-    'weight' => '12',
+    'weight' => '10',
     'children' => array(
       0 => 'group_directions',
       1 => 'group_information',
@@ -636,9 +664,14 @@ function flexitol_content_field_group_info() {
     'format_settings' => array(
       'label' => 'Information',
       'instance_settings' => array(
-        'id' => 'product-info',
+        'bootstrap_nav_type' => 'pills',
+        'bootstrap_stacked' => '0',
+        'bootstrap_orientation' => '0',
         'classes' => 'group-info field-group-bootstrap_fieldgroup_nav',
+        'id' => '',
+        'required_fields' => 1,
       ),
+      'formatter' => '',
     ),
   );
   $field_groups[''] = $field_group;
@@ -680,7 +713,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_buttons';
   $field_group->data = array(
     'label' => 'Online resellers',
-    'weight' => '7',
+    'weight' => '43',
     'children' => array(
       0 => 'group_buyonline_group',
     ),
@@ -689,7 +722,7 @@ function flexitol_content_field_group_info() {
       'label' => 'Online resellers',
       'instance_settings' => array(
         'id' => 'online-resellers',
-        'classes' => 'group-onlineresellers field-group-bootstrap_fieldgroup_accordion ',
+        'classes' => 'group-onlineresellers field-group-accordion',
         'description' => '',
         'effect' => 'bounceslide',
       ),
@@ -707,8 +740,8 @@ function flexitol_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_vertical';
   $field_group->data = array(
-    'label' => 'Related products',
-    'weight' => '44',
+    'label' => 'Related Products',
+    'weight' => '45',
     'children' => array(
       0 => 'field_product_related_product',
     ),
@@ -761,7 +794,7 @@ function flexitol_content_field_group_info() {
   $field_group->mode = 'related_product';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => '',
+    'label' => 'Title',
     'weight' => '0',
     'children' => array(
       0 => 'field_product_image',
@@ -769,10 +802,10 @@ function flexitol_content_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => '',
+      'label' => 'Title',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-title field-group-div',
+        'classes' => 'group-title ',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -828,10 +861,11 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vertical tabs',
-    'weight' => '23',
+    'weight' => '24',
     'children' => array(
       0 => 'group_buylinks',
-      1 => 'group_related',
+      1 => 'group_beauty_review_tab',
+      2 => 'group_related',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -846,8 +880,9 @@ function flexitol_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Beauty review link');
+  t('Buy Online Links');
   t('Buy online');
-  t('Buy online links');
   t('Clinical Studies');
   t('Closed');
   t('Dafault');
@@ -862,8 +897,9 @@ function flexitol_content_field_group_info() {
   t('Leave a Testimonial');
   t('Leave a testimonial');
   t('Online resellers');
-  t('Related products');
+  t('Related Products');
   t('Research');
+  t('Title');
   t('Transform Container');
   t('Vertical tabs');
 

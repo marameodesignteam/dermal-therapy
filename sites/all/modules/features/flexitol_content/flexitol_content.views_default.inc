@@ -1376,7 +1376,7 @@ function flexitol_content_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Learn More button */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1386,7 +1386,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]" class="learn-more">Learn more</a>';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Simple URL */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['path_1']['id'] = 'path_1';
   $handler->display->display_options['fields']['path_1']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['path_1']['field'] = 'path';
@@ -1394,62 +1394,34 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['path_1']['label'] = '';
   $handler->display->display_options['fields']['path_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path_1']['element_label_colon'] = FALSE;
-  /* Field: Global: PHP */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
   $handler->display->display_options['fields']['php']['label'] = '';
   $handler->display->display_options['fields']['php']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_output'] = '<?php
-global $_domain;
-if ($_domain[\'domain_id\'] == 2){
-  echo "SG";
-} elseif($_domain[\'domain_id\'] == 3){
-  echo "NZ";
-} else {
-  echo "AUS";
-}
-?>';
-  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-  /* Field: Views: Views Conditional */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional']['label'] = '';
   $handler->display->display_options['fields']['views_conditional']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['views_conditional']['if'] = 'php';
-  $handler->display->display_options['fields']['views_conditional']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'SG';
-  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_packshot_image_sg]';
-  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
-  /* Field: Views: Views Conditional */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['views_conditional_1']['id'] = 'views_conditional_1';
   $handler->display->display_options['fields']['views_conditional_1']['table'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_1']['field'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_1']['label'] = '';
   $handler->display->display_options['fields']['views_conditional_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['views_conditional_1']['if'] = 'php';
-  $handler->display->display_options['fields']['views_conditional_1']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = 'NZ';
-  $handler->display->display_options['fields']['views_conditional_1']['then'] = '[field_packshot_image_nz]';
-  $handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
-  /* Field: Views: Views Conditional */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['views_conditional_2']['id'] = 'views_conditional_2';
   $handler->display->display_options['fields']['views_conditional_2']['table'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_2']['field'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_2']['label'] = '';
   $handler->display->display_options['fields']['views_conditional_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['views_conditional_2']['if'] = 'php';
-  $handler->display->display_options['fields']['views_conditional_2']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = 'AUS';
-  $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_packshot_image]';
-  $handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -1485,137 +1457,6 @@ if ($_domain[\'domain_id\'] == 2){
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['metatags'] = array(
-    'und' => array(
-      'title' => array(
-        'value' => 'Dermal Therapy Products | Effective Skincare Products Made in Australia',
-        'default' => '[view:title] | [current-page:pager][site:name]',
-      ),
-      'description' => array(
-        'value' => 'Dermal Therapy products Australia offer a range of effective and innovative foot and skincare products',
-        'default' => '[view:description]',
-      ),
-      'abstract' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'keywords' => array(
-        'value' => 'Dermal Therapy Products',
-        'default' => 'heel balm, foot care, dry hands, dry skin, cracked heels, blisters, stretch marks, scars, dry lips, skincare, psoriasis, eczema, dermatitis,cocoa butter, lanolin, shea butter, urea',
-      ),
-      'robots' => array(
-        'value' => array(
-          'index' => 'index',
-          'follow' => 'follow',
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
-        'default' => array(
-          'index' => 0,
-          'follow' => 0,
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
-      ),
-      'news_keywords' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'standout' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'rating' => array(
-        'value' => 'general',
-        'default' => 'general',
-      ),
-      'referrer' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'rights' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'image_src' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
-      ),
-      'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
-      ),
-      'original-source' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'prev' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'next' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'content-language' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'geo.position' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'geo.placename' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'geo.region' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'icbm' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'refresh' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'revisit-after' => array(
-        'value' => '',
-        'period' => '',
-        'default' => '',
-      ),
-      'pragma' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'cache-control' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'expires' => array(
-        'value' => '',
-        'default' => '',
-      ),
-    ),
-  );
   $handler->display->display_options['path'] = 'products';
   $export['products_page'] = $view;
 
