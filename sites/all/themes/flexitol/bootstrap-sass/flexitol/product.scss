@@ -77,8 +77,9 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
     align-items: center;
   }
 
-  .group-bt-link, .group-bt-link-clone {
-    color:#7A99AC;
+  .group-bt-link,
+  .group-bt-link-clone {
+    color: #7A99AC;
   }
 
   .bh-rating {
@@ -165,17 +166,19 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
       margin-top: 1.42857em;
     }
     margin-bottom: 2.85714em;
-    display: flex;
+    @media (min-width:375px) {display: flex;}
     position: relative;
 
     #online-resellers {
       width: 100%;
 
       h3 {
-        display: inline-block;
         padding: 0;
         background: none;
-        width: calc(50% - 0.7142855em);
+        @media (min-width:375px) {
+          width: calc(50% - 0.7142855em);
+          display: inline-block;
+        }
         @media (min-width:768px) {
           width: auto;
         }
@@ -286,20 +289,25 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
     }
 
     .field-name-where-to-buy-button {
-      width: calc(50% - 0.7142855em);
+      width:100%;
+      @media (min-width:375px) {width: calc(50% - 0.7142855em);}
       @media (min-width:768px) {
         width: auto;
       }
     }
 
     #online-resellers + .field-name-where-to-buy-button {
-      position: absolute;
-      left: calc(50% + 0.7142855em);
-      width: calc(50% - 0.7142855em);
+      margin-top: 0.7142855em;
+      @media (min-width:375px) {
+        position: absolute;
+        margin-top: 0;
+        left: calc(50% + 0.7142855em);
+        width: calc(50% - 0.7142855em);
+      }
       @media (min-width:768px) {
         width: auto;
-        left: 8.75em;
-        margin-left: 20px;
+        left: 11.6em;
+        margin-left: 1.428571em;
       }
     }
 
@@ -548,6 +556,12 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
           }
         }
 
+        &.col-lg-2 {
+          @media (min-width: $screen-lg) {
+            flex: 0 0 16.6666666667%;
+          }
+        }
+
         div:not(.contextual-links-wrapper) {
           width: 100%;
           height: 100%;
@@ -585,7 +599,8 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
       }
     }
 
-    .field-name-title, .field-name-field-product-image {
+    .field-name-field-product-image,
+    .field-name-title {
       height: auto;
     }
 

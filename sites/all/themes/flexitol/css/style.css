@@ -8112,7 +8112,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   display: inline-flex;
   align-items: center;
 }
-.page-node.node-type-product .group-bt-link, .page-node.node-type-product .group-bt-link-clone {
+.page-node.node-type-product .group-bt-link,
+.page-node.node-type-product .group-bt-link-clone {
   color: #7A99AC;
 }
 .page-node.node-type-product .bh-rating div {
@@ -8182,7 +8183,6 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-node.node-type-product .group-buttons {
   margin-top: 2.85714em;
   margin-bottom: 2.85714em;
-  display: flex;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -8190,14 +8190,23 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     margin-top: 1.42857em;
   }
 }
+@media (min-width: 375px) {
+  .page-node.node-type-product .group-buttons {
+    display: flex;
+  }
+}
 .page-node.node-type-product .group-buttons #online-resellers {
   width: 100%;
 }
 .page-node.node-type-product .group-buttons #online-resellers h3 {
-  display: inline-block;
   padding: 0;
   background: none;
-  width: calc(50% - 0.7142855em);
+}
+@media (min-width: 375px) {
+  .page-node.node-type-product .group-buttons #online-resellers h3 {
+    width: calc(50% - 0.7142855em);
+    display: inline-block;
+  }
 }
 @media (min-width: 768px) {
   .page-node.node-type-product .group-buttons #online-resellers h3 {
@@ -8290,7 +8299,12 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/watsons.png");
 }
 .page-node.node-type-product .group-buttons .field-name-where-to-buy-button {
-  width: calc(50% - 0.7142855em);
+  width: 100%;
+}
+@media (min-width: 375px) {
+  .page-node.node-type-product .group-buttons .field-name-where-to-buy-button {
+    width: calc(50% - 0.7142855em);
+  }
 }
 @media (min-width: 768px) {
   .page-node.node-type-product .group-buttons .field-name-where-to-buy-button {
@@ -8298,15 +8312,21 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   }
 }
 .page-node.node-type-product .group-buttons #online-resellers + .field-name-where-to-buy-button {
-  position: absolute;
-  left: calc(50% + 0.7142855em);
-  width: calc(50% - 0.7142855em);
+  margin-top: 0.7142855em;
+}
+@media (min-width: 375px) {
+  .page-node.node-type-product .group-buttons #online-resellers + .field-name-where-to-buy-button {
+    position: absolute;
+    margin-top: 0;
+    left: calc(50% + 0.7142855em);
+    width: calc(50% - 0.7142855em);
+  }
 }
 @media (min-width: 768px) {
   .page-node.node-type-product .group-buttons #online-resellers + .field-name-where-to-buy-button {
     width: auto;
-    left: 8.75em;
-    margin-left: 20px;
+    left: 11.6em;
+    margin-left: 1.428571em;
   }
 }
 .page-node.node-type-product .group-buttons .btn-danger {
@@ -8490,6 +8510,11 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     flex: 0 0 25%;
   }
 }
+@media (min-width: 1200px) {
+  .page-node.node-type-product .related-products .row li.col-lg-2 {
+    flex: 0 0 16.6666666667%;
+  }
+}
 .page-node.node-type-product .related-products .row li div:not(.contextual-links-wrapper) {
   width: 100%;
   height: 100%;
@@ -8519,7 +8544,8 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   object-fit: contain;
   max-height: 15.714285em;
 }
-.page-node.node-type-product .related-products .field-name-title, .page-node.node-type-product .related-products .field-name-field-product-image {
+.page-node.node-type-product .related-products .field-name-field-product-image,
+.page-node.node-type-product .related-products .field-name-title {
   height: auto;
 }
 .page-node.node-type-product .related-products .field-name-title {
