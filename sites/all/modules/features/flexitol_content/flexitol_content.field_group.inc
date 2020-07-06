@@ -229,7 +229,7 @@ function flexitol_content_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_onlineresellers';
   $field_group->data = array(
-    'label' => 'Buy online',
+    'label' => 'Buy online now',
     'weight' => '46',
     'children' => array(
       0 => 'field_amcal_',
@@ -246,10 +246,11 @@ function flexitol_content_field_group_info() {
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Buy online now',
       'instance_settings' => array(
         'classes' => 'group-buyonline-group field-group-accordion-item',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups[''] = $field_group;
@@ -864,8 +865,7 @@ function flexitol_content_field_group_info() {
     'weight' => '24',
     'children' => array(
       0 => 'group_buylinks',
-      1 => 'group_beauty_review_tab',
-      2 => 'group_related',
+      1 => 'group_related',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -882,7 +882,7 @@ function flexitol_content_field_group_info() {
   // Included for use with string extractors like potx.
   t('Beauty review link');
   t('Buy Online Links');
-  t('Buy online');
+  t('Buy online now');
   t('Clinical Studies');
   t('Closed');
   t('Dafault');
