@@ -8112,6 +8112,9 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   display: inline-flex;
   align-items: center;
 }
+.page-node.node-type-product .group-bt-link, .page-node.node-type-product .group-bt-link-clone {
+  color: #7A99AC;
+}
 .page-node.node-type-product .bh-rating div {
   display: inline-flex;
   align-items: center;
