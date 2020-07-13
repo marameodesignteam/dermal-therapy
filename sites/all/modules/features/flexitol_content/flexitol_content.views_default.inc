@@ -495,7 +495,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Content: Category Image */
   $handler->display->display_options['fields']['field_product_image']['id'] = 'field_product_image';
   $handler->display->display_options['fields']['field_product_image']['table'] = 'field_data_field_product_image';
   $handler->display->display_options['fields']['field_product_image']['field'] = 'field_product_image';
@@ -1590,7 +1590,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['relationships']['field_product_related_product_target_id']['table'] = 'field_data_field_product_related_product';
   $handler->display->display_options['relationships']['field_product_related_product_target_id']['field'] = 'field_product_related_product_target_id';
   $handler->display->display_options['relationships']['field_product_related_product_target_id']['required'] = TRUE;
-  /* Field: Content: Image */
+  /* Field: Content: Category Image */
   $handler->display->display_options['fields']['field_product_image']['id'] = 'field_product_image';
   $handler->display->display_options['fields']['field_product_image']['table'] = 'field_data_field_product_image';
   $handler->display->display_options['fields']['field_product_image']['field'] = 'field_product_image';

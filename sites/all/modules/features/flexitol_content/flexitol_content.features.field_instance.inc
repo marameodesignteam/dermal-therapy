@@ -3355,7 +3355,7 @@ function flexitol_content_field_default_field_instances() {
   $field_instances['node-product-field_product_image'] = array(
     'bundle' => 'product',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The image appearing in the product list pages such as products / foot care.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3410,9 +3410,10 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_product_image',
-    'label' => 'Image',
+    'label' => 'Category Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
@@ -5110,6 +5111,7 @@ function flexitol_content_field_default_field_instances() {
   t('Body');
   t('Buy link');
   t('Category');
+  t('Category Image');
   t('Chemist Warehouse');
   t('Chempro');
   t('City');
@@ -5162,6 +5164,7 @@ function flexitol_content_field_default_field_instances() {
   t('Subtitle');
   t('Subtitle information');
   t('Tags');
+  t('The image appearing in the product list pages such as products / foot care.');
   t('This copy appears below the graph, outside the rounded frame. It\'s used for small notes about the study');
   t('Title');
   t('To which product this review belongs.');
