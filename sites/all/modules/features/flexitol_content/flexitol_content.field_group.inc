@@ -122,34 +122,6 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_beauty_review|node|product|form';
-  $field_group->group_name = 'group_beauty_review';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'product';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_vertical';
-  $field_group->data = array(
-    'label' => 'Beauty Review',
-    'weight' => '46',
-    'children' => array(
-      0 => 'field_beauty_review_link',
-      1 => 'field_write_a_review_url',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-beauty-review field-group-tab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_bt_link|node|product|full';
   $field_group->group_name = 'group_bt_link';
   $field_group->entity_type = 'node';
@@ -173,6 +145,34 @@ function flexitol_content_field_group_info() {
         'classes' => 'group-bt-link field-group-link',
       ),
       'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_bt_review|node|product|form';
+  $field_group->group_name = 'group_bt_review';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Beauty review',
+    'weight' => '43',
+    'children' => array(
+      0 => 'field_beauty_review_link',
+      1 => 'field_write_a_review_url',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-bt-review field-group-tab',
+        'required_fields' => 1,
+      ),
     ),
   );
   $field_groups[''] = $field_group;
@@ -221,7 +221,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_vertical';
   $field_group->data = array(
     'label' => 'Buy Online Links',
-    'weight' => '47',
+    'weight' => '44',
     'children' => array(
       0 => 'field_amcal_',
       1 => 'field_chemist_warehouse',
@@ -734,6 +734,40 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_obsolete|node|product|form';
+  $field_group->group_name = 'group_obsolete';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Obsolete fields',
+    'weight' => '46',
+    'children' => array(
+      0 => 'field_product_buy_link',
+      1 => 'field_product_condition',
+      2 => 'field_beauty_review_data',
+      3 => 'field_bh_rate',
+      4 => 'field_weight',
+      5 => 'field_product_review_link',
+      6 => 'field_rating_count',
+      7 => 'field_rating_value',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-obsolete field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_onlineresellers|node|product|full';
   $field_group->group_name = 'group_onlineresellers';
   $field_group->entity_type = 'node';
@@ -770,7 +804,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_vertical';
   $field_group->data = array(
     'label' => 'Related Products',
-    'weight' => '48',
+    'weight' => '45',
     'children' => array(
       0 => 'field_product_related_product',
     ),
@@ -890,11 +924,12 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vertical tabs',
-    'weight' => '17',
+    'weight' => '18',
     'children' => array(
       0 => 'group_buylinks',
       1 => 'group_related',
-      2 => 'group_beauty_review',
+      2 => 'group_bt_review',
+      3 => 'group_obsolete',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -909,7 +944,7 @@ function flexitol_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Beauty Review');
+  t('Beauty review');
   t('Beauty review link');
   t('Buy Online Links');
   t('Buy online now');
@@ -926,6 +961,7 @@ function flexitol_content_field_group_info() {
   t('Ingredients');
   t('Leave a Testimonial');
   t('Leave a testimonial');
+  t('Obsolete fields');
   t('Online resellers');
   t('Related Products');
   t('Research');

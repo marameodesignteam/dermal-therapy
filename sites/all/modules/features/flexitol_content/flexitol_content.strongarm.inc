@@ -1161,16 +1161,16 @@ function flexitol_content_strongarm() {
           'weight' => '0',
         ),
         'domain' => array(
-          'weight' => '13',
-        ),
-        'metatags' => array(
-          'weight' => '15',
-        ),
-        'path' => array(
           'weight' => '14',
         ),
-        'xmlsitemap' => array(
+        'metatags' => array(
           'weight' => '16',
+        ),
+        'path' => array(
+          'weight' => '15',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '17',
         ),
         'redirect' => array(
           'weight' => '22',

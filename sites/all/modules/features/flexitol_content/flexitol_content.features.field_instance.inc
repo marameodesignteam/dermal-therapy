@@ -2271,7 +2271,7 @@ function flexitol_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 26,
+      'weight' => 29,
     ),
   );
 
@@ -2358,7 +2358,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 20,
+      'weight' => 22,
     ),
   );
 
@@ -2427,7 +2427,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 23,
+      'weight' => 25,
     ),
   );
 
@@ -3087,7 +3087,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 21,
+      'weight' => 23,
     ),
   );
 
@@ -3219,7 +3219,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 20,
+      'weight' => 24,
     ),
   );
 
@@ -3282,7 +3282,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 13,
     ),
   );
 
@@ -4046,7 +4046,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 24,
+      'weight' => 28,
     ),
   );
 
@@ -4115,7 +4115,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 25,
+      'weight' => 27,
     ),
   );
 
@@ -4326,7 +4326,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 18,
+      'weight' => 26,
     ),
   );
 
