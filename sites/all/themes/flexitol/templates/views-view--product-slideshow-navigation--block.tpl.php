@@ -1,4 +1,7 @@
 <?php
+
+
+
 if ($node = menu_get_object()) {
 
 //echo "<pre>";var_dump($node->field_product_video['und'][0]);echo "</pre>";die;
@@ -17,8 +20,6 @@ if ($node = menu_get_object()) {
 
           $lis .= '<li><div class="views-field views-field-field-image-gallery"><div class="field-content"><img typeof="foaf:Image" class="img-responsive" src="'.file_create_url($video_arr['thumbnail_path']).'" alt="" draggable="false"></div></div></li>';
 
-
-
           //echo "<pre>";var_dump($rows);echo "</pre>";die;
 
       }
@@ -31,7 +32,7 @@ if ($node = menu_get_object()) {
 
 }
 
-if (!empty($lis)) :
+if (!empty($rows)) :
 
   print $rows;
 

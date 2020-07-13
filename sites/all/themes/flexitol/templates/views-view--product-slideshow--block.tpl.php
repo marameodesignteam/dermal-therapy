@@ -50,7 +50,7 @@ if (is_array($node->field_product_video['und']) && count($node->field_product_vi
 }
 ?>
 
-<?php if (!empty($lis)) :
+<?php if (!empty($rows)) :
 
 print $rows;
  if ($footer): ?>
