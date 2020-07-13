@@ -122,6 +122,34 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_beauty_review|node|product|form';
+  $field_group->group_name = 'group_beauty_review';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Beauty Review',
+    'weight' => '46',
+    'children' => array(
+      0 => 'field_beauty_review_link',
+      1 => 'field_write_a_review_url',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-beauty-review field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_bt_link|node|product|full';
   $field_group->group_name = 'group_bt_link';
   $field_group->entity_type = 'node';
@@ -193,7 +221,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_vertical';
   $field_group->data = array(
     'label' => 'Buy Online Links',
-    'weight' => '44',
+    'weight' => '47',
     'children' => array(
       0 => 'field_amcal_',
       1 => 'field_chemist_warehouse',
@@ -742,7 +770,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_vertical';
   $field_group->data = array(
     'label' => 'Related Products',
-    'weight' => '45',
+    'weight' => '48',
     'children' => array(
       0 => 'field_product_related_product',
     ),
@@ -862,10 +890,11 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vertical tabs',
-    'weight' => '24',
+    'weight' => '17',
     'children' => array(
       0 => 'group_buylinks',
       1 => 'group_related',
+      2 => 'group_beauty_review',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -880,6 +909,7 @@ function flexitol_content_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Beauty Review');
   t('Beauty review link');
   t('Buy Online Links');
   t('Buy online now');
