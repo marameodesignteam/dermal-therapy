@@ -1,0 +1,31 @@
+diff --git a/sites/all/modules/contrib/entityreference/entityreference.module b/sites/all/modules/contrib/entityreference/entityreference.module
+index c0c9f58..687f375 100644
+--- a/sites/all/modules/contrib/entityreference/entityreference.module
++++ b/sites/all/modules/contrib/entityreference/entityreference.module
+@@ -1123,7 +1123,9 @@ function entityreference_autocomplete_callback_get_matches($type, $field, $insta
+         if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
+           $key = '"' . str_replace('"', '""', $key) . '"';
+         }
+-        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $label . '</div>';
++        $domain_names = array_map('dtrans', $entity->domains);
++        $domain_names_prefix = !empty($domain_names) ? '[' . implode(', ', $domain_names) . '] ' : '';        
++        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $domain_names_prefix . $label . '</div>';
+       }
+     }
+   }
+@@ -1131,6 +1133,15 @@ function entityreference_autocomplete_callback_get_matches($type, $field, $insta
+   drupal_json_output($matches);
+ }
+ 
++function dtrans($did) {
++  $domains = [
++    1 => 'AU',
++    2 => 'SG',
++    3 => 'NZ',
++  ];
++  return !empty($did) && is_numeric($did) ? $domains[$did] : NULL;
++}
++
+  /**
+  * Introspects field and instance settings, and determines the correct settings
+  * for the functioning of the formatter.

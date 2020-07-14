@@ -1123,12 +1123,23 @@ function entityreference_autocomplete_callback_get_matches($type, $field, $insta
         if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
           $key = '"' . str_replace('"', '""', $key) . '"';
         }
-        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $label . '</div>';
+        $domain_names = array_map('dtrans', $entity->domains);
+        $domain_names_prefix = !empty($domain_names) ? '[' . implode(', ', $domain_names) . '] ' : '';        
+        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $domain_names_prefix . $label . '</div>';
       }
     }
   }
 
   drupal_json_output($matches);
+}
+
+function dtrans($did) {
+  $domains = [
+    1 => 'AU',
+    2 => 'SG',
+    3 => 'NZ',
+  ];
+  return !empty($did) && is_numeric($did) ? $domains[$did] : NULL;
 }
 
  /**
