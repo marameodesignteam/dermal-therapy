@@ -329,7 +329,7 @@ function flexitol_content_ds_field_settings_info() {
           'fis-def-at' => FALSE,
           'fi' => TRUE,
           'fi-el' => 'li',
-          'fi-cl' => 'col-sm-6 col-lg-4',
+          'fi-cl' => 'col-sm-6 col-lg-3',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
