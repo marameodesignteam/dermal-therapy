@@ -1117,13 +1117,15 @@ function entityreference_autocomplete_callback_get_matches($type, $field, $insta
           continue;
         }
         $key = "$label ($entity_id)";
+        $n = node_load($entity_id);
         // Strip starting/trailing white spaces, line breaks and tags.
         $key = preg_replace('/\s\s+/', ' ', str_replace("\n", '', trim(decode_entities(strip_tags($key)))));
         // Names containing commas or quotes must be wrapped in quotes.
         if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
           $key = '"' . str_replace('"', '""', $key) . '"';
         }
-        $domain_names = array_map('dtrans', $entity->domains);
+        $domain_names = array_map('dtrans', $n->domains);
+
         $domain_names_prefix = !empty($domain_names) ? '[' . implode(', ', $domain_names) . '] ' : '';        
         $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $domain_names_prefix . $label . '</div>';
       }
