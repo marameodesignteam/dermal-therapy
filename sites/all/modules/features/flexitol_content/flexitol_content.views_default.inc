@@ -495,7 +495,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Content: Category Image */
   $handler->display->display_options['fields']['field_product_image']['id'] = 'field_product_image';
   $handler->display->display_options['fields']['field_product_image']['table'] = 'field_data_field_product_image';
   $handler->display->display_options['fields']['field_product_image']['field'] = 'field_product_image';
@@ -967,6 +967,155 @@ function flexitol_content_views_default_views() {
   $export['nodequeue_2'] = $view;
 
   $view = new view();
+  $view->name = 'product_slideshow';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Product slideshow';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Product slideshow';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'single_product_slideshow';
+  $handler->display->display_options['style_options']['id'] = 'product-gallery';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'product_slideshow_navigation:block';
+  /* Field: Content: Image Gallery */
+  $handler->display->display_options['fields']['field_image_gallery']['id'] = 'field_image_gallery';
+  $handler->display->display_options['fields']['field_image_gallery']['table'] = 'field_data_field_image_gallery';
+  $handler->display->display_options['fields']['field_image_gallery']['field'] = 'field_image_gallery';
+  $handler->display->display_options['fields']['field_image_gallery']['label'] = '';
+  $handler->display->display_options['fields']['field_image_gallery']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_gallery']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_gallery']['settings'] = array(
+    'image_style' => 'product_slideshow',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_image_gallery']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_image_gallery']['delta_offset'] = '0';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'product' => 'product',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['product_slideshow'] = $view;
+
+  $view = new view();
+  $view->name = 'product_slideshow_navigation';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Product slideshow navigation';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Product slideshow';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'single_product_slideshow_navigation';
+  $handler->display->display_options['style_options']['id'] = 'product-gallery-navigation';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Image Gallery */
+  $handler->display->display_options['fields']['field_image_gallery']['id'] = 'field_image_gallery';
+  $handler->display->display_options['fields']['field_image_gallery']['table'] = 'field_data_field_image_gallery';
+  $handler->display->display_options['fields']['field_image_gallery']['field'] = 'field_image_gallery';
+  $handler->display->display_options['fields']['field_image_gallery']['label'] = '';
+  $handler->display->display_options['fields']['field_image_gallery']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_gallery']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_gallery']['settings'] = array(
+    'image_style' => 'flexslider_thumbnail',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_image_gallery']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_image_gallery']['delta_offset'] = '0';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'product' => 'product',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['product_slideshow_navigation'] = $view;
+
+  $view = new view();
   $view->name = 'product_testimonials';
   $view->description = '';
   $view->tag = 'default';
@@ -1255,13 +1404,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php']['php_output'] = '<?php
 global $_domain;
-if ($_domain[\'domain_id\'] == 2){
-  echo "SG";
-} elseif($_domain[\'domain_id\'] == 3){
-  echo "NZ";
-} else {
-  echo "AUS";
-}
+echo $_domain[\'domain_id\'];
 ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
@@ -1273,9 +1416,9 @@ if ($_domain[\'domain_id\'] == 2){
   $handler->display->display_options['fields']['views_conditional']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['views_conditional']['if'] = 'php';
-  $handler->display->display_options['fields']['views_conditional']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'SG';
-  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_packshot_image_sg]';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_packshot_image]';
   $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Field: Views: Views Conditional */
   $handler->display->display_options['fields']['views_conditional_1']['id'] = 'views_conditional_1';
@@ -1285,8 +1428,8 @@ if ($_domain[\'domain_id\'] == 2){
   $handler->display->display_options['fields']['views_conditional_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_1']['if'] = 'php';
-  $handler->display->display_options['fields']['views_conditional_1']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = 'NZ';
+  $handler->display->display_options['fields']['views_conditional_1']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = '2';
   $handler->display->display_options['fields']['views_conditional_1']['then'] = '[field_packshot_image_nz]';
   $handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
   /* Field: Views: Views Conditional */
@@ -1297,9 +1440,9 @@ if ($_domain[\'domain_id\'] == 2){
   $handler->display->display_options['fields']['views_conditional_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_2']['if'] = 'php';
-  $handler->display->display_options['fields']['views_conditional_2']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = 'AUS';
-  $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_packshot_image]';
+  $handler->display->display_options['fields']['views_conditional_2']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = '3';
+  $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_packshot_image_sg] ';
   $handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -1336,137 +1479,6 @@ if ($_domain[\'domain_id\'] == 2){
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['metatags'] = array(
-    'und' => array(
-      'title' => array(
-        'value' => 'Dermal Therapy Products | Effective Skincare Products Made in Australia',
-        'default' => '[view:title] | [current-page:pager][site:name]',
-      ),
-      'description' => array(
-        'value' => 'Dermal Therapy products Australia offer a range of effective and innovative foot and skincare products',
-        'default' => '[view:description]',
-      ),
-      'abstract' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'keywords' => array(
-        'value' => 'Dermal Therapy Products',
-        'default' => 'heel balm, foot care, dry hands, dry skin, cracked heels, blisters, stretch marks, scars, dry lips, skincare, psoriasis, eczema, dermatitis,cocoa butter, lanolin, shea butter, urea',
-      ),
-      'robots' => array(
-        'value' => array(
-          'index' => 'index',
-          'follow' => 'follow',
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
-        'default' => array(
-          'index' => 0,
-          'follow' => 0,
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
-      ),
-      'news_keywords' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'standout' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'rating' => array(
-        'value' => 'general',
-        'default' => 'general',
-      ),
-      'referrer' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'rights' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'image_src' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
-      ),
-      'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
-      ),
-      'original-source' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'prev' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'next' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'content-language' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'geo.position' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'geo.placename' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'geo.region' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'icbm' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'refresh' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'revisit-after' => array(
-        'value' => '',
-        'period' => '',
-        'default' => '',
-      ),
-      'pragma' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'cache-control' => array(
-        'value' => '',
-        'default' => '',
-      ),
-      'expires' => array(
-        'value' => '',
-        'default' => '',
-      ),
-    ),
-  );
   $handler->display->display_options['path'] = 'products';
   $export['products_page'] = $view;
 
@@ -1600,7 +1612,7 @@ if ($_domain[\'domain_id\'] == 2){
   $handler->display->display_options['relationships']['field_product_related_product_target_id']['table'] = 'field_data_field_product_related_product';
   $handler->display->display_options['relationships']['field_product_related_product_target_id']['field'] = 'field_product_related_product_target_id';
   $handler->display->display_options['relationships']['field_product_related_product_target_id']['required'] = TRUE;
-  /* Field: Content: Image */
+  /* Field: Content: Category Image */
   $handler->display->display_options['fields']['field_product_image']['id'] = 'field_product_image';
   $handler->display->display_options['fields']['field_product_image']['table'] = 'field_data_field_product_image';
   $handler->display->display_options['fields']['field_product_image']['field'] = 'field_product_image';

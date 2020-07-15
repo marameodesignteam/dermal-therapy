@@ -1145,6 +1145,15 @@ function flexitol_content_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'nodeorder' => array(
+        'custom_settings' => TRUE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'related_product' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1152,19 +1161,19 @@ function flexitol_content_strongarm() {
           'weight' => '0',
         ),
         'domain' => array(
-          'weight' => '10',
-        ),
-        'metatags' => array(
-          'weight' => '15',
-        ),
-        'path' => array(
           'weight' => '14',
         ),
+        'metatags' => array(
+          'weight' => '16',
+        ),
+        'path' => array(
+          'weight' => '15',
+        ),
         'xmlsitemap' => array(
-          'weight' => '19',
+          'weight' => '17',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '22',
         ),
       ),
       'display' => array(
@@ -1174,7 +1183,7 @@ function flexitol_content_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '30',
+            'weight' => '38',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -1183,6 +1192,10 @@ function flexitol_content_strongarm() {
           ),
           'widget' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'related_product' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),

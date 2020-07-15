@@ -122,6 +122,170 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_bt_link|node|product|full';
+  $field_group->group_name = 'group_bt_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_dt';
+  $field_group->data = array(
+    'label' => 'Beauty review link',
+    'weight' => '49',
+    'children' => array(
+      0 => 'field_beauty_review_data',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Beauty review link',
+      'instance_settings' => array(
+        'link_to' => 'field_beauty_review_link',
+        'custom_url' => '',
+        'custom_url_normalize' => 0,
+        'target' => 'default',
+        'classes' => 'group-bt-link field-group-link',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_bt_review|node|product|form';
+  $field_group->group_name = 'group_bt_review';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Beauty review',
+    'weight' => '43',
+    'children' => array(
+      0 => 'field_beauty_review_link',
+      1 => 'field_write_a_review_url',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-bt-review field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_buttons|node|product|full';
+  $field_group->group_name = 'group_buttons';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '9',
+    'children' => array(
+      0 => 'where_to_buy_button',
+      1 => 'group_onlineresellers',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-buttons field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_buylinks|node|product|form';
+  $field_group->group_name = 'group_buylinks';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Buy Online Links',
+    'weight' => '44',
+    'children' => array(
+      0 => 'field_amcal_',
+      1 => 'field_chemist_warehouse',
+      2 => 'field__shopee',
+      3 => 'field_bargain_chemist',
+      4 => 'field_chempro',
+      5 => 'field_coles',
+      6 => 'field_lazada',
+      7 => 'field_pharmacy_direct',
+      8 => 'field_priceline',
+      9 => 'field_watsons',
+      10 => 'field_woolworths',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-buylinks field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_buyonline_group|node|product|full';
+  $field_group->group_name = 'group_buyonline_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_onlineresellers';
+  $field_group->data = array(
+    'label' => 'Buy online now',
+    'weight' => '46',
+    'children' => array(
+      0 => 'field_amcal_',
+      1 => 'field_chemist_warehouse',
+      2 => 'field__shopee',
+      3 => 'field_bargain_chemist',
+      4 => 'field_chempro',
+      5 => 'field_coles',
+      6 => 'field_lazada',
+      7 => 'field_pharmacy_direct',
+      8 => 'field_priceline',
+      9 => 'field_watsons',
+      10 => 'field_woolworths',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'label' => 'Buy online now',
+      'instance_settings' => array(
+        'classes' => 'group-buyonline-group field-group-accordion-item',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_clinical_studies_accordion|field_collection_item|field_clinical_study|default';
   $field_group->group_name = 'group_clinical_studies_accordion';
   $field_group->entity_type = 'field_collection_item';
@@ -250,13 +414,79 @@ function flexitol_content_field_group_info() {
     'children' => array(
       0 => 'field_product_directions',
     ),
-    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Directions',
       'instance_settings' => array(
         'classes' => 'group-directions field-group-bootstrap_fieldgroup_nav_item',
-        'required_fields' => 1,
       ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_dt_clone|node|product|full';
+  $field_group->group_name = 'group_dt_clone';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '1',
+    'children' => array(
+      0 => 'write_a_review_url_clone_',
+      1 => 'group_bt_link_clone',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-dt-clone field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_dt|node|product|full';
+  $field_group->group_name = 'group_dt';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_write_a_review_url',
+      1 => 'group_bt_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-dt field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
     ),
   );
   $field_groups[''] = $field_group;
@@ -430,12 +660,13 @@ function flexitol_content_field_group_info() {
     'children' => array(
       0 => 'field_product_information',
     ),
-    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
     'format_settings' => array(
       'label' => 'Information',
       'instance_settings' => array(
         'classes' => 'group-information field-group-bootstrap_fieldgroup_nav_item ',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups[''] = $field_group;
@@ -451,14 +682,14 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Information',
-    'weight' => '0',
+    'weight' => '10',
     'children' => array(
       0 => 'group_directions',
       1 => 'group_information',
       2 => 'group_ingredients',
       3 => 'group_research',
     ),
-    'format_type' => 'bootstrap_fieldgroup_nav',
+    'format_type' => 'bootstrap_fieldgroup_accordion',
     'format_settings' => array(
       'label' => 'Information',
       'instance_settings' => array(
@@ -466,7 +697,10 @@ function flexitol_content_field_group_info() {
         'bootstrap_stacked' => '0',
         'bootstrap_orientation' => '0',
         'classes' => 'group-info field-group-bootstrap_fieldgroup_nav',
+        'id' => '',
+        'required_fields' => 1,
       ),
+      'formatter' => '',
     ),
   );
   $field_groups[''] = $field_group;
@@ -486,11 +720,100 @@ function flexitol_content_field_group_info() {
     'children' => array(
       0 => 'field_product_ingredients',
     ),
-    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Ingredients',
       'instance_settings' => array(
         'classes' => 'group-ingredients field-group-bootstrap_fieldgroup_nav_item',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_obsolete|node|product|form';
+  $field_group->group_name = 'group_obsolete';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Obsolete fields',
+    'weight' => '46',
+    'children' => array(
+      0 => 'field_product_buy_link',
+      1 => 'field_product_condition',
+      2 => 'field_beauty_review_data',
+      3 => 'field_bh_rate',
+      4 => 'field_weight',
+      5 => 'field_product_review_link',
+      6 => 'field_rating_count',
+      7 => 'field_rating_value',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-obsolete field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_onlineresellers|node|product|full';
+  $field_group->group_name = 'group_onlineresellers';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_buttons';
+  $field_group->data = array(
+    'label' => 'Online resellers',
+    'weight' => '43',
+    'children' => array(
+      0 => 'group_buyonline_group',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'label' => 'Online resellers',
+      'instance_settings' => array(
+        'id' => 'online-resellers',
+        'classes' => 'group-onlineresellers field-group-accordion',
+        'description' => '',
+        'effect' => 'bounceslide',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_related|node|product|form';
+  $field_group->group_name = 'group_related';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_vertical';
+  $field_group->data = array(
+    'label' => 'Related Products',
+    'weight' => '45',
+    'children' => array(
+      0 => 'field_product_related_product',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-related field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -513,13 +836,46 @@ function flexitol_content_field_group_info() {
       0 => 'field_product_research',
       1 => 'field_clinical_study',
     ),
-    'format_type' => 'bootstrap_fieldgroup_nav_item',
+    'format_type' => 'bootstrap_fieldgroup_accordion_item',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Research',
       'instance_settings' => array(
         'classes' => 'group-research field-group-bootstrap_fieldgroup_nav_item',
-        'required_fields' => 1,
       ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_title|node|product|related_product';
+  $field_group->group_name = 'group_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'related_product';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_product_image',
+      1 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-title ',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
     ),
   );
   $field_groups[''] = $field_group;
@@ -557,8 +913,41 @@ function flexitol_content_field_group_info() {
   );
   $field_groups[''] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_vertical|node|product|form';
+  $field_group->group_name = 'group_vertical';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Vertical tabs',
+    'weight' => '18',
+    'children' => array(
+      0 => 'group_buylinks',
+      1 => 'group_related',
+      2 => 'group_bt_review',
+      3 => 'group_obsolete',
+    ),
+    'format_type' => 'tabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-vertical field-group-tabs',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Beauty review');
+  t('Beauty review link');
+  t('Buy Online Links');
+  t('Buy online now');
   t('Clinical Studies');
   t('Closed');
   t('Dafault');
@@ -572,8 +961,13 @@ function flexitol_content_field_group_info() {
   t('Ingredients');
   t('Leave a Testimonial');
   t('Leave a testimonial');
+  t('Obsolete fields');
+  t('Online resellers');
+  t('Related Products');
   t('Research');
+  t('Title');
   t('Transform Container');
+  t('Vertical tabs');
 
   return $field_groups;
 }

@@ -36,6 +36,31 @@ function flexitol_content_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function flexitol_content_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: product_slideshow.
+  $styles['product_slideshow'] = array(
+    'label' => 'Product slideshow',
+    'effects' => array(
+      14 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 460,
+          'height' => 430,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function flexitol_content_node_info() {

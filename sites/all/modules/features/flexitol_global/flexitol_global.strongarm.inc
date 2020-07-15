@@ -78,13 +78,17 @@ function flexitol_global_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'ds_extras_region_blocks';
   $strongarm->value = array(
+    'banner_conditions' => array(
+      'title' => 'Banner Conditions',
+      'info' => 'node_conditions_full',
+    ),
     'banner' => array(
       'title' => 'Banner',
       'info' => 'node_product_full',
     ),
-    'banner_conditions' => array(
-      'title' => 'Banner Conditions',
-      'info' => 'node_conditions_full',
+    'related' => array(
+      'title' => 'Related',
+      'info' => 'node_product_full',
     ),
   );
   $export['ds_extras_region_blocks'] = $strongarm;

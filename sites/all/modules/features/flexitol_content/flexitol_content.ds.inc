@@ -168,34 +168,249 @@ function flexitol_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'product';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'click_and_collect' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'leave_a_testimonial' => array(
-      'weight' => '5',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'where_to_buy_button' => array(
+      'weight' => '44',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'beauty_review_data_clone_' => array(
+      'weight' => '55',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:6:"hidden";s:9:"formatter";s:10:"bhfivestar";s:11:"delta_limit";i:0;s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";b:0;s:18:"formatter_settings";a:0:{}s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:29:"node:field_beauty_review_data";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'bh-rating  hidden-md',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'product_slideshow' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'product-gallery',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'subtitle_clone_' => array(
       'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:6:"hidden";s:9:"formatter";s:12:"text_default";s:11:"delta_limit";i:0;s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";b:0;s:18:"formatter_settings";a:0:{}s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:27:"node:field_product_subtitle";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'hidden-md',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'subtitle_information_clone_' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:6:"hidden";s:9:"formatter";s:12:"text_default";s:11:"delta_limit";s:1:"0";s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";i:0;s:18:"formatter_settings";a:0:{}s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:31:"node:field_subtitle_information";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'subtitle-info hidden-md',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'title_clone_' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:8:{s:4:"link";i:0;s:6:"markup";s:2:"h1";s:2:"id";s:0:"";s:5:"class";s:9:"hidden-md";s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:10:"node_title";s:7:"subtype";s:10:"node_title";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'write_a_review_url_clone_' => array(
+      'weight' => '56',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:6:"hidden";s:9:"formatter";s:12:"link_default";s:11:"delta_limit";i:0;s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";b:0;s:18:"formatter_settings";a:0:{}s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:29:"node:field_write_a_review_url";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'write-review hidden-md',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
     ),
     'title' => array(
-      'weight' => '6',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'link' => '0',
         'wrapper' => 'h1',
-        'class' => '',
-        'ft' => array(),
+        'class' => 'visible-md',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_product_subtitle' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'visible-md field-name-field-product-subtitle',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_product_related_product' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'related-products',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fis' => TRUE,
+          'fis-el' => 'ul',
+          'fis-cl' => 'row',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'li',
+          'fi-cl' => 'col-sm-6 col-lg-3',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_beauty_review_data' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'bh-rating visible-md-inlineflex',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_subtitle_information' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'subtitle-info visible-md-flex',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'p',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_write_a_review_url' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'write-review visible-md-inlineflex',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
       ),
     ),
   );
   $export['node|product|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|product|related_product';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'product';
+  $ds_fieldsetting->view_mode = 'related_product';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '38',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'field_product_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|product|related_product'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -413,6 +628,51 @@ function flexitol_content_ds_custom_fields_info() {
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
+  $ds_field->field = 'beauty_review_data_clone_';
+  $ds_field->label = 'Beauty Review data (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['beauty_review_data_clone_'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'click_and_collect';
+  $ds_field->label = 'Click and collect';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<p>Click and collect</p>
+',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['click_and_collect'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
   $ds_field->field = 'conditions_menu_block';
   $ds_field->label = 'Conditions Menu';
   $ds_field->field_type = 6;
@@ -425,6 +685,116 @@ function flexitol_content_ds_custom_fields_info() {
     'block_render' => '2',
   );
   $export['conditions_menu_block'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'leave_a_testimonial';
+  $ds_field->label = 'Leave a testimonial';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'views|leave_a_testimonial-block',
+    'block_render' => '1',
+    'block_visibility' => 0,
+  );
+  $export['leave_a_testimonial'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'product_slideshow';
+  $ds_field->label = 'Product slideshow';
+  $ds_field->field_type = 6;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'block' => 'views|product_slideshow-block',
+    'block_render' => '3',
+    'block_visibility' => 0,
+  );
+  $export['product_slideshow'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'subtitle_clone_';
+  $ds_field->label = 'Subtitle (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['subtitle_clone_'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'subtitle_information_clone_';
+  $ds_field->label = 'Subtitle information (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['subtitle_information_clone_'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'title_clone_';
+  $ds_field->label = 'Title (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['title_clone_'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
@@ -441,12 +811,38 @@ function flexitol_content_ds_custom_fields_info() {
 $crt_path = current_path();
 $path = ($crt_path == \'node/1331\' || $crt_path == \'node/1332\' || $crt_path == \'node/1333\') ? \'https://littlebodies.com.au/\' : \'/where-buy\';
 ?>
-<p><a class="btn btn-danger" href="<?php echo $path; ?>">Where to buy</a></p>',
+<p><a class="btn btn-danger" href="<?php echo $path; ?>">Find a Stockist</a></p>',
       'format' => 'php_code',
     ),
     'use_token' => 0,
   );
   $export['where_to_buy_button'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'write_a_review_url_clone_';
+  $ds_field->label = 'Write a review URL (clone)';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['write_a_review_url_clone_'] = $ds_field;
 
   return $export;
 }
@@ -802,53 +1198,99 @@ function flexitol_content_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'product';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_8_4';
+  $ds_layout->layout = 'bootstrap_5_7';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
-        0 => 'group_info',
-        3 => 'field_product_information',
-        5 => 'field_product_directions',
-        7 => 'field_product_ingredients',
-        10 => 'field_product_research',
-        12 => 'field_clinical_study',
-        14 => 'group_information',
-        15 => 'group_directions',
-        16 => 'group_ingredients',
-        17 => 'group_research',
-      ),
       'right' => array(
-        1 => 'field_product_buy_link',
-        2 => 'where_to_buy_button',
-        4 => 'click_and_collect',
-        6 => 'field_product_info_image',
-        8 => 'leave_a_testimonial',
+        0 => 'field_chemist_warehouse',
+        3 => 'field_priceline',
+        4 => 'field_amcal_',
+        6 => 'field_chempro',
+        8 => 'field_product_information',
+        9 => 'field_product_directions',
+        11 => 'field_coles',
+        12 => 'field_woolworths',
+        13 => 'title',
+        14 => 'field_product_ingredients',
+        15 => 'field_product_subtitle',
+        16 => 'field_bargain_chemist',
+        17 => 'field_product_research',
+        18 => 'group_dt',
+        19 => 'field_clinical_study',
+        20 => 'field_pharmacy_direct',
+        21 => 'field_lazada',
+        22 => 'field_subtitle_information',
+        23 => 'field__shopee',
+        24 => 'group_buttons',
+        25 => 'field_watsons',
+        26 => 'group_info',
+        28 => 'group_information',
+        29 => 'group_directions',
+        30 => 'group_ingredients',
+        31 => 'group_research',
+        32 => 'group_onlineresellers',
+        33 => 'where_to_buy_button',
+        34 => 'group_buyonline_group',
+        35 => 'group_bt_link',
+        36 => 'field_beauty_review_data',
+        37 => 'field_write_a_review_url',
       ),
-      'banner' => array(
-        9 => 'title',
-        11 => 'field_product_image',
-        13 => 'field_product_subtitle',
+      'left' => array(
+        1 => 'title_clone_',
+        2 => 'group_dt_clone',
+        5 => 'subtitle_clone_',
+        7 => 'subtitle_information_clone_',
+        10 => 'product_slideshow',
+        38 => 'group_bt_link_clone',
+        39 => 'beauty_review_data_clone_',
+        40 => 'write_a_review_url_clone_',
+      ),
+      'related' => array(
+        27 => 'field_product_related_product',
       ),
     ),
     'fields' => array(
-      'group_info' => 'left',
-      'field_product_buy_link' => 'right',
+      'field_chemist_warehouse' => 'right',
+      'title_clone_' => 'left',
+      'group_dt_clone' => 'left',
+      'field_priceline' => 'right',
+      'field_amcal_' => 'right',
+      'subtitle_clone_' => 'left',
+      'field_chempro' => 'right',
+      'subtitle_information_clone_' => 'left',
+      'field_product_information' => 'right',
+      'field_product_directions' => 'right',
+      'product_slideshow' => 'left',
+      'field_coles' => 'right',
+      'field_woolworths' => 'right',
+      'title' => 'right',
+      'field_product_ingredients' => 'right',
+      'field_product_subtitle' => 'right',
+      'field_bargain_chemist' => 'right',
+      'field_product_research' => 'right',
+      'group_dt' => 'right',
+      'field_clinical_study' => 'right',
+      'field_pharmacy_direct' => 'right',
+      'field_lazada' => 'right',
+      'field_subtitle_information' => 'right',
+      'field__shopee' => 'right',
+      'group_buttons' => 'right',
+      'field_watsons' => 'right',
+      'group_info' => 'right',
+      'field_product_related_product' => 'related',
+      'group_information' => 'right',
+      'group_directions' => 'right',
+      'group_ingredients' => 'right',
+      'group_research' => 'right',
+      'group_onlineresellers' => 'right',
       'where_to_buy_button' => 'right',
-      'field_product_information' => 'left',
-      'click_and_collect' => 'right',
-      'field_product_directions' => 'left',
-      'field_product_info_image' => 'right',
-      'field_product_ingredients' => 'left',
-      'leave_a_testimonial' => 'right',
-      'title' => 'banner',
-      'field_product_research' => 'left',
-      'field_product_image' => 'banner',
-      'field_clinical_study' => 'left',
-      'field_product_subtitle' => 'banner',
-      'group_information' => 'left',
-      'group_directions' => 'left',
-      'group_ingredients' => 'left',
-      'group_research' => 'left',
+      'group_buyonline_group' => 'right',
+      'group_bt_link' => 'right',
+      'field_beauty_review_data' => 'right',
+      'field_write_a_review_url' => 'right',
+      'group_bt_link_clone' => 'left',
+      'beauty_review_data_clone_' => 'left',
+      'write_a_review_url_clone_' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -865,6 +1307,39 @@ function flexitol_content_ds_layout_settings_info() {
     'page_option_title' => '',
   );
   $export['node|product|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|product|related_product';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'product';
+  $ds_layout->view_mode = 'related_product';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_title',
+        1 => 'title',
+        2 => 'field_product_image',
+      ),
+    ),
+    'fields' => array(
+      'group_title' => 'ds_content',
+      'title' => 'ds_content',
+      'field_product_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|product|related_product'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -1295,6 +1770,15 @@ function flexitol_content_ds_layout_settings_info() {
  */
 function flexitol_content_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'related_product';
+  $ds_view_mode->label = 'Related product';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['related_product'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
