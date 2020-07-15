@@ -1376,7 +1376,7 @@ function flexitol_content_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Broken/missing handler */
+  /* Field: Learn More button */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1386,7 +1386,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]" class="learn-more">Learn more</a>';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Simple URL */
   $handler->display->display_options['fields']['path_1']['id'] = 'path_1';
   $handler->display->display_options['fields']['path_1']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['path_1']['field'] = 'path';
@@ -1394,34 +1394,56 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['path_1']['label'] = '';
   $handler->display->display_options['fields']['path_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path_1']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
   $handler->display->display_options['fields']['php']['label'] = '';
   $handler->display->display_options['fields']['php']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php
+global $_domain;
+echo $_domain[\'domain_id\'];
+?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: Views: Views Conditional */
   $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional']['label'] = '';
   $handler->display->display_options['fields']['views_conditional']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'php';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_packshot_image]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
+  /* Field: Views: Views Conditional */
   $handler->display->display_options['fields']['views_conditional_1']['id'] = 'views_conditional_1';
   $handler->display->display_options['fields']['views_conditional_1']['table'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_1']['field'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_1']['label'] = '';
   $handler->display->display_options['fields']['views_conditional_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_1']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['views_conditional_1']['if'] = 'php';
+  $handler->display->display_options['fields']['views_conditional_1']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = '2';
+  $handler->display->display_options['fields']['views_conditional_1']['then'] = '[field_packshot_image_nz]';
+  $handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
+  /* Field: Views: Views Conditional */
   $handler->display->display_options['fields']['views_conditional_2']['id'] = 'views_conditional_2';
   $handler->display->display_options['fields']['views_conditional_2']['table'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_2']['field'] = 'views_conditional';
   $handler->display->display_options['fields']['views_conditional_2']['label'] = '';
   $handler->display->display_options['fields']['views_conditional_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional_2']['if'] = 'php';
+  $handler->display->display_options['fields']['views_conditional_2']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = '3';
+  $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_packshot_image_sg] ';
+  $handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
