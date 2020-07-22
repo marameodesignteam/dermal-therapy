@@ -1,4 +1,4 @@
-#block-views-home-page-reviews-block--2 .block-title {
+#block-views-home-page-reviews-block .block-title {
   font-size: 38px;
   font-weight: bold;
   text-transform: uppercase;
@@ -12,6 +12,15 @@
     border-bottom: 2px solid $navy-dark;
     margin: 15px auto 20px;
     display: block;
+  }
+}
+
+.front {
+  .content-tertiary-fluid {
+    padding-bottom: 2em;
+    @media (min-width:992px) {
+      padding-bottom: 3.5em;
+    }
   }
 }
 
