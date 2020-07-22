@@ -199,6 +199,7 @@ features[field_group][] = group_accordion1|node|webform|teaser
 features[field_group][] = group_accordion1|node|webform|widget
 features[field_group][] = group_accordion|node|webform|teaser
 features[field_group][] = group_accordion|node|webform|widget
+features[field_group][] = group_bt_link_clone|node|product|full
 features[field_group][] = group_bt_link|node|product|full
 features[field_group][] = group_bt_review|node|product|form
 features[field_group][] = group_buttons|node|product|full

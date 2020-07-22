@@ -122,6 +122,36 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_bt_link_clone|node|product|full';
+  $field_group->group_name = 'group_bt_link_clone';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_dt_clone';
+  $field_group->data = array(
+    'label' => 'Beauty review link clone',
+    'weight' => '54',
+    'children' => array(
+      0 => 'beauty_review_data_clone_',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Beauty review link clone',
+      'instance_settings' => array(
+        'link_to' => 'field_beauty_review_link',
+        'custom_url' => '',
+        'custom_url_normalize' => 0,
+        'target' => 'default',
+        'classes' => 'group-bt-link-clone field-group-link',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_bt_link|node|product|full';
   $field_group->group_name = 'group_bt_link';
   $field_group->entity_type = 'node';
@@ -946,6 +976,7 @@ function flexitol_content_field_group_info() {
   // Included for use with string extractors like potx.
   t('Beauty review');
   t('Beauty review link');
+  t('Beauty review link clone');
   t('Buy Online Links');
   t('Buy online now');
   t('Clinical Studies');
