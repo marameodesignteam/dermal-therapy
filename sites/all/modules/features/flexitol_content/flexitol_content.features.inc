@@ -97,6 +97,14 @@ function flexitol_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'home_page_reviews' => array(
+      'name' => t('Home page reviews'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'homepage_featured_content' => array(
       'name' => t('Homepage Featured Content'),
       'base' => 'node_content',
