@@ -530,6 +530,7 @@ features[views_view][] = conditions
 features[views_view][] = conditions_menu
 features[views_view][] = conditions_product_reference
 features[views_view][] = healthcare_professional_page
+features[views_view][] = home_page_reviews
 features[views_view][] = homepage
 features[views_view][] = leave_a_testimonial
 features[views_view][] = nodequeue_1
