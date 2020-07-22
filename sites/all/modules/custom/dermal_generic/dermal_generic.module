@@ -325,3 +325,17 @@ function dermal_generic_ds_pre_render_alter(&$layout_render_array, $context, &$v
         }
     }
 }
+
+function dermal_generic_form_node_form_alter(&$form, &$form_state, $form_id)
+{
+    $exclude_fields = array(
+      "body",
+    );
+
+
+    if ($form_id == 'home_page_reviews_node_form') {
+        foreach ($exclude_fields as $field) {
+            $form[$field]['#attributes']['class'][] = 'element-hidden';
+        }
+    }
+}
