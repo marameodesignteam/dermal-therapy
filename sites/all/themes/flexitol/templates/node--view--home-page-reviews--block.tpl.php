@@ -79,7 +79,7 @@
  *
  * @ingroup templates
  */
- // /echo "<pre>";var_dump( $field_average_review);echo "</pre>";die;
+ //echo "<pre>";var_dump( $field_logo);echo "</pre>";die;
 
  $rate_value = $field_average_review[0]["value"];
 
@@ -96,7 +96,7 @@
   <?php if (!$page && !empty($title)): ?>
     <h2<?php print $title_attributes; ?>>
       <a href="<?php print $field_external_link[0]["value"]; ?>">
-        <img src="<?php echo file_create_url($field_logo[0]["uri"]); ?>" alt="<?php echo $title; ?>" />
+        <img src="<?php echo image_style_url("homepage_review", $field_logo[0]["uri"]); ?>" alt="<?php echo $title; ?>" />
       </a>
     </h2>
     <h3 class="rating-title">Overall reviews</h3>
