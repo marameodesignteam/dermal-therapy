@@ -188,11 +188,11 @@ function flexitol_content_context_default_contexts() {
           'region' => 'content_secondary',
           'weight' => '0',
         ),
-        'views-nodequeue_2-block' => array(
+        'views-home_page_reviews-block' => array(
           'module' => 'views',
-          'delta' => 'nodequeue_2-block',
+          'delta' => 'home_page_reviews-block',
           'region' => 'content_tertiary',
-          'weight' => '0',
+          'weight' => '-10',
         ),
       ),
     ),
@@ -237,11 +237,11 @@ function flexitol_content_context_default_contexts() {
           'region' => 'content_secondary',
           'weight' => '0',
         ),
-        'views-nodequeue_2-block_2' => array(
+        'views-home_page_reviews-block' => array(
           'module' => 'views',
-          'delta' => 'nodequeue_2-block_2',
+          'delta' => 'home_page_reviews-block',
           'region' => 'content_tertiary',
-          'weight' => '1',
+          'weight' => '-10',
         ),
       ),
     ),
@@ -286,11 +286,11 @@ function flexitol_content_context_default_contexts() {
           'region' => 'content_secondary',
           'weight' => '0',
         ),
-        'views-nodequeue_2-block_1' => array(
+        'views-home_page_reviews-block' => array(
           'module' => 'views',
-          'delta' => 'nodequeue_2-block_1',
+          'delta' => 'home_page_reviews-block',
           'region' => 'content_tertiary',
-          'weight' => '0',
+          'weight' => '-10',
         ),
       ),
     ),
