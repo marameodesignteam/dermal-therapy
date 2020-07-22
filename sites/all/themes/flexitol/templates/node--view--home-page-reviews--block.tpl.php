@@ -101,7 +101,7 @@
       <img src="<?php echo image_style_url("homepage_review", $field_logo[0]["uri"]); ?>" alt="" />
     </h2>
     <h3 class="rating-title">Overall reviews</h3>
-    <p class="sr-only visually-hidden"><?php echo $rate_value; ?> stars out of 5</p>
+    <p class="sr-only visually-hidden"><?php echo $rate_value; ?> star<?php echo ($rate_value > 1) ? "s" : ""; ?> out of 5</p>
     <div class='fivestar-widget-static fivestar-widget-static-vote fivestar-widget-static-5' aria-hidden='true'>
       <?php echo $final_markup; ?>
     </div>
