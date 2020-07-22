@@ -323,6 +323,7 @@ features[flexslider_optionset][] = dermal_therapy_testinomials
 features[flexslider_optionset][] = single_product_slideshow
 features[flexslider_optionset][] = single_product_slideshow_navigation
 features[image][] = product_slideshow
+features[image][] = related_products
 features[menu_custom][] = main-menu
 features[menu_custom][] = menu-footer-menu
 features[node][] = article

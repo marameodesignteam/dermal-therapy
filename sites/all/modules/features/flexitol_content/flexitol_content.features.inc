@@ -57,6 +57,22 @@ function flexitol_content_image_default_styles() {
     ),
   );
 
+  // Exported image style: related_products.
+  $styles['related_products'] = array(
+    'label' => 'Related products',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 250,
+          'height' => 220,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
