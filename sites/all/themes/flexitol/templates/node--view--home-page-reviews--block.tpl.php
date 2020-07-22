@@ -95,7 +95,7 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if (!$page && !empty($title)): ?>
     <h2<?php print $title_attributes; ?>>
-      <a href="<?php print $field_external_link[0]["value"]; ?>" target="_blank">
+      <a href="<?php print $field_external_link[0]["value"]; ?>" target="_blank" rel="noopener noreferrer">
         <span class="sr-only visually-hidden"><?php echo $title; ?></span>
       </a>
       <img src="<?php echo image_style_url("homepage_review", $field_logo[0]["uri"]); ?>" alt="" />
