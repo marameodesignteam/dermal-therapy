@@ -1493,7 +1493,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['views_conditional_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_1']['if'] = 'php';
   $handler->display->display_options['fields']['views_conditional_1']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = '2';
+  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = '3';
   $handler->display->display_options['fields']['views_conditional_1']['then'] = '[field_packshot_image_nz]';
   $handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
   /* Field: Views: Views Conditional */
@@ -1505,7 +1505,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['views_conditional_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_2']['if'] = 'php';
   $handler->display->display_options['fields']['views_conditional_2']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = '3';
+  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = '2';
   $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_packshot_image_sg] ';
   $handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
   /* Field: Global: Custom text */
