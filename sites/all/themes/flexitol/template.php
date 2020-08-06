@@ -153,6 +153,7 @@ function _product_review($categ, $wrapper_class)
     23 => 'fe658376-e2db-4c78-bc04-f24d0fe7e44f', // PERSONAL CARE
     10 => 'b1a40f30-4372-4788-bc38-da37413ff560', // HAND CARE
     28 => '28023c61-e180-43fc-8219-e6f318688388', // CHILDREN SKIN CARE
+    35 => '7c8f468c-ef56-41cd-a2e6-927619a3a5e8', // SCALP CARE
   ];
     $markups = [
     9 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-foot-care-range" rel="noopener">
@@ -216,6 +217,13 @@ alt="Dermal Therapy Australia Hand Care Range"
 width="160"
 src="https://api.productreview.com.au/api/services/rating-badge/v2/au/28023c61-e180-43fc-8219-e6f318688388/from-internal-entry-id?resolution=hd&theme=light&width=160"
 alt="Dermal Therapy Australia Children\'s Skin Care"
+>
+</a>', // CHILDREN SKIN CARE
+    35 => '<a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia-scalp-care-range" rel="noopener">
+<img
+width="160"
+src="https://api.productreview.com.au/api/services/rating-badge/v2/au/7c8f468c-ef56-41cd-a2e6-927619a3a5e8/from-internal-entry-id?resolution=hd&theme=light&width=160"
+alt="Dermal Therapy Australia Scalp Care"
 >
 </a>', // CHILDREN SKIN CARE
   ];
@@ -365,8 +373,7 @@ function flexitol_preprocess_field(&$vars)
 /**
  * Implements template_preprocess_HOOK().
  */
-function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
-{
+function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
     if (current_path() == 'taxonomy/term/28') {
         $variables['rows'] .= '
     <div class="views-row col-sm-12">
@@ -378,30 +385,25 @@ function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
       <a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a>
     </div>';
     } elseif (current_path() == 'taxonomy/term/34') {
+
         $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
     } elseif (current_path() == 'taxonomy/term/9') {
         $variables['rows'] .= _product_review(9, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/10') {
         $variables['rows'] .= _product_review(10, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/14') {
         $variables['rows'] .= _product_review(14, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/19') {
         $variables['rows'] .= _product_review(19, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/20') {
         $variables['rows'] .= _product_review(20, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/21') {
         $variables['rows'] .= _product_review(21, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/22') {
         $variables['rows'] .= _product_review(22, 'views-row col-sm-12');
-        ;
     } elseif (current_path() == 'taxonomy/term/23') {
         $variables['rows'] .= _product_review(23, 'views-row col-sm-12');
-        ;
+    } elseif (current_path() == 'taxonomy/term/35') {
+        $variables['rows'] .= _product_review(35, 'views-row col-sm-12');
     }
 }
