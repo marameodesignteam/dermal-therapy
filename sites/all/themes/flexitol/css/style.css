@@ -7754,6 +7754,11 @@ i.fa.fa-search {
   border-right: 0;
 }
 
+.webform-component-radios.form-item {
+  padding: 6px 12px;
+  background: #fff;
+}
+
 .nav-pills > li {
   border: 1px solid;
 }
