@@ -168,6 +168,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 					} elseif ($_domain['domain_id'] == 1) {
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>';
+						echo '<a href="https://www.pinterest.com.au/dermaltherapyau/" target="_blank"><i class="fa fa-pinterest"></i></a>';
 					} else {
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>';

@@ -15,6 +15,7 @@ img {
   }
 }
 //@@BM for new logo
+
 .row.top-banner {
   position: relative;
   z-index: 1;
@@ -309,6 +310,16 @@ img {
     left: 134px;
     float: left;
     position: relative;
+
+    .domain-australia-dt & {
+      left: 104px;
+      @media (max-width: $screen-lg-desktop) {
+        left: 65px;
+      }
+      @media (max-width: $screen-desktop) {
+        left: -8px;
+      }
+    }
 
     ul.dropdown-menu.top {
       li.first {
@@ -1327,6 +1338,14 @@ i.fa.fa-instagram {
   cursor: pointer;
 }
 
+i.fa.fa-pinterest {
+  padding: 0.1em;
+  bottom: -5px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 i.fa.fa-youtube {
   padding: 0.1em;
   bottom: -5px;
@@ -1465,6 +1484,7 @@ i.fa.fa-search {
   left: -6px;
 }
 //hide products dropdown
+
 .navbar-nav .first .dropdown-menu {
   @media (max-width: 767px) {
     display: none !important;
@@ -1482,10 +1502,10 @@ i.fa.fa-search {
   white-space: nowrap;
   /* added line */
 }
-
 //hide money back guaranteed for nz and au, show only on contact and home
 
-.domain-australia-dt, .domain-newzealand-dt {
+.domain-australia-dt,
+.domain-newzealand-dt {
   &:not(.node-type-webform):not(.page-homepage) {
     #block-menu-menu-footer-menu {
       .menu.nav {
@@ -1496,8 +1516,7 @@ i.fa.fa-search {
 
           &:nth-last-child(2) {
             a {
-              border-right:0;
-
+              border-right: 0;
             }
           }
         }
@@ -1505,7 +1524,6 @@ i.fa.fa-search {
     }
   }
 }
-
 //@BM radio buttons background - contact form
 
 .webform-component-radios.form-item {
