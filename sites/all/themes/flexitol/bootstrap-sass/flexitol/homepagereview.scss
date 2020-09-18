@@ -1,0 +1,132 @@
+#block-views-home-page-reviews-block .block-title {
+  font-size: 38px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1em;
+
+  &:after {
+    content: "";
+    width: 150px;
+    height: 2px;
+    border-bottom: 2px solid $navy-dark;
+    margin: 15px auto 20px;
+    display: block;
+  }
+}
+
+.front {
+  .content-tertiary-fluid {
+    padding-bottom: 2em;
+    @media (min-width:992px) {
+      padding-bottom: 3.5em;
+    }
+  }
+}
+
+.view-home-page-reviews {
+  .row {
+    display: flex;
+    @media (min-width:992px) {
+      justify-content: center;
+    }
+    flex-wrap: wrap;
+    margin-bottom: -2em;
+
+    > div {
+      margin-bottom: 2em;
+
+      &.col-xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      &.col-sm-6 {
+        @media (min-width:768px) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+
+      &.col-md-4 {
+        @media (min-width:992px) {
+          flex: 0 0 33.33333333%;
+          max-width: 33.33333333%;
+        }
+      }
+
+      &.col-lg-4 {
+        @media (min-width:1200px) {
+          flex: 0 0 33.33333333%;
+          max-width: 33.33333333%;
+        }
+      }
+    }
+  }
+
+  .node-home-page-reviews {
+    position: relative;
+    background: #fff;
+    padding: 1em 1em 2em;
+    @media (min-width:1200px) {
+      padding: 1.5em 2em 2em;
+    }
+
+    > * {
+      text-align: center;
+    }
+  }
+
+  h2 {
+    margin: 0 0 0.7em;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    img {
+      max-height: 2em;
+      object-fit: contain;
+    }
+  }
+
+
+  .rating-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0 0 0.4em;
+  }
+
+  .fivestar-widget-static {
+    div {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .star {
+      background: url("../images/star-small.png") 0 0 no-repeat;
+      width: 21px;
+      height: 20px;
+      display: inline-block;
+    }
+
+    .star.filled {
+      background-position: 0 -40px;
+    }
+
+    .fivestar-widget-static {
+      min-width: 11rem;
+    }
+
+    .fivestar-widget-static,
+    .product-average-rating,
+    .product-average-rating div {
+      display: inline;
+    }
+  }
+}

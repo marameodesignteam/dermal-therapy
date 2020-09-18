@@ -41,6 +41,22 @@ function flexitol_content_views_api($module = NULL, $api = NULL) {
 function flexitol_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: homepage_review.
+  $styles['homepage_review'] = array(
+    'label' => 'Homepage review',
+    'effects' => array(
+      15 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 350,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: product_slideshow.
   $styles['product_slideshow'] = array(
     'label' => 'Product slideshow',
@@ -50,6 +66,22 @@ function flexitol_content_image_default_styles() {
         'data' => array(
           'width' => 460,
           'height' => 430,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: related_products.
+  $styles['related_products'] = array(
+    'label' => 'Related products',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 250,
+          'height' => 220,
           'upscale' => 1,
         ),
         'weight' => 1,
@@ -91,6 +123,14 @@ function flexitol_content_node_info() {
     ),
     'health_professionals_product' => array(
       'name' => t('Health Professionals Product'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'home_page_reviews' => array(
+      'name' => t('Home page reviews'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
