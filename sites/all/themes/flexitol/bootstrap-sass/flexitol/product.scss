@@ -6,21 +6,6 @@ $red-button: #C83617;
 $text-color: #575757;
 $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 
-@media (max-width: 576px){
-  .page-products .view-products-page .view-content .box-flex{
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin: 0 0 10px;
-  }
-  .page-products .view-products-page .view-content .box-flex span{
-    flex-direction: column;
-    align-items: center;
-  }
-  .page-products .view-products-page .view-content .box-flex a.learn-more{
-    align-self: center;
-  }
-}
-
 .page-node.node-type-product {
   &.domain-newzealand-dt .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
     background-image: url("#{$retailer_images}pharmacy-direct-nz.jpg");
@@ -1614,5 +1599,20 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
         margin-top: 70px;
       }
     }
+  }
+}
+
+@media (max-width: 576px){
+  .page-products .view-products-page .view-content .box-flex{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
+  }
+  .page-products .view-products-page .view-content .box-flex span{
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-products .view-products-page .view-content .box-flex a.learn-more{
+    align-self: center;
   }
 }
