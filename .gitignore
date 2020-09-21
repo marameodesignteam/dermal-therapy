@@ -13,3 +13,5 @@ sites/all/themes/flexitol/prepros-6.config
 .DS_Store
 /*/.DS_Store
 .htaccess
+*Zone.Identifier
+
