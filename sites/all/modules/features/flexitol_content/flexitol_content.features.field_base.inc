@@ -191,6 +191,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_catch'.
+  $field_bases['field_catch'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_catch',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_category_image'.
   $field_bases['field_category_image'] = array(
     'active' => 1,
@@ -513,6 +534,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_good_price'.
+  $field_bases['field_good_price'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_good_price',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_graph_2_notes'.
   $field_bases['field_graph_2_notes'] = array(
     'active' => 1,
@@ -530,6 +572,27 @@ function flexitol_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_guardian'.
+  $field_bases['field_guardian'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_guardian',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_healtcare_product_body'.
@@ -868,6 +931,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_life_pharmacy'.
+  $field_bases['field_life_pharmacy'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_life_pharmacy',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_logo'.
   $field_bases['field_logo'] = array(
     'active' => 1,
@@ -978,6 +1062,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_pharmacy_4_less'.
+  $field_bases['field_pharmacy_4_less'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pharmacy_4_less',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_pharmacy_direct'.
   $field_bases['field_pharmacy_direct'] = array(
     'active' => 1,
@@ -985,6 +1090,27 @@ function flexitol_content_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_pharmacy_direct',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_pharmacy_online'.
+  $field_bases['field_pharmacy_online'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pharmacy_online',
     'indexes' => array(
       'format' => array(
         0 => 'format',
