@@ -270,6 +270,30 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
           background-image: url("#{$retailer_images}bargain-chemist.png");
         }
 
+        .field-name-field-catch {
+          background-image: url("#{$retailer_images}catch.png");
+        }
+
+        .field-name-good-price {
+          background-image: url("#{$retailer_images}good-price.png");
+        }
+
+        .field-name-pharmacy-4-less {
+          background-image: url("#{$retailer_images}pharmacy-4-less.png");
+        }
+
+        .field-name-pharmacy-online {
+          background-image: url("#{$retailer_images}pharmacy-online.png");
+        }
+
+        .field-name-guardian {
+          background-image: url("#{$retailer_images}guardian.png");
+        }
+
+        .field-life-pharmacy {
+          background-image: url("#{$retailer_images}life-pharmacy.png");
+        }
+
         .field-name-field-pharmacy-direct {
           background-image: url("#{$retailer_images}pharmacy-direct-au.png");
         }
