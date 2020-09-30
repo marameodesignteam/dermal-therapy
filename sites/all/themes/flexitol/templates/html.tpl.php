@@ -67,7 +67,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
-</head><body<?php print $body_attributes; ?> style="<?php print $background_image ? 'background-image: url(\''. $background_image .'\')' : ''?> ">
+</head>
+<body<?php print $body_attributes; ?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
