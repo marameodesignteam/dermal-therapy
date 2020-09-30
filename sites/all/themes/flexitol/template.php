@@ -26,30 +26,30 @@ function flexitol_preprocess_html(&$vars)
     if (arg(0) == 'node' && is_numeric(arg(1))) {
         $node = node_load(arg(1));
         // If product set background
-        if (isset($node->field_page_background_image['und'][0]['uri'])) {
-            $uri = $node->field_page_background_image['und'][0]['uri'];
-            $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
-            if ($wrapper instanceof DrupalLocalStreamWrapper) {
-                $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
-            }
-            $vars['background_image'] = base_path() . $path;
-        }
-        if ($node->type == 'product') {
-            // if (isset($node->field_product_category['und'][0]['target_id'])) {
-            //     $term_id = $node->field_product_category['und'][0]['target_id'];
-            //     $term = taxonomy_term_load($term_id);
-            //     if (isset($term->field_category_image['und'][0]['uri'])) {
-            //         $uri = $term->field_category_image['und'][0]['uri'];
-            //         $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
-            //         if ($wrapper instanceof DrupalLocalStreamWrapper) {
-            //             $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
-            //         }
-            //         $vars['background_image'] = base_path() . $path;
-            //     }
-            // }
-
-            $vars['background_image'] = "";
-        }
+        // if (isset($node->field_page_background_image['und'][0]['uri'])) {
+        //     $uri = $node->field_page_background_image['und'][0]['uri'];
+        //     $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+        //     if ($wrapper instanceof DrupalLocalStreamWrapper) {
+        //         $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+        //     }
+        //     $vars['background_image'] = base_path() . $path;
+        // }
+        // if ($node->type == 'product') {
+        //     if (isset($node->field_product_category['und'][0]['target_id'])) {
+        //         $term_id = $node->field_product_category['und'][0]['target_id'];
+        //         $term = taxonomy_term_load($term_id);
+        //         if (isset($term->field_category_image['und'][0]['uri'])) {
+        //             $uri = $term->field_category_image['und'][0]['uri'];
+        //             $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+        //             if ($wrapper instanceof DrupalLocalStreamWrapper) {
+        //                 $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+        //             }
+        //             $vars['background_image'] = base_path() . $path;
+        //         }
+        //     }
+        //
+        //     $vars['background_image'] = "";
+        // }
 
         // Add product review script
         // Setup IE meta tag to force IE rendering mode
@@ -73,58 +73,58 @@ function flexitol_preprocess_html(&$vars)
         $term = taxonomy_term_load(arg(2));
         // If term of type category set background
         if ($term->vocabulary_machine_name == 'product_category') {
-            if (isset($term->field_category_image['und'][0]['uri'])) {
-                $uri = $term->field_category_image['und'][0]['uri'];
-                $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
-                if ($wrapper instanceof DrupalLocalStreamWrapper) {
-                    $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
-                }
-                $vars['background_image'] = base_path() . $path;
-            }
+            // if (isset($term->field_category_image['und'][0]['uri'])) {
+            //     $uri = $term->field_category_image['und'][0]['uri'];
+            //     $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+            //     if ($wrapper instanceof DrupalLocalStreamWrapper) {
+            //         $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+            //     }
+            //     $vars['background_image'] = base_path() . $path;
+            // }
             $vars['classes_array'][] = 'productcat';
         }
     }
 
     // custom background image for contact pages
-    else {
-        if (in_array($vars['classes_array'][6], [
-      'page-node-221',
-      'page-node-185',
-      'page-node-36',
-    ])) {
-            // Place url of img inside quotes below
-            $vars['background_image'] = "/sites/all/themes/flexitol/images/dt-contact-us-background.jpeg";
-        }
-    }
+    // else {
+    //     if (in_array($vars['classes_array'][6], [
+    //   'page-node-221',
+    //   'page-node-185',
+    //   'page-node-36',
+    // ])) {
+    //         // Place url of img inside quotes below
+    //         $vars['background_image'] = "/sites/all/themes/flexitol/images/dt-contact-us-background.jpeg";
+    //     }
+    // }
 
     // Set background of view pages
-    if (function_exists('views_get_page_view') && views_get_page_view()) {
-        $view = views_get_page_view();
+    // if (function_exists('views_get_page_view') && views_get_page_view()) {
+    //     $view = views_get_page_view();
+    //
+    //     //Background for Healthcare Professionals
+    //     if (isset($view) && $view->name == 'healthcare_professional_page') {
+    //         // Place url of img inside quotes below
+    //         $vars['background_image'] = "/sites/all/themes/flexitol/images/healthcare_bg.jpg";
+    //     }
+    //     //Background for 'Review' page
+    //     else {
+    //         if (isset($view) && $view->name == 'review') {
+    //             // Place url of img inside quotes below
+    //             $vars['background_image'] = "/sites/all/themes/flexitol/images/testimonials_bg.jpg";
+    //         }
+    //         //Background for Special offers and events
+    //         else {
+    //             if (isset($view) && $view->name == 'special_offers') {
+    //                 // Place url of img inside quotes below
+    //                 $vars['background_image'] = "/sites/all/themes/flexitol/images/special_offer_bg.jpg";
+    //             }
+    //         }
+    //     }
+    // }
 
-        //Background for Healthcare Professionals
-        if (isset($view) && $view->name == 'healthcare_professional_page') {
-            // Place url of img inside quotes below
-            $vars['background_image'] = "/sites/all/themes/flexitol/images/healthcare_bg.jpg";
-        }
-        //Background for 'Review' page
-        else {
-            if (isset($view) && $view->name == 'review') {
-                // Place url of img inside quotes below
-                $vars['background_image'] = "/sites/all/themes/flexitol/images/testimonials_bg.jpg";
-            }
-            //Background for Special offers and events
-            else {
-                if (isset($view) && $view->name == 'special_offers') {
-                    // Place url of img inside quotes below
-                    $vars['background_image'] = "/sites/all/themes/flexitol/images/special_offer_bg.jpg";
-                }
-            }
-        }
-    }
-
-    if (drupal_is_front_page()) {
-        $vars['background_image'] = null;
-    }
+    // if (drupal_is_front_page()) {
+    //     $vars['background_image'] = null;
+    // }
 }
 
 /**
