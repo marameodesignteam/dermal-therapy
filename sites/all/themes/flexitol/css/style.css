@@ -1956,7 +1956,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1130px;
+    width: 1380px;
   }
 }
 
@@ -8317,20 +8317,20 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-catch {
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/catch.png?v=2");
 }
-.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-life-pharmacy {
-  background-image: url("/sites/all/themes/flexitol/images/online-retailers/life-pharmacy.png?v=2");
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-good-price {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/good-price.png?v=2");
 }
-.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-guardian {
-  background-image: url("/sites/all/themes/flexitol/images/online-retailers/guardian.png?v=2");
-}
-.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-online {
-  background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-online.png?v=2");
-}
-.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-4-less {
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-pharmacy-4-less {
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-4-less.png?v=2");
 }
-.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-good-price {
-  background-image: url("/sites/all/themes/flexitol/images/online-retailers/good-price.png?v=2");
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-pharmacy-online {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-online.png?v=2");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-guardian {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/guardian.png?v=2");
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-life-pharmacy {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/life-pharmacy.png?v=2");
 }
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-direct-au.png?v=2");
@@ -9425,6 +9425,22 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   }
 }
 
+@media (max-width: 576px) {
+  .page-products .view-products-page .view-content .box-flex {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
+  }
+
+  .page-products .view-products-page .view-content .box-flex span {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-products .view-products-page .view-content .box-flex a.learn-more {
+    align-self: center;
+  }
+}
 .page-taxonomy.page-taxonomy-term hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -10005,7 +10021,7 @@ body.node-type-conditions section.content-column.col-sm-9 section#block-system-m
 
 /*
 section#block-views-8a88aca1c0589e095165a67e4cdec26f{
-  position: fixed;  bottom: 10px;
+  position: fixed;  bottom: 10px; 
 }*/
 /*
 .block.block-views.contextual-links-region.clearfix.affix{
@@ -14217,21 +14233,6 @@ td.visible-print {
 
 .fa-meetup:before {
   content: "";
-}
-
-@media (max-width: 576px){
-  .page-products .view-products-page .view-content .box-flex{
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin: 0 0 10px;
-  }
-  .page-products .view-products-page .view-content .box-flex span{
-    flex-direction: column;
-    align-items: center;
-  }
-  .page-products .view-products-page .view-content .box-flex a.learn-more{
-    align-self: center;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
