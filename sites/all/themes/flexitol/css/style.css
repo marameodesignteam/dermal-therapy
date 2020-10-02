@@ -6752,28 +6752,19 @@ img {
 }
 
 .breadcrumb {
-  font-size: 0.8em;
-  background-color: rgba(123, 122, 122, 0.5);
-  margin-top: 10px;
-  padding: 3px 15px;
-}
-.breadcrumb li,
-.breadcrumb li > a,
-.breadcrumb li.active {
+  padding: 1em 0 0;
+  background: none;
+  font-size: 0.85714em;
   text-transform: uppercase;
-  color: #FFFFFF;
 }
-@media (max-width: 768px) {
-  .breadcrumb {
-    background-color: #24b5e4;
-  }
+.breadcrumb > li, .breadcrumb > li + li::before, .breadcrumb li.active,
+.breadcrumb li > a {
+  color: #1F1F1F;
+}
+.breadcrumb > li + li::before {
+  padding: 0 0.142857em;
 }
 
-@media (max-width: 768px) {
-  #page-header {
-    background-color: #00a9e0;
-  }
-}
 #block-menu-menu-footer-menu {
   float: right;
 }
@@ -7366,24 +7357,6 @@ ul.dropdown-menu.top {
 .footer-fluid {
   background-color: transparent;
   color: #fff;
-}
-
-.breadcrumb {
-  font-size: 0.8em;
-  background-color: rgba(123, 122, 122, 0.5);
-  margin-top: 10px;
-  padding: 3px 15px;
-}
-.breadcrumb li,
-.breadcrumb li > a,
-.breadcrumb li.active {
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-@media (max-width: 768px) {
-  .breadcrumb {
-    background-color: #24b5e4;
-  }
 }
 
 @media (max-width: 768px) {
@@ -8108,19 +8081,6 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   .page-node.node-type-product .visible-md-inlineflex {
     display: inline-flex !important;
   }
-}
-.page-node.node-type-product .breadcrumb {
-  padding: 1em 0 0;
-  background: none;
-  font-size: 0.85714em;
-  text-transform: uppercase;
-}
-.page-node.node-type-product .breadcrumb > li, .page-node.node-type-product .breadcrumb > li + li::before, .page-node.node-type-product .breadcrumb li.active,
-.page-node.node-type-product .breadcrumb li > a {
-  color: #1F1F1F;
-}
-.page-node.node-type-product .breadcrumb > li + li::before {
-  padding: 0 0.142857em;
 }
 .page-node.node-type-product h1 {
   margin-top: 0;

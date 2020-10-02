@@ -421,24 +421,20 @@ img {
 }
 
 .breadcrumb {
-  font-size: 0.8em;
-  background-color: rgba(123, 122, 122, 0.5);
-  margin-top: 10px;
-  padding: 3px 15px;
+  padding: 1em 0 0;
+  background: none;
+  font-size: 0.85714em;
+  text-transform: uppercase;
 
-  li,
-  li > a,
-  li.active {
-    text-transform: uppercase;
-    color: #FFFFFF;
+  & > li,
+  & > li + li::before,
+  & li.active,
+  li > a {
+    color: #1F1F1F;
   }
-  @media (max-width: $grid-float-breakpoint) {
-    background-color: #24b5e4;
-  }
-}
-@media (max-width: $grid-float-breakpoint) {
-  #page-header {
-    background-color: $brand-primary;
+
+  & > li + li::before {
+    padding: 0 0.142857em;
   }
 }
 
@@ -1094,22 +1090,22 @@ ul.dropdown-menu.top {
   color: #fff;
 }
 
-.breadcrumb {
-  font-size: 0.8em;
-  background-color: rgba(123, 122, 122, 0.5);
-  margin-top: 10px;
-  padding: 3px 15px;
-
-  li,
-  li > a,
-  li.active {
-    text-transform: uppercase;
-    color: #FFFFFF;
-  }
-  @media (max-width: $grid-float-breakpoint) {
-    background-color: #24b5e4;
-  }
-}
+// .breadcrumb {
+//   font-size: 0.8em;
+//   background-color: rgba(123, 122, 122, 0.5);
+//   margin-top: 10px;
+//   padding: 3px 15px;
+//
+//   li,
+//   li > a,
+//   li.active {
+//     text-transform: uppercase;
+//     color: #FFFFFF;
+//   }
+//   @media (max-width: $grid-float-breakpoint) {
+//     background-color: #24b5e4;
+//   }
+// }
 @media (max-width: $grid-float-breakpoint) {
   #page-header {
     background-color: $brand-primary;
