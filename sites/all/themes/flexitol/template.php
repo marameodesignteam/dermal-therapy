@@ -250,7 +250,7 @@ alt="Dermal Therapy Australia Scalp Care"
 }
 
 /**
- * Override or insert variables into the page template.
+ * Override or insert variables into the page template.sites/all/modules/features/flexitol_content/flexitol_content.views_default.inc
  */
 
 function flexitol_preprocess_page(&$vars)
@@ -373,9 +373,14 @@ function flexitol_preprocess_field(&$vars)
 /**
  * Implements template_preprocess_HOOK().
  */
-function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
+function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
+{
+
+  $col = "4";
+
+
     if (current_path() == 'taxonomy/term/28') {
-        $variables['rows'] .= '
+        $variables['header'] .= '
     <div class="views-row col-sm-12">
       <div class="product-review" style="text-align: center; margin-bottom: 10px; margin-top: 50px;">
         <a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia" rel="noopener">
@@ -385,25 +390,24 @@ function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
       <a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a>
     </div>';
     } elseif (current_path() == 'taxonomy/term/34') {
-
-        $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
+        $variables['header'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
     } elseif (current_path() == 'taxonomy/term/9') {
-        $variables['rows'] .= _product_review(9, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(9, 'views-row col-sm-'.$col );
     } elseif (current_path() == 'taxonomy/term/10') {
-        $variables['rows'] .= _product_review(10, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(10, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/14') {
-        $variables['rows'] .= _product_review(14, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(14, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/19') {
-        $variables['rows'] .= _product_review(19, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(19, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/20') {
-        $variables['rows'] .= _product_review(20, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(20, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/21') {
-        $variables['rows'] .= _product_review(21, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(21, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/22') {
-        $variables['rows'] .= _product_review(22, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(22, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/23') {
-        $variables['rows'] .= _product_review(23, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(23, 'views-row col-sm-'.$col);
     } elseif (current_path() == 'taxonomy/term/35') {
-        $variables['rows'] .= _product_review(35, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(35, 'views-row col-sm-'.$col);
     }
 }
