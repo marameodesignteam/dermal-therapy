@@ -2899,6 +2899,12 @@ echo $_domain[\'domain_id\'];
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'category:block';
   $handler->display->display_options['path'] = 'taxonomy/term/%';
 
   /* Display: Feed */
