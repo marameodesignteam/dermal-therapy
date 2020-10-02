@@ -272,7 +272,6 @@ features[field_instance][] = node-homepage_featured_content-field_hfc_link
 features[field_instance][] = node-homepage_slide-field_slide_image
 features[field_instance][] = node-homepage_slide-field_slide_link
 features[field_instance][] = node-page-body
-features[field_instance][] = node-page-field_page_background_image
 features[field_instance][] = node-product-field__shopee
 features[field_instance][] = node-product-field_amcal_
 features[field_instance][] = node-product-field_bargain_chemist
