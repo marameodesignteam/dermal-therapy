@@ -29,12 +29,6 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-category-block' => array(
-          'module' => 'views',
-          'delta' => 'category-block',
-          'region' => 'header',
-          'weight' => '-10',
-        ),
         'views-products-block' => array(
           'module' => 'views',
           'delta' => 'products-block',
