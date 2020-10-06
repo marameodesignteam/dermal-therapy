@@ -65,7 +65,7 @@ function flexitol_content_ds_field_settings_info() {
       ),
     ),
     'node_link' => array(
-      'weight' => '6',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -77,7 +77,7 @@ function flexitol_content_ds_field_settings_info() {
       ),
     ),
     'author' => array(
-      'weight' => '3',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'author',
       'formatter_settings' => array(
@@ -91,6 +91,11 @@ function flexitol_content_ds_field_settings_info() {
           'ow-at' => '',
           'ow-def-at' => FALSE,
         ),
+      ),
+    ),
+    'body' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
       ),
     ),
   );
@@ -1001,19 +1006,15 @@ function flexitol_content_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'title',
         1 => 'field_image',
-        2 => 'field_video',
-        3 => 'author',
-        4 => 'field_tags',
-        5 => 'body',
-        6 => 'node_link',
+        2 => 'author',
+        3 => 'body',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
       'field_image' => 'ds_content',
-      'field_video' => 'ds_content',
       'author' => 'ds_content',
-      'field_tags' => 'ds_content',
       'body' => 'ds_content',
       'node_link' => 'ds_content',
     ),

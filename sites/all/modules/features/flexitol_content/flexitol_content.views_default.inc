@@ -2724,7 +2724,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['row_class'] = 'col-xs-12 col-sm-6 col-lg-4';
-  $handler->display->display_options['style_options']['class'] = 'row';
+  $handler->display->display_options['style_options']['class'] = 'row row-flex';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
   /* Header: Global: Unfiltered text */
