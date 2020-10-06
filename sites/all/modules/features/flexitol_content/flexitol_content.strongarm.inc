@@ -1328,7 +1328,7 @@ function flexitol_content_strongarm() {
           ),
           'full' => array(
             'weight' => '41',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'teaser' => array(
             'weight' => '52',

@@ -22,6 +22,7 @@ dependencies[] = field_group_titles
 dependencies[] = filter
 dependencies[] = flexitol_global
 dependencies[] = flexslider
+dependencies[] = flexslider_fields
 dependencies[] = flexslider_views
 dependencies[] = image
 dependencies[] = image_link_formatter
