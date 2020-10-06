@@ -415,7 +415,7 @@ function flexitol_content_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -1358,14 +1358,14 @@ function flexitol_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_product_image',
-        1 => 'title',
+        0 => 'title',
+        1 => 'field_product_image',
         2 => 'node_link',
       ),
     ),
     'fields' => array(
-      'field_product_image' => 'ds_content',
       'title' => 'ds_content',
+      'field_product_image' => 'ds_content',
       'node_link' => 'ds_content',
     ),
     'classes' => array(),
@@ -1377,6 +1377,7 @@ function flexitol_content_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|product|teaser'] = $ds_layout;
 
