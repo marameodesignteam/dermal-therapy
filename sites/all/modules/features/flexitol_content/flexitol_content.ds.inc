@@ -80,6 +80,23 @@ function flexitol_content_ds_field_settings_info() {
       'weight' => '3',
       'label' => 'hidden',
       'format' => 'author',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'prefix' => 'By ',
+          'ow' => TRUE,
+          'ow-el' => 'div ',
+          'ow-cl' => 'author',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_tags' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
     ),
   );
   $export['node|article|teaser'] = $ds_fieldsetting;
