@@ -31,6 +31,7 @@
 
     .view-category {
       flex: 1;
+
       .views-field-name {
         position: relative;
 
@@ -65,12 +66,6 @@
     }
   }
 
-
-
-  #block-views-products-block {
-    padding: 0;
-  }
-
   .view-id-category.view-display-id-block_1 {
     background-image: linear-gradient(0deg, #797979, #636363);
     padding-top: 10px;
@@ -98,13 +93,28 @@
       @media (max-width: $grid-float-breakpoint) {
         display: none;
       }
+      padding-left: 30px;
+
+      .category-active {
+        position: relative;
+
+        &::before {
+          content: "";
+          border-left: 5px solid $dark-blue;
+          position: absolute;
+          top: 0;
+          left: -30px;
+          bottom: -2px;
+        }
+      }
     }
 
     h3 {
       text-transform: uppercase;
       font-weight: 600;
       margin-top: 40px;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 0;
 
       &:first-child {
         margin-top: 0;
@@ -251,7 +261,6 @@
     @media (min-width: $screen-md) {
       padding-left: 20px;
     }
-
     @media (min-width: $screen-lg) {
       padding-left: 40px;
     }

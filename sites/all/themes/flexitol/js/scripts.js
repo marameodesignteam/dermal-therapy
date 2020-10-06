@@ -1,3 +1,35 @@
+//set active class on sidebar menu -  product category page
+
+(function($) {
+  $(document).ready(function() {
+
+    var product_nav = $("#block-views-products-block");
+
+    if (product_nav.length > 0) {
+
+      var title = product_nav.find("a.active").parent();
+
+      title.addClass("category-active")
+
+      title.nextAll().each(function(i) {
+
+        console.log($(this))
+
+        if ($(this).is("h3")) {
+          return false;
+        }
+
+        $(this).addClass("category-active")
+
+      });
+
+    }
+
+  });
+
+})(jQuery);
+
+
 (function($) {
   $(document).ready(function() {
     $(".node-homepage-featured-content .group-hover").on("click", function() {
@@ -253,7 +285,7 @@ $(window).scroll(function(){
 
           var animationSpeed = slider.vars.animationSpeed; //save animation speed to reset later
           slider.vars.animationSpeed = 0;
-          slider.flexAnimate(index); //position index for desired slide 
+          slider.flexAnimate(index); //position index for desired slide
           slider.vars.animationSpeed = animationSpeed;
 
           //scroll to video
