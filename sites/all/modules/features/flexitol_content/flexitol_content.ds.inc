@@ -42,6 +42,28 @@ function flexitol_content_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h1',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'post_date' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'ds_post_date_medium',
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'addtoany' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
     ),
   );
   $export['node|article|full'] = $ds_fieldsetting;
@@ -964,31 +986,34 @@ function flexitol_content_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
+      'ds_content' => array(
         0 => 'title',
-        1 => 'field_image',
-        2 => 'body',
-        3 => 'field_video',
+        1 => 'post_date',
+        2 => 'field_image',
+        3 => 'body',
+        4 => 'addtoany',
       ),
     ),
     'fields' => array(
-      'title' => 'central',
-      'field_image' => 'central',
-      'body' => 'central',
-      'field_video' => 'central',
+      'title' => 'ds_content',
+      'post_date' => 'ds_content',
+      'field_image' => 'ds_content',
+      'body' => 'ds_content',
+      'addtoany' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
-    'layout_attributes' => '',
+    'layout_attributes' => 'class="article-full"',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
     'hide_page_title' => '0',
     'page_option_title' => '',
   );

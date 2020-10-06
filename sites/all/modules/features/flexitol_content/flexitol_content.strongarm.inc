@@ -916,19 +916,32 @@ function flexitol_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '8',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '6',
+        ),
+        'domain' => array(
+          'weight' => '4',
+        ),
+        'redirect' => array(
+          'weight' => '9',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(
         'domain' => array(
           'teaser' => array(
             'weight' => '23',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
