@@ -93,11 +93,6 @@ function flexitol_content_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_tags' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|article|teaser'] = $ds_fieldsetting;
 
@@ -1000,10 +995,10 @@ function flexitol_content_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'article';
   $ds_layout->view_mode = 'teaser';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
+      'ds_content' => array(
         0 => 'title',
         1 => 'field_image',
         2 => 'field_video',
@@ -1014,20 +1009,20 @@ function flexitol_content_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'title' => 'central',
-      'field_image' => 'central',
-      'field_video' => 'central',
-      'author' => 'central',
-      'field_tags' => 'central',
-      'body' => 'central',
-      'node_link' => 'central',
+      'title' => 'ds_content',
+      'field_image' => 'ds_content',
+      'field_video' => 'ds_content',
+      'author' => 'ds_content',
+      'field_tags' => 'ds_content',
+      'body' => 'ds_content',
+      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
-    'layout_attributes' => '',
+    'layout_attributes' => 'class="article-teaser"',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
