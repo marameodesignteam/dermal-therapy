@@ -57,6 +57,29 @@ function flexitol_content_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'node_link' => array(
+      'weight' => '6',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Read more',
+        'link class' => '',
+        'wrapper' => '',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'author' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'author',
     ),
   );
   $export['node|article|teaser'] = $ds_fieldsetting;
@@ -966,15 +989,21 @@ function flexitol_content_ds_layout_settings_info() {
       'central' => array(
         0 => 'title',
         1 => 'field_image',
-        2 => 'body',
-        3 => 'field_video',
+        2 => 'field_video',
+        3 => 'author',
+        4 => 'field_tags',
+        5 => 'body',
+        6 => 'node_link',
       ),
     ),
     'fields' => array(
       'title' => 'central',
       'field_image' => 'central',
-      'body' => 'central',
       'field_video' => 'central',
+      'author' => 'central',
+      'field_tags' => 'central',
+      'body' => 'central',
+      'node_link' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -985,6 +1014,7 @@ function flexitol_content_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|article|teaser'] = $ds_layout;
 

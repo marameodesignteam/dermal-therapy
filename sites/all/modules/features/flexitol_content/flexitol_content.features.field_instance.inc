@@ -163,8 +163,8 @@ function flexitol_content_field_default_field_instances() {
         'settings' => array(
           'trim_length' => 600,
         ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'type' => 'text_trimmed',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -224,7 +224,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => 'width_300',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -283,11 +283,11 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -344,7 +344,7 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'video_embed_field',
         'settings' => array(
           'description' => 1,
@@ -352,7 +352,7 @@ function flexitol_content_field_default_field_instances() {
           'video_style' => 'normal',
         ),
         'type' => 'video_embed_field',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
