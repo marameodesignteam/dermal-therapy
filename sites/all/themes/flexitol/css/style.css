@@ -6988,9 +6988,8 @@ img {
 .node-type-page h2 {
   text-align: center;
   font-size: 2.5em;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
   margin-bottom: 50px;
 }
 .node-type-page h2:after {
@@ -6998,16 +6997,16 @@ img {
   top: 70px;
   left: 50%;
   content: "";
-  border-top: 2px solid #FFFFFF;
+  border-top: 2px solid;
   width: 120px;
   margin-left: -60px;
 }
 .node-type-page .field-name-body {
-  background: rgba(255, 255, 255, 0.9);
   padding: 5% 13%;
   font-weight: 400;
   word-spacing: 0.1em;
   text-align: justify;
+  color: #1F1F1F;
 }
 
 .node-type-conditions section#block-system-main h2 {
