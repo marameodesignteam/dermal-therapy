@@ -70,7 +70,7 @@ function flexitol_content_ds_field_settings_info() {
       'format' => 'default',
       'formatter_settings' => array(
         'link text' => 'Read more',
-        'link class' => '',
+        'link class' => 'learn-more',
         'wrapper' => '',
         'class' => '',
         'ft' => array(),
