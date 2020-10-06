@@ -10199,14 +10199,14 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-top: 30px;
 }
 
-.page-special-offers .view-header .view-title h1 {
+.page-special-offers .view-header .view-title h1, .page-blog .view-header .view-title h1, .page-news .view-header .view-title h1, .page-promotions .view-header .view-title h1 {
   text-align: center;
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-.page-special-offers .view-header .view-title h1:after {
+.page-special-offers .view-header .view-title h1:after, .page-blog .view-header .view-title h1:after, .page-news .view-header .view-title h1:after, .page-promotions .view-header .view-title h1:after {
   position: absolute;
   left: 50%;
   content: "";
