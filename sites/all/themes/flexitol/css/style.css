@@ -7554,8 +7554,38 @@ ul.dropdown-menu.top {
   padding: 1em 2em 1em 1em;
 }
 
-/* Social Icons Styling*/
-i.fa.fa-facebook {
+header {
+  /* Social Icons Styling*/
+}
+header i.fa.fa-facebook {
+  padding: 0.1em;
+  bottom: -5px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+header i.fa.fa-instagram {
+  padding: 0.1em;
+  bottom: -5px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+header i.fa.fa-pinterest {
+  padding: 0.1em;
+  bottom: -5px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+header i.fa.fa-youtube {
+  padding: 0.1em;
+  bottom: -5px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+header i.fa.fa-search {
   padding: 0.1em;
   bottom: -5px;
   color: #fff;
@@ -7563,46 +7593,13 @@ i.fa.fa-facebook {
   cursor: pointer;
 }
 
-i.fa.fa-instagram {
-  padding: 0.1em;
-  bottom: -5px;
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-i.fa.fa-pinterest {
-  padding: 0.1em;
-  bottom: -5px;
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-i.fa.fa-youtube {
-  padding: 0.1em;
-  bottom: -5px;
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-i.fa.fa-search {
-  padding: 0.1em;
-  bottom: -5px;
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.footer i.fa.fa-facebook {
+.footer .fa.fa-facebook {
   padding: 0.1em;
   bottom: -5px;
   color: #00a9e0;
   font-size: 28px;
   cursor: pointer;
 }
-
 .footer i.fa.fa-instagram {
   padding: 0.1em;
   bottom: -5px;
@@ -7610,7 +7607,6 @@ i.fa.fa-search {
   font-size: 28px;
   cursor: pointer;
 }
-
 .footer i.fa.fa-youtube {
   padding: 0.1em;
   bottom: -5px;
@@ -7817,7 +7813,7 @@ ul.row {
   font-size: 26px;
 }
 .article-teaser .author {
-  color: #D1D1D1;
+  color: #858585;
 }
 .article-teaser .learn-more::after {
   content: "";
@@ -7830,6 +7826,74 @@ ul.row {
 }
 .article-teaser .learn-more:focus, .article-teaser .learn-more:hover {
   color: #30576F;
+}
+
+.article-full {
+  display: flex;
+  flex-direction: column;
+}
+.article-full > * {
+  order: 1;
+  padding-left: 13%;
+  padding-right: 13%;
+  margin-bottom: 20px;
+}
+.article-full > *:last-child {
+  margin-bottom: 0;
+}
+.article-full .field-name-post-date,
+.article-full .field-name-title {
+  text-align: center;
+}
+.article-full .field-name-title h1 {
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.article-full .field-name-post-date {
+  color: #858585;
+}
+.article-full .field-name-field-image,
+.article-full .field-name-post-date {
+  margin-bottom: 40px;
+}
+.article-full .field-name-field-image {
+  order: 0;
+  padding: 0;
+}
+.article-full .field-name-field-image img {
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+.article-full .field-name-body {
+  word-spacing: 0.1em;
+  color: #1F1F1F;
+}
+
+.field-name-addtoany .share-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+.field-name-addtoany .share-buttons a,
+.field-name-addtoany .share-buttons h2 {
+  color: #858585;
+}
+.field-name-addtoany .share-buttons h2 {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+.field-name-addtoany .share-buttons a + a {
+  margin-left: 15px;
+}
+.field-name-addtoany .share-buttons a i {
+  font-size: 20px;
 }
 
 .nav-pills > li {
