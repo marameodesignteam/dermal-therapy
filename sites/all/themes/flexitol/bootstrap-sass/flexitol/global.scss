@@ -425,12 +425,13 @@ img {
   background: none;
   font-size: 0.85714em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 
   & > li,
   & > li + li::before,
   & li.active,
   li > a {
-    color: #1F1F1F;
+    color: $dark-text;
   }
 
   & > li + li::before {
@@ -729,19 +730,6 @@ img {
       }
     }
   }
-}
-// center-aligned bottom border for h2
-
-.page-taxonomy.page-taxonomy-term .region-content .field-name-title h2:after {
-  position: relative;
-  top: 15px;
-  /* left: 50%; */
-  content: "";
-  margin-left: 45%;
-  margin-right: 45%;
-  border-top: 2px solid #7a99ac;
-  width: auto;
-  display: block;
 }
 
 body {
