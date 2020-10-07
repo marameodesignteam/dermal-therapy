@@ -113,6 +113,14 @@ function flexitol_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'condition_glossary' => array(
+      'name' => t('Condition Glossary'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'conditions' => array(
       'name' => t('Conditions'),
       'base' => 'node_content',

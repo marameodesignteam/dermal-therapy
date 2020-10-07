@@ -69,6 +69,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_condition_glossary';
+  $strongarm->value = 0;
+  $export['comment_anonymous_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_health_professionals_product';
   $strongarm->value = 0;
   $export['comment_anonymous_health_professionals_product'] = $strongarm;
@@ -146,6 +153,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_condition_glossary';
+  $strongarm->value = '1';
+  $export['comment_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_article';
   $strongarm->value = 1;
   $export['comment_default_mode_article'] = $strongarm;
@@ -163,6 +177,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_default_mode_conditions';
   $strongarm->value = 1;
   $export['comment_default_mode_conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_condition_glossary';
+  $strongarm->value = 0;
+  $export['comment_default_mode_condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -244,6 +265,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_condition_glossary';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_health_professionals_product';
   $strongarm->value = '50';
   $export['comment_default_per_page_health_professionals_product'] = $strongarm;
@@ -317,6 +345,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_form_location_conditions';
   $strongarm->value = 1;
   $export['comment_form_location_conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_condition_glossary';
+  $strongarm->value = 0;
+  $export['comment_form_location_condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -433,6 +468,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_condition_glossary';
+  $strongarm->value = '0';
+  $export['comment_preview_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_health_professionals_product';
   $strongarm->value = '1';
   $export['comment_preview_health_professionals_product'] = $strongarm;
@@ -524,6 +566,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_condition_glossary';
+  $strongarm->value = 0;
+  $export['comment_subject_field_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_health_professionals_product';
   $strongarm->value = 1;
   $export['comment_subject_field_health_professionals_product'] = $strongarm;
@@ -608,6 +657,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_condition_glossary';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_enable_revisions_page_node_health_professionals_product';
   $strongarm->value = 1;
   $export['diff_enable_revisions_page_node_health_professionals_product'] = $strongarm;
@@ -678,6 +734,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_condition_glossary';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_show_preview_changes_node_health_professionals_product';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_health_professionals_product'] = $strongarm;
@@ -744,6 +807,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'diff_view_mode_preview_node_conditions';
   $strongarm->value = 'full';
   $export['diff_view_mode_preview_node_conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_condition_glossary';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1029,6 +1099,87 @@ function flexitol_content_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__condition_glossary';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'nodeorder' => array(
+        'custom_settings' => FALSE,
+      ),
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'related_product' => array(
+        'custom_settings' => FALSE,
+      ),
+      'widget' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'domain' => array(
+          'weight' => '2',
+        ),
+        'metatags' => array(
+          'weight' => '6',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '3',
+        ),
+        'redirect' => array(
+          'weight' => '4',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
+      ),
+      'display' => array(
+        'domain' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_node__condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1644,6 +1795,15 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_condition_glossary';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_health_professionals_product';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -1735,6 +1895,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_condition_glossary';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_health_professionals_product';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_health_professionals_product'] = $strongarm;
@@ -1817,6 +1984,16 @@ function flexitol_content_strongarm() {
     1 => 'promote',
   );
   $export['node_options_conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_condition_glossary';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1917,6 +2094,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_condition_glossary';
+  $strongarm->value = '1';
+  $export['node_preview_condition_glossary'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_health_professionals_product';
   $strongarm->value = '0';
   $export['node_preview_health_professionals_product'] = $strongarm;
@@ -1990,6 +2174,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'node_submitted_conditions';
   $strongarm->value = 0;
   $export['node_submitted_conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_condition_glossary';
+  $strongarm->value = 0;
+  $export['node_submitted_condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2160,6 +2351,16 @@ function flexitol_content_strongarm() {
     'priority' => '0.8',
   );
   $export['xmlsitemap_settings_node_conditions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_condition_glossary';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_condition_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
