@@ -53,8 +53,13 @@
 }
 
 @mixin containedBody() {
-  padding-left: 13%;
-  padding-right: 13%;
+
+  @media (min-width: $screen-sm) {
+
+    padding-left: 13%;
+    padding-right: 13%;
+
+  }
 }
 
 @mixin bodyText() {

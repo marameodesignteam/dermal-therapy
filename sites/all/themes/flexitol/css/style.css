@@ -6985,9 +6985,11 @@ img {
 }
 
 /* BASIC PAGES */
-.node-type-page h2, .node-type-page .field-name-body {
-  padding-left: 13%;
-  padding-right: 13%;
+@media (min-width: 768px) {
+  .node-type-page h2, .node-type-page .field-name-body {
+    padding-left: 13%;
+    padding-right: 13%;
+  }
 }
 .node-type-page h2 {
   text-align: center;
@@ -10352,10 +10354,14 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-top: 50px;
 }
 .view-conditions-glossary .view-content {
-  padding-left: 13%;
-  padding-right: 13%;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .view-conditions-glossary .view-content {
+    padding-left: 13%;
+    padding-right: 13%;
+  }
 }
 
 .table.dt-table {
@@ -10414,7 +10420,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   width: 70%;
 }
 
-.node-type-condition-glossary .field-name-title h1 {
+.node-type-condition-glossary .field-name-title h1, .node-type-ingredients-glossary .field-name-title h1 {
   text-align: center;
   font-size: 2.5em;
   font-weight: 600;
@@ -10422,7 +10428,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-bottom: 50px;
   position: relative;
 }
-.node-type-condition-glossary .field-name-title h1:after {
+.node-type-condition-glossary .field-name-title h1:after, .node-type-ingredients-glossary .field-name-title h1:after {
   position: absolute;
   left: 50%;
   content: "";
@@ -10431,17 +10437,24 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-left: -55px;
   margin-top: 50px;
 }
-.node-type-condition-glossary .field-name-body {
+.node-type-condition-glossary .field-name-body, .node-type-ingredients-glossary .field-name-body {
   font-weight: 400;
   word-spacing: 0.1em;
   text-align: justify;
   color: #1F1F1F;
 }
-.node-type-condition-glossary .field-name-body,
+@media (min-width: 768px) {
+  .node-type-condition-glossary .field-name-body,
 .node-type-condition-glossary .field-name-title,
-.node-type-condition-glossary .view-header {
-  padding-left: 13%;
-  padding-right: 13%;
+.node-type-condition-glossary .view-header, .node-type-ingredients-glossary .field-name-body,
+.node-type-ingredients-glossary .field-name-title,
+.node-type-ingredients-glossary .view-header {
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+}
+.node-type-condition-glossary .view-header, .node-type-ingredients-glossary .view-header {
+  margin-top: 40px;
 }
 
 .modal-open {

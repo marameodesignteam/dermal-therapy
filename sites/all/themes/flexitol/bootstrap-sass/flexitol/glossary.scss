@@ -76,7 +76,7 @@
   }
 }
 
-.node-type-condition-glossary {
+.node-type-condition-glossary, .node-type-ingredients-glossary {
   .field-name-title h1 {
     @include mainHeader()
   }
