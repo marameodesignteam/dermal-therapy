@@ -161,6 +161,14 @@ function flexitol_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'ingredients_glossary' => array(
+      'name' => t('Ingredients Glossary'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Basic page'),
       'base' => 'node_content',
