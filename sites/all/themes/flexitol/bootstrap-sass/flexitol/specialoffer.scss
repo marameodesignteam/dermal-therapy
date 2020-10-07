@@ -1,21 +1,10 @@
-.page-special-offers, .page-blog, .page-news, .page-promotions {
+.page-blog,
+.page-news,
+.page-promotions,
+.page-special-offers {
   .view-header {
-    .view-title h1 {
-      text-align: center;
-      font-size: 2.5em;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 50px;
-
-      &:after {
-        position: absolute;
-        left: 50%;
-        content: "";
-        border-top: 2px solid;
-        width: 110px;
-        margin-left: -55px;
-        margin-top: 50px;
-      }
+    .view-title {
+      @include mainHeader();
     }
   }
 }

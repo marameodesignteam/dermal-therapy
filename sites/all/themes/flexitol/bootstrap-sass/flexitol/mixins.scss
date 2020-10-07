@@ -14,3 +14,39 @@
   filter: alpha(opacity=#{$value});
   opacity: #{$value};
 }
+
+
+@mixin learnMore() {
+  text-transform: uppercase;
+  border: 1px solid;
+  color: #7a99ac;
+  padding: 5px 10px;
+  text-align: center;
+  align-self: flex-end;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin mainHeader() {
+ h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+
+      &:after {
+        position: absolute;
+        left: 50%;
+        content: "";
+        border-top: 2px solid;
+        width: 110px;
+        margin-left: -55px;
+        margin-top: 50px;
+      }
+  }
+}

@@ -10199,14 +10199,20 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-top: 30px;
 }
 
-.page-special-offers .view-header .view-title h1, .page-blog .view-header .view-title h1, .page-news .view-header .view-title h1, .page-promotions .view-header .view-title h1 {
+.page-blog .view-header .view-title h1,
+.page-news .view-header .view-title h1,
+.page-promotions .view-header .view-title h1,
+.page-special-offers .view-header .view-title h1 {
   text-align: center;
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-.page-special-offers .view-header .view-title h1:after, .page-blog .view-header .view-title h1:after, .page-news .view-header .view-title h1:after, .page-promotions .view-header .view-title h1:after {
+.page-blog .view-header .view-title h1:after,
+.page-news .view-header .view-title h1:after,
+.page-promotions .view-header .view-title h1:after,
+.page-special-offers .view-header .view-title h1:after {
   position: absolute;
   left: 50%;
   content: "";
@@ -10329,6 +10335,82 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
 .view-home-page-reviews .fivestar-widget-static .product-average-rating,
 .view-home-page-reviews .fivestar-widget-static .product-average-rating div {
   display: inline;
+}
+
+.view-conditions-glossary .view-header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.view-conditions-glossary .view-header h1:after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  border-top: 2px solid;
+  width: 110px;
+  margin-left: -55px;
+  margin-top: 50px;
+}
+.view-conditions-glossary .view-content {
+  padding: 20px 13%;
+}
+
+.table.dt-table {
+  font-size: 18px;
+  color: #1F1F1F;
+}
+.table.dt-table > thead th, .table.dt-table > thead th.active {
+  background: #7a99ac;
+  color: #fff;
+  border-bottom: 0;
+  border-right: 2px solid #fff;
+  padding: 15px;
+}
+.table.dt-table > thead th:last-child, .table.dt-table > thead th.active:last-child {
+  border-right: 0;
+}
+.table.dt-table > thead th:nth-child(2) {
+  text-align: center;
+}
+.table.dt-table > tbody td {
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  font-size: 16px;
+}
+.table.dt-table > tbody td a {
+  color: #30576F;
+  font-weight: 600;
+}
+.table.dt-table > tbody td, .table.dt-table > tbody td.active {
+  background: #f2f2f2;
+  padding: 15px;
+}
+.table.dt-table > tbody td:hover, .table.dt-table > tbody td.active:hover {
+  background: #f2f2f2;
+}
+.table.dt-table > tbody td p, .table.dt-table > tbody td.active p {
+  margin-bottom: 0;
+}
+.table.dt-table > tbody td:nth-child(2) a {
+  text-transform: uppercase;
+  border: 1px solid;
+  color: #7a99ac;
+  padding: 5px 10px;
+  text-align: center;
+  align-self: flex-end;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: normal;
+}
+.table.dt-table > tbody td:nth-child(2) a:hover {
+  text-decoration: none;
+}
+.table.dt-table > tbody td:last-child {
+  border-right: 0;
+  width: 70%;
 }
 
 .modal-open {
