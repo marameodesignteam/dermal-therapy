@@ -6985,28 +6985,34 @@ img {
 }
 
 /* BASIC PAGES */
+.node-type-page h2, .node-type-page .field-name-body {
+  padding-left: 13%;
+  padding-right: 13%;
+}
 .node-type-page h2 {
   text-align: center;
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
+  position: relative;
 }
 .node-type-page h2:after {
   position: absolute;
-  top: 70px;
   left: 50%;
   content: "";
   border-top: 2px solid;
-  width: 120px;
-  margin-left: -60px;
+  width: 110px;
+  margin-left: -55px;
+  margin-top: 50px;
 }
 .node-type-page .field-name-body {
-  padding: 5% 13%;
   font-weight: 400;
   word-spacing: 0.1em;
   text-align: justify;
   color: #1F1F1F;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .node-type-conditions section#block-system-main h2 {
@@ -7020,16 +7026,6 @@ img {
   border-top: 2px solid #7a99ac;
   width: 120px;
   display: block;
-}
-
-body {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .page-search .content-column {
@@ -10208,6 +10204,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
+  position: relative;
 }
 .page-blog .view-header .view-title h1:after,
 .page-news .view-header .view-title h1:after,
@@ -10343,6 +10340,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
+  position: relative;
 }
 .view-conditions-glossary .view-header h1:after {
   position: absolute;
@@ -10354,7 +10352,10 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-top: 50px;
 }
 .view-conditions-glossary .view-content {
-  padding: 20px 13%;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .table.dt-table {
@@ -10411,6 +10412,36 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
 .table.dt-table > tbody td:last-child {
   border-right: 0;
   width: 70%;
+}
+
+.node-type-condition-glossary .field-name-title h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+}
+.node-type-condition-glossary .field-name-title h1:after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  border-top: 2px solid;
+  width: 110px;
+  margin-left: -55px;
+  margin-top: 50px;
+}
+.node-type-condition-glossary .field-name-body {
+  font-weight: 400;
+  word-spacing: 0.1em;
+  text-align: justify;
+  color: #1F1F1F;
+}
+.node-type-condition-glossary .field-name-body,
+.node-type-condition-glossary .field-name-title,
+.node-type-condition-glossary .view-header {
+  padding-left: 13%;
+  padding-right: 13%;
 }
 
 .modal-open {

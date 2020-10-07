@@ -3,7 +3,7 @@
 .page-promotions,
 .page-special-offers {
   .view-header {
-    .view-title {
+    .view-title h1 {
       @include mainHeader();
     }
   }

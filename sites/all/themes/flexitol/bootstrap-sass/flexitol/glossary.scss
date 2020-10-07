@@ -1,10 +1,12 @@
 .view-conditions-glossary {
-  .view-header {
+  .view-header h1 {
     @include mainHeader();
   }
 
   .view-content {
-    padding: 20px 13%;
+    @include containedBody();
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -13,8 +15,6 @@
   color: $dark-text;
 
   > thead {
-
-
     th {
       &,
       &.active {
@@ -36,7 +36,6 @@
   }
 
   > tbody {
-
     td {
       border-top: 2px solid #fff;
       border-right: 2px solid #fff;
@@ -53,7 +52,7 @@
         padding: 15px;
 
         &:hover {
-          background:$very-light-grey;
+          background: $very-light-grey;
         }
 
         p {
@@ -74,5 +73,25 @@
         width: 70%;
       }
     }
+  }
+}
+
+.node-type-condition-glossary {
+  .field-name-title h1 {
+    @include mainHeader()
+  }
+
+  .field-name-body {
+    @include bodyText()
+  }
+
+  .field-name-body,
+  .field-name-title,
+  .view-header {
+    @include containedBody();
+  }
+
+  .view-header {
+    margin-top: 40px
   }
 }

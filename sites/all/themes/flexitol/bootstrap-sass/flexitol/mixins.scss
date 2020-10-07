@@ -32,21 +32,34 @@
 }
 
 @mixin mainHeader() {
- h1 {
-      text-align: center;
-      font-size: 2.5em;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 50px;
 
-      &:after {
-        position: absolute;
-        left: 50%;
-        content: "";
-        border-top: 2px solid;
-        width: 110px;
-        margin-left: -55px;
-        margin-top: 50px;
-      }
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 50%;
+    content: "";
+    border-top: 2px solid;
+    width: 110px;
+    margin-left: -55px;
+    margin-top: 50px;
+
   }
+}
+
+@mixin containedBody() {
+  padding-left: 13%;
+  padding-right: 13%;
+}
+
+@mixin bodyText() {
+  font-weight: 400;
+  word-spacing: 0.1em;
+  text-align: justify;
+  color: $dark-text;
 }

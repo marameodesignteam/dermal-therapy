@@ -684,32 +684,23 @@ img {
     margin-top: 30px;
   }
 }
+
 /* BASIC PAGES */
 .node-type-page {
-  h2 {
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 50px;
 
-    &:after {
-      position: absolute;
-      top: 70px;
-      left: 50%;
-      content: "";
-      border-top: 2px solid;
-      width: 120px;
-      margin-left: -60px;
-    }
+  h2, .field-name-body {
+    @include containedBody();
+  }
+
+  h2 {
+    @include mainHeader();
   }
 
   .field-name-body {
-    padding: 5% 13%;
-    font-weight: 400;
-    word-spacing: 0.1em;
-    text-align: justify;
-    color: $dark-text;
+    @include bodyText();
+    padding-top: 5%;
+    padding-bottom: 5%;
+
   }
 }
 
@@ -729,16 +720,6 @@ img {
       }
     }
   }
-}
-
-body {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .page-search .content-column {
@@ -1522,7 +1503,7 @@ header {
 
 a.learn-more {
   @include learnMore();
-  
+
 }
 
 ul.row {
