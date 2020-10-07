@@ -250,6 +250,17 @@ function flexitol_content_views_default_views() {
   /* Display: Conditions glossary */
   $handler = $view->new_display('page', 'Conditions glossary', 'page');
   $handler->display->display_options['path'] = 'conditions-glossary';
+
+  /* Display: Conditions glossary block */
+  $handler = $view->new_display('block', 'Conditions glossary block', 'block_1');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: PHP */
+  $handler->display->display_options['header']['php']['id'] = 'php';
+  $handler->display->display_options['header']['php']['table'] = 'views';
+  $handler->display->display_options['header']['php']['field'] = 'php';
+  $handler->display->display_options['header']['php']['php_output'] = '<h2>Other conditions</h2>
+
+';
   $export['conditions_glossary'] = $view;
 
   $view = new view();
