@@ -72,6 +72,11 @@
 *
 * @ingroup themeable
 */
+
+if (!empty($page['sidebar_first'])): $content_column_class = "col-md-8"; endif;
+$sidebar_first_class = "col-md-4";
+
+
 ?>
 <?php $block_language = module_invoke('locale', 'block_view', 'language'); ?>
 <?php global $_domain, $theme_path, $base_url; ?>
@@ -230,7 +235,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 	<div class="row <?php print $content_container_class; ?>">
 
 	  <?php if (!empty($page['sidebar_first'])): ?>
-		<aside class="<?php print $sidebar_first_class?>" role="complementary">
+		<aside class="<?php print $sidebar_first_class; ?>" role="complementary">
 		  <?php print render($page['sidebar_first']); ?>
 		</aside>  <!-- /#sidebar-first -->
 	  <?php endif; ?>

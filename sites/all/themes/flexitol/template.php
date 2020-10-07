@@ -376,12 +376,12 @@ function flexitol_preprocess_field(&$vars)
  */
 function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
 {
-    $col = "4";
+    $col = "lg-4";
 
 
     if (current_path() == 'taxonomy/term/28') {
         $variables['header'] .= '
-    <div class="views-row col-sm-'.$col.'">
+    <div class="views-row col-'.$col.'">
       <div class="product-review"">
         <a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia" rel="noopener">
           <img width="160" src="https://api.productreview.com.au/api/services/rating-badge/v2/au/28023c61-e180-43fc-8219-e6f318688388/from-internal-entry-id?resolution=hd&amp;theme=light&amp;width=160" alt="Dermal Therapy Australia Children\'s Skin Care">
@@ -392,22 +392,22 @@ function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
     } elseif (current_path() == 'taxonomy/term/34') {
         $variables['row'] .= '<div class="views-row col-sm-6"><a target="_blank" href="https://littlebodies.com"><img alt="Little Bodies" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
     } elseif (current_path() == 'taxonomy/term/9') {
-        $variables['header'] .= _product_review(9, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(9, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/10') {
-        $variables['header'] .= _product_review(10, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(10, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/14') {
-        $variables['header'] .= _product_review(14, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(14, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/19') {
-        $variables['header'] .= _product_review(19, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(19, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/20') {
-        $variables['header'] .= _product_review(20, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(20, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/21') {
-        $variables['header'] .= _product_review(21, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(21, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/22') {
-        $variables['header'] .= _product_review(22, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(22, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/23') {
-        $variables['header'] .= _product_review(23, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(23, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/35') {
-        $variables['header'] .= _product_review(35, 'views-row col-sm-'.$col);
+        $variables['header'] .= _product_review(35, 'views-row col-'.$col);
     }
 }
