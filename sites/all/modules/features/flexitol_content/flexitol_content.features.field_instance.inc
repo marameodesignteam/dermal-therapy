@@ -149,7 +149,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -161,10 +161,10 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 300,
+          'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -183,57 +183,7 @@ function flexitol_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-article-field_category'.
-  $field_instances['node-article-field_category'] = array(
-    'bundle' => 'article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 11,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'nodeorder' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_category',
-    'label' => 'Category',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -258,10 +208,10 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -273,8 +223,8 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'large',
+          'image_link' => 'content',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -302,7 +252,7 @@ function flexitol_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -324,7 +274,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 0,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -333,10 +283,11 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -353,7 +304,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 0,
+      'weight' => -4,
     ),
   );
 
@@ -377,9 +328,14 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'normal',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 3,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -388,10 +344,15 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
+        'label' => 'above',
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'normal',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 3,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -413,7 +374,7 @@ function flexitol_content_field_default_field_instances() {
       'module' => 'video_embed_field',
       'settings' => array(),
       'type' => 'video_embed_field_video',
-      'weight' => 7,
+      'weight' => 4,
     ),
   );
 
@@ -671,7 +632,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -681,32 +642,36 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 8,
     ),
   );
 
@@ -2209,32 +2174,36 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 8,
     ),
   );
 
@@ -2288,6 +2257,59 @@ function flexitol_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_page_background_image'.
+  $field_instances['node-page-field_page_background_image'] = array(
+    'bundle' => 'page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'nodeorder' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_page_background_image',
+    'label' => 'Page Background Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => -3,
+    ),
+  );
+
   // Exported field_instance: 'node-product-field__shopee'.
   $field_instances['node-product-field__shopee'] = array(
     'bundle' => 'product',
@@ -2325,7 +2347,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2396,7 +2418,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2467,7 +2489,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2538,7 +2560,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2588,9 +2610,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 39,
       ),
       'nodeorder' => array(
@@ -2609,7 +2630,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2681,9 +2702,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'dermal_generic',
         'settings' => array(),
-        'type' => 'bhrate_to_fivestar',
+        'type' => 'hidden',
         'weight' => 28,
       ),
       'nodeorder' => array(
@@ -2702,7 +2722,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2767,7 +2787,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2831,7 +2851,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2902,7 +2922,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -2981,7 +3001,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3044,7 +3064,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3115,7 +3135,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3179,7 +3199,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3224,13 +3244,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'flexslider_fields',
-        'settings' => array(
-          'caption' => FALSE,
-          'image_style' => '',
-          'optionset' => 'default',
-        ),
-        'type' => 'flexslider',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 33,
       ),
       'nodeorder' => array(
@@ -3249,7 +3264,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3323,7 +3338,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3394,7 +3409,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3458,7 +3473,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3522,7 +3537,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3593,7 +3608,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3657,7 +3672,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3707,9 +3722,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 27,
       ),
       'nodeorder' => array(
@@ -3728,7 +3742,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 60,
+        'weight' => 19,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3799,12 +3813,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 40,
       ),
       'nodeorder' => array(
@@ -3823,7 +3833,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 59,
+        'weight' => 18,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3872,12 +3882,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 38,
       ),
       'nodeorder' => array(
@@ -3896,7 +3902,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -3939,12 +3945,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 37,
       ),
       'nodeorder' => array(
@@ -3963,7 +3965,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4024,7 +4026,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 12,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4070,13 +4072,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'flexslider_fields',
-        'settings' => array(
-          'caption' => FALSE,
-          'image_style' => '',
-          'optionset' => 'default',
-        ),
-        'type' => 'flexslider',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 30,
       ),
       'nodeorder' => array(
@@ -4099,11 +4096,11 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
+          'image_link' => 'content',
           'image_style' => 'height_310',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'hidden',
@@ -4162,13 +4159,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'flexslider_fields',
-        'settings' => array(
-          'caption' => FALSE,
-          'image_style' => '',
-          'optionset' => 'default',
-        ),
-        'type' => 'flexslider',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 31,
       ),
       'nodeorder' => array(
@@ -4187,7 +4179,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 58,
+        'weight' => 16,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4261,7 +4253,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 55,
+        'weight' => 13,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4326,7 +4318,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 14,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4398,7 +4390,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4465,7 +4457,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 57,
+        'weight' => 15,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4509,9 +4501,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'dermal_generic',
         'settings' => array(),
-        'type' => 'online_reseller',
+        'type' => 'hidden',
         'weight' => 35,
       ),
       'nodeorder' => array(
@@ -4530,7 +4521,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4594,7 +4585,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 53,
+        'weight' => 10,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4642,13 +4633,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'video_embed_field',
-        'settings' => array(
-          'description' => 1,
-          'description_position' => 'bottom',
-          'video_style' => 'normal',
-        ),
-        'type' => 'video_embed_field',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 34,
       ),
       'nodeorder' => array(
@@ -4667,7 +4653,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4720,9 +4706,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'dermal_generic',
         'settings' => array(),
-        'type' => 'bhrate_to_fivestar',
+        'type' => 'hidden',
         'weight' => 29,
       ),
       'nodeorder' => array(
@@ -4741,7 +4726,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4790,14 +4775,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 32,
       ),
       'nodeorder' => array(
@@ -4816,7 +4795,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4881,7 +4860,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -4952,7 +4931,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -5007,9 +4986,8 @@ function flexitol_content_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'dermal_generic',
         'settings' => array(),
-        'type' => 'bhrate_to_fivestar',
+        'type' => 'hidden',
         'weight' => 36,
       ),
       'nodeorder' => array(
@@ -5028,7 +5006,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -5093,7 +5071,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',
@@ -5164,7 +5142,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 0,
       ),
       'widget' => array(
         'label' => 'above',

@@ -1056,36 +1056,16 @@ function flexitol_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '5',
         ),
         'title' => array(
-          'weight' => '2',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
-        ),
-        'domain' => array(
-          'weight' => '4',
-        ),
-        'redirect' => array(
-          'weight' => '9',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '10',
+          'weight' => '3',
         ),
       ),
-      'display' => array(
-        'domain' => array(
-          'teaser' => array(
-            'weight' => '23',
-            'visible' => FALSE,
-          ),
-          'full' => array(
-            'weight' => '24',
-            'visible' => FALSE,
-          ),
-        ),
-      ),
+      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__article'] = $strongarm;
@@ -1234,11 +1214,11 @@ function flexitol_content_strongarm() {
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '22',
+            'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '22',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -1519,11 +1499,11 @@ function flexitol_content_strongarm() {
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '21',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '23',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -1646,10 +1626,10 @@ function flexitol_content_strongarm() {
           ),
           'full' => array(
             'weight' => '41',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '52',
+            'weight' => '2',
             'visible' => FALSE,
           ),
           'widget' => array(

@@ -227,6 +227,12 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -271,7 +277,6 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'condition_glossary' => 'condition_glossary',
-    'ingredients_glossary' => 'ingredients_glossary',
   );
   $handler->display->display_options['path'] = 'conditions-glossary';
 
@@ -287,6 +292,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['header']['php']['php_output'] = '<h2>Other conditions</h2>
 
 ';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published status */
@@ -3128,7 +3134,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
-  /* Filter criterion: Content: Category (field_category) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_category_value']['id'] = 'field_category_value';
   $handler->display->display_options['filters']['field_category_value']['table'] = 'field_data_field_category';
   $handler->display->display_options['filters']['field_category_value']['field'] = 'field_category_value';
@@ -3181,7 +3187,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
-  /* Filter criterion: Content: Category (field_category) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_category_value']['id'] = 'field_category_value';
   $handler->display->display_options['filters']['field_category_value']['table'] = 'field_data_field_category';
   $handler->display->display_options['filters']['field_category_value']['field'] = 'field_category_value';
@@ -3234,7 +3240,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
-  /* Filter criterion: Content: Category (field_category) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_category_value']['id'] = 'field_category_value';
   $handler->display->display_options['filters']['field_category_value']['table'] = 'field_data_field_category';
   $handler->display->display_options['filters']['field_category_value']['field'] = 'field_category_value';
