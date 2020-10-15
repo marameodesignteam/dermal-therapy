@@ -3134,11 +3134,11 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_category_value']['id'] = 'field_category_value';
-  $handler->display->display_options['filters']['field_category_value']['table'] = 'field_data_field_category';
-  $handler->display->display_options['filters']['field_category_value']['field'] = 'field_category_value';
-  $handler->display->display_options['filters']['field_category_value']['value'] = array(
+  /* Filter criterion: Content: Content category (field_content_category) */
+  $handler->display->display_options['filters']['field_content_category_value']['id'] = 'field_content_category_value';
+  $handler->display->display_options['filters']['field_content_category_value']['table'] = 'field_data_field_content_category';
+  $handler->display->display_options['filters']['field_content_category_value']['field'] = 'field_content_category_value';
+  $handler->display->display_options['filters']['field_content_category_value']['value'] = array(
     'news' => 'news',
   );
   $handler->display->display_options['path'] = 'news';
@@ -3187,11 +3187,11 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_category_value']['id'] = 'field_category_value';
-  $handler->display->display_options['filters']['field_category_value']['table'] = 'field_data_field_category';
-  $handler->display->display_options['filters']['field_category_value']['field'] = 'field_category_value';
-  $handler->display->display_options['filters']['field_category_value']['value'] = array(
+  /* Filter criterion: Content: Content category (field_content_category) */
+  $handler->display->display_options['filters']['field_content_category_value']['id'] = 'field_content_category_value';
+  $handler->display->display_options['filters']['field_content_category_value']['table'] = 'field_data_field_content_category';
+  $handler->display->display_options['filters']['field_content_category_value']['field'] = 'field_content_category_value';
+  $handler->display->display_options['filters']['field_content_category_value']['value'] = array(
     'blog' => 'blog',
   );
   $handler->display->display_options['path'] = 'blog';
@@ -3235,17 +3235,19 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Domain Access: Available on current domain */
   $handler->display->display_options['filters']['current_all']['id'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['table'] = 'domain_access';
   $handler->display->display_options['filters']['current_all']['field'] = 'current_all';
   $handler->display->display_options['filters']['current_all']['value'] = '1';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_category_value']['id'] = 'field_category_value';
-  $handler->display->display_options['filters']['field_category_value']['table'] = 'field_data_field_category';
-  $handler->display->display_options['filters']['field_category_value']['field'] = 'field_category_value';
-  $handler->display->display_options['filters']['field_category_value']['value'] = array(
-    'promotions' => 'promotions',
+  $handler->display->display_options['filters']['current_all']['group'] = 1;
+  /* Filter criterion: Content: Content category (field_content_category) */
+  $handler->display->display_options['filters']['field_content_category_value']['id'] = 'field_content_category_value';
+  $handler->display->display_options['filters']['field_content_category_value']['table'] = 'field_data_field_content_category';
+  $handler->display->display_options['filters']['field_content_category_value']['field'] = 'field_content_category_value';
+  $handler->display->display_options['filters']['field_content_category_value']['value'] = array(
+    'promotion' => 'promotion',
   );
   $handler->display->display_options['path'] = 'promotions';
   $handler->display->display_options['menu']['title'] = 'Latest News and Special Offers';
