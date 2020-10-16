@@ -6751,11 +6751,6 @@ img {
   right: -19px;
 }
 
-.content-secondary-fluid {
-  background-color: transparent;
-  color: #fff;
-}
-
 .content-tertiary-fluid {
   background-color: #e0e0e0;
   padding: 20px 0;
@@ -7957,10 +7952,59 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 
 .page-homepage .content-secondary-fluid {
-  background-color: #d9f2fa;
-  color: #7a99ac;
-  text-align: center;
+  color: #858585;
   padding: 30px 0;
+}
+@media (min-width: 768px) {
+  .page-homepage .content-secondary-fluid {
+    padding: 50px 0;
+  }
+}
+.page-homepage .content-secondary-fluid .block-title {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .page-homepage .content-secondary-fluid .welcome-block .text {
+    padding-right: 20px;
+  }
+}
+.page-homepage .content-secondary-fluid .welcome-block h2 {
+  color: #00a9e0;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .page-homepage .content-secondary-fluid .welcome-block h2 {
+    font-size: 38px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-homepage .content-secondary-fluid .welcome-block h2 {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1440px) {
+  .page-homepage .content-secondary-fluid .welcome-block h2 {
+    font-size: 50px;
+  }
+}
+.page-homepage .content-secondary-fluid .welcome-block p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .page-homepage .content-secondary-fluid .welcome-block p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+}
+@media (min-width: 1200px) {
+  .page-homepage .content-secondary-fluid .welcome-block p {
+    font-size: 18px;
+  }
 }
 .page-homepage .footer-fluid {
   background-color: #ffffff;

@@ -1,9 +1,54 @@
 .page-homepage {
   .content-secondary-fluid {
-    background-color: #d9f2fa;
-    color: $navy-dark;
-    text-align: center;
+    //background-color: #d9f2fa;
+    color: $grey;
+    //text-align: center;
     padding: 30px 0;
+    @media (min-width:768px) {
+      padding: 50px 0;
+    }
+
+    .block-title {
+      display: none;
+    }
+
+    .welcome-block {
+      .text {
+        @media (min-width:1200px) {
+          padding-right: 20px;
+        }
+      }
+
+      h2 {
+        color: $brand-primary;
+        margin-bottom: 20px;
+        margin-top: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 30px;
+        @media (min-width:768px) {
+          font-size: 38px;
+        }
+        @media (min-width:1200px) {
+          font-size: 45px;
+        }
+        @media (min-width:1440px) {
+          font-size: 50px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        @media (min-width:768px) {
+          font-size: 18px;
+          line-height: 1.75;
+        }
+        @media (min-width:1200px) {
+          font-size: 18px;
+        }
+      }
+    }
   }
 
   .footer-fluid {
