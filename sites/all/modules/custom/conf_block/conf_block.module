@@ -62,7 +62,7 @@ function _conf_block_welcome_block_view() {
       <div class='row'>
         <div class='col-md-7'>
           <div class='text'>
-            <h2>" . $block_data['title'] . "</h2>
+            <h2><a href='". $block_data['link'] . "'>" . $block_data['title'] . "</a></h2>
             <p>" . $block_data['body'] . "</p>
           </div>
         </div>
