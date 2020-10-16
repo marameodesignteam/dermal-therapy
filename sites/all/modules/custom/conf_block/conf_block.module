@@ -37,6 +37,9 @@ function _conf_block_welcome_block_view() {
   $markup = "";
 
 
+  //echo "<pre>";var_dump($block_data);echo "</pre>";
+
+
   $file = file_load($block_data['image']);
   $image = image_load($file->uri);
   $content = array(
@@ -49,8 +52,30 @@ function _conf_block_welcome_block_view() {
     ),
   );
 
-  $markup .= "<div>" . $block_data['body'] . drupal_render($content) . "</div>";
-  $markup .= "<a class='btn btn-default' href=\"". $block_data['link'] . "\">Read more</a>";
+
+  $img_markup = drupal_render($content);
+
+  $markup .= "
+
+
+    <div class='welcome-block'>
+      <div class='row'>
+        <div class='col-md-7'>
+          <div class='text'>
+            <h2>" . $block_data['title'] . "</h2>
+            <p>" . $block_data['body'] . "</p>
+          </div>
+        </div>
+        <div class='col-md-5 hidden-xs  hidden-sm'>
+          <div class='image'>
+            ".$img_markup."
+          </div>
+        </div>
+      </div>
+    </div>
+
+  ";
+  //$markup .= "<a class='btn btn-default' href=\"". $block_data['link'] . "\">Read more</a>";
 
   // Block output in HTML with div wrapper
   $block = array(
@@ -73,6 +98,12 @@ function conf_block_block_configure($delta = '') {
   switch ($delta) {
     case 'welcome_block' :
       $block_data = variable_get('conf_block_welcome_block_data', array());
+
+      $form['conf_block_welcome_block_title'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Main title',
+        '#default_value' => isset($block_data['title']) ? $block_data['title'] : '',
+      );
 
       $form['conf_block_welcome_block_body'] = array(
         '#type' => 'textarea',
@@ -112,6 +143,11 @@ function conf_block_block_save($delta = '', $edit = array()) {
       if (isset($edit['conf_block_welcome_block_body'])) {
         $block_data['body'] = $edit['conf_block_welcome_block_body'];
       }
+
+      if (isset($edit['conf_block_welcome_block_title'])) {
+        $block_data['title'] = $edit['conf_block_welcome_block_title'];
+      }
+
       if (isset($edit['conf_block_welcome_block_image'])) {
         $block_data['image'] = $edit['conf_block_welcome_block_image'];
       }
