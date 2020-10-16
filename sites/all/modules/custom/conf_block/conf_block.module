@@ -35,7 +35,21 @@ function conf_block_block_view($delta = '') {
 function _conf_block_welcome_block_view() {
   $block_data = variable_get('conf_block_welcome_block_data', array());
   $markup = "";
-  $markup .= "<div>" . $block_data['body'] . "</div>";
+
+
+  $file = file_load($block_data['image']);
+  $image = image_load($file->uri);
+  $content = array(
+    'file' => array(
+      '#theme' => 'image_style',
+      '#style_name' => 'large',
+      '#path' => $image->source,
+      '#width' => $image->info['width'],
+      '#height' => $image->info['height'],
+    ),
+  );
+
+  $markup .= "<div>" . $block_data['body'] . drupal_render($content) . "</div>";
   $markup .= "<a class='btn btn-default' href=\"". $block_data['link'] . "\">Read more</a>";
 
   // Block output in HTML with div wrapper
@@ -66,6 +80,14 @@ function conf_block_block_configure($delta = '') {
         '#default_value' => isset($block_data['body']) ? $block_data['body'] : '',
       );
 
+      $form['conf_block_welcome_block_image'] = array(
+        '#title' => t('Image'),
+        '#type' => 'managed_file',
+        '#description' => t('The uploaded image will be displayed on this page using the image style choosen below.'),
+        '#default_value' => isset($block_data['image']) ? $block_data['image'] : '',
+        '#upload_location' => 'public://',
+      );
+
       $form['conf_block_welcome_block_link'] = array(
         '#type' => 'textfield',
         '#title' => 'Read More Link Url',
@@ -89,6 +111,9 @@ function conf_block_block_save($delta = '', $edit = array()) {
 
       if (isset($edit['conf_block_welcome_block_body'])) {
         $block_data['body'] = $edit['conf_block_welcome_block_body'];
+      }
+      if (isset($edit['conf_block_welcome_block_image'])) {
+        $block_data['image'] = $edit['conf_block_welcome_block_image'];
       }
       if (isset($edit['conf_block_welcome_block_link'])) {
         $block_data['link'] = $edit['conf_block_welcome_block_link'];
