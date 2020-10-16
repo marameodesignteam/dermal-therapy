@@ -12,7 +12,7 @@
     //text-align: center;
     //padding: 30px 0;
     color: inherit;
-    background-color: rgba($brand-primary, 0.1);
+    background-color: #ecf8fb;
   }
 
   .content-tertiary-fluid {
@@ -164,14 +164,26 @@
   }
 
   .field-name-title {
-    z-index: 1;
-    margin-top: 35%;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: bold;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $brand-primary;
+    padding: 10px;
 
     h2 {
-      font-size: 24px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+
+      &::after {
+        content: ">";
+      }
     }
   }
 
@@ -184,17 +196,36 @@
       @include prefixed("transform", "scaleY(1)");
       @include prefixed("transition", "all 0.7s ease-in-out");
       width: 100%;
-      height: auto;
+      @media (min-width: 992px) {
+        object-fit: cover;
+        height: 440px;
+      }
     }
   }
 
   .group-hover {
-    background-color: $brand-primary;
+    background-color: #b7e8fa;
+    background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fff), color-stop(0%, #ecf8fb), color-stop(100%, #b7e8fa));
+    /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #fff 0%,  #ecf8fb 50%, #b7e8fa 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #fff 0%,  #ecf8fb 50%, #b7e8fa 100%);
+    /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #fff 0%,  #ecf8fb 50%, #b7e8fa 100%);
+    /* ie10+ */
+    background: radial-gradient(ellipse at center, #fff 0%,   #ecf8fb 50%, #b7e8fa 100%);
+    /* w3c */
     top: 0;
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 20px 50px;
     @include prefixed("transition", "all 0.5s linear");
     @include opacity(0);
 
@@ -209,6 +240,12 @@
       @include prefixed("transition", "all 0.5s linear");
     }
 
+    .field-name-field-hfc-hover-text,
+    .field-name-field-hfc-hover-title {
+      color: $brand-primary;
+      margin-bottom: 20px;
+    }
+
     .field-name-field-hfc-hover-title {
       font-size: 30px;
       line-height: 30px;
@@ -216,8 +253,6 @@
     }
 
     .field-name-field-hfc-hover-text {
-      color: #ffffff;
-
       span {
         display: block;
       }
@@ -226,12 +261,27 @@
     .field-name-field-hfc-link {
       text-align: center;
       margin-top: 20px;
+
+      .btn.btn-default {
+        /*@include button-variant(#FFF, rgba(0, 0, 0, 0), #FFF);*/
+        text-transform: uppercase;
+        border: 1px solid $brand-primary;
+        color: #fff;
+        background-color: $brand-primary;
+        padding: 5px 10px;
+
+        &:hover {
+          text-decoration: none;
+          background-color: #fff;
+          color: $brand-primary;
+        }
+      }
     }
   }
   @media (min-width: $screen-desktop) {
     &:hover {
-      .field-name-field-hfc-image img,
-      .field-name-title {
+      //.field-name-title,
+      .field-name-field-hfc-image img {
         @include prefixed("transform", "scale(10)");
         @include opacity(0);
       }

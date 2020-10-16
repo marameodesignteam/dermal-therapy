@@ -562,22 +562,6 @@ img {
   @media (max-width: $screen-lg-min) {
     margin: 30px 0;
   }
-
-  .btn.btn-default {
-    /*@include button-variant(#FFF, rgba(0, 0, 0, 0), #FFF);*/
-    text-transform: uppercase;
-    border: 1px solid;
-    color: #7a99ac;
-    background-color: #fff;
-    padding: 5px 10px;
-
-    &:hover {
-      text-decoration: none;
-      background-color: #7a99ac;
-      color: #ffffff;
-      border-color: #ffffff;
-    }
-  }
 }
 
 #block-views-nodequeue-2-block,

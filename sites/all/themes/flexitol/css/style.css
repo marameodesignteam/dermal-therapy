@@ -6877,22 +6877,6 @@ img {
     margin: 30px 0;
   }
 }
-#block-views-nodequeue-1-block .btn.btn-default,
-#block-views-nodequeue-1-block-1 .btn.btn-default {
-  /*@include button-variant(#FFF, rgba(0, 0, 0, 0), #FFF);*/
-  text-transform: uppercase;
-  border: 1px solid;
-  color: #7a99ac;
-  background-color: #fff;
-  padding: 5px 10px;
-}
-#block-views-nodequeue-1-block .btn.btn-default:hover,
-#block-views-nodequeue-1-block-1 .btn.btn-default:hover {
-  text-decoration: none;
-  background-color: #7a99ac;
-  color: #ffffff;
-  border-color: #ffffff;
-}
 
 #block-views-nodequeue-2-block,
 #block-views-nodequeue-2-block-1 {
@@ -7963,7 +7947,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 }
 .page-homepage .content-secondary-fluid {
   color: inherit;
-  background-color: rgba(0, 169, 224, 0.1);
+  background-color: #ecf8fb;
 }
 .page-homepage .content-tertiary-fluid {
   background: none;
@@ -8108,14 +8092,25 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   text-align: center;
 }
 .node-homepage-featured-content .field-name-title {
-  z-index: 1;
-  margin-top: 35%;
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: bold;
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #00a9e0;
+  padding: 10px;
 }
 .node-homepage-featured-content .field-name-title h2 {
-  font-size: 24px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.node-homepage-featured-content .field-name-title h2::after {
+  content: ">";
 }
 .node-homepage-featured-content .field-name-field-hfc-image .field-items {
   overflow: hidden;
@@ -8132,15 +8127,36 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
   width: 100%;
-  height: auto;
+}
+@media (min-width: 992px) {
+  .node-homepage-featured-content .field-name-field-hfc-image img {
+    object-fit: cover;
+    height: 440px;
+  }
 }
 .node-homepage-featured-content .group-hover {
-  background-color: #00a9e0;
+  background-color: #b7e8fa;
+  background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fff), color-stop(0%, #ecf8fb), color-stop(100%, #b7e8fa));
+  /* safari4+,chrome */
+  background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
+  /* opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
+  /* ie10+ */
+  background: radial-gradient(ellipse at center, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
+  /* w3c */
   top: 0;
   bottom: 0;
   width: 100%;
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 20px 50px;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -ms-transition: all 0.5s linear;
@@ -8169,13 +8185,15 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
+.node-homepage-featured-content .group-hover .field-name-field-hfc-hover-text,
+.node-homepage-featured-content .group-hover .field-name-field-hfc-hover-title {
+  color: #00a9e0;
+  margin-bottom: 20px;
+}
 .node-homepage-featured-content .group-hover .field-name-field-hfc-hover-title {
   font-size: 30px;
   line-height: 30px;
   margin-top: 20px;
-}
-.node-homepage-featured-content .group-hover .field-name-field-hfc-hover-text {
-  color: #ffffff;
 }
 .node-homepage-featured-content .group-hover .field-name-field-hfc-hover-text span {
   display: block;
@@ -8184,9 +8202,21 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   text-align: center;
   margin-top: 20px;
 }
+.node-homepage-featured-content .group-hover .field-name-field-hfc-link .btn.btn-default {
+  /*@include button-variant(#FFF, rgba(0, 0, 0, 0), #FFF);*/
+  text-transform: uppercase;
+  border: 1px solid #00a9e0;
+  color: #fff;
+  background-color: #00a9e0;
+  padding: 5px 10px;
+}
+.node-homepage-featured-content .group-hover .field-name-field-hfc-link .btn.btn-default:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #00a9e0;
+}
 @media (min-width: 992px) {
-  .node-homepage-featured-content:hover .field-name-field-hfc-image img,
-.node-homepage-featured-content:hover .field-name-title {
+  .node-homepage-featured-content:hover .field-name-field-hfc-image img {
     -webkit-transform: scale(10);
     -moz-transform: scale(10);
     -ms-transform: scale(10);
