@@ -826,8 +826,8 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['style_options']['columns_vertical'] = '4';
   $handler->display->display_options['style_options']['columns_xs'] = '12';
   $handler->display->display_options['style_options']['columns_sm'] = '6';
-  $handler->display->display_options['style_options']['columns_md'] = '4';
-  $handler->display->display_options['style_options']['columns_lg'] = '4';
+  $handler->display->display_options['style_options']['columns_md'] = '6';
+  $handler->display->display_options['style_options']['columns_lg'] = '6';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
   /* Field: Content: Title */
