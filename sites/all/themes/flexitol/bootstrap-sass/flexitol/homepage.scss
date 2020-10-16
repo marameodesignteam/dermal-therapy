@@ -1,6 +1,6 @@
 .page-homepage {
-
-  .content-secondary-fluid, .content-tertiary-fluid {
+  .content-secondary-fluid,
+  .content-tertiary-fluid {
     padding: 30px 0;
     @media (min-width:768px) {
       padding: 60px 0;
@@ -11,11 +11,12 @@
     //background-color: #d9f2fa;
     //text-align: center;
     //padding: 30px 0;
-    background-color: rgba($brand-primary, 0.15);
+    color: inherit;
+    background-color: rgba($brand-primary, 0.1);
   }
 
   .content-tertiary-fluid {
-    background:none;
+    background: none;
   }
 
   #block-conf-block-welcome-block .block-title {
@@ -72,8 +73,10 @@
   }
 
   #block-conf-block-welcome-block {
-    width: 85%;
-    margin: 0 auto;
+    @media (min-width:992px) {
+      width: 85%;
+      margin: 0 auto;
+    }
 
     .block-title {
       font-size: 38px;
