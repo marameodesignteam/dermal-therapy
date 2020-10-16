@@ -1,52 +1,68 @@
 .page-homepage {
-  .content-secondary-fluid {
-    //background-color: #d9f2fa;
-    color: $grey;
-    //text-align: center;
+
+  .content-secondary-fluid, .content-tertiary-fluid {
     padding: 30px 0;
     @media (min-width:768px) {
-      padding: 50px 0;
+      padding: 60px 0;
+    }
+  }
+
+  .content-secondary-fluid {
+    //background-color: #d9f2fa;
+    //text-align: center;
+    //padding: 30px 0;
+    background-color: rgba($brand-primary, 0.15);
+  }
+
+  .content-tertiary-fluid {
+    background:none;
+  }
+
+  #block-conf-block-welcome-block .block-title {
+    display: none;
+  }
+
+  .welcome-block {
+    color: $grey;
+    padding: 30px 0;
+    @media (min-width:768px) {
+      padding: 60px 0;
     }
 
-    .block-title {
-      display: none;
+    .text {
+      @media (min-width:1200px) {
+        padding-right: 20px;
+      }
     }
 
-    .welcome-block {
-      .text {
-        @media (min-width:1200px) {
-          padding-right: 20px;
-        }
+    h2 {
+      color: $brand-primary;
+      margin-bottom: 20px;
+      margin-top: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 30px;
+      @media (min-width:768px) {
+        font-size: 38px;
       }
-
-      h2 {
-        color: $brand-primary;
-        margin-bottom: 20px;
-        margin-top: 0;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 30px;
-        @media (min-width:768px) {
-          font-size: 38px;
-        }
-        @media (min-width:1200px) {
-          font-size: 45px;
-        }
-        @media (min-width:1440px) {
-          font-size: 50px;
-        }
+      @media (min-width:1200px) {
+        font-size: 45px;
+        line-height: 0.95;
       }
+      @media (min-width:1440px) {
+        font-size: 50px;
+      }
+    }
 
-      p {
-        font-size: 14px;
-        line-height: 1.5;
-        @media (min-width:768px) {
-          font-size: 18px;
-          line-height: 1.75;
-        }
-        @media (min-width:1200px) {
-          font-size: 18px;
-        }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      @media (min-width:768px) {
+        font-size: 18px;
+        line-height: 1.75;
+      }
+      @media (min-width:1200px) {
+        font-size: 18px;
       }
     }
   }
