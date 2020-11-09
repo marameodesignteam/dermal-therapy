@@ -142,14 +142,14 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -204,7 +204,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 25,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -321,13 +321,18 @@ function flexitol_content_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -380,7 +385,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -422,25 +427,15 @@ function flexitol_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'video_embed_field',
-        'settings' => array(
-          'description' => 1,
-          'description_position' => 'bottom',
-          'video_style' => 'normal',
-        ),
-        'type' => 'video_embed_field',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'video_embed_field',
-        'settings' => array(
-          'description' => 1,
-          'description_position' => 'bottom',
-          'video_style' => 'normal',
-        ),
-        'type' => 'video_embed_field',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'nodeorder' => array(
         'label' => 'above',

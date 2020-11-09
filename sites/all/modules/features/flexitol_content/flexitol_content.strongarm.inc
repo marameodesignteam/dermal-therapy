@@ -1090,6 +1090,10 @@ function flexitol_content_strongarm() {
             'weight' => '25',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '26',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

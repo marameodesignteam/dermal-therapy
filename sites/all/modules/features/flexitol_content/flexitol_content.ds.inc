@@ -28,6 +28,16 @@ function flexitol_content_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
+    'post_date' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'ds_post_date_long',
+    ),
+    'addtoany' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'field_related_articles_' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -79,7 +89,7 @@ function flexitol_content_ds_field_settings_info() {
       ),
     ),
     'post_date' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'ds_post_date_short',
       'formatter_settings' => array(
@@ -92,6 +102,33 @@ function flexitol_content_ds_field_settings_info() {
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(),
+      ),
+    ),
+    'field_related_articles_' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'You might also be interested in',
+          'lb-el' => 'h2',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'related-articles',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fis' => TRUE,
+          'fis-el' => 'ul',
+          'fis-cl' => 'row',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'li',
+          'fi-cl' => 'col-sm-4',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
       ),
     ),
   );
@@ -1150,16 +1187,18 @@ function flexitol_content_ds_layout_settings_info() {
       'central' => array(
         0 => 'title',
         1 => 'field_image',
-        2 => 'body',
-        3 => 'field_video',
-        4 => 'field_related_articles_',
+        2 => 'post_date',
+        3 => 'body',
+        4 => 'addtoany',
+        5 => 'field_related_articles_',
       ),
     ),
     'fields' => array(
       'title' => 'central',
       'field_image' => 'central',
+      'post_date' => 'central',
       'body' => 'central',
-      'field_video' => 'central',
+      'addtoany' => 'central',
       'field_related_articles_' => 'central',
     ),
     'classes' => array(),
@@ -1186,18 +1225,20 @@ function flexitol_content_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'post_date',
-        2 => 'field_image',
+        1 => 'field_image',
+        2 => 'post_date',
         3 => 'body',
         4 => 'addtoany',
+        5 => 'field_related_articles_',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'post_date' => 'ds_content',
       'field_image' => 'ds_content',
+      'post_date' => 'ds_content',
       'body' => 'ds_content',
       'addtoany' => 'ds_content',
+      'field_related_articles_' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
