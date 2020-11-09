@@ -28,6 +28,35 @@ function flexitol_content_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
+    'field_related_articles_' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'You might also be interested in',
+          'lb-el' => 'h2',
+          'lbw-el' => 'div',
+          'lbw-cl' => 'related-articles',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'related-articles',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fis' => TRUE,
+          'fis-el' => 'ul',
+          'fis-cl' => 'row',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'li',
+          'fi-cl' => 'col-sm-4',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|article|default'] = $ds_fieldsetting;
 
@@ -1123,6 +1152,7 @@ function flexitol_content_ds_layout_settings_info() {
         1 => 'field_image',
         2 => 'body',
         3 => 'field_video',
+        4 => 'field_related_articles_',
       ),
     ),
     'fields' => array(
@@ -1130,6 +1160,7 @@ function flexitol_content_ds_layout_settings_info() {
       'field_image' => 'central',
       'body' => 'central',
       'field_video' => 'central',
+      'field_related_articles_' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -1140,6 +1171,7 @@ function flexitol_content_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|article|default'] = $ds_layout;
 

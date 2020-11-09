@@ -1052,32 +1052,42 @@ function flexitol_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'nodeorder' => array(
+        'custom_settings' => TRUE,
+      ),
+      'related_product' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'domain' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'xmlsitemap' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(
         'domain' => array(
           'teaser' => array(
             'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
