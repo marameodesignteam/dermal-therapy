@@ -7788,7 +7788,7 @@ ul.row {
 .article-teaser .field-name-field-video img {
   width: 100%;
   object-fit: cover;
-  max-height: 250px;
+  height: 250px;
 }
 .article-teaser .field-name-title {
   margin-bottom: 15px;
