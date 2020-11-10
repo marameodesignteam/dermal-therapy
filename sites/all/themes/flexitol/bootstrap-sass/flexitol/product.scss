@@ -93,8 +93,8 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
     }
 
     .review-result {
-      > div > strong,
-      > div > div > div > div {
+      > div > div > div > div,
+      > div > strong {
         display: none;
       }
     }
@@ -1517,7 +1517,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
     font-size: 2.3em;
     font-weight: bold;
     text-transform: uppercase;
-    color: #fff;
+    //color: #fff;
     margin-bottom: 50px;
 
     &:after {
@@ -1525,7 +1525,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
       top: 65px;
       left: 50%;
       content: "";
-      border-top: 1px solid #FFFFFF;
+      border-top: 1px solid;
       width: 120px;
       margin-left: -60px;
     }
@@ -1533,55 +1533,84 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 
   .view-products-page .view-content {
     width: 100%;
-    margin: auto;
+    margin: 0 auto -30px;
     display: flex;
     flex-wrap: wrap;
 
     .box-flex {
-      flex: 0 0 30.3333%;
-      margin: 10px;
-      max-width: 30.333%;
-      @media (max-width: $screen-tablet) {
-        flex: 0 0 45%;
-        max-width: 45%;
+      flex: 0 0 100%;
+      margin: 0 0 30px;
+      max-width: 100%;
+      padding: 0 15px;
+      @media (min-width: $screen-tablet) {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
       }
-
-      > div {
-        background-color: rgba(255,255,255,0.8);
-        padding: 20px;
-        text-align: center;
-        height: 100%;
-
-        &:hover {
-          background-color: rgba(255,255,255,1);
-        }
-      }
-
+      // > div {
+      //   background-color: rgba(255,255,255,0.8);
+      //   padding: 20px;
+      //   text-align: center;
+      //   height: 100%;
+      //
+      //   &:hover {
+      //     background-color: rgba(255,255,255,1);
+      //   }
+      // }
       span {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
         height: 100%;
+        width: 100%;
+        display: block;
       }
 
       h2 {
-        font-size: 25px;
-        text-transform: uppercase;
+        // font-size: 25px;
+        // text-transform: uppercase;
+        // font-weight: bold;
+        // text-align: center;
+        // color: #7a99ac;
+        // margin: 0;
+        // color: gray;
+        // @media (max-width: $screen-md) {
+        //   font-size: 20px;
+        // }
+        // @media (max-width: $screen-phone) {
+        //   font-size: 18px;
+        // }
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
         font-weight: bold;
-        text-align: center;
-        color: #7a99ac;
+        text-transform: uppercase;
         margin: 0;
-        color: gray;
-        @media (max-width: $screen-md) {
-          font-size: 20px;
+        z-index: 5;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: $brand-primary;
+        padding: 10px;
+
+        &::after {
+          content: ">";
         }
-        @media (max-width: $screen-phone) {
-          font-size: 18px;
-        }
+      }
+
+      img {
+        object-fit: cover;
+        height: 440px;
+        width: 100%;
       }
 
       a {
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
 
         &:hover {
           text-decoration: none;
