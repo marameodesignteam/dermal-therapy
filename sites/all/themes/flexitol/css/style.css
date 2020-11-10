@@ -6371,11 +6371,11 @@ body {
   width: 100%;
 }
 
-.navbar.container > .container,
 .navbar.container-fluid > .container-fluid {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  max-width: 1380px;
 }
 
 img {
@@ -6486,7 +6486,7 @@ img {
   margin: 0 !important;
 }
 .header-fluid .navbar.container {
-  max-width: 100%;
+  max-width: 1380px;
 }
 .header-fluid .mobile-logo,
 .header-fluid .tablet-logo {
@@ -9580,10 +9580,12 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   margin-left: -60px;
 }
 .page-products .view-products-page .view-content {
-  width: 100%;
-  margin: 0 auto -30px;
+  margin: 0 -15px -30px;
   display: flex;
   flex-wrap: wrap;
+}
+.page-products .view-products-page .view-content + div {
+  margin-top: 30px;
 }
 .page-products .view-products-page .view-content .box-flex {
   flex: 0 0 100%;
