@@ -319,6 +319,11 @@ function flexitol_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_hfc_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|homepage_featured_content|widget'] = $ds_fieldsetting;
 

@@ -2008,7 +2008,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'crop_320_square',
+          'image_style' => '',
         ),
         'type' => 'image',
         'weight' => 1,
