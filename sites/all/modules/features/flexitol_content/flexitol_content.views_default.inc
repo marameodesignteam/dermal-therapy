@@ -1777,7 +1777,6 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path_1]">
 <h2>[name]</h2>
 [views_conditional] [views_conditional_1] [views_conditional_2]
-[path]
 </a> ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
