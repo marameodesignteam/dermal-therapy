@@ -1648,7 +1648,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h1>Products</h1>';
+  $handler->display->display_options['header']['area']['content'] = '<h1>Product categories</h1>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Taxonomy term: Content with term */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';
