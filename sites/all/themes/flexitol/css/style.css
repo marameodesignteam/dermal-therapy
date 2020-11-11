@@ -9664,13 +9664,31 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   margin-left: -55px;
   margin-top: 50px;
 }
+@media (min-width: 992px) {
+  .page-taxonomy.page-taxonomy-term .view-header .view-category .views-field-name h1 {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .page-taxonomy.page-taxonomy-term .view-header .view-category .views-field-name h1::after {
+    left: 0;
+    margin-left: 0;
+  }
+}
 .page-taxonomy.page-taxonomy-term .view-header .view-category .views-field-description {
   color: #1F1F1F;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .page-taxonomy.page-taxonomy-term .view-header .view-category .views-field-description {
+    text-align: inherit;
+  }
 }
 .page-taxonomy.page-taxonomy-term .view-header .col-lg-4 {
   display: flex;
   flex: 0 0 100%;
   max-width: 100%;
+  justify-content: center;
 }
 @media (min-width: 992px) {
   .page-taxonomy.page-taxonomy-term .view-header .col-lg-4 {

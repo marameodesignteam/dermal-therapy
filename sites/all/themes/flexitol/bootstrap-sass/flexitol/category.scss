@@ -27,11 +27,25 @@
       .views-field-name {
         h1 {
           @include mainHeader();
+          @media (min-width: $screen-md) {
+            text-align: left;
+          }
+
+          &::after {
+            @media (min-width: $screen-md) {
+              left: 0;
+              margin-left: 0;
+            }
+          }
         }
       }
 
       .views-field-description {
         color: $dark-text;
+        text-align: center;
+        @media (min-width: $screen-md) {
+          text-align: inherit;
+        }
       }
     }
 
@@ -39,6 +53,7 @@
       display: flex;
       flex: 0 0 100%;
       max-width: 100%;
+      justify-content: center;
       @media (min-width: $screen-md) {
         flex: 33%;
         max-width: 33%;
