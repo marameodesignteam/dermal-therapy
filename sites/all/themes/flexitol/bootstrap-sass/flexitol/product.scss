@@ -1532,7 +1532,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
   }
 
   .view-products-page .view-content {
-    
+
     margin: 0 -15px -30px;
     display: flex;
     flex-wrap: wrap;
@@ -1570,57 +1570,57 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
         display: block;
       }
 
-      h2 {
-        // font-size: 25px;
-        // text-transform: uppercase;
-        // font-weight: bold;
-        // text-align: center;
-        // color: #7a99ac;
-        // margin: 0;
-        // color: gray;
-        // @media (max-width: $screen-md) {
-        //   font-size: 20px;
-        // }
-        // @media (max-width: $screen-phone) {
-        //   font-size: 18px;
-        // }
-        font-size: 20px;
-        display: flex;
-        justify-content: space-between;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 0;
-        z-index: 5;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: $brand-primary;
-        padding: 10px;
-
-        &::after {
-          content: ">";
-        }
-      }
-
-      img {
-        object-fit: cover;
-        height: 440px;
-        width: 100%;
-      }
-
-      a {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 100%;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
+      // h2 {
+      //   // font-size: 25px;
+      //   // text-transform: uppercase;
+      //   // font-weight: bold;
+      //   // text-align: center;
+      //   // color: #7a99ac;
+      //   // margin: 0;
+      //   // color: gray;
+      //   // @media (max-width: $screen-md) {
+      //   //   font-size: 20px;
+      //   // }
+      //   // @media (max-width: $screen-phone) {
+      //   //   font-size: 18px;
+      //   // }
+      //   font-size: 20px;
+      //   display: flex;
+      //   justify-content: space-between;
+      //   color: #fff;
+      //   font-weight: bold;
+      //   text-transform: uppercase;
+      //   margin: 0;
+      //   z-index: 5;
+      //   position: absolute;
+      //   left: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   background: $brand-primary;
+      //   padding: 10px;
+      //
+      //   &::after {
+      //     content: ">";
+      //   }
+      // }
+      //
+      // img {
+      //   object-fit: cover;
+      //   height: 440px;
+      //   width: 100%;
+      // }
+      // 
+      // a {
+      //   text-decoration: none;
+      //   display: flex;
+      //   flex-direction: column;
+      //   position: relative;
+      //   width: 100%;
+      //
+      //   &:hover {
+      //     text-decoration: none;
+      //   }
+      // }
     }
   }
 }

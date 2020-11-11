@@ -9604,40 +9604,6 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   width: 100%;
   display: block;
 }
-.page-products .view-products-page .view-content .box-flex h2 {
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0;
-  z-index: 5;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #00a9e0;
-  padding: 10px;
-}
-.page-products .view-products-page .view-content .box-flex h2::after {
-  content: ">";
-}
-.page-products .view-products-page .view-content .box-flex img {
-  object-fit: cover;
-  height: 440px;
-  width: 100%;
-}
-.page-products .view-products-page .view-content .box-flex a {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-}
-.page-products .view-products-page .view-content .box-flex a:hover {
-  text-decoration: none;
-}
 
 @media (min-width: 769px) {
   .domain-newzealand-dt.page-node-1402 .field-name-leave-a-testimonial, .domain-newzealand-dt.page-node-1403 .field-name-leave-a-testimonial {
