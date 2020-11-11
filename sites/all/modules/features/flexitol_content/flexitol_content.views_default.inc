@@ -1701,21 +1701,10 @@ function flexitol_content_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Learn More button */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['ui_name'] = 'Learn More button';
-  $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]" class="learn-more">Learn more</a>';
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Simple URL */
+  /* Field: Taxonomy term: Path */
   $handler->display->display_options['fields']['path_1']['id'] = 'path_1';
   $handler->display->display_options['fields']['path_1']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['path_1']['field'] = 'path';
-  $handler->display->display_options['fields']['path_1']['ui_name'] = 'Simple URL';
   $handler->display->display_options['fields']['path_1']['label'] = '';
   $handler->display->display_options['fields']['path_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path_1']['element_label_colon'] = FALSE;
@@ -1769,15 +1758,34 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['views_conditional_2']['equalto'] = '2';
   $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_packshot_image_sg] ';
   $handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
+  /* Field: Taxonomy term: Hover text */
+  $handler->display->display_options['fields']['field_hover_text']['id'] = 'field_hover_text';
+  $handler->display->display_options['fields']['field_hover_text']['table'] = 'field_data_field_hover_text';
+  $handler->display->display_options['fields']['field_hover_text']['field'] = 'field_hover_text';
+  $handler->display->display_options['fields']['field_hover_text']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_text']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_hover_text']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Hover title */
+  $handler->display->display_options['fields']['field_hover_title']['id'] = 'field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['table'] = 'field_data_field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['field'] = 'field_hover_title';
+  $handler->display->display_options['fields']['field_hover_title']['label'] = '';
+  $handler->display->display_options['fields']['field_hover_title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_hover_title']['element_label_colon'] = FALSE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path_1]">
-<h2>[name]</h2>
-[views_conditional] [views_conditional_1] [views_conditional_2]
-</a> ';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="node-homepage-featured-content">
+<div class="field-name-title"><h2>[name]</h2></div>
+<div class="field-name-field-hfc-image">[views_conditional] [views_conditional_1] [views_conditional_2]</div>
+<div class="group-hover">
+<div class="field-name-field-hfc-hover-title">[field_hover_title]</div>
+<div class="field-name-field-hfc-hover-text">[field_hover_text]</div>
+<div class="field field-name-field-hfc-link field-type-link-field field-label-hidden"><a class="btn btn-default btn btn-default" href="[path_1]">Learn more<span class="sr-only"> about the [name] products</a></div>
+</div>
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Filter criterion: Taxonomy vocabulary: Machine name */

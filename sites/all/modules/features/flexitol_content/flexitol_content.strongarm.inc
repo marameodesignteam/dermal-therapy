@@ -1896,16 +1896,16 @@ function flexitol_content_strongarm() {
           'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '11',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'xmlsitemap' => array(
-          'weight' => '8',
+          'weight' => '10',
         ),
       ),
       'display' => array(
