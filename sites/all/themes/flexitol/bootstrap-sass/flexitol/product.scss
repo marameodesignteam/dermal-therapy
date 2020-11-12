@@ -1532,14 +1532,12 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
   }
 
   .view-products-page .view-content {
-
     margin: 0 -15px -30px;
     display: flex;
     flex-wrap: wrap;
 
-
     & + div {
-      margin-top: 30px
+      margin-top: 30px;
     }
 
     .box-flex {
@@ -1570,6 +1568,37 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
         display: block;
       }
 
+      .node-homepage-featured-content {
+        .field-name-title {
+          padding: 0;
+          h2 {
+            position: relative;
+            align-items: center;
+
+            &::after {
+              position: absolute;
+              right: 10px;
+            }
+
+            a {
+              color: #fff;
+              text-decoration: none;
+              text-align: left;
+              display: block;
+              width: 100%;
+              padding: 10px;
+              padding-right: 30px;
+              position: relative;
+              z-index: 1;
+            }
+          }
+        }
+
+        .field-name-field-hfc-hover-text {
+          font-size: 24px;
+          margin-bottom: 0
+        }
+      }
       // h2 {
       //   // font-size: 25px;
       //   // text-transform: uppercase;
@@ -1609,7 +1638,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
       //   height: 440px;
       //   width: 100%;
       // }
-      // 
+      //
       // a {
       //   text-decoration: none;
       //   display: flex;
