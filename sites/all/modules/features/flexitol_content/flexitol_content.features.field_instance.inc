@@ -5702,7 +5702,7 @@ function flexitol_content_field_default_field_instances() {
   $field_instances['taxonomy_term-product_category-field_category_image'] = array(
     'bundle' => 'product_category',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please ignore this field. Kept for legacy purposes.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -5757,7 +5757,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -5787,53 +5787,6 @@ function flexitol_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'taxonomy_term-product_category-field_hover_title'.
-  $field_instances['taxonomy_term-product_category-field_hover_title'] = array(
-    'bundle' => 'product_category',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_hover_title',
-    'label' => 'Hover title',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
       'weight' => 6,
     ),
   );
@@ -5865,7 +5818,7 @@ function flexitol_content_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_packshot_image',
-    'label' => 'Packshot Image AU',
+    'label' => 'Image AU',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -5914,10 +5867,11 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_packshot_image_nz',
-    'label' => 'Packshot Image NZ',
-    'required' => FALSE,
+    'label' => 'Image NZ',
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -5930,6 +5884,7 @@ function flexitol_content_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'image',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
@@ -5964,10 +5919,11 @@ function flexitol_content_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_packshot_image_sg',
-    'label' => 'Packshot Image SG',
-    'required' => FALSE,
+    'label' => 'Image SG',
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -5980,6 +5936,7 @@ function flexitol_content_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'image',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
@@ -6031,7 +5988,10 @@ function flexitol_content_field_default_field_instances() {
   t('Hover text');
   t('Hover title');
   t('Image');
+  t('Image AU');
   t('Image Gallery');
+  t('Image NZ');
+  t('Image SG');
   t('Images');
   t('Info Image');
   t('Information');
@@ -6042,13 +6002,11 @@ function flexitol_content_field_default_field_instances() {
   t('Logo');
   t('Main body');
   t('Main paragraph');
-  t('Packshot Image AU');
-  t('Packshot Image NZ');
-  t('Packshot Image SG');
   t('Page Background Image');
   t('Pharmacy 4 less');
   t('Pharmacy Direct');
   t('Pharmacy Online');
+  t('Please ignore this field. Kept for legacy purposes.');
   t('Priceline');
   t('Product');
   t('Product Review Link');

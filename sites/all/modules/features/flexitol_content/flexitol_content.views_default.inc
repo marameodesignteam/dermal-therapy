@@ -1665,7 +1665,7 @@ function flexitol_content_views_default_views() {
   $handler->display->display_options['fields']['name']['element_type'] = 'h2';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
-  /* Field: Taxonomy term: Packshot Image AU */
+  /* Field: Taxonomy term: Image AU */
   $handler->display->display_options['fields']['field_packshot_image']['id'] = 'field_packshot_image';
   $handler->display->display_options['fields']['field_packshot_image']['table'] = 'field_data_field_packshot_image';
   $handler->display->display_options['fields']['field_packshot_image']['field'] = 'field_packshot_image';
@@ -1677,7 +1677,7 @@ function flexitol_content_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Taxonomy term: Packshot Image NZ */
+  /* Field: Taxonomy term: Image NZ */
   $handler->display->display_options['fields']['field_packshot_image_nz']['id'] = 'field_packshot_image_nz';
   $handler->display->display_options['fields']['field_packshot_image_nz']['table'] = 'field_data_field_packshot_image_nz';
   $handler->display->display_options['fields']['field_packshot_image_nz']['field'] = 'field_packshot_image_nz';
@@ -1689,7 +1689,7 @@ function flexitol_content_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Taxonomy term: Packshot Image SG */
+  /* Field: Taxonomy term: Image SG */
   $handler->display->display_options['fields']['field_packshot_image_sg']['id'] = 'field_packshot_image_sg';
   $handler->display->display_options['fields']['field_packshot_image_sg']['table'] = 'field_data_field_packshot_image_sg';
   $handler->display->display_options['fields']['field_packshot_image_sg']['field'] = 'field_packshot_image_sg';
@@ -1765,7 +1765,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['field_hover_text']['label'] = '';
   $handler->display->display_options['fields']['field_hover_text']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_hover_text']['element_label_colon'] = FALSE;
-  /* Field: Taxonomy term: Hover title */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_hover_title']['id'] = 'field_hover_title';
   $handler->display->display_options['fields']['field_hover_title']['table'] = 'field_data_field_hover_title';
   $handler->display->display_options['fields']['field_hover_title']['field'] = 'field_hover_title';
