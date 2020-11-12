@@ -1765,25 +1765,16 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['field_hover_text']['label'] = '';
   $handler->display->display_options['fields']['field_hover_text']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_hover_text']['element_label_colon'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_hover_title']['id'] = 'field_hover_title';
-  $handler->display->display_options['fields']['field_hover_title']['table'] = 'field_data_field_hover_title';
-  $handler->display->display_options['fields']['field_hover_title']['field'] = 'field_hover_title';
-  $handler->display->display_options['fields']['field_hover_title']['label'] = '';
-  $handler->display->display_options['fields']['field_hover_title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_hover_title']['element_label_colon'] = FALSE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="node-homepage-featured-content">
-<div class="field-name-title"><h2>[name]</h2></div>
+<div class="field-name-title"><h2><a href="[path_1]">[name]</a></h2></div>
 <div class="field-name-field-hfc-image">[views_conditional] [views_conditional_1] [views_conditional_2]</div>
 <div class="group-hover">
-<div class="field-name-field-hfc-hover-title">[field_hover_title]</div>
 <div class="field-name-field-hfc-hover-text">[field_hover_text]</div>
-<div class="field field-name-field-hfc-link field-type-link-field field-label-hidden"><a class="btn btn-default btn btn-default" href="[path_1]">Learn more<span class="sr-only"> about the [name] products</a></div>
 </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
