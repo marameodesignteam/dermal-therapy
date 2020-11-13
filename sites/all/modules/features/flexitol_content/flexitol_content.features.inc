@@ -41,6 +41,21 @@ function flexitol_content_views_api($module = NULL, $api = NULL) {
 function flexitol_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: article_teaser.
+  $styles['article_teaser'] = array(
+    'label' => 'Article teaser',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 768,
+          'height' => 250,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: homepage_review.
   $styles['homepage_review'] = array(
     'label' => 'Homepage review',

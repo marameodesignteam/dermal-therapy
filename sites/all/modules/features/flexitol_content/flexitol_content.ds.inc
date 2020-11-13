@@ -181,6 +181,11 @@ function flexitol_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|article|teaser'] = $ds_fieldsetting;
 

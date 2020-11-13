@@ -272,8 +272,8 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_link' => '',
+          'image_style' => 'article_teaser',
         ),
         'type' => 'image',
         'weight' => 1,

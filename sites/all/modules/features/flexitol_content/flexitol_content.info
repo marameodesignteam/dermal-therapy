@@ -355,6 +355,7 @@ features[flexslider_optionset][] = dermal_therapy_related_products
 features[flexslider_optionset][] = dermal_therapy_testinomials
 features[flexslider_optionset][] = single_product_slideshow
 features[flexslider_optionset][] = single_product_slideshow_navigation
+features[image][] = article_teaser
 features[image][] = homepage_review
 features[image][] = product_slideshow
 features[image][] = related_products
