@@ -301,19 +301,21 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 
       <?php if ($_domain['domain_id'] == 1):  ?>
         <!-- <div class="social twitter"><a href="https://www.twitter.com/FlexitolCanada/" target="_blank"><i class="fa fa-twitter"></i></a></div>-->
+          <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
+
 
 
       <?php elseif ($_domain['domain_id'] == 2):  ?>
+            	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>
 			<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>
-      	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>
+
 
 
       <?php else:  ?>
+        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
 
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
 
       <?php endif; ?>
     </div>
