@@ -38,6 +38,11 @@ function flexitol_content_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
+    'field_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
     'field_related_articles_' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -100,6 +105,11 @@ function flexitol_content_ds_field_settings_info() {
       'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_image' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),
