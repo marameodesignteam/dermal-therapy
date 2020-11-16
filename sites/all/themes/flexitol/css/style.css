@@ -7877,6 +7877,7 @@ ul.row {
   width: 100%;
   max-width: none;
   object-fit: cover;
+  max-height: 500px;
 }
 .article-full .field-name-body {
   word-spacing: 0.1em;
