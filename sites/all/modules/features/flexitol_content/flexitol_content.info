@@ -43,6 +43,7 @@ dependencies[] = video_embed_field
 dependencies[] = views
 dependencies[] = views_bootstrap
 features[context][] = category
+features[context][] = category-sidebar-second
 features[context][] = clone_of_where_2_buy_nz
 features[context][] = conditions
 features[context][] = homepage
