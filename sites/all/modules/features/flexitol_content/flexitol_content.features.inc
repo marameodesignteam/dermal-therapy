@@ -45,11 +45,12 @@ function flexitol_content_image_default_styles() {
   $styles['article_teaser'] = array(
     'label' => 'Article teaser',
     'effects' => array(
-      4 => array(
-        'name' => 'image_scale_and_crop',
+      5 => array(
+        'name' => 'image_scale',
         'data' => array(
           'width' => 768,
-          'height' => 250,
+          'height' => '',
+          'upscale' => 0,
         ),
         'weight' => 1,
       ),
