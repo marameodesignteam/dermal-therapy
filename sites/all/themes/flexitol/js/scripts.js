@@ -3,7 +3,7 @@
 (function($) {
   $(document).ready(function() {
 
-    var product_nav = $("#block-views-products-block");
+    var product_nav = $('[id*="block-views-products-block"]');
 
     if (product_nav.length > 0) {
 
@@ -12,8 +12,6 @@
       title.addClass("category-active")
 
       title.nextAll().each(function(i) {
-
-        console.log($(this))
 
         if ($(this).is("h3")) {
           return false;

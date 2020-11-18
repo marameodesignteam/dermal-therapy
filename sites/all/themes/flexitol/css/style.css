@@ -6992,7 +6992,7 @@ img {
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 }
@@ -9570,7 +9570,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 }
@@ -9682,7 +9682,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 }
@@ -9730,73 +9730,96 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     align-items: center;
   }
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first {
-  margin-bottom: 0;
-}
-.page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-products-block {
-  padding-left: 30px;
-}
 @media (max-width: 991px) {
-  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-products-block {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first [id*=block-views-products-block] {
     display: none;
   }
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-products-block .category-active {
-  position: relative;
+@media (min-width: 992px) {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-second [id*=block-views-products-block] {
+    display: none;
+  }
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-products-block .category-active::before {
-  content: "";
-  border-left: 5px solid #30576F;
-  position: absolute;
-  top: 0;
-  left: -30px;
-  bottom: -2px;
+.page-taxonomy.page-taxonomy-term .region-sidebar-first,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second {
+  margin-bottom: 0;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first h3 {
+@media (min-width: 992px) {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first [id*=block-views-products-block],
+.page-taxonomy.page-taxonomy-term .region-sidebar-second [id*=block-views-products-block] {
+    padding-left: 30px;
+  }
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first [id*=block-views-products-block] .category-active,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second [id*=block-views-products-block] .category-active {
+    position: relative;
+  }
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first [id*=block-views-products-block] .category-active::before,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second [id*=block-views-products-block] .category-active::before {
+    content: "";
+    border-left: 5px solid #30576F;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    bottom: -2px;
+  }
+}
+.page-taxonomy.page-taxonomy-term .region-sidebar-first h3,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second h3 {
   text-transform: uppercase;
   font-weight: 600;
   margin-top: 40px;
   padding-bottom: 10px;
   margin-bottom: 0;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first h3:first-child {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first h3:first-child,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second h3:first-child {
   margin-top: 0;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first h3 a {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first h3 a,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second h3 a {
   color: #B8B8B8;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first h3 .active {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first h3 .active,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second h3 .active {
   color: #30576F;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first a {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first a,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second a {
   color: #1F1F1F;
   text-decoration: none;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first a:hover {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first a:hover,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second a:hover {
   color: #00a9e0;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first .views-row {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first .views-row,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second .views-row {
   padding: 12px 0;
   border-bottom: 2px solid #f2f2f2;
   margin: 0;
 }
-.page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block {
+.page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second #block-views-conditions-menu-block {
   padding-left: 0;
   padding-top: 10px;
 }
 @media (min-width: 768px) {
-  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second #block-views-conditions-menu-block {
     padding-left: 0;
   }
-  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block .view.view-conditions-menu h3 a {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block .view.view-conditions-menu h3 a,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second #block-views-conditions-menu-block .view.view-conditions-menu h3 a {
     color: #ffffff;
   }
 }
 @media (min-width: 992px) {
-  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second #block-views-conditions-menu-block {
     padding-left: 0;
   }
-  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block .view.view-conditions-menu h3 a {
+  .page-taxonomy.page-taxonomy-term .region-sidebar-first #block-views-conditions-menu-block .view.view-conditions-menu h3 a,
+.page-taxonomy.page-taxonomy-term .region-sidebar-second #block-views-conditions-menu-block .view.view-conditions-menu h3 a {
     color: #ffffff;
   }
 }
@@ -10338,7 +10361,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 }
@@ -10494,7 +10517,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 }
@@ -10620,7 +10643,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 }

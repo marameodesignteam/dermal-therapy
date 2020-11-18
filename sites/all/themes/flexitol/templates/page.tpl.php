@@ -73,8 +73,9 @@
 * @ingroup themeable
 */
 
-if (!empty($page['sidebar_first'])): $content_column_class = "col-md-8"; endif;
+if (!empty($page['sidebar_first']) or !empty($page['sidebar_second'])): $content_column_class = "col-md-8"; endif;
 $sidebar_first_class = "col-md-4";
+$sidebar_second_class = "col-sm-12";
 
 
 ?>
@@ -259,7 +260,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 	  </section>
 
 	  <?php if (!empty($page['sidebar_second'])): ?>
-		<aside class="col-sm-3" role="complementary">
+		<aside class="<?php print $sidebar_second_class; ?>" role="complementary">
 		  <?php print render($page['sidebar_second']); ?>
 		</aside>  <!-- /#sidebar-second -->
 	  <?php endif; ?>
