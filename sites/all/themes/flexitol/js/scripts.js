@@ -35,7 +35,7 @@
     $(".node-homepage-featured-content .group-hover").on("click", function() {
 
       if ($(window).width() < 992) {
-        var location = $(this).find(".btn").attr("href");
+        var location = typeof $(this).find(".btn").attr("href") == "string" ? $(this).find(".btn").attr("href") : $(this).parent().find("h2 a").attr("href");
 
         window.location = location;
       }
