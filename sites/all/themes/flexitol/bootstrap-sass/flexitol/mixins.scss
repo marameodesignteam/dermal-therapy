@@ -1,6 +1,5 @@
 // prefix declarations
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,600,700);
-
 @mixin prefixed($property, $value) {
   -webkit-#{$property}: #{$value};
   -moz-#{$property}: #{$value};
@@ -8,14 +7,11 @@
   -o-#{$property}: #{$value};
   #{$property}: #{$value};
 }
-
 @mixin opacity($value) {
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
   filter: alpha(opacity=#{$value});
   opacity: #{$value};
 }
-
-
 @mixin learnMore() {
   text-transform: uppercase;
   border: 1px solid;
@@ -30,39 +26,33 @@
     text-decoration: none;
   }
 }
-
 @mixin mainHeader() {
-
   text-align: center;
   font-size: 2.5em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: 0;
 
   &:after {
-    position: absolute;
-    left: 50%;
-    content: "";
-    border-top: 2px solid;
-    width: 110px;
-    margin-left: -55px;
-    margin-top: 50px;
+      display: block;
+      position: relative;
+      left: 50%;
+      content: "";
+      border-top: 2px solid;
+      width: 110px;
+      margin-left: -55px;
+      margin-top: 10px;
 
   }
 }
-
 @mixin containedBody() {
-
   @media (min-width: $screen-sm) {
-
     padding-left: 13%;
     padding-right: 13%;
-
   }
 }
-
 @mixin bodyText() {
   font-weight: 400;
   word-spacing: 0.1em;

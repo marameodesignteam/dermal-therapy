@@ -1513,22 +1513,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 /* PRODUCT PAGE */
 .page-products {
   h1 {
-    text-align: center;
-    font-size: 2.3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    //color: #fff;
-    margin-bottom: 50px;
-
-    &:after {
-      position: absolute;
-      top: 65px;
-      left: 50%;
-      content: "";
-      border-top: 1px solid;
-      width: 120px;
-      margin-left: -60px;
-    }
+  @include mainHeader();
   }
 
   .view-products-page .view-content {

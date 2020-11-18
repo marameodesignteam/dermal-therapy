@@ -6997,13 +6997,14 @@ img {
   margin-top: 0;
 }
 .node-type-page h2:after {
-  position: absolute;
+  display: block;
+  position: relative;
   left: 50%;
   content: "";
   border-top: 2px solid;
   width: 110px;
   margin-left: -55px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .node-type-page .field-name-body {
   font-weight: 400;
@@ -9566,19 +9567,22 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 /* PRODUCT PAGE */
 .page-products h1 {
   text-align: center;
-  font-size: 2.3em;
-  font-weight: bold;
+  font-size: 2.5em;
+  font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 50px;
+  position: relative;
+  margin-top: 0;
 }
 .page-products h1:after {
-  position: absolute;
-  top: 65px;
+  display: block;
+  position: relative;
   left: 50%;
   content: "";
-  border-top: 1px solid;
-  width: 120px;
-  margin-left: -60px;
+  border-top: 2px solid;
+  width: 110px;
+  margin-left: -55px;
+  margin-top: 10px;
 }
 .page-products .view-products-page .view-content {
   margin: 0 -15px -30px;
@@ -9683,13 +9687,14 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   margin-top: 0;
 }
 .page-taxonomy.page-taxonomy-term .view-header .view-category .views-field-name h1:after {
-  position: absolute;
+  display: block;
+  position: relative;
   left: 50%;
   content: "";
   border-top: 2px solid;
   width: 110px;
   margin-left: -55px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 @media (min-width: 992px) {
   .page-taxonomy.page-taxonomy-term .view-header .view-category .views-field-name h1 {
@@ -10341,13 +10346,14 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
 .page-news .view-header .view-title h1:after,
 .page-promotions .view-header .view-title h1:after,
 .page-special-offers .view-header .view-title h1:after {
-  position: absolute;
+  display: block;
+  position: relative;
   left: 50%;
   content: "";
   border-top: 2px solid;
   width: 110px;
   margin-left: -55px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 @media (min-width: 992px) {
@@ -10493,13 +10499,14 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-top: 0;
 }
 .view-conditions-glossary .view-header h1:after {
-  position: absolute;
+  display: block;
+  position: relative;
   left: 50%;
   content: "";
   border-top: 2px solid;
   width: 110px;
   margin-left: -55px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .view-conditions-glossary .view-content {
   padding-top: 20px;
@@ -10619,13 +10626,14 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
 }
 .node-type-condition-glossary .field-name-title h1:after,
 .node-type-ingredients-glossary .field-name-title h1:after {
-  position: absolute;
+  display: block;
+  position: relative;
   left: 50%;
   content: "";
   border-top: 2px solid;
   width: 110px;
   margin-left: -55px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .node-type-condition-glossary .field-name-body,
 .node-type-ingredients-glossary .field-name-body {
