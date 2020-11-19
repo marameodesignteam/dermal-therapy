@@ -113,10 +113,10 @@ function flexitol_global_image_default_styles() {
   $styles['slide'] = array(
     'label' => 'Slide',
     'effects' => array(
-      5 => array(
+      13 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 1100,
+          'width' => 1380,
           'height' => 500,
         ),
         'weight' => 1,

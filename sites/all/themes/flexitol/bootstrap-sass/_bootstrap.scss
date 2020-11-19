@@ -46,9 +46,10 @@
 @import "bootstrap/close";
 
 // flexitol files files
+@import "flexitol/variables";
+@import "flexitol/mixins";
 @import "flexitol/global";
 @import "flexitol/overwrites";
-@import "flexitol/mixins";
 @import "flexitol/homepage";
 @import "flexitol/product";
 @import "flexitol/category";
@@ -58,6 +59,7 @@
 @import "flexitol/review";
 @import "flexitol/specialoffer";
 @import "flexitol/homepagereview";
+@import "flexitol/glossary";
 
 
 // Components w/ JavaScript

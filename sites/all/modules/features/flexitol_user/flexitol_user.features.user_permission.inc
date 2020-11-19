@@ -293,6 +293,7 @@ function flexitol_user_user_default_permissions() {
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
+      'Staff' => 'Staff',
       'administrator' => 'administrator',
     ),
     'module' => 'block',
@@ -1793,6 +1794,7 @@ function flexitol_user_user_default_permissions() {
   $permissions['use text format php_code'] = array(
     'name' => 'use text format php_code',
     'roles' => array(
+      'Staff' => 'Staff',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',

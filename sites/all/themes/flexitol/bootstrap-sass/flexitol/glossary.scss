@@ -1,0 +1,131 @@
+.view-conditions-glossary {
+  .view-header h1 {
+    @include mainHeader();
+  }
+
+  .view-content {
+    @include containedBody();
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .table-responsive {
+    border: 0;
+  }
+}
+
+.table.dt-table {
+  font-size: 18px;
+  color: $dark-text;
+  @media (max-width:767px) {
+    display: block;
+    max-width: 100%;
+  }
+
+  > thead {
+    @media (max-width:767px) {
+      position: absolute;
+      left: -9999vw;
+    }
+
+    th {
+      &,
+      &.active {
+        background: $navy-dark;
+        color: #fff;
+        border-bottom: 0;
+        border-right: 2px solid #fff;
+        padding: 15px;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+    }
+  }
+
+  > tbody {
+    @media (max-width:767px) {
+      display: block;
+    }
+
+    > tr {
+      @media (max-width:767px) {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      > td {
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        font-size: 16px;
+
+        a {
+          color: $dark-blue;
+          font-weight: 600;
+        }
+
+        &,
+        &.active {
+          background: $very-light-grey;
+          padding: 15px;
+          @media (max-width:767px) {
+            display: block;
+            width: 100%;
+            white-space: normal;
+          }
+
+          &:hover {
+            background: $very-light-grey;
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          a {
+            @include learnMore();
+            margin-top: 10px;
+            font-weight: normal;
+          }
+        }
+
+        &:last-child {
+          border-right: 0;
+          width: 70%;
+          @media (max-width:767px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.node-type-condition-glossary,
+.node-type-ingredients-glossary {
+  .field-name-title h1 {
+    @include mainHeader()
+  }
+
+  .field-name-body {
+    @include bodyText()
+  }
+
+  .field-name-body,
+  .field-name-title,
+  .view-header {
+    @include containedBody();
+  }
+
+  .view-header {
+    margin-top: 40px;
+  }
+}

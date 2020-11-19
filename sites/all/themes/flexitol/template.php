@@ -26,30 +26,30 @@ function flexitol_preprocess_html(&$vars)
     if (arg(0) == 'node' && is_numeric(arg(1))) {
         $node = node_load(arg(1));
         // If product set background
-        if (isset($node->field_page_background_image['und'][0]['uri'])) {
-            $uri = $node->field_page_background_image['und'][0]['uri'];
-            $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
-            if ($wrapper instanceof DrupalLocalStreamWrapper) {
-                $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
-            }
-            $vars['background_image'] = base_path() . $path;
-        }
-        if ($node->type == 'product') {
-            // if (isset($node->field_product_category['und'][0]['target_id'])) {
-            //     $term_id = $node->field_product_category['und'][0]['target_id'];
-            //     $term = taxonomy_term_load($term_id);
-            //     if (isset($term->field_category_image['und'][0]['uri'])) {
-            //         $uri = $term->field_category_image['und'][0]['uri'];
-            //         $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
-            //         if ($wrapper instanceof DrupalLocalStreamWrapper) {
-            //             $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
-            //         }
-            //         $vars['background_image'] = base_path() . $path;
-            //     }
-            // }
-
-            $vars['background_image'] = "";
-        }
+        // if (isset($node->field_page_background_image['und'][0]['uri'])) {
+        //     $uri = $node->field_page_background_image['und'][0]['uri'];
+        //     $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+        //     if ($wrapper instanceof DrupalLocalStreamWrapper) {
+        //         $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+        //     }
+        //     $vars['background_image'] = base_path() . $path;
+        // }
+        // if ($node->type == 'product') {
+        //     if (isset($node->field_product_category['und'][0]['target_id'])) {
+        //         $term_id = $node->field_product_category['und'][0]['target_id'];
+        //         $term = taxonomy_term_load($term_id);
+        //         if (isset($term->field_category_image['und'][0]['uri'])) {
+        //             $uri = $term->field_category_image['und'][0]['uri'];
+        //             $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+        //             if ($wrapper instanceof DrupalLocalStreamWrapper) {
+        //                 $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+        //             }
+        //             $vars['background_image'] = base_path() . $path;
+        //         }
+        //     }
+        //
+        //     $vars['background_image'] = "";
+        // }
 
         // Add product review script
         // Setup IE meta tag to force IE rendering mode
@@ -73,58 +73,58 @@ function flexitol_preprocess_html(&$vars)
         $term = taxonomy_term_load(arg(2));
         // If term of type category set background
         if ($term->vocabulary_machine_name == 'product_category') {
-            if (isset($term->field_category_image['und'][0]['uri'])) {
-                $uri = $term->field_category_image['und'][0]['uri'];
-                $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
-                if ($wrapper instanceof DrupalLocalStreamWrapper) {
-                    $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
-                }
-                $vars['background_image'] = base_path() . $path;
-            }
+            // if (isset($term->field_category_image['und'][0]['uri'])) {
+            //     $uri = $term->field_category_image['und'][0]['uri'];
+            //     $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+            //     if ($wrapper instanceof DrupalLocalStreamWrapper) {
+            //         $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+            //     }
+            //     $vars['background_image'] = base_path() . $path;
+            // }
             $vars['classes_array'][] = 'productcat';
         }
     }
 
     // custom background image for contact pages
-    else {
-        if (in_array($vars['classes_array'][6], [
-      'page-node-221',
-      'page-node-185',
-      'page-node-36',
-    ])) {
-            // Place url of img inside quotes below
-            $vars['background_image'] = "/sites/all/themes/flexitol/images/dt-contact-us-background.jpeg";
-        }
-    }
+    // else {
+    //     if (in_array($vars['classes_array'][6], [
+    //   'page-node-221',
+    //   'page-node-185',
+    //   'page-node-36',
+    // ])) {
+    //         // Place url of img inside quotes below
+    //         $vars['background_image'] = "/sites/all/themes/flexitol/images/dt-contact-us-background.jpeg";
+    //     }
+    // }
 
     // Set background of view pages
-    if (function_exists('views_get_page_view') && views_get_page_view()) {
-        $view = views_get_page_view();
+    // if (function_exists('views_get_page_view') && views_get_page_view()) {
+    //     $view = views_get_page_view();
+    //
+    //     //Background for Healthcare Professionals
+    //     if (isset($view) && $view->name == 'healthcare_professional_page') {
+    //         // Place url of img inside quotes below
+    //         $vars['background_image'] = "/sites/all/themes/flexitol/images/healthcare_bg.jpg";
+    //     }
+    //     //Background for 'Review' page
+    //     else {
+    //         if (isset($view) && $view->name == 'review') {
+    //             // Place url of img inside quotes below
+    //             $vars['background_image'] = "/sites/all/themes/flexitol/images/testimonials_bg.jpg";
+    //         }
+    //         //Background for Special offers and events
+    //         else {
+    //             if (isset($view) && $view->name == 'special_offers') {
+    //                 // Place url of img inside quotes below
+    //                 $vars['background_image'] = "/sites/all/themes/flexitol/images/special_offer_bg.jpg";
+    //             }
+    //         }
+    //     }
+    // }
 
-        //Background for Healthcare Professionals
-        if (isset($view) && $view->name == 'healthcare_professional_page') {
-            // Place url of img inside quotes below
-            $vars['background_image'] = "/sites/all/themes/flexitol/images/healthcare_bg.jpg";
-        }
-        //Background for 'Review' page
-        else {
-            if (isset($view) && $view->name == 'review') {
-                // Place url of img inside quotes below
-                $vars['background_image'] = "/sites/all/themes/flexitol/images/testimonials_bg.jpg";
-            }
-            //Background for Special offers and events
-            else {
-                if (isset($view) && $view->name == 'special_offers') {
-                    // Place url of img inside quotes below
-                    $vars['background_image'] = "/sites/all/themes/flexitol/images/special_offer_bg.jpg";
-                }
-            }
-        }
-    }
-
-    if (drupal_is_front_page()) {
-        $vars['background_image'] = null;
-    }
+    // if (drupal_is_front_page()) {
+    //     $vars['background_image'] = null;
+    // }
 }
 
 /**
@@ -229,6 +229,7 @@ alt="Dermal Therapy Australia Scalp Care"
   ];
     if (!empty($categ) && !empty($identifiers[$categ])) {
         return "
+        <div class='{$wrapper_class}'>
     <script>
         window.__productReviewCallbackQueue = window.__productReviewCallbackQueue || [];
         window.__productReviewCallbackQueue.push(function(ProductReview) {
@@ -241,7 +242,7 @@ alt="Dermal Therapy Australia Scalp Care"
             });
         });
     </script>
-    <div class='{$wrapper_class}' style='text-align: center; margin-bottom: 10px; margin-top: 100px;'>
+
       {$markups[$categ]}
     </div>";
     }
@@ -373,37 +374,40 @@ function flexitol_preprocess_field(&$vars)
 /**
  * Implements template_preprocess_HOOK().
  */
-function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
+function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
+{
+    $col = "lg-4";
+
+
     if (current_path() == 'taxonomy/term/28') {
-        $variables['rows'] .= '
-    <div class="views-row col-sm-12">
-      <div class="product-review" style="text-align: center; margin-bottom: 10px; margin-top: 50px;">
+        $variables['header'] .= '
+    <div class="views-row col-'.$col.'">
+      <div class="product-review"">
         <a target="_blank" href="https://www.productreview.com.au/listings/dermal-therapy-australia" rel="noopener">
           <img width="160" src="https://api.productreview.com.au/api/services/rating-badge/v2/au/28023c61-e180-43fc-8219-e6f318688388/from-internal-entry-id?resolution=hd&amp;theme=light&amp;width=160" alt="Dermal Therapy Australia Children\'s Skin Care">
         </a>
       </div>
-      <a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a>
+      <!--a target="_blank" href="https://littlebodies.com.au"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_button.png"/></a-->
     </div>';
     } elseif (current_path() == 'taxonomy/term/34') {
-
-        $variables['rows'] .= '<div class="views-row col-sm-12"><a target="_blank" href="https://littlebodies.com"><img style="margin-top: 100px" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
+        $variables['row'] .= '<div class="views-row col-sm-6"><a target="_blank" href="https://littlebodies.com"><img alt="Little Bodies" src="/sites/all/themes/flexitol/images/little_bodies_com_button.png"/></a></div>';
     } elseif (current_path() == 'taxonomy/term/9') {
-        $variables['rows'] .= _product_review(9, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(9, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/10') {
-        $variables['rows'] .= _product_review(10, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(10, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/14') {
-        $variables['rows'] .= _product_review(14, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(14, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/19') {
-        $variables['rows'] .= _product_review(19, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(19, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/20') {
-        $variables['rows'] .= _product_review(20, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(20, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/21') {
-        $variables['rows'] .= _product_review(21, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(21, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/22') {
-        $variables['rows'] .= _product_review(22, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(22, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/23') {
-        $variables['rows'] .= _product_review(23, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(23, 'views-row col-'.$col);
     } elseif (current_path() == 'taxonomy/term/35') {
-        $variables['rows'] .= _product_review(35, 'views-row col-sm-12');
+        $variables['header'] .= _product_review(35, 'views-row col-'.$col);
     }
 }

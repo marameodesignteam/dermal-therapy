@@ -41,6 +41,22 @@ function flexitol_content_views_api($module = NULL, $api = NULL) {
 function flexitol_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: article_teaser.
+  $styles['article_teaser'] = array(
+    'label' => 'Article teaser',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 768,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: homepage_review.
   $styles['homepage_review'] = array(
     'label' => 'Homepage review',
@@ -113,6 +129,14 @@ function flexitol_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'condition_glossary' => array(
+      'name' => t('Condition Glossary'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'conditions' => array(
       'name' => t('Conditions'),
       'base' => 'node_content',
@@ -147,6 +171,14 @@ function flexitol_content_node_info() {
     ),
     'homepage_slide' => array(
       'name' => t('Homepage Slide'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'ingredients_glossary' => array(
+      'name' => t('Ingredients Glossary'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

@@ -72,6 +72,12 @@
 *
 * @ingroup themeable
 */
+
+if (!empty($page['sidebar_first']) or !empty($page['sidebar_second'])): $content_column_class = "col-md-8"; endif;
+$sidebar_first_class = "col-md-4";
+$sidebar_second_class = "col-sm-12";
+
+
 ?>
 <?php $block_language = module_invoke('locale', 'block_view', 'language'); ?>
 <?php global $_domain, $theme_path, $base_url; ?>
@@ -230,7 +236,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 	<div class="row <?php print $content_container_class; ?>">
 
 	  <?php if (!empty($page['sidebar_first'])): ?>
-		<aside class="<?php print $sidebar_first_class?>" role="complementary">
+		<aside class="<?php print $sidebar_first_class; ?>" role="complementary">
 		  <?php print render($page['sidebar_first']); ?>
 		</aside>  <!-- /#sidebar-first -->
 	  <?php endif; ?>
@@ -254,7 +260,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 	  </section>
 
 	  <?php if (!empty($page['sidebar_second'])): ?>
-		<aside class="col-sm-3" role="complementary">
+		<aside class="<?php print $sidebar_second_class; ?>" role="complementary">
 		  <?php print render($page['sidebar_second']); ?>
 		</aside>  <!-- /#sidebar-second -->
 	  <?php endif; ?>
@@ -296,19 +302,21 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 
       <?php if ($_domain['domain_id'] == 1):  ?>
         <!-- <div class="social twitter"><a href="https://www.twitter.com/FlexitolCanada/" target="_blank"><i class="fa fa-twitter"></i></a></div>-->
+          <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
+
 
 
       <?php elseif ($_domain['domain_id'] == 2):  ?>
+            	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>
 			<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>
-      	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>
+
 
 
       <?php else:  ?>
+        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
 
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
 
       <?php endif; ?>
     </div>

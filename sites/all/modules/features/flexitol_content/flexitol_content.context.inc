@@ -29,23 +29,11 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-category-block' => array(
-          'module' => 'views',
-          'delta' => 'category-block',
-          'region' => 'header',
-          'weight' => '-10',
-        ),
         'views-products-block' => array(
           'module' => 'views',
           'delta' => 'products-block',
           'region' => 'sidebar_first',
           'weight' => '-10',
-        ),
-        'views-category-block_1' => array(
-          'module' => 'views',
-          'delta' => 'category-block_1',
-          'region' => 'sidebar_first',
-          'weight' => '-9',
         ),
       ),
     ),
@@ -56,6 +44,37 @@ function flexitol_content_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Category page');
   $export['category'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'category-sidebar-second';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'taxonomy_term' => array(
+      'values' => array(
+        'product_category' => 'product_category',
+      ),
+      'options' => array(
+        'term_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-products-block' => array(
+          'module' => 'views',
+          'delta' => 'products-block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['category-sidebar-second'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -176,23 +195,23 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-nodequeue_1-block' => array(
-          'module' => 'views',
-          'delta' => 'nodequeue_1-block',
-          'region' => 'content',
-          'weight' => '22',
-        ),
         'conf_block-welcome_block' => array(
           'module' => 'conf_block',
           'delta' => 'welcome_block',
-          'region' => 'content_secondary',
-          'weight' => '0',
+          'region' => 'content',
+          'weight' => '-10',
         ),
         'views-home_page_reviews-block' => array(
           'module' => 'views',
           'delta' => 'home_page_reviews-block',
-          'region' => 'content_tertiary',
+          'region' => 'content_secondary',
           'weight' => '-10',
+        ),
+        'views-nodequeue_1-block' => array(
+          'module' => 'views',
+          'delta' => 'nodequeue_1-block',
+          'region' => 'content_tertiary',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -225,21 +244,21 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-nodequeue_1-block_2' => array(
-          'module' => 'views',
-          'delta' => 'nodequeue_1-block_2',
-          'region' => 'content',
-          'weight' => '10',
-        ),
         'conf_block-welcome_block' => array(
           'module' => 'conf_block',
           'delta' => 'welcome_block',
-          'region' => 'content_secondary',
-          'weight' => '0',
+          'region' => 'content',
+          'weight' => '10',
         ),
         'views-home_page_reviews-block' => array(
           'module' => 'views',
           'delta' => 'home_page_reviews-block',
+          'region' => 'content_secondary',
+          'weight' => '-10',
+        ),
+        'views-nodequeue_1-block_2' => array(
+          'module' => 'views',
+          'delta' => 'nodequeue_1-block_2',
           'region' => 'content_tertiary',
           'weight' => '-10',
         ),
@@ -274,21 +293,21 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-nodequeue_1-block_1' => array(
-          'module' => 'views',
-          'delta' => 'nodequeue_1-block_1',
-          'region' => 'content',
-          'weight' => '10',
-        ),
         'conf_block-welcome_block' => array(
           'module' => 'conf_block',
           'delta' => 'welcome_block',
-          'region' => 'content_secondary',
-          'weight' => '0',
+          'region' => 'content',
+          'weight' => '-10',
         ),
         'views-home_page_reviews-block' => array(
           'module' => 'views',
           'delta' => 'home_page_reviews-block',
+          'region' => 'content_secondary',
+          'weight' => '-10',
+        ),
+        'views-nodequeue_1-block_1' => array(
+          'module' => 'views',
+          'delta' => 'nodequeue_1-block_1',
           'region' => 'content_tertiary',
           'weight' => '-10',
         ),
