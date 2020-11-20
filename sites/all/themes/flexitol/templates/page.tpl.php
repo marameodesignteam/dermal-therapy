@@ -90,7 +90,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 	<div class="col-xs-12 tablet-top-bar visible-sm-* visible-xs-* hidden-md hidden-lg">
       <div id="countryselecdt-tablet" class="countryselecdt lower">
         <label for="op">
-          <i class="fa fa-globe"></i>
+          <i class="fas fa-globe-americas"></i>
           <div class="curr-domain">
 
             <?php if ($_domain['domain_id'] == 1){
@@ -153,7 +153,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 				<input type="checkbox" id="op"></input>
 					<div id="countryselecdt-dsktop" class="countryselecdt lower">
 						<label for="op">
-							<i class="fa fa-globe"></i>
+							<i class="fas fa-globe-americas"></i>
 							<div class="curr-domain">
 						        <?php if ($_domain['domain_id'] == 1){
 					            	echo "AUS";
@@ -167,22 +167,22 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 		            		</div>
 					    </label>
 					</div>
-					<a href="https://www.youtube.com/channel/UCu72syrSnOcHoEifAZWR-kA/videos" target="_blank"><i class="fa fa-youtube"></i></a>
+					<a href="https://www.youtube.com/channel/UCu72syrSnOcHoEifAZWR-kA/videos" target="_blank"><i class="fab fa-youtube"></i></a>
 					<?php if ($_domain['domain_id'] == 2) {
-						echo '<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>';
-						echo '<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>';
+						echo '<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fab fa-facebook"></i></a>';
+						echo '<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fab fa-instagram"></i></a>';
 					} elseif ($_domain['domain_id'] == 1) {
-						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>';
-						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>';
-						echo '<a href="https://www.pinterest.com.au/dermaltherapyau/" target="_blank"><i class="fa fa-pinterest"></i></a>';
+						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>';
+						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>';
+						echo '<a href="https://www.pinterest.com.au/dermaltherapyau/" target="_blank"><i class="fab fa-pinterest"></i></a>';
 					} else {
-						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>';
-						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>';
+						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>';
+						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>';
 					}
 
 					?>
 			<!--  <a href="#"><span class="header-icon header-icon-world"></span></a> -->
-			  <a class="searchicon" href="#"><i class="fa fa-search"></i></a>
+			  <a class="searchicon" href="#"><i class="fas fa-search"></i></a>
 			  <div class="sblock"><?php $search_form = drupal_get_form('search_block_form'); print render($search_form);?>
 
 			  </div>
@@ -298,25 +298,25 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
   <footer class="footer container no-padding">
     <?php print render($page['footer']); ?>
     <div class="col-xs-12 col-sm-3 no-padding-left">
-			<a href="https://www.youtube.com/channel/UCu72syrSnOcHoEifAZWR-kA/videos" target="_blank"><i class="fa fa-youtube"></i></a>
+			<a href="https://www.youtube.com/channel/UCu72syrSnOcHoEifAZWR-kA/videos" target="_blank"><i class="fab fa-youtube"></i></a>
 
       <?php if ($_domain['domain_id'] == 1):  ?>
         <!-- <div class="social twitter"><a href="https://www.twitter.com/FlexitolCanada/" target="_blank"><i class="fa fa-twitter"></i></a></div>-->
-          <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>
 
 
 
       <?php elseif ($_domain['domain_id'] == 2):  ?>
-            	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fa fa-instagram"></i></a>
+            	<a href="https://www.facebook.com/dermaltherapysg" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.instagram.com/dermaltherapysingapore/" target="_blank"><i class="fab fa-instagram"></i></a>
 
 
 
       <?php else:  ?>
-        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>
 
-        <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>
 
       <?php endif; ?>
     </div>
