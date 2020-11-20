@@ -179,8 +179,8 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>';
 					}
-
 					?>
+          <a href="https://www.tiktok.com/@dermaltherapy?lang=en" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">TikTok</span></a>
 			<!--  <a href="#"><span class="header-icon header-icon-world"></span></a> -->
 			  <a class="searchicon" href="#"><i class="fas fa-search"></i></a>
 			  <div class="sblock"><?php $search_form = drupal_get_form('search_block_form'); print render($search_form);?>
@@ -319,6 +319,8 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>
 
       <?php endif; ?>
+      <a href="https://www.tiktok.com/@dermaltherapy?lang=en" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">TikTok</span></a>
+
     </div>
   </footer>
 </div>
