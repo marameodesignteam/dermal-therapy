@@ -175,12 +175,14 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>';
 						echo '<a href="https://www.pinterest.com.au/dermaltherapyau/" target="_blank"><i class="fab fa-pinterest"></i></a>';
+            echo '<a href="https://www.tiktok.com/@dermaltherapy?lang=en" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">TikTok</span></a>';
 					} else {
 						echo '<a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>';
 						echo '<a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>';
+
 					}
 					?>
-          <a href="https://www.tiktok.com/@dermaltherapy?lang=en" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">TikTok</span></a>
+
 			<!--  <a href="#"><span class="header-icon header-icon-world"></span></a> -->
 			  <a class="searchicon" href="#"><i class="fas fa-search"></i></a>
 			  <div class="sblock"><?php $search_form = drupal_get_form('search_block_form'); print render($search_form);?>
@@ -304,6 +306,7 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
         <!-- <div class="social twitter"><a href="https://www.twitter.com/FlexitolCanada/" target="_blank"><i class="fa fa-twitter"></i></a></div>-->
           <a href="https://www.facebook.com/DermalTherapy/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@dermaltherapy?lang=en" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">TikTok</span></a>
 
 
 
@@ -318,8 +321,10 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 
         <a href="https://www.instagram.com/dermaltherapy/" target="_blank"><i class="fab fa-instagram"></i></a>
 
+
+
       <?php endif; ?>
-      <a href="https://www.tiktok.com/@dermaltherapy?lang=en" target="_blank"><i class="fab fa-tiktok"></i><span class="sr-only">TikTok</span></a>
+
 
     </div>
   </footer>
