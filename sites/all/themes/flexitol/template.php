@@ -402,6 +402,8 @@ function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables)
     $variables['header'] .= _product_review(19, 'views-row col-'.$col);
   } elseif (current_path() == 'taxonomy/term/20') {
     $variables['header'] .= _product_review(20, 'views-row col-'.$col);
+  } elseif (current_path() == 'taxonomy/term/101') {
+    $variables['header'] .= _product_review(20, 'views-row col-'.$col);
   } elseif (current_path() == 'taxonomy/term/21') {
     $variables['header'] .= _product_review(21, 'views-row col-'.$col);
   } elseif (current_path() == 'taxonomy/term/22') {
