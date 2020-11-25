@@ -72,7 +72,7 @@ function flexitol_global_image_default_styles() {
         'data' => array(
           'width' => 1350,
           'height' => '',
-          'upscale' => 0,
+          'upscale' => 1,
         ),
         'weight' => 1,
       ),
@@ -198,7 +198,7 @@ function flexitol_global_image_default_styles() {
         'data' => array(
           'width' => 1350,
           'height' => '',
-          'upscale' => 0,
+          'upscale' => 1,
         ),
         'weight' => 1,
       ),
