@@ -63,6 +63,38 @@ function flexitol_global_fontyourface_features_default_font() {
 function flexitol_global_image_default_styles() {
   $styles = array();
 
+  // Exported image style: article_full.
+  $styles['article_full'] = array(
+    'label' => 'Article full',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1350,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: article_teaser.
+  $styles['article_teaser'] = array(
+    'label' => 'Article teaser',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 768,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: crop_320_square.
   $styles['crop_320_square'] = array(
     'label' => 'Crop 320 square',
@@ -109,15 +141,64 @@ function flexitol_global_image_default_styles() {
     ),
   );
 
+  // Exported image style: homepage_review.
+  $styles['homepage_review'] = array(
+    'label' => 'Homepage review',
+    'effects' => array(
+      15 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 350,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: product_slideshow.
+  $styles['product_slideshow'] = array(
+    'label' => 'Product slideshow',
+    'effects' => array(
+      14 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 460,
+          'height' => 430,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: related_products.
+  $styles['related_products'] = array(
+    'label' => 'Related products',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 250,
+          'height' => 220,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: slide.
   $styles['slide'] = array(
     'label' => 'Slide',
     'effects' => array(
-      13 => array(
-        'name' => 'image_scale_and_crop',
+      8 => array(
+        'name' => 'image_scale',
         'data' => array(
-          'width' => 1380,
-          'height' => 500,
+          'width' => 1350,
+          'height' => '',
+          'upscale' => 1,
         ),
         'weight' => 1,
       ),

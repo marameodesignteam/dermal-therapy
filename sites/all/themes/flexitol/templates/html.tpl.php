@@ -67,6 +67,8 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+  <!-- add fontawesome -->
+  <link href="/<?php echo drupal_get_path('theme',$GLOBALS['theme']); ?>/css/fontawesome/all.css" rel="stylesheet">
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">
