@@ -5,6 +5,29 @@
   .view-header {
     .view-title h1 {
       @include mainHeader();
+      margin-bottom: 30px;
+
     }
+  }
+}
+
+.news-nav {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display:
+    flex;
+    justify-content: center;
+
+    li {
+      & + li {
+        margin-left: 10px
+      }
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }

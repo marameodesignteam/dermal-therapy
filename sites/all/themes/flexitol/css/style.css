@@ -10465,6 +10465,7 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   margin-bottom: 40px;
   position: relative;
   margin-top: 0;
+  margin-bottom: 30px;
 }
 .page-blog .view-header .view-title h1:after,
 .page-news .view-header .view-title h1:after,
@@ -10478,6 +10479,20 @@ section#block-views-8a88aca1c0589e095165a67e4cdec26f{
   width: 110px;
   margin-left: -55px;
   margin-top: 10px;
+}
+
+.news-nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+}
+.news-nav ul li + li {
+  margin-left: 10px;
+}
+.news-nav .btn {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 @media (min-width: 992px) {
