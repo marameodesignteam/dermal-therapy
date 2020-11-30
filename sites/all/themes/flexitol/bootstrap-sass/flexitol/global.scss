@@ -811,6 +811,14 @@ ul.dropdown-menu.top {
   left: 1px;
 }
 
+//@@BM hide dropdown menu for mobile
+
+.dropdown-menu {
+  @media (max-width:767px) {
+    display: none !important
+  }
+}
+
 .page-search404 section#block-system-main {
   padding-top: 2%;
   background: rgba(255, 255, 255, 0.9);

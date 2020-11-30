@@ -27,6 +27,28 @@
 
 })(jQuery);
 
+//no dropdown menu for mobile -> so force click
+
+(function($) {
+
+  $(document).ready(function() {
+
+    var main_menu_links = $("header nav .dropdown a");
+
+    main_menu_links.removeAttr("data-target data-toggle").removeClass("dropdown-toggle");
+
+    main_menu_links.on("click", function() {
+
+      var href = $(this).attr("href");
+
+      window.location = href;
+
+    });
+
+  });
+
+})(jQuery);
+
 
 (function($) {
   $(document).ready(function() {
