@@ -3081,7 +3081,9 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="view-title"> <h1>News, Blog & Promotions</h1></div>
+<nav class="news-nav"><ul><li><a class="btn btn-primary" href="/news">News</a></li><li><a class="btn btn-primary" href="/blog">Blog</a></li><li><a class="btn btn-primary" href="/promotions">Promotions</a></li></nav>
 </br>
 
 
@@ -3107,7 +3109,9 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="view-title"> <h1>News</h1></div>
+<nav class="news-nav"><ul><li><a class="btn btn-primary" href="/news">News</a></li><li><a class="btn btn-primary" href="/blog">Blog</a></li><li><a class="btn btn-primary" href="/promotions">Promotions</a></li></nav>
 </br>
 
 
@@ -3160,7 +3164,9 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="view-title"> <h1>Blog</h1></div>
+<nav class="news-nav"><ul><li><a class="btn btn-primary" href="/news">News</a></li><li><a class="btn btn-primary" href="/blog">Blog</a></li><li><a class="btn btn-primary" href="/promotions">Promotions</a></li></nav>
 </br>
 
 
@@ -3213,7 +3219,9 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="view-title"> <h1>Promotions</h1></div>
+<nav class="news-nav"><ul><li><a class="btn btn-primary" href="/news">News</a></li><li><a class="btn btn-primary" href="/blog">Blog</a></li><li><a class="btn btn-primary" href="/promotions">Promotions</a></li></nav>
 </br>
 
 
