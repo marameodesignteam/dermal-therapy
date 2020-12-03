@@ -339,3 +339,33 @@ function dermal_generic_form_node_form_alter(&$form, &$form_state, $form_id)
         }
     }
 }
+
+/**
+ * Implements hook_ds_fields_info_alter().
+ */
+function dermal_generic_ds_fields_info_alter(&$fields, $entity_type) {
+  $fields['author']['properties']['formatters']['author_displayed_name'] = t('Author displayed name');
+  $fields['author']['function'] = 'custom_ds_render_author_field';
+}
+
+function custom_ds_render_author_field($field) {
+  // Users without a user name are anonymous users. These are never linked.
+  if (empty($field['entity']->name)) {
+    $output = check_plain(variable_get('anonymous', t('Anonymous')));
+  }
+
+  if ($field['formatter'] == 'author') {
+    $output = format_username($field['entity']);
+  }
+
+  if ($field['formatter'] == 'author_linked') {
+    $output = theme('username', array('account' => $field['entity']));
+  }
+
+  if ($field['formatter'] == 'author_displayed_name') {
+    $author = user_load($field['entity']->uid);
+    $output = !empty($author->field_displayed_name['und'][0]['value']) ? $author->field_displayed_name['und'][0]['value'] : 'By ' . $author->name;
+  }
+
+  return ds_edit_support('author', $output, $field);
+}
