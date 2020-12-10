@@ -1083,7 +1083,7 @@ function flexitol_content_strongarm() {
       'display' => array(
         'domain' => array(
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'default' => array(
