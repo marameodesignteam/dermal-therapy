@@ -304,6 +304,12 @@ function flexitol_content_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(),
+      ),
     ),
     'field_hfc_hover_text' => array(
       'formatter_settings' => array(
@@ -323,11 +329,6 @@ function flexitol_content_ds_field_settings_info() {
           'fi-odd-even' => FALSE,
           'fi-first-last' => FALSE,
         ),
-      ),
-    ),
-    'field_hfc_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
       ),
     ),
   );
