@@ -170,7 +170,7 @@
     bottom: 0;
     right: 0;
     background: $brand-primary;
-    padding: 10px;
+    padding: 0;
 
     h2 {
       font-size: 20px;
@@ -180,9 +180,24 @@
       font-weight: bold;
       text-transform: uppercase;
       margin: 0;
+      position: relative;
+      align-items: center;
 
       &::after {
         content: ">";
+        position: absolute;
+        right: 10px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+        width: 100%;
+        padding: 10px 30px 10px 10px;
+        position: relative;
+        z-index: 1;
       }
     }
   }
@@ -209,13 +224,13 @@
     /* ff3.6+ */
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fff), color-stop(0%, #ecf8fb), color-stop(100%, #b7e8fa));
     /* safari4+,chrome */
-    background: -webkit-radial-gradient(center, ellipse cover, #fff 0%,  #ecf8fb 50%, #b7e8fa 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
     /* safari5.1+,chrome10+ */
-    background: -o-radial-gradient(center, ellipse cover, #fff 0%,  #ecf8fb 50%, #b7e8fa 100%);
+    background: -o-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
     /* opera 11.10+ */
-    background: -ms-radial-gradient(center, ellipse cover, #fff 0%,  #ecf8fb 50%, #b7e8fa 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
     /* ie10+ */
-    background: radial-gradient(ellipse at center, #fff 0%,   #ecf8fb 50%, #b7e8fa 100%);
+    background: radial-gradient(ellipse at center, #fff 0%, #ecf8fb 50%, #b7e8fa 100%);
     /* w3c */
     top: 0;
     bottom: 0;

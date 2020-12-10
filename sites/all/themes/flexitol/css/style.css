@@ -8226,7 +8226,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   bottom: 0;
   right: 0;
   background: #00a9e0;
-  padding: 10px;
+  padding: 0;
 }
 .node-homepage-featured-content .field-name-title h2 {
   font-size: 20px;
@@ -8236,9 +8236,23 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
+  position: relative;
+  align-items: center;
 }
 .node-homepage-featured-content .field-name-title h2::after {
   content: ">";
+  position: absolute;
+  right: 10px;
+}
+.node-homepage-featured-content .field-name-title h2 a {
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+  z-index: 1;
 }
 .node-homepage-featured-content .field-name-field-hfc-image .field-items {
   overflow: hidden;
