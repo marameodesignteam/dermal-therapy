@@ -156,14 +156,14 @@
     }
   }
 
-  .field-name-title,
-  .group-hover {
+  .group-hover,
+  .group-title {
     position: absolute;
     color: #ffffff;
     text-align: center;
   }
 
-  .field-name-title {
+  .group-title {
     z-index: 5;
     position: absolute;
     left: 0;
@@ -171,6 +171,18 @@
     right: 0;
     background: $brand-primary;
     padding: 0;
+
+    .field-name-field-hfc-link a {
+      position: absolute;
+      color: transparent;
+      background: transparent;
+      display: block;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border: 0;
+    }
 
     h2 {
       font-size: 20px;
@@ -182,6 +194,7 @@
       margin: 0;
       position: relative;
       align-items: center;
+      padding: 10px;
 
       &::after {
         content: ">";

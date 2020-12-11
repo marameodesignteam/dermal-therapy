@@ -1555,12 +1555,29 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 
       .node-homepage-featured-content {
         .field-name-title {
+          z-index: 5;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: $brand-primary;
           padding: 0;
+          position: absolute;
+          color: #ffffff;
           h2 {
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
             position: relative;
             align-items: center;
 
+
             &::after {
+              content: ">";
               position: absolute;
               right: 10px;
             }
