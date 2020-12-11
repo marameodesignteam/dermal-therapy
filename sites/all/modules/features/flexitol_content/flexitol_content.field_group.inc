@@ -632,7 +632,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hover Block',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_hfc_hover_text',
       1 => 'field_hfc_hover_title',
@@ -892,6 +892,39 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_title|node|homepage_featured_content|widget';
+  $field_group->group_name = 'group_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'homepage_featured_content';
+  $field_group->mode = 'widget';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title container',
+    'weight' => '0',
+    'children' => array(
+      0 => 'hover_link_copy',
+      1 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title container',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-title field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_title|node|product|related_product';
   $field_group->group_name = 'group_title';
   $field_group->entity_type = 'node';
@@ -1009,6 +1042,7 @@ function flexitol_content_field_group_info() {
   t('Related Products');
   t('Research');
   t('Title');
+  t('Title container');
   t('Transform Container');
   t('Vertical tabs');
 
