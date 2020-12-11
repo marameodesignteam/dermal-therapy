@@ -8201,7 +8201,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     margin-top: 10px;
   }
   .node-homepage-featured-content .field-name-title {
-    margin-top: 15% !important;
+    margin-top: 0% !important;
   }
 }
 @media (max-width: 480px) {
@@ -8210,7 +8210,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     margin-top: 5px;
   }
   .node-homepage-featured-content .field-name-title {
-    margin-top: 12% !important;
+    margin-top: 0 !important;
   }
 }
 .node-homepage-featured-content .group-hover,
