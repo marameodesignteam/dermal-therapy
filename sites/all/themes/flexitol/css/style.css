@@ -8201,7 +8201,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     margin-top: 10px;
   }
   .node-homepage-featured-content .field-name-title {
-    margin-top: 15% !important;
+    margin-top: 0% !important;
   }
 }
 @media (max-width: 480px) {
@@ -8210,25 +8210,36 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     margin-top: 5px;
   }
   .node-homepage-featured-content .field-name-title {
-    margin-top: 12% !important;
+    margin-top: 0 !important;
   }
 }
-.node-homepage-featured-content .field-name-title,
-.node-homepage-featured-content .group-hover {
+.node-homepage-featured-content .group-hover,
+.node-homepage-featured-content .group-title {
   position: absolute;
   color: #ffffff;
   text-align: center;
 }
-.node-homepage-featured-content .field-name-title {
+.node-homepage-featured-content .group-title {
   z-index: 5;
   position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
   background: #00a9e0;
-  padding: 10px;
+  padding: 0;
 }
-.node-homepage-featured-content .field-name-title h2 {
+.node-homepage-featured-content .group-title .field-name-field-hfc-link a {
+  position: absolute;
+  color: transparent;
+  background: transparent;
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: 0;
+}
+.node-homepage-featured-content .group-title h2 {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
@@ -8236,9 +8247,24 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
+  position: relative;
+  align-items: center;
+  padding: 10px;
 }
-.node-homepage-featured-content .field-name-title h2::after {
+.node-homepage-featured-content .group-title h2::after {
   content: ">";
+  position: absolute;
+  right: 10px;
+}
+.node-homepage-featured-content .group-title h2 a {
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+  z-index: 1;
 }
 .node-homepage-featured-content .field-name-field-hfc-image .field-items {
   overflow: hidden;
@@ -9717,13 +9743,29 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   display: block;
 }
 .page-products .view-products-page .view-content .box-flex .node-homepage-featured-content .field-name-title {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #00a9e0;
   padding: 0;
+  position: absolute;
+  color: #ffffff;
 }
 .page-products .view-products-page .view-content .box-flex .node-homepage-featured-content .field-name-title h2 {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
   position: relative;
   align-items: center;
 }
 .page-products .view-products-page .view-content .box-flex .node-homepage-featured-content .field-name-title h2::after {
+  content: ">";
   position: absolute;
   right: 10px;
 }

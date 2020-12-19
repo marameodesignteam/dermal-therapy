@@ -174,15 +174,12 @@ function flexitol_content_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'author' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'author_displayed_name',
+    'field_author_info' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
-          'ow-el' => 'div ',
+          'ow-el' => 'div',
           'ow-cl' => 'author',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
@@ -303,10 +300,28 @@ function flexitol_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'homepage_featured_content';
   $ds_fieldsetting->view_mode = 'widget';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
+    'hover_link_copy' => array(
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:10:{s:5:"label";s:6:"hidden";s:9:"formatter";s:12:"link_default";s:11:"delta_limit";i:0;s:12:"delta_offset";s:1:"0";s:14:"delta_reversed";b:0;s:18:"formatter_settings";a:0:{}s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:12:"entity_field";s:7:"subtype";s:19:"node:field_hfc_link";}',
+        'load_terms' => 0,
+        'ft' => array(),
+      ),
+    ),
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(),
+      ),
     ),
     'field_hfc_hover_text' => array(
       'formatter_settings' => array(
@@ -326,11 +341,6 @@ function flexitol_content_ds_field_settings_info() {
           'fi-odd-even' => FALSE,
           'fi-first-last' => FALSE,
         ),
-      ),
-    ),
-    'field_hfc_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
       ),
     ),
   );
@@ -972,6 +982,32 @@ function flexitol_content_ds_custom_fields_info() {
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
+  $ds_field->field = 'hover_link_copy';
+  $ds_field->label = 'Hover link copy';
+  $ds_field->field_type = 7;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'default' => array(),
+    'settings' => array(
+      'show_title' => array(
+        'type' => 'checkbox',
+      ),
+      'title_wrapper' => array(
+        'type' => 'textfield',
+        'description' => 'Eg: h1, h2, p',
+      ),
+      'ctools' => array(
+        'type' => 'ctools',
+      ),
+    ),
+  );
+  $export['hover_link_copy'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
   $ds_field->field = 'ingredients_glossary';
   $ds_field->label = 'Ingredients Glossary';
   $ds_field->field_type = 6;
@@ -1280,19 +1316,17 @@ function flexitol_content_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'field_content_category',
-        2 => 'field_image',
+        1 => 'field_image',
+        2 => 'field_author_info',
         3 => 'body',
-        4 => 'author',
-        5 => 'node_link',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'field_content_category' => 'ds_content',
       'field_image' => 'ds_content',
+      'field_author_info' => 'ds_content',
       'body' => 'ds_content',
-      'author' => 'ds_content',
       'node_link' => 'ds_content',
     ),
     'classes' => array(),
@@ -1487,16 +1521,20 @@ function flexitol_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'field_hfc_image',
-        2 => 'group_hover',
-        3 => 'field_hfc_hover_title',
-        4 => 'field_hfc_hover_text',
-        5 => 'field_hfc_link',
+        0 => 'group_title',
+        1 => 'title',
+        2 => 'hover_link_copy',
+        3 => 'field_hfc_image',
+        4 => 'group_hover',
+        5 => 'field_hfc_hover_title',
+        6 => 'field_hfc_hover_text',
+        7 => 'field_hfc_link',
       ),
     ),
     'fields' => array(
+      'group_title' => 'ds_content',
       'title' => 'ds_content',
+      'hover_link_copy' => 'ds_content',
       'field_hfc_image' => 'ds_content',
       'group_hover' => 'ds_content',
       'field_hfc_hover_title' => 'ds_content',

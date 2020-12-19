@@ -193,7 +193,7 @@ function flexitol_global_image_default_styles() {
   $styles['slide'] = array(
     'label' => 'Slide',
     'effects' => array(
-      8 => array(
+      4 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1350,
