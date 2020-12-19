@@ -177,11 +177,10 @@ function flexitol_content_ds_field_settings_info() {
     'author' => array(
       'weight' => '2',
       'label' => 'hidden',
-      'format' => 'author',
+      'format' => 'author_displayed_name',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'prefix' => 'By ',
           'ow' => TRUE,
           'ow-el' => 'div ',
           'ow-cl' => 'author',
@@ -189,11 +188,6 @@ function flexitol_content_ds_field_settings_info() {
           'ow-at' => '',
           'ow-def-at' => FALSE,
         ),
-      ),
-    ),
-    'field_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
       ),
     ),
   );
@@ -1286,14 +1280,16 @@ function flexitol_content_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'field_image',
-        2 => 'body',
-        3 => 'author',
-        4 => 'node_link',
+        1 => 'field_content_category',
+        2 => 'field_image',
+        3 => 'body',
+        4 => 'author',
+        5 => 'node_link',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
+      'field_content_category' => 'ds_content',
       'field_image' => 'ds_content',
       'body' => 'ds_content',
       'author' => 'ds_content',
