@@ -226,6 +226,10 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
           }
         }
 
+        .field-name-field-amazon {
+          background-image: url("#{$retailer_images}amazon.png?v=2");
+        }
+
         .field-name-field-amcal- {
           background-image: url("#{$retailer_images}amcal.png?v=2");
         }

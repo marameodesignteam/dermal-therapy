@@ -36,7 +36,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_accordion1|node|webform|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -63,7 +63,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_accordion1|node|webform|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -90,7 +90,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_accordion|node|webform|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -117,7 +117,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_accordion|node|webform|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -145,7 +145,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_beauty_review_tab|node|product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -175,7 +175,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_bt_link_clone|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -205,7 +205,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_bt_link|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -238,7 +238,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_buttons|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -270,6 +270,7 @@ function flexitol_content_field_group_info() {
       14 => 'field_pharmacy_online',
       15 => 'field_guardian',
       16 => 'field_life_pharmacy',
+      17 => 'field_amazon',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -281,7 +282,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_buylinks|node|product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -313,6 +314,7 @@ function flexitol_content_field_group_info() {
       14 => 'field_pharmacy_online',
       15 => 'field_guardian',
       16 => 'field_life_pharmacy',
+      17 => 'field_amazon',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -323,7 +325,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_buyonline_group|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -351,7 +353,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_clinical_studies_accordion|field_collection_item|field_clinical_study|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -379,7 +381,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_clinical_studies_item|field_collection_item|field_clinical_study|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -405,7 +407,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_closed|node|webform|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -439,7 +441,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_default|node|review|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -452,7 +454,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_info';
   $field_group->data = array(
     'label' => 'Directions',
-    'weight' => '17',
+    'weight' => '14',
     'children' => array(
       0 => 'field_product_directions',
     ),
@@ -465,7 +467,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_directions|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -498,7 +500,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_dt_clone|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -531,7 +533,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_dt|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -561,7 +563,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_healthcare_graph_1|node|health_professionals_product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -591,7 +593,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_healthcare_graph_2|node|health_professionals_product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -619,7 +621,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_healthcare_graphs|node|health_professionals_product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -653,7 +655,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_hover|node|homepage_featured_content|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -685,7 +687,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_hover|node|review|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -698,7 +700,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_info';
   $field_group->data = array(
     'label' => 'Information',
-    'weight' => '16',
+    'weight' => '13',
     'children' => array(
       0 => 'field_product_information',
     ),
@@ -711,7 +713,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_information|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -745,7 +747,7 @@ function flexitol_content_field_group_info() {
       'formatter' => '',
     ),
   );
-  $field_groups['group_info|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -758,7 +760,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_info';
   $field_group->data = array(
     'label' => 'Ingredients',
-    'weight' => '18',
+    'weight' => '15',
     'children' => array(
       0 => 'field_product_ingredients',
     ),
@@ -771,7 +773,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_ingredients|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -805,7 +807,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_obsolete|node|product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -833,7 +835,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_onlineresellers|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -860,7 +862,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_related|node|product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -873,7 +875,7 @@ function flexitol_content_field_group_info() {
   $field_group->parent_name = 'group_info';
   $field_group->data = array(
     'label' => 'Research',
-    'weight' => '19',
+    'weight' => '16',
     'children' => array(
       0 => 'field_product_research',
       1 => 'field_clinical_study',
@@ -887,7 +889,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_research|node|product|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -920,7 +922,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_title|node|homepage_featured_content|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -953,7 +955,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_title|node|product|related_product'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -986,7 +988,7 @@ function flexitol_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_transform_container|node|review|widget'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1015,7 +1017,7 @@ function flexitol_content_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_vertical|node|product|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
