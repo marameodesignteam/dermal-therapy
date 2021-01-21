@@ -197,6 +197,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
                 }
                 .field-name-field-amazon {
                     background-image: url("#{$retailer_images}amazon_black.png?v=2");
+                    background-size: 120px auto;
                 }
                 .field-name-field-amcal- {
                     background-image: url("#{$retailer_images}amcal.png?v=2");
