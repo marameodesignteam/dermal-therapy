@@ -271,6 +271,7 @@ function flexitol_content_field_group_info() {
       15 => 'field_guardian',
       16 => 'field_life_pharmacy',
       17 => 'field_amazon',
+      18 => 'field_chemist_discount_centre',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -315,6 +316,7 @@ function flexitol_content_field_group_info() {
       15 => 'field_guardian',
       16 => 'field_life_pharmacy',
       17 => 'field_amazon',
+      18 => 'field_chemist_discount_centre',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
