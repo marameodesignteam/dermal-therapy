@@ -8679,6 +8679,10 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/amazon_black.png?v=2");
   background-size: 120px auto;
 }
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chemist-discount-centre {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/chemist-discount-centre.png?v=2");
+  background-size: 120px auto;
+}
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-amcal- {
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/amcal.png?v=2");
 }
@@ -10478,7 +10482,7 @@ body.node-type-conditions section.content-column.col-sm-9 section#block-system-m
 
 /*
 section#block-views-8a88aca1c0589e095165a67e4cdec26f{
-  position: fixed;  bottom: 10px; 
+  position: fixed;  bottom: 10px;
 }*/
 /*
 .block.block-views.contextual-links-region.clearfix.affix{
