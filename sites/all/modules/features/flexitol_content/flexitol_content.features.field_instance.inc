@@ -3085,7 +3085,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 39,
+      'weight' => 38,
     ),
   );
 
@@ -3156,7 +3156,7 @@ function flexitol_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 38,
+      'weight' => 39,
     ),
   );
 
