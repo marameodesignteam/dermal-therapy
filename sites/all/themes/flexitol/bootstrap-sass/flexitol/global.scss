@@ -762,6 +762,12 @@ ul.dropdown-menu.top {
     }
 }
 
+.dropdown.dropdown-flags:hover .dropdown-menu {
+    @media (max-width: 767px) {
+        display: block !important
+    }
+}
+
 .page-search404 section#block-system-main {
     padding-top: 2%;
     background: rgba(255, 255, 255, 0.9);
