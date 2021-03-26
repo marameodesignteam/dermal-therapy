@@ -602,6 +602,27 @@ function flexitol_content_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_discount_drug_stores'.
+  $field_bases['field_discount_drug_stores'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_discount_drug_stores',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_external_link'.
   $field_bases['field_external_link'] = array(
     'active' => 1,
@@ -1931,6 +1952,27 @@ function flexitol_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_terry_white_chemmart'.
+  $field_bases['field_terry_white_chemmart'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_terry_white_chemmart',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_video'.
