@@ -132,6 +132,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_stockist';
+  $strongarm->value = 0;
+  $export['comment_anonymous_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_webform';
   $strongarm->value = 0;
   $export['comment_anonymous_webform'] = $strongarm;
@@ -251,6 +258,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_stockist';
+  $strongarm->value = 1;
+  $export['comment_default_mode_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_webform';
   $strongarm->value = 1;
   $export['comment_default_mode_webform'] = $strongarm;
@@ -342,6 +356,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_stockist';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_webform';
   $strongarm->value = '50';
   $export['comment_default_per_page_webform'] = $strongarm;
@@ -429,6 +450,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_form_location_review';
   $strongarm->value = 1;
   $export['comment_form_location_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_stockist';
+  $strongarm->value = 1;
+  $export['comment_form_location_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -566,6 +594,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_stockist';
+  $strongarm->value = '0';
+  $export['comment_preview_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_webform';
   $strongarm->value = '1';
   $export['comment_preview_webform'] = $strongarm;
@@ -583,6 +618,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_review';
   $strongarm->value = '1';
   $export['comment_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_stockist';
+  $strongarm->value = '1';
+  $export['comment_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -667,6 +709,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'comment_subject_field_review';
   $strongarm->value = 1;
   $export['comment_subject_field_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_stockist';
+  $strongarm->value = 1;
+  $export['comment_subject_field_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -769,6 +818,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_stockist';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_enable_revisions_page_node_webform';
   $strongarm->value = 1;
   $export['diff_enable_revisions_page_node_webform'] = $strongarm;
@@ -853,6 +909,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_stockist';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'diff_show_preview_changes_node_webform';
   $strongarm->value = 1;
   $export['diff_show_preview_changes_node_webform'] = $strongarm;
@@ -933,6 +996,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'diff_view_mode_preview_node_review';
   $strongarm->value = 'full';
   $export['diff_view_mode_preview_node_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_stockist';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1735,6 +1805,38 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__stockist';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'domain' => array(
+          'weight' => '4',
+        ),
+        'metatags' => array(
+          'weight' => '8',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '6',
+        ),
+        'redirect' => array(
+          'weight' => '5',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '7',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__webform';
   $strongarm->value = array(
     'view_modes' => array(
@@ -2030,6 +2132,15 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_stockist';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_webform';
   $strongarm->value = array(
     0 => 'menu-footer-menu',
@@ -2120,6 +2231,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'menu_parent_review';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_stockist';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2246,6 +2364,16 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_stockist';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_webform';
   $strongarm->value = array(
     0 => 'status',
@@ -2340,6 +2468,13 @@ function flexitol_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_stockist';
+  $strongarm->value = '1';
+  $export['node_preview_stockist'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_webform';
   $strongarm->value = '1';
   $export['node_preview_webform'] = $strongarm;
@@ -2427,6 +2562,13 @@ function flexitol_content_strongarm() {
   $strongarm->name = 'node_submitted_review';
   $strongarm->value = 0;
   $export['node_submitted_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_stockist';
+  $strongarm->value = 1;
+  $export['node_submitted_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2638,6 +2780,16 @@ function flexitol_content_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_stockist';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_stockist'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
