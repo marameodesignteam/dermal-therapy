@@ -2476,7 +2476,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 26,
+        'weight' => 25,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2823,7 +2823,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 43,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -2915,7 +2915,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 32,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3321,7 +3321,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3392,7 +3392,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 16,
+        'weight' => 11,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3456,7 +3456,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 19,
+        'weight' => 18,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3520,7 +3520,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3585,7 +3585,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 37,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3659,7 +3659,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3730,7 +3730,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3794,7 +3794,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3858,7 +3858,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 23,
+        'weight' => 22,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3929,7 +3929,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 24,
+        'weight' => 23,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -3993,7 +3993,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 25,
+        'weight' => 24,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4063,7 +4063,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 31,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4154,7 +4154,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 44,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4224,7 +4224,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4287,7 +4287,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 41,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4414,7 +4414,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 34,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4501,7 +4501,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 35,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4712,7 +4712,7 @@ function flexitol_content_field_default_field_instances() {
           'view_mode' => 'related_product',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 11,
+        'weight' => 15,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4843,7 +4843,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 39,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -4975,7 +4975,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 38,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -5048,7 +5048,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 33,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -5117,7 +5117,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 36,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -5253,7 +5253,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 27,
+        'weight' => 12,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -5317,7 +5317,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 28,
+        'weight' => 26,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -5392,7 +5392,7 @@ function flexitol_content_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 40,
       ),
       'nodeorder' => array(
         'label' => 'above',
@@ -5457,7 +5457,7 @@ function flexitol_content_field_default_field_instances() {
         'module' => 'dermal_generic',
         'settings' => array(),
         'type' => 'online_reseller',
-        'weight' => 29,
+        'weight' => 27,
       ),
       'nodeorder' => array(
         'label' => 'above',
