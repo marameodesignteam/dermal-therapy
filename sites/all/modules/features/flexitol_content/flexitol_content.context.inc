@@ -79,55 +79,6 @@ function flexitol_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'where_2_buy_nz';
-  $context->description = 'where to buy page NZ';
-  $context->tag = '';
-  $context->conditions = array(
-    'domain' => array(
-      'values' => array(
-        3 => 3,
-      ),
-    ),
-    'path' => array(
-      'values' => array(
-        'node/30' => 'node/30',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'block-11' => array(
-          'module' => 'block',
-          'delta' => '11',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
-        'views-stockist-block_2' => array(
-          'module' => 'views',
-          'delta' => 'stockist-block_2',
-          'region' => 'content',
-          'weight' => '-8',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 1;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('where to buy page NZ');
-  $export['where_2_buy_nz'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'conditions';
   $context->description = 'Condition page';
   $context->tag = '';
@@ -422,6 +373,55 @@ function flexitol_content_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('where to buy page australia');
   $export['where_2_buy'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'where_2_buy_nz';
+  $context->description = 'where to buy page NZ';
+  $context->tag = '';
+  $context->conditions = array(
+    'domain' => array(
+      'values' => array(
+        3 => 3,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'node/30' => 'node/30',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'views-stockist-block_2' => array(
+          'module' => 'views',
+          'delta' => 'stockist-block_2',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('where to buy page NZ');
+  $export['where_2_buy_nz'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

@@ -244,6 +244,59 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_find_stockist_group|node|product|full';
+  $field_group->group_name = 'group_find_stockist_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_buttons';
+  $field_group->data = array(
+    'label' => 'Find a stockist group',
+    'weight' => '53',
+    'children' => array(
+      0 => 'group_find_stockist',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-find-stockist-group field-group-accordion',
+        'effect' => 'bounceslide',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_find_stockist|node|product|full';
+  $field_group->group_name = 'group_find_stockist';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_find_stockist_group';
+  $field_group->data = array(
+    'label' => 'Find a stockist',
+    'weight' => '57',
+    'children' => array(
+      0 => 'stockist_by_product',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-find-stockist field-group-accordion-item',
+      ),
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_information|node|product|full';
   $field_group->group_name = 'group_information';
   $field_group->entity_type = 'node';
@@ -417,6 +470,8 @@ function flexitol_content_field_group_info() {
   t('Beauty review link clone');
   t('Buy online now');
   t('Directions');
+  t('Find a stockist');
+  t('Find a stockist group');
   t('Information');
   t('Ingredients');
   t('Online resellers');
