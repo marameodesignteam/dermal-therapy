@@ -79,8 +79,8 @@ function flexitol_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'clone_of_where_2_buy_nz';
-  $context->description = 'where to buy page singapore';
+  $context->name = 'where_2_buy_nz';
+  $context->description = 'where to buy page NZ';
   $context->tag = '';
   $context->conditions = array(
     'domain' => array(
@@ -109,6 +109,12 @@ function flexitol_content_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
+        'views-stockist-block_2' => array(
+          'module' => 'views',
+          'delta' => 'stockist-block_2',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
       ),
     ),
   );
@@ -116,8 +122,8 @@ function flexitol_content_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('where to buy page singapore');
-  $export['clone_of_where_2_buy_nz'] = $context;
+  t('where to buy page NZ');
+  $export['where_2_buy_nz'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -438,12 +444,6 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-8' => array(
-          'module' => 'block',
-          'delta' => '8',
-          'region' => 'header',
-          'weight' => '-8',
-        ),
         'system-main' => array(
           'module' => 'system',
           'delta' => 'main',
@@ -455,6 +455,12 @@ function flexitol_content_context_default_contexts() {
           'delta' => '10',
           'region' => 'content',
           'weight' => '-7',
+        ),
+        'views-stockist-block_2' => array(
+          'module' => 'views',
+          'delta' => 'stockist-block_2',
+          'region' => 'content',
+          'weight' => '-6',
         ),
       ),
     ),
