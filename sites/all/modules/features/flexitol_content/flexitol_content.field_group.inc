@@ -84,6 +84,7 @@ function flexitol_content_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'group_onlineresellers',
+      1 => 'group_find_stockist_group',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -340,7 +341,6 @@ function flexitol_content_field_group_info() {
     'weight' => '52',
     'children' => array(
       0 => 'group_buyonline_group',
-      1 => 'group_find_stockist',
     ),
     'format_type' => 'accordion',
     'format_settings' => array(

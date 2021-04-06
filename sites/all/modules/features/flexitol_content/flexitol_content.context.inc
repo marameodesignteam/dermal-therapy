@@ -389,12 +389,6 @@ function flexitol_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-8' => array(
-          'module' => 'block',
-          'delta' => '8',
-          'region' => 'header',
-          'weight' => '-10',
-        ),
         'system-main' => array(
           'module' => 'system',
           'delta' => 'main',
@@ -406,6 +400,12 @@ function flexitol_content_context_default_contexts() {
           'delta' => '1',
           'region' => 'content',
           'weight' => '-8',
+        ),
+        'views-stockist-block_2' => array(
+          'module' => 'views',
+          'delta' => 'stockist-block_2',
+          'region' => 'content',
+          'weight' => '-7',
         ),
       ),
     ),
