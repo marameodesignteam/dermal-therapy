@@ -242,7 +242,6 @@ features[field_group][] = group_default|node|review|widget
 features[field_group][] = group_directions|node|product|full
 features[field_group][] = group_dt_clone|node|product|full
 features[field_group][] = group_dt|node|product|full
-features[field_group][] = group_find_stockist_group|node|product|full
 features[field_group][] = group_find_stockist|node|product|full
 features[field_group][] = group_healthcare_graph_1|node|health_professionals_product|form
 features[field_group][] = group_healthcare_graph_2|node|health_professionals_product|form

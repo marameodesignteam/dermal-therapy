@@ -222,7 +222,6 @@ function flexitol_content_field_group_info() {
     'children' => array(
       0 => 'where_to_buy_button',
       1 => 'group_onlineresellers',
-      2 => 'group_find_stockist_group',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -515,43 +514,15 @@ function flexitol_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_find_stockist_group|node|product|full';
-  $field_group->group_name = 'group_find_stockist_group';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'product';
-  $field_group->mode = 'full';
-  $field_group->parent_name = 'group_buttons';
-  $field_group->data = array(
-    'label' => 'Find a stockist group',
-    'weight' => '53',
-    'children' => array(
-      0 => 'group_find_stockist',
-    ),
-    'format_type' => 'accordion',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-find-stockist-group field-group-accordion',
-        'effect' => 'bounceslide',
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_find_stockist_group|node|product|full'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_find_stockist|node|product|full';
   $field_group->group_name = 'group_find_stockist';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'product';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_find_stockist_group';
+  $field_group->parent_name = 'group_onlineresellers';
   $field_group->data = array(
-    'label' => 'Find a stockist',
-    'weight' => '64',
+    'label' => 'Where to buy',
+    'weight' => '56',
     'children' => array(
       0 => 'stockist_by_product',
     ),
@@ -853,6 +824,7 @@ function flexitol_content_field_group_info() {
     'weight' => '52',
     'children' => array(
       0 => 'group_buyonline_group',
+      1 => 'group_find_stockist',
     ),
     'format_type' => 'accordion',
     'format_settings' => array(
@@ -1026,8 +998,7 @@ function flexitol_content_field_group_info() {
   t('Clinical Studies');
   t('Dafault');
   t('Directions');
-  t('Find a stockist');
-  t('Find a stockist group');
+  t('Where to buy');
   t('Graph 1');
   t('Graph 2');
   t('Graphs');
