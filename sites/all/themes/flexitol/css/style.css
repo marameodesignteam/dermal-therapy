@@ -8617,11 +8617,16 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-node.node-type-product .group-buttons #online-resellers h3 {
   padding: 0;
   background: none;
+  position: absolute;
+  width: auto;
+}
+.page-node.node-type-product .group-buttons #online-resellers h3#ui-accordion-online-resellers-header-1 {
+  top: 0;
+  left: 170px;
 }
 @media (min-width: 375px) {
   .page-node.node-type-product .group-buttons #online-resellers h3 {
-    width: calc(50% - 0.7142855em);
-    display: inline-block;
+    width: auto;
   }
 }
 @media (min-width: 768px) {
@@ -8654,9 +8659,34 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
   background-color: #9a2a12;
   border-color: #9a2a12;
 }
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 {
+  margin-top: 60px;
+  background: #fff;
+  padding: 0;
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
+  width: 50%;
+  padding: 0 10px;
+}
+@media (min-width: 576px) {
+  .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
+    width: 33.33%;
+  }
+}
+@media (min-width: 1200px) {
+  .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
+    width: 25%;
+  }
+}
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 {
   padding: 1.42857em 0 0;
   background: none;
+  margin-top: calc(60px - 1.42857em);
 }
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 > div {
   background-color: #F8FAFB;
@@ -10493,7 +10523,7 @@ body.node-type-conditions section.content-column.col-sm-9 section#block-system-m
 
 /*
 section#block-views-8a88aca1c0589e095165a67e4cdec26f{
-  position: fixed;  bottom: 10px;
+  position: fixed;  bottom: 10px; 
 }*/
 /*
 .block.block-views.contextual-links-region.clearfix.affix{
