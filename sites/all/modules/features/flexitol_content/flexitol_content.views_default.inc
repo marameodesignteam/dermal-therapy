@@ -3349,9 +3349,7 @@ echo $_domain[\'domain_id\'];
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['alter']['text'] = '<a href=\'[field_url]\' target=\'_blank\'>
-[field_image]
-</a>';
+  $handler->display->display_options['fields']['field_image']['alter']['text'] = '[field_image]';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
