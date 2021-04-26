@@ -183,6 +183,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
                     .view-content {
                         display: flex;
                         display: -webkit-flex;
+                        align-items: center;
                         flex-wrap: wrap;
                         .views-row {
                             width: 50%;
@@ -1502,5 +1503,19 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
     }
     .page-products .view-products-page .view-content .box-flex a.learn-more {
         align-self: center;
+    }
+}
+
+#block-views-stockist-block-2 {
+    .view-stockist {
+        .view-content {
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .col-xs-6.col-sm-4.col-md-2 {
+                float: none;
+            }
+        }
     }
 }

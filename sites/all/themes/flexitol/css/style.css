@@ -8667,6 +8667,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content {
   display: flex;
   display: -webkit-flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
@@ -9876,6 +9877,16 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
     align-self: center;
   }
 }
+#block-views-stockist-block-2 .view-stockist .view-content {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#block-views-stockist-block-2 .view-stockist .view-content .col-xs-6.col-sm-4.col-md-2 {
+  float: none;
+}
+
 .page-taxonomy.page-taxonomy-term .field-content p {
   word-spacing: 0.3em;
 }
