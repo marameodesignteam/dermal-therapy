@@ -998,7 +998,6 @@ function flexitol_content_field_group_info() {
   t('Clinical Studies');
   t('Dafault');
   t('Directions');
-  t('Where to buy');
   t('Graph 1');
   t('Graph 2');
   t('Graphs');
@@ -1015,6 +1014,7 @@ function flexitol_content_field_group_info() {
   t('Title');
   t('Transform Container');
   t('Vertical tabs');
+  t('Where to buy');
 
   return $field_groups;
 }
