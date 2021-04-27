@@ -272,6 +272,8 @@ function flexitol_content_field_group_info() {
       16 => 'field_life_pharmacy',
       17 => 'field_amazon',
       18 => 'field_chemist_discount_centre',
+      19 => 'field_discount_drug_stores',
+      20 => 'field_terry_white_chemmart',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -317,6 +319,8 @@ function flexitol_content_field_group_info() {
       16 => 'field_life_pharmacy',
       17 => 'field_amazon',
       18 => 'field_chemist_discount_centre',
+      19 => 'field_discount_drug_stores',
+      20 => 'field_terry_white_chemmart',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -974,8 +978,8 @@ function flexitol_content_field_group_info() {
     'children' => array(
       0 => 'group_beauty_review_tab',
       1 => 'group_buylinks',
-      2 => 'group_related',
-      3 => 'group_obsolete',
+      2 => 'group_obsolete',
+      3 => 'group_related',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
