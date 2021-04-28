@@ -8776,6 +8776,9 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-terry-white-chemmart {
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/terry-white-chemmart.png?v=3");
 }
+.page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chemsave {
+  background-image: url("/sites/all/themes/flexitol/images/online-retailers/chemsave.png?v=3");
+}
 .page-node.node-type-product .group-buttons .field-name-where-to-buy-button {
   width: 100%;
 }
@@ -10534,7 +10537,7 @@ body.node-type-conditions section.content-column.col-sm-9 section#block-system-m
 
 /*
 section#block-views-8a88aca1c0589e095165a67e4cdec26f{
-  position: fixed;  bottom: 10px; 
+  position: fixed;  bottom: 10px;
 }*/
 /*
 .block.block-views.contextual-links-region.clearfix.affix{

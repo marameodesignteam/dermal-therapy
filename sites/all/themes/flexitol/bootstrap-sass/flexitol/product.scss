@@ -290,6 +290,9 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
                 .field-name-field-terry-white-chemmart {
                     background-image: url("#{$retailer_images}terry-white-chemmart.png?v=3");
                 }
+                .field-name-field-chemsave {
+                    background-image: url("#{$retailer_images}chemsave.png?v=3");
+                }
             }
         }
         .field-name-where-to-buy-button {
