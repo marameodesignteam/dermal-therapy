@@ -274,6 +274,7 @@ function flexitol_content_field_group_info() {
       18 => 'field_chemist_discount_centre',
       19 => 'field_discount_drug_stores',
       20 => 'field_terry_white_chemmart',
+      21 => 'field_chemsave',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -321,6 +322,7 @@ function flexitol_content_field_group_info() {
       18 => 'field_chemist_discount_centre',
       19 => 'field_discount_drug_stores',
       20 => 'field_terry_white_chemmart',
+      21 => 'field_chemsave',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
