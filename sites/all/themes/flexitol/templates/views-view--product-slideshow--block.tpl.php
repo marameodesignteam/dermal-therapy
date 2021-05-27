@@ -22,7 +22,7 @@ if (is_array($node->field_product_video['und']) && count($node->field_product_vi
         if (preg_match("/youtube/i", $video_link)) {
               $video_ID = substr($video_link, strpos($video_link, "?v=") + 3);
 
-              $video_html = '<iframe class="reframe" width="1266" height="712" src="https://www.youtube.com/embed/'.$video_ID.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+              $video_html = '<iframe loading="lazy" class="reframe" width="1266" height="712" src="https://www.youtube.com/embed/'.$video_ID.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
           }
 
           //https://vimeo.com/86291629
