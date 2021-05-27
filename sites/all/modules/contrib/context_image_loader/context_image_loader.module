@@ -1,0 +1,603 @@
+<?php
+
+/**
+ * @file
+ * Module file for context image loader.
+ */
+
+/**
+ * Pull the url of the admin.
+ *
+ * Future proofing the admin url and theming functions.
+ *
+ * @return string
+ *   the path for context add assets admin page
+ */
+function _context_image_loader_admin_path() {
+  if (module_exists('context_ui')) {
+    $core_context_items = context_ui_menu();
+    foreach ($core_context_items as $path => $item) {
+      if (stripos($path, 'context/settings') != FALSE) {
+        $imagelazyload_admin_path = str_replace('/settings', '', $path) . '/context-lazy-load';
+        break;
+      }
+    }
+    if (!isset($imagelazyload_admin_path)) {
+      $imagelazyload_admin_path = 'admin/structure/context/context-lazy-load';
+    }
+    return $imagelazyload_admin_path;
+  }
+  else {
+    return '';
+  }
+}
+
+
+/**
+ * Implements hook_init().
+ *
+ * Used to purge conf values for image lazy load settings.
+ */
+function context_image_loader_init() {
+  global $conf;
+  $conf['context_image_loader'] = [];
+}
+
+/**
+ * Implements hook_page_build().
+ *
+ * Attach admin css/js file.
+ */
+function context_image_loader_page_build(&$page) {
+  global $conf;
+  if (!path_is_admin(current_path())) {
+    if(isset($conf['context_image_loader']['image_lazyload']) && $conf['context_image_loader']['image_lazyload']) {
+      $page['content']['#attached']['js'][]= drupal_get_path('module', 'context_image_loader') . '/context_image_loader.js';
+      $page['content']['#attached']['css'][]= drupal_get_path('module', 'context_image_loader') . '/context_image_loader.css';
+    }
+    if(isset($conf['context_image_loader']['enable_scrolling']) && $conf['context_image_loader']['enable_scrolling']) {      
+      $page['content']['#attached']['js'][]= drupal_get_path('module', 'context_image_loader') . '/context_scroll_load.js';
+    }
+  }
+}
+
+/**
+ * Implements hook_page_alter().
+ *
+ * Attach custom callback for image lazyload.
+ */
+function context_image_loader_page_alter(&$page) {
+  //Skip admin pages.
+  if(!path_is_admin(current_path()))
+    $page['#post_render'][] = '_context_lazyloading_page_post_render';
+}
+
+/**
+ * Implements hook_menu().
+ */
+function context_image_loader_menu() {
+  $items[_context_image_loader_admin_path()] = array(
+    'title' => 'Lazy Loading',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('context_image_loader_admin'),
+    'access arguments' => array('access context image loader administration'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'context_image_loader.admin.inc',
+  );
+  $items['admin/structure/context/context-image-swap'] = array(
+    'title' => 'Webp Image Swapping',
+    'page callback' => 'context_image_swap_admin',
+    'access arguments' => array('access context image loader administration'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'context_image_loader.admin.inc',
+  );
+
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function context_image_loader_permission() {
+  return array(
+    'access context image loader administration' => array(
+      'title' => t('Access Context Image Loader Administration'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function context_image_loader_ctools_plugin_api($module, $api) {
+  if ($module == 'context' && $api == 'plugins') {
+    return array('version' => 3);
+  }
+}
+
+/**
+ * Implements hook_context_plugins().
+ */
+function context_image_loader_context_plugins() {
+  $plugins = array();
+
+  // Images.
+  $plugins['context_image_lazyload'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context_image_loader') . '/plugins',
+      'file' => 'context_image_lazyload.inc',
+      'class' => 'context_image_lazyload',
+      'parent' => 'context_reaction',
+    ),
+  );
+  $plugins['context_image_swap'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context_image_loader') . '/plugins',
+      'file' => 'context_image_swap.inc',
+      'class' => 'context_image_swap',
+      'parent' => 'context_reaction',
+    ),
+  );
+   $plugins['context_image_scroll'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context_image_loader') . '/plugins',
+      'file' => 'context_image_scroll.inc',
+      'class' => 'context_image_scroll',
+      'parent' => 'context_reaction',
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_context_registry().
+ */
+function context_image_loader_context_registry() {
+  $registry = array();
+  $registry['reactions'] = array(
+
+    'lazy_load' => array(
+      'plugin' => 'context_image_lazyload',
+    ),
+    'swap' => array(
+      'plugin' => 'context_image_swap',
+    ),
+    'scroll' => array(
+      'plugin' => 'context_image_scroll',
+    ),
+  );
+  return $registry;
+}
+
+/**
+ * Implements hook_context_page_reaction().
+ */
+function context_image_loader_context_page_reaction() {
+  // Image lazy load.
+  if ($plugin = context_get_plugin('reaction', 'lazy_load')) {
+    $plugin->execute();
+  }
+  if ($plugin = context_get_plugin('reaction', 'swap')) {
+    $plugin->execute();
+  }
+  if ($plugin = context_get_plugin('reaction', 'scroll')) {
+    $plugin->execute();
+  }
+}
+
+/**
+ * Ajax Callback to add more fields.
+ */
+function elements_add_more($form, $form_state) {
+  return $form['reactions']['plugins']['lazy_load']['dom_elements']['custom_elementset'];
+}
+
+/**
+ * Ajax submit handler to add more fields.
+ */
+function submit_callback($form, &$form_state) {
+  $form_state['rebuild'] = TRUE;
+}
+
+
+/**
+ * Internal Function for image loading manipulation.
+ *
+ * Parse the DOM and replace images as necessary
+ */
+function _context_lazyloading_page_post_render($html) {
+  global $conf, $language;
+
+  if(!count($conf['context_image_loader']))
+    return $html;
+
+  // Check if the html parser is already included.
+  if(!function_exists('str_get_html') || !class_exists('simple_html_dom')) {
+    module_load_include('inc', 'context_image_loader', 'simple_html_dom');
+  }   
+  
+  // Check for cache settings and set the key.
+  $current_path = drupal_get_path_alias(current_path());
+  $cache_key = '';
+  
+  if(variable_get('context_lazy_load_enable_cache', 0)) {
+    // Check for exlude path.
+    $exclude_page_cache = trim(variable_get('context_lazy_load_cache_exclude', ''));
+    $path = drupal_strtolower(drupal_get_path_alias($_GET['q']));
+    // Compare the lowercase internal and lowercase path alias (if any).
+    $page_match = drupal_match_path($path, $exclude_page_cache);
+    if ($path != $_GET['q']) {
+      $page_match = $page_match || drupal_match_path($_GET['q'], $exclude_page_cache);
+    }
+    if(!$page_match)
+      $cache_key = preg_replace('/[^a-zA-Z0-9]+/s', "_", $current_path.'_'.$language->language);
+   
+  }
+
+  // If we have cache set, get data and return.
+  if($cache_key && $cache_html = cache_get($cache_key)) {
+    $html = $cache_html->data;
+    if($html)
+      return $html;
+  }
+
+  //Process Image swapping.
+  if (strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false && isset($conf['context_image_loader']['enable_swapping']) && $conf['context_image_loader']['enable_swapping'] == 1) {
+    watchdog('image swap', 'Initiate process swapping');
+       
+
+    // Check entries for exclude images and populate.
+    $exclude_images = [];
+    if(trim($conf['context_image_loader']['image_swapping_exclude']))
+      $exclude_images = explode("\r\n",$conf['context_image_loader']['image_swapping_exclude']);
+      
+    $html = str_get_html($html, FALSE, FALSE, DEFAULT_TARGET_CHARSET, FALSE);
+
+    foreach($html->find('img') as $img) {
+      $img_match = [];
+      // Parse image url
+      $img_src = $img->getAttribute('src');
+      //check for exlude images list, if found, do not process
+      if(count($exclude_images)) {
+        $img_match = array_filter($exclude_images, function($elem) use($img_src){
+          if(strpos($img_src, $elem)===FALSE)
+           return FALSE;
+          else
+          return TRUE; 
+        });
+      }
+      if(count($img_match) > 0)
+        continue;
+
+      watchdog('image swap', 'File SRC : ' . $img_src);
+      $img_details = _get_image_detail($img_src);
+      watchdog('image swap', 'File extension : ' . $img_details['org_extn']);
+      if(in_array($img_details['org_extn'], ['jpeg', 'jpg', 'png'])) {
+        // check if file exists and then replace
+        watchdog('webp image', 'generate on fly' . $conf['context_image_loader']['image_swapping_runtime']);
+        if(_find_webp_image($img_details['org_src'], $img_details['webp_src'], $img_details['webp_path'], $conf['context_image_loader']['image_swapping_runtime'])) {          
+          watchdog('image swap found', 'File found : ' . DRUPAL_ROOT.$img_details['webp_src']);
+          $img->setAttribute('src', urldecode($img_details['webp_src']));
+        }
+        else {          
+          watchdog('image swap', 'File not exists : ' . DRUPAL_ROOT.$img_details['webp_src']);
+        }
+      }
+    }
+  }
+
+  // Process Image Lazy Loading.
+  if (isset($conf['context_image_loader']['image_lazyload']) && $conf['context_image_loader']['image_lazyload'] != '') {
+    watchdog('image lazy', 'Initiate image lazy load');
+
+    module_load_include('inc', 'context_image_loader', 'context_image_loader.api');
+
+    // Grab the DOM elements.
+    $context_count = 1;
+    foreach($conf['context_image_loader']['image_lazyload'] as $indiv_context) {
+      if ($indiv_context == 'content') {
+        $allowed_regions[$context_count]['selector'] = 'img';
+        $allowed_regions[$context_count]['delay'] = variable_get('context_lazy_load_default_delay', '');
+        $context_count++;
+      }
+      else {
+        $element_count = $indiv_context['element_count'];
+        for ($i = 1; $i <= $element_count + 1; $i++) {
+          $allowed_regions[$context_count]['selector'] = $indiv_context['element_wrapper_' . $i]['element_selector_' . $i];
+          $allowed_regions[$context_count]['delay'] = $indiv_context['element_wrapper_' . $i]['element_loadtime_' . $i];
+          $allowed_regions[$context_count]['use_loader'] = $indiv_context['element_wrapper_' . $i]['use_loader_' . $i];
+          $allowed_regions[$context_count]['set_on_scroll'] = $indiv_context['element_wrapper_' . $i]['set_on_scroll_' . $i];
+          $allowed_regions[$context_count]['alternate_img'] = $indiv_context['element_wrapper_' . $i]['alternate_image_' . $i];
+          $allowed_regions[$context_count]['bg_image'] = $indiv_context['element_wrapper_' . $i]['bg_image_' . $i];
+          $allowed_regions[$context_count]['trans_image'] = $indiv_context['element_wrapper_' . $i]['trans_image_' . $i];
+          $allowed_regions[$context_count]['context_name'] = $indiv_context['context_name'];
+          $context_count++;
+        }
+      }
+    }
+
+    $loader_fid = variable_get('context_lazy_load_default_loader', '');
+    $loader_img = file_load($loader_fid);
+    $loader_img_url = file_create_url($loader_img->uri);
+
+    if (!is_a($html, 'simple_html_dom'))
+      $html = str_get_html($html, FALSE, FALSE, DEFAULT_TARGET_CHARSET, FALSE);
+
+    foreach ($allowed_regions as $region) {
+      if($region['selector'] == 'img')
+        $selector[] = 'body';
+      else
+        $selector = _generate_path_selector($region['selector']);
+
+      if(isset($selector[1]) && $html->find($selector[0], $selector[1])) {
+        // if we have a element counter
+        if($region['bg_image']) {
+          foreach($html->find("$selector[0]") as $e) {
+            $e = _set_lazy_bg_image_container($e, $region);
+          }
+        } else {
+          foreach($html->find($selector[0], $selector[1])->find('img') as $e) {
+            $e = _set_lazy_image_container($e, $region, $loader_img_url);
+          }
+        }
+      } else {
+        if($region['bg_image']) {
+          // For inline background image
+          foreach($html->find("$selector[0]") as $e) {
+            $e = _set_lazy_bg_image_container($e, $region);
+          }
+        } else {
+          // Standard img tag
+          foreach($html->find("$selector[0] img") as $e) {
+            $e = _set_lazy_image_container($e, $region, $loader_img_url);
+          }
+        }
+      }
+    }
+  }
+
+  // Generic Image load on scroll ( Experimental )
+  if (isset($conf['context_image_loader']['enable_scrolling']) && $conf['context_image_loader']['enable_scrolling'] != '') {
+    watchdog('image scroll', 'Initiate image scrolling');
+
+    module_load_include('inc', 'context_image_loader', 'context_image_loader.api');
+    //$allowed_regions[$context_count]['selector'] = 'img';
+    if (!is_a($html, 'simple_html_dom'))
+      $html = str_get_html($html, FALSE, FALSE, DEFAULT_TARGET_CHARSET, FALSE);
+
+    foreach($html->find("body img") as $e) {
+      $e = _set_scroll_image_container($e);
+    }
+  }
+  
+  // If caching enabled, set in cache
+  if($cache_key) {
+    cache_set($cache_key, $html);
+  }
+
+  return $html;
+}
+
+
+/**
+ * Internal function to save the loader image.
+ */
+function _save_loader_image($form, &$form_state) {
+  global $user;
+  $file = file_load($form_state['values']['context_lazy_load_default_loader']);
+  // Change status to permanent.
+  $file->status = FILE_STATUS_PERMANENT;
+  // Save.
+  file_save($file);
+  file_usage_add($file, 'context_image_loader', 'user', $user->uid);
+}
+
+/**
+ * Internal function to scan images.
+ * 
+ * Scan images from a specified path.
+ */
+function _scan_folder_for_images($image_scan_path, $scan_sub_folders) {  
+  $image_scan_actual_path = _get_actual_path($image_scan_path);
+  $mask = "/.*\.(jpg|jpeg|png)$/";
+  $image_files = file_scan_directory($image_scan_actual_path, $mask, ['recurse'=>$scan_sub_folders]);
+  return $image_files;
+}
+
+/**
+ * Internal function to get an imagedDetail.
+ *
+ * Parse the image url and return properties.
+ */
+function _get_image_detail($img_src) {
+
+  $webp_img_details =[];
+  watchdog('image src', 'SRC : ' . $img_src);
+  $img_src_arr = explode("/", $img_src);
+  $img_src_name = array_pop($img_src_arr);
+  // get image name and extension
+  $img_src_name_arr = explode('.', $img_src_name);
+  $extension = array_pop($img_src_name_arr);
+  $filename = implode(".", $img_src_name_arr);
+  // remove any qyer parameters
+  $extension_arr = explode("?", $extension);
+  $extension = $extension_arr[0];
+
+  $img_src_path = implode("/", $img_src_arr);
+  $img_src_path = parse_url($img_src_path);
+  $img_src_path_webp = $img_src_path['path']."/webp/".$filename.".webp";
+
+  $webp_img_details['org_extn'] = $extension;
+  $webp_img_details['org_src'] = $img_src_path['path'].'/'.$filename.'.'.$extension;
+  $webp_img_details['webp_src'] = $img_src_path_webp;
+  $webp_img_details['webp_path'] = $img_src_path['path']."/webp/";
+  return $webp_img_details;
+}
+
+/**
+ * Internal Function to get actual phisycal path.
+ */
+function _get_actual_path($path) {
+  if(!trim($path)){
+    return FALSE;
+  }
+  //$actual_path = drupal_realpath($path);
+  //if(!$image_scan_actual_path)
+  $actual_path = DRUPAL_ROOT . $path;
+  $actual_path = rtrim($actual_path, "/");
+  return $actual_path;
+}
+
+/**
+ * Internal function for webp images zip upload form.
+ * 
+ * Upload and unzip all order related folder.
+ */
+function _upload_save_image_files($form, &$form_state) {
+  global $user;
+  $folder_found = TRUE;
+  $file = file_load($form_state['values']['upload_image']);
+
+  $folder_path = 'public://'.$form_state['values']['image_swap_upload_path'].'/webp';
+
+  if(!file_prepare_directory($folder_path)) {
+    if(!drupal_mkdir($folder_path, '0777'))
+      $folder_found = FALSE;
+  }
+  if($folder_found == TRUE) {
+    $file = file_move($file, $folder_path, FILE_EXISTS_REPLACE);
+    $file->status = FILE_STATUS_PERMANENT;
+    file_save($file);
+    file_usage_add($file, 'image_swap', 'user', $user->uid);
+    drupal_set_message(t('Image files successfully uploaded.'));
+    // If it is a zip, unzip it.
+    if($file->filemime == 'application/zip') {
+      $zip = new ZipArchive;
+      $res = $zip->open(drupal_realpath($file->uri));
+      if ($res === TRUE) {
+        $zip->extractTo(drupal_realpath($folder_path));
+        $zip->close();
+        drupal_set_message(t('Image zip file successfully unzipped.'));
+      } else {
+        form_set_error('upload_image', t('Failed to unzip.'));
+      }
+    }
+
+  } else
+    form_set_error('upload_image', t('Failed to create the folder'));
+}
+
+
+/**
+ * Batch job to convert to webp images.
+ */
+function _batch_to_convert_webp_images($path_to_scan, $scan_sub_folders, $execute_as_drush = FALSE){
+
+  $found_images = _scan_folder_for_images($path_to_scan, $scan_sub_folders);
+  watchdog('image conert', 'count ' . count($found_images));
+  if(count($found_images) > 0) {
+
+      $batch = array(
+        'title' => t('Generating total '.count($found_images).' webp images...'),
+        'operations' => [],
+        'finished' => '_batch_convert_webp_images_finished',
+        'init_message' => t('Initiating process ...'),
+        'progress_message' => t('Created @current out of @total images.'),
+        'error_message' => t('An error occurred during processing'),
+      );
+      foreach($found_images as $image){
+        $batch['operations'][] = ['_convert_image_to_webp', [$image]];
+      }
+
+      batch_set($batch);
+      if ($execute_as_drush) {
+        $batch =& batch_get();
+        $batch['progressive'] = FALSE;
+        drush_backend_batch_process();
+      }
+      batch_process();
+
+   } else {
+    drupal_set_message(t('No images found in the path provided!'));
+   }
+}
+
+/**
+ * Internal function to convert to webp image.
+ */
+function _convert_image_to_webp($image, &$context) {
+  watchdog('image convert', 'uri : ' . $image->uri);
+  $file_extn_all = [];
+  $fileuri = $image->uri;
+  $filename = $image->filename;
+  $name = $image->name;
+  $filepath = str_replace($filename, '', $fileuri);
+  $file_extn  = strtolower(str_replace($name.".", '', $filename));
+  $file_extn_all[] = $file_extn;
+  $new_filename = $name.'.webp';
+  if(!file_exists($filepath.'webp'))
+    if(!mkdir($filepath.'webp'))
+      watchdog('image conert', 'failed to creare dir ' . $filepath.'webp');
+
+  $im = new Imagick($fileuri);
+  $im->writeImage('webp:' . $filepath.'webp/'.$new_filename);
+    
+  $context['sandbox']['progress']++;
+  $context['message'] = t('Now processing ' . $filename);
+}
+
+/**
+ * Internal function to replace a single webp image.
+ */
+function _find_webp_image($img_src, $webp_src, $webp_path, $generate_on_fly = FALSE) {
+  $img_src = DRUPAL_ROOT.urldecode($img_src);
+  $webp_src = DRUPAL_ROOT.urldecode($webp_src);
+  $webp_path = DRUPAL_ROOT.urldecode($webp_path);
+
+  if(!file_exists($img_src)) {
+    watchdog('webp image', 'Original File not exists!' . $img_src);
+    return FALSE;
+  }
+
+
+  if(file_exists($webp_src)) {
+    watchdog('webp image', 'File exists!' . $img_src);
+    return TRUE;    
+  }
+  else {
+    watchdog('webp image', 'File not exists!' . $img_src);
+    if($generate_on_fly) {
+      if(!file_exists($webp_path))
+        if(!mkdir($webp_path)) {
+          watchdog('webp image', 'dir not created!' . $webp_path);
+          return FALSE;
+        }  
+      
+      $im = new Imagick($img_src);
+      if($im->writeImage('webp:' . $webp_src)) {
+        watchdog('webp image', 'img not created!' . $webp_src);
+        return TRUE; 
+      }
+      else
+        return FALSE;     
+    }
+      return FALSE;
+  }  
+}
+
+/**
+ * Batch finished callback.
+ */
+function _batch_convert_webp_images_finished($success, $results, $operations) {
+  if ($success) {
+    $message = t('Image generation completed.');
+    drupal_set_message($message);
+    drupal_goto('/admin/structure/context/context-image-swap');
+  }
+  else {
+    $error_operation = reset($operations);
+    $message = t('An error occurred while processing %error_operation with arguments: @arguments', array('%error_operation' => $error_operation[0], '@arguments' => print_r($error_operation[1], TRUE)));
+    drupal_set_message($message, 'error');
+  }
+}

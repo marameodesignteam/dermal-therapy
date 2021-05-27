@@ -1,0 +1,10 @@
+div.context_image_loader_instruction {
+  background-color: #f9f9d1;
+  border: #9b963c 1px solid;
+  padding: 5px;
+  color: #636041;
+  font-style: italic;
+}
+div#webpswap-form-wrapper fieldset {
+  padding-top: 1em;
+}

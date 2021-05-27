@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Module install file for context image loader.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function context_image_loader_install() {
+  db_query("ALTER TABLE {context} CHANGE COLUMN `reactions` `reactions` MEDIUMTEXT NULL DEFAULT NULL COMMENT 'Serialized storage of all context reaction settings.'");
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function context_image_loader_uninstall() {
+  // Delete variables.
+  db_delete('variable')
+    ->condition('name', 'context_lazy_load_%', 'LIKE')
+    ->execute();
+  cache_clear_all('variables', 'cache_bootstrap');
+}

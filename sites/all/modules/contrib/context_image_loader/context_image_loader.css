@@ -1,0 +1,40 @@
+/*.context-img-loader-div {
+  text-align: center;
+  margin: auto;
+  display: inline;
+}*/
+
+.context-img-use-loader{
+  position: absolute;
+  right:0px;
+  left:0px;
+  top:0px;
+  bottom: 0px;
+  vertical-align: middle;
+  text-align: center;
+  /*border:1px dashed;*/
+}
+
+.context-img-use-loader>img {
+  position: absolute !important;
+  margin: auto !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.context-img-loader-div>img.hidden-loader, .context-img-loader-div>img.hidden-loader-temp {
+  display: none !important;
+}
+
+.slide-image-container .context-img-loader-div {
+   display: inline-block;
+}
+
+.Pralay2>img{
+  height:200px;
+  width:400px;
+}
