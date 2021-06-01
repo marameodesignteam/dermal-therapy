@@ -81,9 +81,9 @@ $sidebar_second_class = "col-sm-12";
 ?>
 <?php $block_language = module_invoke('locale', 'block_view', 'language'); ?>
 <?php global $_domain, $theme_path, $base_url; ?>
-<?php if ($_domain['domain_id'] == 1): ?>
-    <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='4e362358e23874bb5aaf766e8b37533605b209a7bef67a95ce8244d4f23ad645';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
-<?php endif; ?>
+<?php //if ($_domain['domain_id'] == 1): ?>
+<!--    <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='4e362358e23874bb5aaf766e8b37533605b209a7bef67a95ce8244d4f23ad645';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>-->
+<?php //endif; ?>
 <?php $path_to_theme = $base_url.'/'.$theme_path;
 $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 <div class="row">
