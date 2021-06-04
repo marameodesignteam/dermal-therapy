@@ -80,7 +80,7 @@
 <!--    })(window,document,'script','dataLayer','GTM-W3X2PFC');</script>-->
 
   <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
-<!--  <script type="text/javascript" src="https://a.omappapi.com/app/js/api.min.js" data-account="135679" data-user="123433" async></script>-->
+  <script type="text/javascript" src="https://a.omappapi.com/app/js/api.min.js" data-account="135679" data-user="123433" async></script>
   <!-- / https://optinmonster.com -->
   <!-- End Google Tag Manager --
   <?php endif; ?>
