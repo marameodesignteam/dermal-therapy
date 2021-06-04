@@ -53,7 +53,9 @@
  *
  * @ingroup templates
  */
-?><!DOCTYPE html>
+?>
+<?php global $_domain; ?>
+<!DOCTYPE html>
 <html<?php print $html_attributes;?><?php print $rdf_namespaces;?>>
 <head>
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
@@ -69,6 +71,19 @@
   <?php print $scripts; ?>
   <!-- add fontawesome -->
   <link href="/<?php echo drupal_get_path('theme',$GLOBALS['theme']); ?>/css/fontawesome/all.css" rel="stylesheet">
+  <?php if ($_domain['domain_id'] == 1): ?>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W3X2PFC');</script>
+
+  <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
+  <script type="text/javascript" src="https://a.omappapi.com/app/js/api.min.js" data-account="135679" data-user="123433" async></script>
+  <!-- / https://optinmonster.com -->
+  <!-- End Google Tag Manager --
+  <?php endif; ?>
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">
