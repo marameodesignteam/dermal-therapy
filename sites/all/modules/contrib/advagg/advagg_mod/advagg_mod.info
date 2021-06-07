@@ -7,8 +7,8 @@ recommends[] = libraries
 
 configure = admin/config/development/performance/advagg/mod
 
-; Information added by Drupal.org packaging script on 2020-11-19
-version = "7.x-2.35"
+; Information added by Drupal.org packaging script on 2021-06-04
+version = "7.x-2.35+28-dev"
 core = "7.x"
 project = "advagg"
-datestamp = "1605792717"
+datestamp = "1622838774"
