@@ -14,4 +14,6 @@ sites/all/themes/flexitol/prepros-6.config
 /*/.DS_Store
 .htaccess
 *Zone.Identifier
+.well-known
+php.ini
 
