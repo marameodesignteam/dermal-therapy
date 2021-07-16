@@ -1,332 +1,304 @@
 /* healthcare professional view */
+
 .view-healthcare-professional-page {
-
-  @media (max-width: $screen-phone) {
-    .third {
-      width: 100% !important;
-      display: block;
-    }
-    .nav-pills > li > a {
-      padding: 10px !important;
-    }
-  }
-
-  .third {
-
-    width: 30%;
-    text-align: center;
-
-    img {
-      margin-right: auto;
-      margin-left: auto;
-      width: 100%;
-    }
     @media (max-width: $screen-phone) {
-      img {
-        display: none;
-      }
-    }
-
-    @media (min-width: $screen-md) {
-      img {
-        width: 80%;
-      }
-    }
-  }
-  .nav-pills > li {
-    border: none;
-    background-color: transparent;
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: #000;
-        background-color: rgba(255, 255, 255, 0.77);
-      }
-    }
-
-    > a {
-      position: relative;
-      display: block;
-      padding: 30px 15px;
-
-      &:visited,
-      &:active,
-      &:hover,
-      &:focus {
-        color: #000;
-        background-color: rgba(255, 255, 255, 0.77);
-      }
-    }
-  }
-
-  @media (max-width: $screen-md) {
-    .nav-pills > li {
-      &.active > a {
-        &,
-        &:hover,
-        &:focus {
-          color: #000;
-          background-color: transparent;
+        .third {
+            width: 100% !important;
+            display: block;
         }
-      }
-
-      > a {
-        position: relative;
-        display: block;
-        padding: 30px 15px;
-
-        &:visited,
-        &:active,
-        &:hover,
-        &:focus {
-          color: #000;
-          background-color: transparent;
+        .nav-pills>li>a {
+            padding: 10px !important;
         }
-      }
     }
-  }
-
-  .healthcare-body {
-    background: #fff;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 50px;
-    overflow: hidden;
-
-    h1 {
-      color: $brand-primary;
-      margin-top: -15px;
-
+    .third {
+        width: 30%;
+        text-align: center;
+        img {
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+        }
+        @media (max-width: $screen-phone) {
+            img {
+                display: none;
+            }
+        }
+        @media (min-width: $screen-md) {
+            img {
+                width: 80%;
+            }
+        }
     }
-  }
-
-  @media (max-width: $screen-md) {
+    .nav-pills>li {
+        border: none;
+        background-color: transparent;
+        &.active>a {
+            &,
+            &:hover,
+            &:focus {
+                color: #000;
+                background-color: rgba(255, 255, 255, 0.77);
+            }
+        }
+        >a {
+            position: relative;
+            display: block;
+            padding: 30px 15px;
+            &:visited,
+            &:active,
+            &:hover,
+            &:focus {
+                color: #000;
+                background-color: rgba(255, 255, 255, 0.77);
+            }
+        }
+    }
+    @media (max-width: $screen-md) {
+        .nav-pills>li {
+            &.active>a {
+                &,
+                &:hover,
+                &:focus {
+                    color: #000;
+                    background-color: transparent;
+                }
+            }
+            >a {
+                position: relative;
+                display: block;
+                padding: 30px 15px;
+                &:visited,
+                &:active,
+                &:hover,
+                &:focus {
+                    color: #000;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
     .healthcare-body {
-      background: #fff;
-      padding-left: 10%;
-      padding-right: 10%;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      margin-top: 30px;
+        background: #fff;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 50px;
+        overflow: hidden;
+        h1 {
+            color: $brand-primary;
+            margin-top: -15px;
+        }
     }
-  }
-
-  #tab-1-0 .single-graph1 {
-    display: none;
-  }
-
-  #tab-1-2 .healthcare-body {
-    background: url("../images/flexitol_desert.png") no-repeat bottom center #fff;
-    background-size: contain;
-    padding-bottom: 0;
-
-  }
-
-  .efficacy h1 {
-    text-align: center;
-    display: block;
-    background-color: #fff;
-    padding-top: 35px;
-    padding-bottom: 40px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 0px;
-    font-size: 30px;
-    &:after {
-      position: absolute;
-      left: 50%;
-      content: "";
-      border-top: 2px solid rgb(122, 153, 172);
-      width: 110px;
-      margin-left: -55px;
-      margin-top: 48px;
+    @media (max-width: $screen-md) {
+        .healthcare-body {
+            background: #fff;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-top: 30px;
+        }
     }
-  }
-  .single-graph1 {
-    border: 3px solid $brand-primary;
-    border-radius: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    margin-top: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    img {
-      margin-left: auto;
-      margin-right: auto;
+    #tab-1-0 .single-graph1 {
+        display: none;
     }
-  }
-
-  .single-graph-text {
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-  .single-graph-note {
-    margin-top: 20px;
-    color: white;
-    font-size: 0.8em;
-    text-align: justify;
-    p {
-      margin-left: 10px;
+    #tab-1-2 .healthcare-body {
+        background: url("../images/flexitol_desert.png") no-repeat bottom center #fff;
+        background-size: contain;
+        padding-bottom: 0;
     }
-  }
-
-  .field-content.efficacy {
-    background: #d9f2fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    p {
-      width: 50%;
-      margin-left: 35%;
-      margin-right: 35%;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    ul {
-      margin-left: 35%;
-      margin-left: 35%;
-      margin-right: 35%;
-      line-height: 2;
-      padding-left: 0;
-    }
-  }
-
-  @media (max-width: $screen-md) {
-
-    .field-content.efficacy {
-      background: #d9f2fa;
-      padding-top: 20px;
-      padding-bottom: 20px;
-
-      p {
-        width: 50%;
-        margin-left: 10%;
-        margin-right: 10%;
-        font-weight: 700;
+    .efficacy h1 {
+        text-align: center;
+        display: block;
+        background-color: #fff;
+        padding-top: 35px;
+        padding-bottom: 40px;
         text-transform: uppercase;
-      }
-      ul {
-        margin-left: 10%;
-        margin-right: 10%;
-        line-height: 2;
-        padding-left: 0;
-      }
+        font-weight: 600;
+        margin-bottom: 0px;
+        font-size: 30px;
+        &:after {
+            position: absolute;
+            left: 50%;
+            content: "";
+            border-top: 2px solid rgb(122, 153, 172);
+            width: 110px;
+            margin-left: -55px;
+            margin-top: 48px;
+        }
     }
-  }
-
-  span.nav-title {
-    border: 1px solid;
-    padding: 10px 20px;
-    margin-top: 20px;
-    line-height: 38px;
-    background: white;
-  }
-
-  .nav-title-div {
-    margin-top: 20px;
-  }
-
-  #views-bootstrap-tab-1 .nav-pills {
-    display: none;
-  }
-
+    .single-graph1 {
+        border: 3px solid $brand-primary;
+        border-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        margin-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .single-graph-text {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    .single-graph-note {
+        margin-top: 20px;
+        color: white;
+        font-size: 0.8em;
+        text-align: justify;
+        p {
+            margin-left: 10px;
+        }
+    }
+    .field-content.efficacy {
+        background: #d9f2fa;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        p {
+            width: 50%;
+            margin-left: 35%;
+            margin-right: 35%;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        ul {
+            margin-left: 35%;
+            margin-left: 35%;
+            margin-right: 35%;
+            line-height: 2;
+            padding-left: 0;
+        }
+    }
+    @media (max-width: $screen-md) {
+        .field-content.efficacy {
+            background: #d9f2fa;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            p {
+                width: 50%;
+                margin-left: 10%;
+                margin-right: 10%;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            ul {
+                margin-left: 10%;
+                margin-right: 10%;
+                line-height: 2;
+                padding-left: 0;
+            }
+        }
+    }
+    span.nav-title {
+        border: 1px solid;
+        padding: 10px 20px;
+        margin-top: 20px;
+        line-height: 38px;
+        background: white;
+    }
+    .nav-title-div {
+        margin-top: 20px;
+    }
+    #views-bootstrap-tab-1 .nav-pills {
+        display: none;
+    }
 }
+
 
 /* healthcare professional sample form page (form comes from Mailchimp) */
 
 #mc_embed_signup #mce-success-response {
-  color: #00a9e0 !important;
+    color: #00a9e0 !important;
 }
 
 #mc_embed_signup div#mce-responses {
-  float: left;
-  top: -1.4em;
-  padding: 0;
-  overflow: hidden;
-  width: 90%;
-  margin: 5% 5%;
-  clear: both;
+    float: left;
+    top: -1.4em;
+    padding: 0;
+    overflow: hidden;
+    width: 90%;
+    margin: 5% 5%;
+    clear: both;
 }
 
 div#mce-responses {
-  top: 0;
-  overflow: hidden;
-
+    top: 0;
+    overflow: hidden;
 }
 
-#mce-error-response, #mce-success-response {
-  border: 8px solid #00a9e0;
-  padding: 2em 2.5em 2em 2.5em !important;
-  background: #fff;
-  width: 100% !important;
-  margin-bottom: 40px !important;
+#mce-error-response,
+#mce-success-response {
+    border: 8px solid #00a9e0;
+    padding: 2em 2.5em 2em 2.5em !important;
+    background: #fff;
+    width: 100% !important;
+    margin-bottom: 40px !important;
 }
 
 #mc_embed_signup {
-  color: #444;
-  .mc-field-group.input-group label {
-    display: inline;
-    margin-left: 10px;
-  }
+    color: #444;
+    .mc-field-group.input-group label {
+        display: inline;
+        margin-left: 10px;
+    }
 }
 
 .roundup {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 25px 25px 0px 0px;
-  border: 2px solid #00a9e0;
-  padding: 35px;
-  font-size: 20px;
-  color: #00a9e0;
-  overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px 25px 0px 0px;
+    border: 2px solid #00a9e0;
+    padding: 35px;
+    font-size: 20px;
+    color: #00a9e0;
+    overflow: hidden;
 }
 
 .rounddown {
-  background: #00a9e0;
-  padding: 0;
-  color: white;
-  padding: 20px 40px;
-  font-size: 12px;
-  border-radius: 0px 0px 25px 25px;
-  a {
+    background: #00a9e0;
+    padding: 0;
     color: white;
-  }
+    padding: 20px 40px;
+    font-size: 12px;
+    border-radius: 0px 0px 25px 25px;
+    a {
+        color: white;
+    }
 }
 
 .roundup div:nth-child(2) {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .top-banner {
-  img {
-    width: 100%;
-    height:auto;
-  }
-
-  img.big-banner {
-    display: block;
-  }
-  img.small-banner {
-    display: none;
-  }
-  @media (max-width: $screen-xs) {
+    img {
+        width: 100%;
+        height: auto;
+    }
     img.big-banner {
-      display: none;
+        display: block;
     }
     img.small-banner {
-      display: block;
+        display: none;
     }
-  }
-
-  padding: 0!important;
-  margin: 0!important;
-  background-color: #00a9e0;
+    @media (max-width: $screen-xs) {
+        img.big-banner {
+            display: none;
+        }
+        img.small-banner {
+            display: block;
+        }
+    }
+    padding: 0!important;
+    margin: 0!important;
+    background-color: #00a9e0;
 }
 
 .top-banner-container {
-  background-color: #00A3E1;
-  border-bottom: 1px solid white;
+    // background-color: #00A3E1;
+    // border-bottom: 1px solid white;
 }

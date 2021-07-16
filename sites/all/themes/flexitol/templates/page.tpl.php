@@ -109,18 +109,16 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
     </div>
 </div>
 <?php if ($_domain['domain_id'] == 1): ?>
-
+	<div class="top-banner-container">
+		<div class="row top-banner">
+			<a href="https://offers.dermaltherapy.com.au/explore-australia/" target="_blank">
+				<img src="<?php print $path_to_theme; ?>/images/top-banner-pc.jpg" class="big-banner" />
+				<img src="<?php print $path_to_theme; ?>/images/top-banner-mb.jpg" class="small-banner" />
+			</a>
+		</div>
+    </div>
 <?php elseif ($_domain['domain_id'] == 3) : ?>
-    <!--div class="container-fluid top-banner-container">
-        <div class="container">
-            <div class="row top-banner">
-                <a href="https://offers.dermaltherapy.com.au/new-zeala" target="_blank">
-                    <img src="<?php print $path_to_theme; ?>/images/nz-top-banner--desktop-ok.jpg" class="big-banner">
-                    <img src="<?php print $path_to_theme; ?>/images/nz-top-banner--mobile.jpg" class="small-banner">
-                </a>
-            </div>
-        </div>
-    </div-->
+    
 <?php endif; ?>
 
 <div class="container-fluid header-fluid">
