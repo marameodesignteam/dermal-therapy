@@ -81,28 +81,28 @@ Wait until we can see the bottom - then set to fixed.
 Then, if top = bottom of above - position absolute
 */
 
-(function($) {
-    $(document).ready(function() {
-
-
-
-        $(".sblock").hide();
-        $('.searchicon').click(function() {
-            $(this).siblings(".sblock").slideToggle(400)
-                .siblings('.sblock:visible').slideUp(400);
-
-
-            /*
-              $(this).siblings('.sblock').togg"leClass('visible-lg');
-              $(this).siblings('.sblock').toggleClass('visible-md');
-              $(this).siblings('.sblock').toggleClass('visible-sm');
-              $(this).siblings('.sblock').toggleClass('heightsb');
-
-               $('.header-fluid').toggleClass('heightheader');
-               */
-        });
-    });
-})(jQuery);
+// (function($) {
+//     $(document).ready(function() {
+//
+//
+//
+//         $(".sblock").hide();
+//         $('.searchicon').click(function() {
+//             $(this).siblings(".sblock").slideToggle(400)
+//                 .siblings('.sblock:visible').slideUp(400);
+//
+//
+//             /*
+//               $(this).siblings('.sblock').togg"leClass('visible-lg');
+//               $(this).siblings('.sblock').toggleClass('visible-md');
+//               $(this).siblings('.sblock').toggleClass('visible-sm');
+//               $(this).siblings('.sblock').toggleClass('heightsb');
+//
+//                $('.header-fluid').toggleClass('heightheader');
+//                */
+//         });
+//     });
+// })(jQuery);
 
 (function($) {
     $(document).ready(function() {

@@ -184,8 +184,8 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 					?>
 
 			<!--  <a href="#"><span class="header-icon header-icon-world"></span></a> -->
-			  <a class="searchicon" href="#"><i class="fas fa-search"></i></a>
-			  <div class="sblock"><?php $search_form = drupal_get_form('search_block_form'); print render($search_form);?>
+<!--			  <a class="searchicon" href="#"><i class="fas fa-search"></i></a>-->
+			  <div class="sblock" style="display: block!important;"><?php $search_form = drupal_get_form('search_block_form'); print render($search_form);?>
 
 			  </div>
 				<?php include 'overlay.tpl.php'; ?>
