@@ -12,13 +12,14 @@ function flexitol_preprocess_html(&$vars) {
   global $_domain;
   if ($_domain['domain_id'] == 1) {
     // Setup IE meta tag to force IE rendering mode
-    $meta_google_site_verification = array(
+    $meta_google_site_verification = [
       '#type' => 'html_tag',
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
+        'name' => 'google-site-verification',
         'content' =>  'Tre2nYB-UOA_PC1q2k4m6aiOBhgGQlSSkD2d6l92ciQ',
-      )
-    );
+      ]
+    ];
     drupal_add_html_head($meta_google_site_verification, 'meta_google_site_verification');
     // <meta name="google-site-verification" content="Tre2nYB-UOA_PC1q2k4m6aiOBhgGQlSSkD2d6l92ciQ" />
   }
