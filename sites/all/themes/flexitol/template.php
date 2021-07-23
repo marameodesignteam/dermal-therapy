@@ -13,7 +13,7 @@ function flexitol_preprocess_html(&$vars) {
   if ($_domain['domain_id'] == 1) {
     // Setup IE meta tag to force IE rendering mode
     $meta_google_site_verification = array(
-      '#type' => 'google-site-verification',
+      '#type' => 'html_tag',
       '#tag' => 'meta',
       '#attributes' => array(
         'content' =>  'Tre2nYB-UOA_PC1q2k4m6aiOBhgGQlSSkD2d6l92ciQ',
