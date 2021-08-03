@@ -6,7 +6,7 @@ $red-button: #C83617;
 $text-color: #575757;
 $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
 .page-node.node-type-product {
-    &.domain-newzealand-dt .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
+    &.domain-newzealand-dt .group-buttons #online-resellers .group-buyonline-group .field-name-field-pharmacy-direct {
         background-image: url("#{$retailer_images}pharmacy-direct-nz.jpg");
     }
     .hidden-md {
@@ -175,7 +175,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
                     }
                 }
             }
-            #ui-accordion-online-resellers-panel-1 {
+            .group-find-stockist {
                 margin-top: 60px;
                 background: #fff;
                 padding: 0;
@@ -198,7 +198,7 @@ $retailer_images: '/sites/all/themes/flexitol/images/online-retailers/';
                     }
                 }
             }
-            #ui-accordion-online-resellers-panel-0 {
+            .group-buyonline-group {
                 padding: 1.42857em 0 0;
                 background: none;
                 margin-top: calc(60px - 1.42857em);

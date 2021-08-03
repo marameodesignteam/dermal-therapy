@@ -6718,7 +6718,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
 .navbar.mobilefront {
   display: none; }
 
-.page-node.node-type-product.domain-newzealand-dt .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
+.page-node.node-type-product.domain-newzealand-dt .group-buttons #online-resellers .group-buyonline-group .field-name-field-pharmacy-direct {
   background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-direct-nz.jpg"); }
 @media (min-width: 768px) {
   .page-node.node-type-product .hidden-md {
@@ -6852,29 +6852,29 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
         .page-node.node-type-product .group-buttons #online-resellers h3 a:focus, .page-node.node-type-product .group-buttons #online-resellers h3 a:hover {
           background-color: #9a2a12;
           border-color: #9a2a12; }
-    .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 {
+    .page-node.node-type-product .group-buttons #online-resellers .group-find-stockist {
       margin-top: 60px;
       background: #fff;
       padding: 0; }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content {
+      .page-node.node-type-product .group-buttons #online-resellers .group-find-stockist .view-stockist .view-content {
         display: flex;
         display: -webkit-flex;
         align-items: center;
         flex-wrap: wrap; }
-        .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
+        .page-node.node-type-product .group-buttons #online-resellers .group-find-stockist .view-stockist .view-content .views-row {
           width: 50%;
           padding: 0 10px; }
           @media (min-width: 576px) {
-            .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
+            .page-node.node-type-product .group-buttons #online-resellers .group-find-stockist .view-stockist .view-content .views-row {
               width: 33.33%; } }
           @media (min-width: 1200px) {
-            .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-1 .view-stockist .view-content .views-row {
+            .page-node.node-type-product .group-buttons #online-resellers .group-find-stockist .view-stockist .view-content .views-row {
               width: 25%; } }
-    .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 {
+    .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group {
       padding: 1.42857em 0 0;
       background: none;
       margin-top: calc(60px - 1.42857em); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 > div {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group > div {
         background-color: #F8FAFB;
         background-size: auto 40px;
         background-repeat: no-repeat;
@@ -6883,7 +6883,7 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
         display: flex;
         justify-content: flex-end;
         padding: 1.42857em; }
-        .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 > div .btn-blue {
+        .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group > div .btn-blue {
           background-color: #50AAE0;
           border-color: #50AAE0;
           color: #fff;
@@ -6891,53 +6891,53 @@ div#admin-toolbar div.admin-tab, div#admin-toolbar div.admin-tab span, div#admin
           font-size: 0.857142em;
           padding: 9px 20px;
           font-weight: 600; }
-          .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 > div .btn-blue:focus, .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 > div .btn-blue:hover {
+          .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group > div .btn-blue:focus, .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group > div .btn-blue:hover {
             background-color: #2695d7;
             border-color: #2695d7; }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-amazon {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-amazon {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/amazon_black.png?v=2");
         background-size: 120px auto; }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chemist-discount-centre {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-chemist-discount-centre {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/chemist-discount-centre.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-amcal- {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-amcal- {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/amcal.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-priceline {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-priceline {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/priceline.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chemist-warehouse {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-chemist-warehouse {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/chemist.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chempro {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-chempro {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/chempro.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-coles {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-coles {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/coles.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-woolworths {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-woolworths {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/wollies.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-bargain-chemist {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-bargain-chemist {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/bargain-chemist.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-catch {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-catch {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/catch.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-good-price {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-good-price {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/good-price.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-4-less {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-pharmacy-4-less {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-4-less.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-online {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-pharmacy-online {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-online.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-guardian {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-guardian {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/guardian.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-life-pharmacy {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-life-pharmacy {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/life-pharmacy.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-pharmacy-direct {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-pharmacy-direct {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/pharmacy-direct-au.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-lazada {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-lazada {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/lazada.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field--shopee {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field--shopee {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/shopee.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-watsons {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-watsons {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/watsons.png?v=2"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-discount-drug-stores {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-discount-drug-stores {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/discount-drug-stores.png?v=3"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-terry-white-chemmart {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-terry-white-chemmart {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/terry-white-chemmart.png?v=3"); }
-      .page-node.node-type-product .group-buttons #online-resellers #ui-accordion-online-resellers-panel-0 .field-name-field-chemsave {
+      .page-node.node-type-product .group-buttons #online-resellers .group-buyonline-group .field-name-field-chemsave {
         background-image: url("/sites/all/themes/flexitol/images/online-retailers/chemsave.png?v=3"); }
   .page-node.node-type-product .group-buttons .field-name-where-to-buy-button {
     width: 100%; }
@@ -8297,7 +8297,7 @@ body.node-type-conditions section.content-column.col-sm-9 {
 
 /*
 section#block-views-8a88aca1c0589e095165a67e4cdec26f{
-  position: fixed;  bottom: 10px; 
+  position: fixed;  bottom: 10px;
 }*/
 /*
 .block.block-views.contextual-links-region.clearfix.affix{
