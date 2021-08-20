@@ -223,8 +223,12 @@ img {
             position: absolute;
             right: 0;
             top: -7px;
+            .sblock {
+                margin-top: 10px;
+            }
         }
         .hamburger-menu {
+            height: 100px;
             .navbar-toggle {
                 padding-right: 5px;
             }
