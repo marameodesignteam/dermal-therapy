@@ -296,7 +296,7 @@ function flexitol_preprocess_field(&$vars) {
 /**
  * Implements template_preprocess_HOOK().
  */
-function flexitol_preprocess_views_view__taxonomy_term_clone(&$variables) {
+function flexitol_preprocess_views_view__taxonomy_term_clone__page(&$variables) {
   $col = "lg-4";
 
   if (current_path() == 'taxonomy/term/28') {

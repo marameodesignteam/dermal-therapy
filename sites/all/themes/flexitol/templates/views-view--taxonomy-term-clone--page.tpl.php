@@ -54,7 +54,6 @@
   <?php if ($rows): ?>
     <div class="view-content row">
       <?php
-
        print $rows;
 
       $current_domain = domain_get_domain();
