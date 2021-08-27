@@ -53,6 +53,7 @@
  *
  * @ingroup templates
  */
+global $base_url;
 ?>
 <?php global $_domain; ?>
 <!DOCTYPE html>
@@ -63,6 +64,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+
+  <meta property="og:image" content="<?php echo $base_url ?>/sites/default/files/dt_new_logo_0.png">
+  <meta property="og:image:secure_url" content="<?php echo $base_url ?>/sites/default/files/dt_new_logo_0.png">
+  <meta property="twitter:image" content="<?php echo $base_url ?>/sites/default/files/dt_new_logo_0.png">
+
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
