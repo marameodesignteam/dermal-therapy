@@ -65,9 +65,9 @@ global $base_url;
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
-  <meta property="og:image" content="<?php echo $base_url ?>/sites/default/files/dt_new_logo_0.png">
-  <meta property="og:image:secure_url" content="<?php echo $base_url ?>/sites/default/files/dt_new_logo_0.png">
-  <meta property="twitter:image" content="<?php echo $base_url ?>/sites/default/files/dt_new_logo_0.png">
+  <meta property="og:image" content="<?php echo $base_url ?>/sites/all/themes/flexitol/images/logo-1000x1000.png">
+  <meta property="og:image:secure_url" content="<?php echo $base_url ?>/sites/all/themes/flexitol/images/logo-1000x1000.png">
+  <meta property="twitter:image" content="<?php echo $base_url ?>/sites/all/themes/flexitol/images/logo-1000x1000.png">
 
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
