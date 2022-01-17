@@ -111,9 +111,10 @@ $serverHost = strval($_SERVER['HTTP_HOST']); ?>
 <?php if ($_domain['domain_id'] == 1): ?>
 	<!-- <div class="top-banner-container">
 		<div class="row top-banner">
-			<a href="https://offers.dermaltherapy.com.au/explore-australia/" target="_blank">
-				<img src="<?php print $path_to_theme; ?>/images/top-banner-pc.jpg" class="big-banner" />
-				<img src="<?php print $path_to_theme; ?>/images/top-banner-mb.jpg" class="small-banner" />
+			<a href=" https://offers.dermaltherapy.com.au/happymondays/" target="_blank">
+				<img src="<?php print $path_to_theme; ?>/images/AUS_DT_Explore Backyard_Top Banner_1.jpg" alt="Happy Monday" class="big-banner" />
+				<img src="<?php print $path_to_theme; ?>/images/AUS_DT_Explore Backyard_Top Banner_2.jpg" alt="Happy Monday" class="middle-banner" />
+				<img src="<?php print $path_to_theme; ?>/images/AUS_DT_Explore Backyard_Top Banner_3.jpg" alt="Happy Monday" class="small-banner" />
 			</a>
 		</div>
     </div> -->

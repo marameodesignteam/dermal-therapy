@@ -8215,10 +8215,18 @@ div#mce-responses {
     height: auto; }
   .top-banner img.big-banner {
     display: block; }
-  .top-banner img.small-banner {
+  .top-banner img.small-banner,
+  .top-banner img.middle-banner {
     display: none; }
+  @media (max-width: 992px) {
+    .top-banner img.middle-banner {
+      display: block; }
+    .top-banner img.big-banner,
+    .top-banner img.small-banner {
+      display: none; } }
   @media (max-width: 480px) {
-    .top-banner img.big-banner {
+    .top-banner img.big-banner,
+    .top-banner img.middle-banner {
       display: none; }
     .top-banner img.small-banner {
       display: block; } }

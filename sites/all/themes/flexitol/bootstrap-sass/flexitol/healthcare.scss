@@ -282,11 +282,22 @@ div#mce-responses {
     img.big-banner {
         display: block;
     }
-    img.small-banner {
+    img.small-banner,
+    img.middle-banner {
         display: none;
     }
+    @media (max-width: $screen-md) {
+        img.middle-banner {
+            display: block;
+        }
+        img.big-banner,
+        img.small-banner {
+            display: none;
+        }
+    }
     @media (max-width: $screen-xs) {
-        img.big-banner {
+        img.big-banner,
+        img.middle-banner {
             display: none;
         }
         img.small-banner {

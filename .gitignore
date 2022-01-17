@@ -6,6 +6,7 @@ sites/*/files
 sites/*/private
 .idea
 .history
+.well-known
 
 sites/all/themes/flexitol/prepros-6.config
 /sites/all/themes/flexitol/prepros-6.config
@@ -17,3 +18,8 @@ sites/all/themes/flexitol/prepros-6.config
 .well-known
 php.ini
 
+sites/default/default/
+
+Default.html
+php_errorlog
+pinterest-a07f5.html
