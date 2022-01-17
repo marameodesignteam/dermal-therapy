@@ -1,14 +1,11 @@
 <?php
-
 /*
-ssh u781-dokrqb835gyy@dermaltherapy.com.au -p18765
+ssh master_pyebeyzefp@45.77.51.3
+5fGCuEbz
 
+=== git flow ====
 LIVE
-git remote add sg_live ssh://u781-dokrqb835gyy@dermaltherapy.com.au:18765/home/u781-dokrqb835gyy/www/dermaltherapy.com.au/live.dermal.git
-git push sg_live
-ssh u781-dokrqb835gyy@dermaltherapy.com.au -p18765 'cd /home/u781-dokrqb835gyy/www/dermaltherapy.com.au/public_html && drush cc all'
+ssh master_pyebeyzefp@45.77.51.3 -p 22 "cd /home/master/applications/gfsytsahed/public_html && git reset --hard && git pull origin master && git reset --hard && git log -n 5 && git status"
 
-DEV
-git remote add sg_dev ssh://u781-dokrqb835gyy@dermaltherapy.com.au:18765/home/u781-dokrqb835gyy/www/dev.dermaltherapy.com.au/dev.dermal.git
-git push sg_dev
-ssh u781-dokrqb835gyy@dermaltherapy.com.au -p18765 'cd /home/u781-dokrqb835gyy/www/dev.dermaltherapy.com.au/public_html && drush cc all'
+
+
