@@ -1,0 +1,4 @@
+name = Marameo Support
+description = Support module for D7
+package = MarameoDesign
+core = 7.x

@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mmd_support_preprocess_page(&$variables) {
+  // Load the currently logged in user.
+  global $user;
+
+  // Check if the user has the 'editor' role.
+  if (in_array('administrator', $user->roles)) {
+    $account = user_load($user->uid);
+    $username = $account->name;
+    $user_email = $account->mail;
+
+    drupal_add_js("function getUsername() {
+          return '{$username}'
+      }
+      function getUserEmal() {
+          return '{$user_email}'
+      }
+      function getSiteTitle() {
+          return 'DERMAL THERAPY NZ-SG'
+      }
+      function getCurrentURL() {
+          return window.location.href
+      }
+      function getClickupURL() {
+          return ''
+      }
+      function getClickupList() {
+          return '6976942'
+      }", array(
+      'type' => 'inline',
+      'scope' => 'header',
+      'weight' => -100,
+    ));
+    drupal_add_js('https://marameodesign.com/wp-content/themes/generatepress_child/js/support-ticket.js', 'external');
+  }
+}
